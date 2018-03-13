@@ -11,12 +11,13 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "postcss css/goku.css --watch --dir dist/",
-    "build": "postcss css/goku.css --dir dist/"
+    "dev": "postcss css/goku.css --watch --dir docs/css",
+    "docs": "yarn dev & browser-sync start --ss 'docs' --files 'docs'",
+    "build": "postcss css/goku.css --dir dist/ && cp -R dist/* docs/css/"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build && git add dist"
+      "pre-commit": "yarn build && git add dist docs/css"
     }
   },
   "devDependencies": {
