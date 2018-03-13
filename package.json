@@ -1,0 +1,22 @@
+{
+  "name": "goku",
+  "version": "0.0.0",
+  "description": "CSS Framework",
+  "main": "index.js",
+  "repository": "git@github.com:maxirozay/goku.git",
+  "contributors": [
+    "Maxime Rossier <rossier.maxime@gmail.com>",
+    "Julien Grünhagel <julien@rspt.ch>"
+  ],
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "postcss css/goku.css --watch --dir dist/",
+    "build": "postcss css/goku.css --dir dist/",
+    "postinstall": "yarn build"
+  },
+  "dependencies": {
+    "autoprefixer": "^8.1.0",
+    "postcss-cli": "^5.0.0"
+  }
+}
