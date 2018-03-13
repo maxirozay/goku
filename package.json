@@ -10,4 +10,11 @@
   ],
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "dev": "postcss css/goku.css --watch --dir dist/",
+    "build": "postcss css/goku.css --dir dist/"
+  },
+  "devDependencies": {
+    "postcss-cli": "^5.0.0"
+  }
 }
