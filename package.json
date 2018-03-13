@@ -12,7 +12,8 @@
   "private": false,
   "scripts": {
     "dev": "postcss css/goku.css --watch --dir dist/",
-    "build": "postcss css/goku.css --dir dist/"
+    "build": "postcss css/goku.css --dir dist/",
+    "postinstall": "yarn build"
   },
   "devDependencies": {
     "postcss-cli": "^5.0.0"
