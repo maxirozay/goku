@@ -1,0 +1,13 @@
+{
+  "name": "goku",
+  "version": "0.0.0",
+  "description": "CSS Framework",
+  "main": "index.js",
+  "repository": "git@github.com:maxirozay/goku.git",
+  "contributors": [
+    "Maxime Rossier <rossier.maxime@gmail.com>",
+    "Julien Grünhagel <julien@rspt.ch>"
+  ],
+  "license": "MIT",
+  "private": false,
+}
