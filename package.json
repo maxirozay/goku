@@ -12,11 +12,16 @@
   "private": false,
   "scripts": {
     "dev": "postcss css/goku.css --watch --dir dist/",
-    "build": "postcss css/goku.css --dir dist/",
-    "postinstall": "yarn build"
+    "build": "postcss css/goku.css --dir dist/"
   },
-  "dependencies": {
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build && git add dist"
+    }
+  },
+  "devDependencies": {
     "autoprefixer": "^8.1.0",
+    "husky": "^0.15.0-rc.9",
     "postcss-cli": "^5.0.0",
     "stylelint": "^9.1.1",
     "stylelint-config-standard": "^18.2.0"
