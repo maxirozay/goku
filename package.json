@@ -19,13 +19,11 @@
       "pre-commit": "yarn build && git add dist"
     }
   },
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^8.1.0",
+    "husky": "^0.15.0-rc.9",
     "postcss-cli": "^5.0.0",
     "stylelint": "^9.1.1",
     "stylelint-config-standard": "^18.2.0"
-  },
-  "devDependencies": {
-    "husky": "^0.15.0-rc.9"
   }
 }
