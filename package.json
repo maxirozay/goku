@@ -11,16 +11,19 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "postcss css/goku.css --watch --dir dist/",
-    "build": "postcss css/goku.css --dir dist/"
+    "dev": "rm -r docs/css/* && postcss css/** --watch --dir docs/css/ --base css/",
+    "docs": "yarn dev & browser-sync start --ss 'docs' --files 'docs'",
+    "build": "yarn clean && postcss css/** --dir dist/ --base css/ && cp -R dist/* docs/css/",
+    "clean": "rm -r dist/* docs/css/*"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build && git add dist"
+      "pre-commit": "yarn build && git add dist docs/css"
     }
   },
   "devDependencies": {
     "autoprefixer": "^8.1.0",
+    "browser-sync": "^2.23.6",
     "cssnano": "^3.10.0",
     "husky": "^0.15.0-rc.9",
     "postcss-cli": "^5.0.0",
