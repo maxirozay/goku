@@ -1,0 +1,7 @@
+:root {
+  --primary-color: lightgray;
+  --primary-color-text: black;
+  --primary-color-active: gray;
+  --border-radius: 8px;
+  --border-width: 1px;
+}
