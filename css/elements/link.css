@@ -1,0 +1,18 @@
+a:link {
+  text-decoration: none;
+  color: var(--primary-color);
+  border: 1px;
+}
+
+a:visited,
+a:hover {
+  color: var(--secondary-color);
+}
+
+a:active {
+  color: var(--primary-active-color);
+}
+
+a:focus {
+  text-decoration: underline;
+}
