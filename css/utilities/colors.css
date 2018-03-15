@@ -1,0 +1,15 @@
+.primary {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  padding: var(--padding);
+}
+
+.primary-outlined {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  padding: var(--padding);
+}
