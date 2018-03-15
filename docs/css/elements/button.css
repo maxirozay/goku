@@ -1,1 +1,0 @@
-button{background-color:var(--primary-color);color:var(--primary-text-color);border-radius:var(--border-radius);border:1px solid var(--primary-color);padding:4px 8px}button:disabled{opacity:.5}button:enabled:active,button:enabled:focus,button:enabled:hover{border-color:var(--primary-active-color)}button:enabled:active{background-color:var(--primary-active-color)}
