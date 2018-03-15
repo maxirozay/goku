@@ -3,6 +3,35 @@ nav {
 }
 
 /**
+ * Nav links
+ */
+
+nav a {
+  color: var(--primary-color-text) !important;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+nav a:active {
+  color: var(--secondary-color) !important;
+}
+
+nav ul:last-child {
+  background-color: var(--primary-color);
+  position: fixed;
+  bottom: -100%;
+  transition: 0.3s;
+  width: 100%;
+}
+
+nav li {
+  padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+}
+nav li:hover {
+  padding-left: 0.3rem;
+  border-left: 0.2rem solid var(--secondary-color);
+}
+
+/**
  * Nav toggle
  */
 
@@ -37,7 +66,7 @@ nav label {
   right: 1.5rem;
   cursor: pointer;
   padding: 0.25rem;
-    margin-top: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 /* Drawer toggle icon */
@@ -47,35 +76,6 @@ nav .bar {
 }
 nav .bar:last-child {
   transform: translate(4px, -4px) rotate(-45deg);
-}
-
-/**
- * Nav links
- */
-
-nav a {
-  color: var(--primary-color-text) !important;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-nav a:active {
-  color: var(--secondary-color) !important;
-}
-
-nav ul:last-child {
-  background-color: var(--primary-color);
-  position: fixed;
-  bottom: -100%;
-  transition: 0.3s;
-  width: 100%;
-}
-
-nav li {
-  padding: 0.75rem 0.5rem 0.75rem 0.5rem;
-}
-nav li:hover {
-  padding-left: 0.3rem;
-  border-left: 0.2rem solid var(--secondary-color);
 }
 
 /**
