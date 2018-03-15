@@ -21,11 +21,11 @@
     }
   },
   "devDependencies": {
-    "autoprefixer": "^8.1.0",
     "browser-sync": "^2.23.6",
     "cssnano": "^3.10.0",
     "husky": "^0.15.0-rc.9",
     "postcss-cli": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
     "stylelint": "^9.1.1",
     "stylelint-config-standard": "^18.2.0"
