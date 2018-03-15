@@ -5,6 +5,7 @@
   --secondary-color: gray;
   --border-radius: 8px;
   --border-width: 1px;
+  --padding: 0.2rem 0.4rem 0.2rem 0.4rem;
 }
 
 /* Why this breakpoints? https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862 */

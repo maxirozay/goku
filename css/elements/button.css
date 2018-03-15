@@ -3,7 +3,7 @@ button {
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: 1px solid var(--primary-color);
-  padding: 4px 8px 4px 8px;
+  padding: var(--padding);
 }
 
 button:disabled {
