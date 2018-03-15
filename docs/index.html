@@ -8,88 +8,98 @@
     <title>Goku CSS - Documentation</title>
   </head>
   <body>
-    <h1>Goku CSS - Documentation</h1>
-    <h2>Elements</h2>
+    <div class="portait">
+      
+      <h1>Goku CSS - Documentation</h1>
+      <h2>Elements</h2>
 
-    <h3>Button</h3>
-    <button type="button">Button</button>
-    <button type="button" disabled="true">Disabled Button</button>
+      <h3>Button</h3>
+      <button type="button">Button</button>
+      <button type="button" disabled="true">Disabled Button</button>
 
-    <h3>Input</h3>
-    <h4>Text</h4>
-    <input type="text">
-    <h4>Number</h4>
-    <input type="number">
-    <h4>Date</h4>
-    <input type="date">
+      <h3>Input</h3>
+      <h4>Text</h4>
+      <input type="text">
+      <h4>Number</h4>
+      <input type="number">
+      <h4>Date</h4>
+      <input type="date">
 
-    <h3>Link</h3>
-    <a href="#">Link</a>
+      <h3>Link</h3>
+      <a href="#">Link</a>
 
-    <h3>List</h3>
-    <ul>
-      <li>Item 1</li>
-      <li>
-        Item 2
+      <h3>List</h3>
+      <ul>
+        <li>Item 1</li>
+        <li>
+          Item 2
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>
+              Item 3
+              <ul>
+                <li><a href="#">Link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Item 3</li>
+      </ul>
+
+      <h3>Nav</h3>
+      <label class="nav-sticky-toggle" for="nav-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </label>
+      <nav>
         <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>
-            Item 3
-            <ul>
-              <li><a href="#">Link</a></li>
-            </ul>
-          </li>
+          <li><a href="#">Home</a></li>
         </ul>
-      </li>
-      <li>Item 3</li>
-    </ul>
+        <input id="nav-toggle" type="checkbox" autocomplete="off">
+        <ul>
+          <label for="nav-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </label>
+          <li><a href="#">About</a></li>
+          <li class="right"><a href="#">Contact</a></li>
+          <li class="right"><a href="#">Login</a></li>
+        </ul>
+      </nav>
 
-    <h3>Nav</h3>
-    <label class="nav-sticky-toggle" for="nav-toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </label>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-      </ul>
-      <input id="nav-toggle" type="checkbox" autocomplete="off">
-      <ul>
-        <label for="nav-toggle">
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </label>
-        <li><a href="#">About</a></li>
-        <li class="right"><a href="#">Contact</a></li>
-        <li class="right"><a href="#">Login</a></li>
-      </ul>
-    </nav>
+      <h3>Select</h3>
+      <select>
+        <option>Item 1</option>
+        <option>Item 2</option>
+      </select>
 
-    <h3>Select</h3>
-    <select>
-      <option>Item 1</option>
-      <option>Item 2</option>
-    </select>
+      <h3>Table</h3>
+      <table>
+        <tr>
+          <th>Username</th>
+          <th>Origin</th>
+        </tr>
+        <tr>
+          <td>Goku</td>
+          <td>Vegeta</td>
+        </tr>
+        <tr>
+          <td>Vegeta</td>
+          <td>Vegeta</td>
+        </tr>
+      </table>
 
-    <h3>Table</h3>
-    <table>
-      <tr>
-        <th>Username</th>
-        <th>Origin</th>
-      </tr>
-      <tr>
-        <td>Goku</td>
-        <td>Vegeta</td>
-      </tr>
-      <tr>
-        <td>Vegeta</td>
-        <td>Vegeta</td>
-      </tr>
-    </table>
+      <h3>Textarea</h3>
+      <textarea rows="4" cols="80"></textarea>
 
-    <h3>Textarea</h3>
-    <textarea rows="4" cols="80"></textarea>
+      <h2>Utilities</h2>
 
+      <h3>Portait</h3>
+      <div class="portait">
+        This div is centered and will never be more than 1200 pixels width. 1200 pixels is our desktop breakpoints but you can change the portait class' max-width if you would like another size.
+      </div>
+
+    </div>
   </body>
 </html>
