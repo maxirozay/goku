@@ -8,6 +8,7 @@
  * HTML Elements
  */
 
+@import "elements/body.css";
 @import "elements/button.css";
 @import "elements/link.css";
 @import "elements/list.css";
