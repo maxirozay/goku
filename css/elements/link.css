@@ -10,7 +10,7 @@ a:hover {
 }
 
 a:active {
-  color: var(--primary-active-color);
+  color: var(--primary-color-active);
 }
 
 a:focus {

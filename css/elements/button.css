@@ -1,6 +1,6 @@
 button {
   background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: 1px solid var(--primary-color);
   padding: 4px 8px 4px 8px;
@@ -12,10 +12,10 @@ button:disabled {
 
 button:enabled:hover,
 button:enabled:focus {
-  border-color: var(--primary-active-color);
+  border-color: var(--primary-color-active);
 }
 
 button:enabled:active {
-  background-color: var(--primary-active-color);
-  border-color: var(--primary-active-color);
+  background-color: var(--primary-color-active);
+  border-color: var(--primary-color-active);
 }
