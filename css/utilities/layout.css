@@ -24,6 +24,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+.gap {
+  grid-gap: 0.5rem;
+}
 
 .col1,
 .col2,
