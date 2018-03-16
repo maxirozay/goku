@@ -16,6 +16,15 @@
   height: 100%;
 }
 
+.center {
+  text-align: center;
+  margin: auto;
+}
+.right {
+  text-align: right;
+  margin-left: auto;
+}
+
 /*
  * Grid
  */
