@@ -1,5 +1,8 @@
 # Browsers that we support
+[production staging]
+last 2 version
 
+[legacy]
 > 1%
 Last 2 versions
 IE 10
