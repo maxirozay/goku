@@ -50,6 +50,7 @@ nav li:hover {
   float: right;
   padding: 1rem;
   cursor: pointer;
+  width: auto;
 }
 
 /* Sticky toggle icon */
@@ -67,6 +68,7 @@ nav label {
   cursor: pointer;
   padding: 0.25rem;
   margin-top: 0.75rem;
+  width: auto;
 }
 
 /* Drawer toggle icon */
