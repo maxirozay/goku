@@ -2,6 +2,6 @@ select {
   background-color: var(--primary-color);
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
-  border: 1px solid var(--primary-color);
+  border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
 }

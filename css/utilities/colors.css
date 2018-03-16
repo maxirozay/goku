@@ -2,7 +2,7 @@
   background-color: var(--primary-color);
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
-  border: 1px solid var(--primary-color);
+  border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
 }
 
@@ -10,7 +10,7 @@
   background-color: transparent;
   color: var(--primary-color);
   border-radius: var(--border-radius);
-  border: 1px solid var(--primary-color);
+  border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
 }
 
@@ -18,7 +18,7 @@
   background-color: var(--success-color);
   color: black;
   border-radius: var(--border-radius);
-  border: 1px solid var(--success-color);
+  border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
 }
 
@@ -26,7 +26,7 @@
   background-color: transparent;
   color: var(--success-color);
   border-radius: var(--border-radius);
-  border: 1px solid var(--success-color);
+  border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
 }
 
@@ -34,7 +34,7 @@
   background-color: var(--error-color);
   color: black;
   border-radius: var(--border-radius);
-  border: 1px solid var(--error-color);
+  border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
 }
 
@@ -42,6 +42,6 @@
   background-color: transparent;
   color: var(--error-color);
   border-radius: var(--border-radius);
-  border: 1px solid var(--error-color);
+  border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
 }

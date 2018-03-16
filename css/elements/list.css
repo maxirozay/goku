@@ -7,5 +7,5 @@ ul {
 li ul {
   margin: 0.5rem 0 0.5rem 0;
   padding-left: 1rem;
-  border-left: 1px solid var(--primary-color);
+  border-left: var(--border-width) solid var(--primary-color);
 }

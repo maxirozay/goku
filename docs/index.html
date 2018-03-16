@@ -12,6 +12,7 @@
 
       <h1>Goku CSS - Documentation</h1>
       <h2>Customization</h2>
+
       <h3>Try to change the colors.</h3>
       <div class="grid">
         <label class="col3">
@@ -29,6 +30,18 @@
         <label class="col3">
           Secondary color
           <input type="color" value="#444444" onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
+        </label>
+      </div>
+
+      <h3>Try to change the border.</h3>
+      <div class="grid">
+        <label class="col6">
+          Border radius
+          <input type="number" value="8" min="0" onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
+        </label>
+        <label class="col6">
+          Border width
+          <input type="number" value="1" min="0" onchange="document.documentElement.style.setProperty('--border-width', event.target.value + 'px')">
         </label>
       </div>
 

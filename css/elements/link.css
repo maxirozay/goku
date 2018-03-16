@@ -1,7 +1,7 @@
 a:link {
   text-decoration: none;
   color: var(--primary-color);
-  border: 1px;
+  border: var(--border-width);
 }
 
 a:visited,
