@@ -11,6 +11,27 @@
     <div class="portait">
 
       <h1>Goku CSS - Documentation</h1>
+      <h2>Customization</h2>
+      <h3>Try to change the colors.</h3>
+      <div class="grid">
+        <label class="col3">
+          Primary color
+          <input type="color" value="#d3d3d3" onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
+        </label>
+        <label class="col3">
+          Primary color text
+          <input type="color" value="#000000" onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
+        </label>
+        <label class="col3">
+          Primary color active
+          <input type="color" value="#888888" onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
+        </label>
+        <label class="col3">
+          Secondary color
+          <input type="color" value="#444444" onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
+        </label>
+      </div>
+
       <h2>Elements</h2>
 
       <h3>Button</h3>

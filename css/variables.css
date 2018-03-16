@@ -1,8 +1,8 @@
 :root {
   --primary-color: lightgray;
   --primary-color-text: black;
-  --primary-color-active: gray;
-  --secondary-color: gray;
+  --primary-color-active: #888;
+  --secondary-color: #444;
   --success-color: #55ff44;
   --error-color: red;
   --border-radius: 8px;
