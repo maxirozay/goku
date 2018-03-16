@@ -5,6 +5,7 @@ input {
   padding: var(--padding);
   display: block;
   max-width: calc(100% - 0.85rem);
+  box-shadow: var(--shadow);
 }
 
 label {

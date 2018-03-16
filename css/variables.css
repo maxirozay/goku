@@ -8,6 +8,7 @@
   --border-radius: 4px;
   --border-width: 1px;
   --padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  --shadow: 0 0.1rem 0.1rem #bbb;
 }
 
 /* Why this breakpoints? https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862 */

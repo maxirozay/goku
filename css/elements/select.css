@@ -4,4 +4,5 @@ select {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
+  box-shadow: var(--shadow);
 }
