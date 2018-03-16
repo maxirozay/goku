@@ -2,5 +2,5 @@ textarea {
   background-color: white;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
-  padding: 4px 8px 4px 8px;
+  padding: var(--padding);
 }
