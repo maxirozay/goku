@@ -22,5 +22,6 @@
  * Utilities
  */
 
-@import "utilities/layout.css";
 @import "utilities/colors.css";
+@import "utilities/layout.css";
+@import "utilities/loading.css";
