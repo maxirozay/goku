@@ -45,6 +45,14 @@
   grid-column: span 12;
 }
 
+.col1 input,
+.col2 input,
+.col3 input,
+.col4 input,
+.col5 input,
+.col6 input {
+  max-width: 50%;
+}
 
 .row1 {
   grid-row: span 1;
