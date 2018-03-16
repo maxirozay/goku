@@ -3,4 +3,9 @@ input {
   border-radius: var(--border-radius);
   border: 1px solid var(--primary-color);
   padding: 4px 8px 4px 8px;
+  display: block;
+}
+
+label {
+  display: inline-block;
 }
