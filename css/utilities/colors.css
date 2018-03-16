@@ -13,3 +13,19 @@
   border: 1px solid var(--primary-color);
   padding: var(--padding);
 }
+
+.success {
+  background-color: var(--success-color);
+  color: black;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--success-color);
+  padding: var(--padding);
+}
+
+.success-outlined {
+  background-color: transparent;
+  color: var(--success-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--success-color);
+  padding: var(--padding);
+}
