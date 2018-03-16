@@ -72,13 +72,13 @@
         <h3>Try to change the padding.</h3>
         <label>
           Padding
-          <input class="w" type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onchange="document.documentElement.style.setProperty('--padding', event.target.value)">
+          <input class="w" type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
         </label>
 
         <h3>Try to change the shadow.</h3>
         <label>
           Shadow
-          <input class="w" type="text" value="0 0.1rem 0.1rem #bbb" onchange="document.documentElement.style.setProperty('--shadow', event.target.value)">
+          <input class="w" type="text" value="0 0.1rem 0.1rem #bbb" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
         </label>
 
       </section>
