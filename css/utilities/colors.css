@@ -29,3 +29,19 @@
   border: 1px solid var(--success-color);
   padding: var(--padding);
 }
+
+.error {
+  background-color: var(--error-color);
+  color: black;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--error-color);
+  padding: var(--padding);
+}
+
+.error-outlined {
+  background-color: transparent;
+  color: var(--error-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--error-color);
+  padding: var(--padding);
+}
