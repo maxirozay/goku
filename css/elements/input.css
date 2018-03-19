@@ -7,6 +7,10 @@ input {
   max-width: calc(100% - 0.85rem);
   box-shadow: var(--shadow);
 }
+input:hover,
+input:focus {
+  border-color: var(--primary-color-active);
+}
 
 label {
   display: inline-block;

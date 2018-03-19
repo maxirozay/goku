@@ -6,3 +6,7 @@ textarea {
   width: calc(100% - 0.85rem);
   box-shadow: var(--shadow);
 }
+textarea:hover,
+textarea:focus {
+  border-color: var(--primary-color-active);
+}
