@@ -26,6 +26,25 @@
 }
 
 /*
+ * Flex
+ */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media (--tablet-landscape-up) {
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.flex-item {
+  flex: auto;
+}
+
+/*
  * Grid
  */
 
