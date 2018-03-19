@@ -55,8 +55,11 @@ nav li:hover {
 }
 
 /* Sticky toggle icon */
-.bar {
+.nav-sticky-toggle .bar {
   width: 16px;
+}
+.bar {
+  width: 12px;
   height: 2px;
   margin: 4px auto;
   background-color: var(--secondary-color);
@@ -74,7 +77,6 @@ nav label {
 
 /* Drawer toggle icon */
 nav .bar {
-  width: 12px;
   transform: translate(-4px, 2px) rotate(45deg);
 }
 nav .bar:last-child {

@@ -1,0 +1,105 @@
+.sidebar-toggle {
+  display: none;
+}
+
+#sidebar-toggle,
+#sidebar-toggle-right {
+  display: none;
+}
+
+@media (--tablet-landscape-up) {
+  .sidebar-toggle {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top: 0.5rem;
+    display: block;
+  }
+  .sidebar-toggle .bar {
+    transition: .3s;
+  }
+  .sidebar-toggle .bar:first-child {
+    transform: translateY(1px) rotate(-40deg);
+  }
+  .sidebar-toggle .bar:last-child {
+    transform: translateY(3px) rotate(40deg);
+  }
+
+
+  .sidebar-content {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-title {
+    margin-top: 0.4rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+
+  #sidebar-toggle:checked ~ .sidebar-toggle .bar:first-child {
+    transform: translate(1px, 1px) rotate(40deg);
+  }
+  #sidebar-toggle:checked ~ .sidebar-toggle .bar:last-child {
+    transform: translate(1px, 3px) rotate(-40deg);
+  }
+  #sidebar-toggle:checked ~ .sidebar-content {
+    display: none;
+  }
+  #sidebar-toggle:checked ~ .sidebar-toggle {
+    float: none;
+  }
+  #sidebar-toggle:checked ~ .sidebar-title {
+    writing-mode: vertical-lr;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  /**
+   * Right Sidebar
+   */
+
+  .sidebar-right .sidebar-toggle {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 0.5rem;
+  }
+  .sidebar-right .sidebar-toggle .bar:first-child {
+    transform: translate(2px, 1px) rotate(40deg);
+  }
+  .sidebar-right .sidebar-toggle .bar:last-child {
+    transform: translate(2px, 3px) rotate(-40deg);
+  }
+
+  .sidebar-right .sidebar-content {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .sidebar-right .sidebar-title {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  #sidebar-toggle-right:checked ~ .sidebar-toggle .bar:first-child {
+    transform: translate(-1px, 1px) rotate(-40deg);
+  }
+  #sidebar-toggle-right:checked ~ .sidebar-toggle .bar:last-child {
+    transform: translate(-1px, 3px) rotate(40deg);
+  }
+  #sidebar-toggle-right:checked ~ .sidebar-content {
+    display: none;
+  }
+  #sidebar-toggle-right:checked ~ .sidebar-toggle {
+    float: none;
+  }
+  #sidebar-toggle-right:checked ~ .sidebar-title {
+    writing-mode: vertical-lr;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
