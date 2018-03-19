@@ -23,6 +23,12 @@
   text-align: right;
 }
 
+.align-center {
+  margin: auto;
+}
+.align-right {
+  margin-left: auto;
+}
 /*
  * Flex
  */
