@@ -37,15 +37,15 @@ nav li:hover {
  */
 
 /* Nav state */
-#nav-toggle {
+#nav__toggle {
   display: none;
 }
-#nav-toggle:checked ~ ul {
+#nav__toggle:checked ~ ul {
   bottom: 0;
 }
 
 /* Nav sticky toggle */
-.nav-sticky-toggle {
+.nav__sticky-toggle {
   position: sticky;
   top: 0;
   float: right;
@@ -55,7 +55,7 @@ nav li:hover {
 }
 
 /* Sticky toggle icon */
-.nav-sticky-toggle .bar {
+.nav__sticky-toggle .bar {
   width: 16px;
 }
 .bar {
@@ -95,7 +95,7 @@ nav .bar:last-child {
   }
 
   nav label,
-  .nav-sticky-toggle {
+  .nav__sticky-toggle {
     display: none;
   }
 
