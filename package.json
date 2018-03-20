@@ -2,7 +2,7 @@
   "name": "goku",
   "version": "0.0.0",
   "description": "CSS Framework",
-  "main": "index.js",
+  "main": "dist/goku.css",
   "repository": "git@github.com:maxirozay/goku.git",
   "contributors": [
     "Maxime Rossier <rossier.maxime@gmail.com>",
