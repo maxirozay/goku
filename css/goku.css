@@ -24,6 +24,7 @@
  */
 
 @import "utilities/colors.css";
+@import "utilities/dropdown.css";
 @import "utilities/layout.css";
 @import "utilities/loading.css";
 @import "utilities/sidebar.css";
