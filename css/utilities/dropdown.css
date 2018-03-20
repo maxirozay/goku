@@ -4,7 +4,6 @@
 
 .dropdown button:focus ~ div {
   display: block;
-  padding-top: 0.2rem;
 }
 
 .dropdown > div {
@@ -13,6 +12,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  padding-top: 0.2rem;
 }
 
 .dropdown > div > ul {
