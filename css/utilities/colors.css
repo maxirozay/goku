@@ -16,6 +16,24 @@
   box-shadow: var(--shadow);
 }
 
+.secondary {
+  background-color: var(--secondary-color);
+  color: var(--secondary-color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--secondary-color);
+  padding: var(--padding);
+  box-shadow: var(--shadow);
+}
+
+.secondary-outlined {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--secondary-color);
+  padding: var(--padding);
+  box-shadow: var(--shadow);
+}
+
 .success {
   background-color: var(--success-color);
   color: black;
