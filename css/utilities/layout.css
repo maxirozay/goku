@@ -63,6 +63,15 @@
   left: 0;
 }
 
+.float-right {
+  float: right;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 /*
  * Flex
  */
