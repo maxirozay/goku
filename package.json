@@ -11,19 +11,22 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "postcss css/goku.css --watch --dir dist/",
-    "build": "postcss css/goku.css --dir dist/"
+    "dev": "postcss css/goku.css --watch --dir docs/css/",
+    "docs": "yarn dev & browser-sync start --ss 'docs' --files 'docs'",
+    "build": "postcss css/goku.css --dir dist/ && BROWSERSLIST_ENV='legacy' postcss css/goku.css -o dist/goku-legacy.css && cp dist/goku.css docs/css/"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build && git add dist"
+      "pre-commit": "yarn build && git add dist docs/css"
     }
   },
   "devDependencies": {
-    "autoprefixer": "^8.1.0",
+    "browser-sync": "^2.23.6",
     "cssnano": "^3.10.0",
     "husky": "^0.15.0-rc.9",
     "postcss-cli": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
     "stylelint": "^9.1.1",
     "stylelint-config-standard": "^18.2.0"
   }

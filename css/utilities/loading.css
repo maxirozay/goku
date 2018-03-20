@@ -1,0 +1,17 @@
+.loading {
+  animation-name: loading;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-color: var(--primary-color);
+  }
+  50% {
+    background-color: var(--secondary-color);
+  }
+  100% {
+    background-color: var(--primary-color);
+  }
+}

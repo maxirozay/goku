@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/goku.css">
+    <title>Goku CSS - Documentation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+  </head>
+  <body>
+    <div class="portait">
+
+      <h1>Goku CSS - Documentation</h1>
+
+      <section>
+        <h2>Customization</h2>
+
+        <p>
+          You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="primary">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
+        </p>
+        <pre class="primary"><code class="language-css" data-lang="css">--primary-color: lightgray;
+--primary-color-text: black;
+--primary-color-active: #888;
+--secondary-color: #444;
+--success-color: #55ff44;
+--error-color: red;
+--border-radius: 4px;
+--border-width: 1px;
+--padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+--shadow: 0 0.1rem 0.1rem #bbb;</code></pre>
+
+        <h3>Try to change the colors.</h3>
+        <div class="grid  text-center">
+          <label class="col3">
+            Primary color
+            <input
+              class="align-center"
+              type="color"
+              value="#d3d3d3"
+              onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
+          </label>
+          <label class="col3">
+            Primary color text
+            <input
+              class="align-center"
+              type="color"
+              value="#000000"
+              onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
+          </label>
+          <label class="col3">
+            Primary color active
+            <input
+              class="align-center"
+              type="color"
+              value="#888888"
+              onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
+          </label>
+          <label class="col3">
+            Secondary color
+            <input
+              class="align-center"
+              type="color"
+              value="#444444"
+              onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
+          </label>
+        </div>
+
+        <h3>Try to change the border.</h3>
+        <div class="grid  text-center">
+          <label class="col6">
+            Border radius
+            <input
+              class="align-center"
+              type="number"
+              value="4"
+              min="0"
+              onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
+          </label>
+          <label class="col6">
+            Border width
+            <input
+              class="align-center"
+              type="number"
+              value="1"
+              min="0"
+              onchange="document.documentElement.style.setProperty('--border-width', event.target.value + 'px')">
+          </label>
+        </div>
+
+        <h3>Try to change the padding.</h3>
+        <label>
+          Padding
+          <input class="w" type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
+        </label>
+
+        <h3>Try to change the shadow.</h3>
+        <label>
+          Shadow
+          <input class="w" type="text" value="0 0.1rem 0.1rem #bbb" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
+        </label>
+
+      </section>
+      <section>
+        <h2>Elements</h2>
+        <p>You don't need to do do anything for the basic HTML elements. They are already styled based on the values of CSS variables.</p>
+
+        <h3>Button</h3>
+        <button type="button">Button</button>
+        <button type="button" disabled="true">Disabled Button</button>
+
+        <h3>Input</h3>
+        <div class="grid  text-center">
+          <label class="col4">
+            Text
+            <input class="align-center" type="text">
+          </label>
+          <label class="col4">
+            Number
+            <input class="align-center" type="number">
+          </label>
+          <label class="col4">
+            Date
+            <input class="align-center" type="date">
+          </label>
+        </div>
+
+        <h3>Link</h3>
+        <a href="#">Link</a>
+
+        <h3>List</h3>
+        <ul>
+          <li>Item 1</li>
+          <li>
+            Item 2
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>
+                Item 3
+                <ul>
+                  <li><a href="#">Link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Item 3</li>
+        </ul>
+
+        <h3>Nav</h3>
+        <label class="nav__sticky-toggle" for="nav__toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </label>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+          </ul>
+          <input id="nav__toggle" type="checkbox" autocomplete="off">
+          <ul>
+            <label for="nav__toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+            <li><a href="#">About</a></li>
+            <li class="right"><a href="#">Contact</a></li>
+            <li class="right"><a href="#">Login</a></li>
+          </ul>
+        </nav>
+
+        <p>Code:</p>
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;label class="nav__sticky-toggle" for="nav__toggle"&gt;
+  &lt;div class="bar"&gt;&lt;/div&gt;
+  &lt;div class="bar"&gt;&lt;/div&gt;
+&lt;/label&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;input id="nav__toggle" type="checkbox" autocomplete="off"&gt;
+  &lt;ul&gt;
+    &lt;label for="nav__toggle"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="right"&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="right"&gt;&lt;a href="#"&gt;Login&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+        <h3>Select</h3>
+        <select>
+          <option>Item 1</option>
+          <option>Item 2</option>
+        </select>
+
+        <h3>Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Origin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Goku</td>
+              <td>Vegeta</td>
+            </tr>
+            <tr>
+              <td>Vegeta</td>
+              <td>Vegeta</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Textarea</h3>
+        <label>
+          Text
+          <textarea rows="4"></textarea>
+        </label>
+
+      </section>
+      <section>
+        <h2>Utilities</h2>
+        <p>The utilities classes used in those elements are the one displayed on each element.</p>
+
+        <h3>Colors</h3>
+        <div class="grid gap">
+          <div class="primary  col2">primary</div>
+          <div class="primary-outlined  col2">primary-outlined</div>
+          <div class="success  col2">success</div>
+          <div class="success-outlined  col2">success-outlined</div>
+          <div class="error  col2">error</div>
+          <div class="error-outlined  col2">error-outlined</div>
+        </div>
+
+        <h3>Layout</h3>
+
+        <h4>Flex</h4>
+        <p>
+          Use the <code class="primary">flex-item</code> class inside an element containing the <code class="primary">flex</code> class.
+        </p>
+        <div class="flex">
+          <div class="primary-outlined  flex-item">
+            flex-item
+          </div>
+          <div class="primary-outlined  flex-item">
+            flex-item
+          </div>
+          <div class="primary-outlined  flex-item">
+            flex-item
+          </div>
+        </div>
+
+        <h4>Grid</h4>
+        <p>
+          You can use any class from <code class="primary">col1</code> to <code class="primary">col12</code> and from <code class="primary">row1</code> to <code class="primary">row12</code> inside an element with the <code class="primary">grid</code> class.
+          Use the <code class="primary">gap</code> class to add a gap between the elements.
+        </p>
+        <div class="grid gap">
+          <div class="primary-outlined  col12">col12</div>
+          <div class="primary-outlined  col2 row6">col2 row6</div>
+          <div class="primary-outlined  col4 row2">col4 row2</div>
+          <div class="primary-outlined  col4">col4</div>
+          <div class="primary-outlined  col2">col4</div>
+          <div class="primary-outlined  col6">col6</div>
+          <div class="primary-outlined  col4 row2">col4 row2</div>
+          <div class="primary-outlined  col4">col4</div>
+          <div class="primary-outlined  col2">col4</div>
+          <div class="primary-outlined  col6">col6</div>
+          <div class="primary-outlined  col10">col10</div>
+        </div>
+
+        <h4>Loading</h4>
+        <button type="button" class="loading">loading</button>
+
+        <h4>Portait</h4>
+        <div class="portait">
+          This div is centered and will never be more than 1200 pixels width. 1200 pixels is our desktop breakpoints but you can change the portait class' max-width if you would like another size.
+        </div>
+
+        <h4>Position</h4>
+        <div class="primary-outlined  text-center">
+          text-center
+        </div>
+        <br>
+        <div class="primary-outlined  text-right">
+          text-right
+        </div>
+        <br>
+        <input class="align-center" type="text" value="align-center">
+        <br>
+        <input class="align-right" type="text" value="align-right">
+
+        <h4>Size</h4>
+        <p>The <code class="primary">w</code> class takes 100% of the width and the <code class="primary">h</code> class takes 100% of the height.</p>
+        <button type="button" class="w">w</button>
+
+
+        <h3>Sidebar</h3>
+        <div class="flex">
+
+          <div class="primary">
+            <input id="sidebar__toggle" type="checkbox" autocomplete="off">
+            <label class="sidebar__toggle" for="sidebar__toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+            <div class="sidebar__title">Sidebar</div>
+            <div class="sidebar__content">
+              <ul>
+                <li>Products</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="primary-outlined  flex-item">
+            content
+          </div>
+
+          <div class="primary  sidebar_right">
+            <input id="sidebar__toggle_right" type="checkbox" autocomplete="off">
+            <label class="sidebar__toggle" for="sidebar__toggle_right">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+            <div class="sidebar__title">Sidebar</div>
+            <div class="sidebar__content">
+              <ul>
+                <li>Products</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <p>Code:</p>
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="flex"&gt;
+
+  &lt;div class="primary"&gt;
+    &lt;input id="sidebar__toggle" type="checkbox" autocomplete="off"&gt;
+    &lt;label class="sidebar__toggle" for="sidebar__toggle"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+    &lt;div class="sidebar__title"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="sidebar__content"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Products&lt;/li&gt;
+        &lt;li&gt;About&lt;/li&gt;
+        &lt;li&gt;Contact&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="primary-outlined  flex-item"&gt;
+    content
+  &lt;/div&gt;
+
+  &lt;div class="primary  sidebar_right"&gt;
+    &lt;input id="sidebar__toggle_right" type="checkbox" autocomplete="off"&gt;
+    &lt;label class="sidebar__toggle" for="sidebar__toggle_right"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+    &lt;div class="sidebar__title"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="sidebar__content"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Products&lt;/li&gt;
+        &lt;li&gt;About&lt;/li&gt;
+        &lt;li&gt;Contact&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+select {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  padding: var(--padding);
+  box-shadow: var(--shadow);
+}
+select:hover,
+select:focus {
+  border-color: var(--primary-color-active);
+}

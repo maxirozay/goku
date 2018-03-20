@@ -1,7 +1,8 @@
 module.exports = () => ({
   plugins: {
     stylelint: {},
-    autoprefixer: {},
-    cssnano: {}
+    'postcss-import': {},
+    'postcss-cssnext': {},
+    cssnano: { autoprefixer: false }
   }
 })

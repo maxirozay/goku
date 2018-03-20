@@ -1,0 +1,18 @@
+input {
+  background-color: white;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  padding: var(--padding);
+  display: block;
+  max-width: calc(100% - 0.85rem);
+  box-shadow: var(--shadow);
+}
+input:hover,
+input:focus {
+  border-color: var(--primary-color-active);
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+}
