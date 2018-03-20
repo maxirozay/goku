@@ -2,6 +2,7 @@
   display: inline-block;
 }
 
+.dropdown:hover > div,
 .dropdown button:focus ~ div {
   display: block;
 }
