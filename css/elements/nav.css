@@ -7,16 +7,27 @@ nav {
  * Nav links
  */
 
-nav a {
-  color: var(--primary-color-text) !important;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+/* dropdown item */
+.nav__dropdown > .dropdown > button {
+ background:none !important;
+ color:inherit;
+ padding:0 !important;
+ font: inherit;
+ cursor: pointer;
+ border: none !important;
+ box-shadow: none !important;
 }
-nav a:active {
+
+nav > ul > li > a,
+.nav__dropdown > .dropdown > button {
+  color: var(--primary-color-text) !important;
+}
+nav > ul > li > a:active,
+.nav__dropdown > .dropdown > button:active {
   color: var(--secondary-color) !important;
 }
 
-nav ul:last-child {
+nav > ul:last-child {
   background-color: var(--primary-color);
   position: fixed;
   bottom: -100%;
@@ -24,11 +35,11 @@ nav ul:last-child {
   width: 100%;
 }
 
-nav li {
-  padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+nav > ul > li {
+  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
 }
-nav li:hover {
-  padding-left: 0.3rem;
+nav > ul > li:hover {
+  padding-left: 0.55rem;
   border-left: 0.2rem solid var(--secondary-color);
 }
 
@@ -90,7 +101,6 @@ nav .bar:last-child {
 @media (--tablet-landscape-up) {
   nav {
     overflow: auto;
-    position: sticky;
     top: 0;
   }
 
@@ -99,20 +109,25 @@ nav .bar:last-child {
     display: none;
   }
 
-  nav ul:last-child {
+  nav > ul:last-child {
     position: inherit;
   }
 
-  nav ul li {
+  nav > ul > li {
     float: left;
-    padding: 0.75rem 0.5rem 0.8rem 0.5rem;
+    padding-bottom: 0.8rem;
   }
-  nav ul li.right {
+  nav > ul > li.right {
     float: right;
   }
-  nav ul li:hover {
-    padding: 0.75rem 0.5rem 0.6rem 0.5rem;
+  nav > ul > li:hover {
+    padding-bottom: 0.6rem;
+    padding-left: 0.75rem;
     border-left: none;
     border-bottom: 0.2rem solid var(--secondary-color);
+  }
+
+  .nav__dropdown > .dropdown > button:focus ~ div {
+    padding-top: 1rem;
   }
 }
