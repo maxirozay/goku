@@ -2,13 +2,23 @@
   display: inline-block;
 }
 
-.dropdown div {
-  display: none;
-  position: absolute;
-}
 .dropdown button:focus ~ div {
   display: block;
-  padding-top: 0.5rem;
+  padding-top: 0.2rem;
+}
+
+.dropdown > div {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.dropdown > div > ul {
+  max-height: 50vh;
+  margin: var(--padding);
+  overflow-y: auto;
 }
 
 .dropdown li:first-child {
@@ -16,4 +26,19 @@
 }
 .dropdown li {
   margin-top: 0.2rem;
+  cursor: pointer;
+}
+
+@media (--tablet-landscape-up) {
+  .dropdown > div {
+    display: none;
+    position: absolute;
+    bottom: inherit;
+    left: inherit;
+    width: auto;
+  }
+
+  .dropdown > div > ul {
+    margin: 0;
+  }
 }
