@@ -3,7 +3,7 @@
 }
 
 .dropdown:hover > div,
-.dropdown button:focus ~ div {
+.dropdown:focus-within > div {
   display: block;
 }
 
@@ -13,7 +13,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding-top: 0.2rem;
+  padding-top: 0.4rem;
 }
 
 .dropdown > div > ul {

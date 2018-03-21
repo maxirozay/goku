@@ -17,6 +17,18 @@
 }
 
 /*
+ * Spacing
+ */
+
+.padding {
+  padding: var(--padding);
+}
+
+.margin {
+  margin: var(--margin);
+}
+
+/*
  * Position
  */
 

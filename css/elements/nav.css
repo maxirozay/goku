@@ -7,17 +7,6 @@ nav {
  * Nav links
  */
 
-/* dropdown item */
-.nav__dropdown > .dropdown > button {
- background:none !important;
- color:inherit;
- padding:0 !important;
- font: inherit;
- cursor: pointer;
- border: none !important;
- box-shadow: none !important;
-}
-
 nav > ul > li > a,
 .nav__dropdown > .dropdown > button {
   color: var(--primary-color-text) !important;
@@ -130,4 +119,9 @@ nav .bar:last-child {
   .nav__dropdown > .dropdown > button:focus ~ div {
     padding-top: 1rem;
   }
+}
+
+/* dropdown item */
+.nav__dropdown > .dropdown > div {
+  padding-top: 1rem;
 }
