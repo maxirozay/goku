@@ -26,10 +26,8 @@
 
 @media (--tablet-landscape-up) {
   .dropdown > ul {
-    display: none;
     position: absolute;
     bottom: inherit;
     left: inherit;
-    width: auto;
   }
 }

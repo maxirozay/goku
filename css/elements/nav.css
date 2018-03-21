@@ -70,6 +70,7 @@ nav label {
   cursor: pointer;
   padding: 0.25rem;
   margin-top: 0.75rem;
+  margin-right: 0;
   width: auto;
 }
 
@@ -121,5 +122,10 @@ nav .bar:last-child {
     padding-left: 0.75rem;
     border-left: none;
     border-bottom: 0.2rem solid var(--secondary-color);
+  }
+
+  /* Dropdown */
+  .nav__dropdown .dropdown > ul {
+    position: absolute;
   }
 }
