@@ -2,6 +2,7 @@
   animation-name: loading;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  color: transparent;
 }
 
 @keyframes loading {
