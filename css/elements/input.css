@@ -3,6 +3,7 @@ input {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
+  margin: var(--margin);
   display: block;
   max-width: calc(100% - 0.85rem);
   box-shadow: var(--shadow);
@@ -15,4 +16,5 @@ input:focus {
 label {
   display: inline-block;
   width: 100%;
+  margin: var(--margin);
 }

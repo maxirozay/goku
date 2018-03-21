@@ -7,6 +7,7 @@ progress {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   box-shadow: var(--shadow);
+  margin: var(--margin);
 }
 
 progress::-webkit-progress-bar {

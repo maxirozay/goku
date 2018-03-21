@@ -4,6 +4,7 @@ select {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
+  margin: var(--margin);
   box-shadow: var(--shadow);
 }
 select:hover,
