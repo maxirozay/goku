@@ -1,0 +1,26 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.modal__background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal__content {
+  background-color: white;
+  position: relative;
+  color: var(--primary-color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  padding: var(--padding);
+  box-shadow: var(--shadow);
+  margin: auto;
+}
