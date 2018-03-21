@@ -44,9 +44,10 @@ nav > ul > li:hover {
 
 /* Nav sticky toggle */
 .nav__sticky-toggle {
-  position: sticky;
+  position: fixed;
   top: 0;
-  float: right;
+  right: 0;
+  margin: 0;
   padding: 1rem;
   cursor: pointer;
   width: auto;
