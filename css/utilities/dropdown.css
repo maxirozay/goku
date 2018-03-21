@@ -27,6 +27,9 @@
 }
 .dropdown li {
   margin-top: 0.2rem;
+}
+
+.dropdown a {
   cursor: pointer;
 }
 
