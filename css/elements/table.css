@@ -7,11 +7,13 @@ table {
   margin: var(--margin);
 }
 
+th {
+  border-bottom: var(--border-width) solid var(--primary-color);
+}
+
 tr,
 th,
 td {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
 }
 
