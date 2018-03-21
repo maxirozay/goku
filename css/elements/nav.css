@@ -7,12 +7,10 @@ nav {
  * Nav links
  */
 
-nav > ul > li > a,
-.nav__dropdown > .dropdown > button {
+nav > ul > li > a {
   color: var(--primary-color-text) !important;
 }
-nav > ul > li > a:active,
-.nav__dropdown > .dropdown > button:active {
+nav > ul > li > a:active {
   color: var(--secondary-color) !important;
 }
 
@@ -83,6 +81,15 @@ nav .bar:last-child {
   transform: translate(4px, -4px) rotate(-45deg);
 }
 
+
+/* Dropdown */
+.nav__dropdown .dropdown > ul {
+  margin-top: 1rem;
+  position: relative;
+  border: none;
+  box-shadow: none;
+}
+
 /**
  * Nav large screen
  */
@@ -115,13 +122,4 @@ nav .bar:last-child {
     border-left: none;
     border-bottom: 0.2rem solid var(--secondary-color);
   }
-
-  .nav__dropdown > .dropdown > button:focus ~ div {
-    padding-top: 1rem;
-  }
-}
-
-/* dropdown item */
-.nav__dropdown > .dropdown > div {
-  padding-top: 1rem;
 }

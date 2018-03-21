@@ -2,31 +2,22 @@
   display: inline-block;
 }
 
-.dropdown:hover > div,
-.dropdown:focus-within > div {
+.dropdown:hover > ul,
+.dropdown:focus-within > ul {
   display: block;
 }
 
-.dropdown > div {
+.dropdown > ul {
   display: none;
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 0.4rem;
-}
-
-.dropdown > div > ul {
+  margin-bottom: 0.2rem;
   max-height: 50vh;
-  margin: var(--padding);
   overflow-y: auto;
 }
 
-.dropdown li:first-child {
-  margin-top: 0;
-}
 .dropdown li {
-  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
 .dropdown a {
@@ -34,15 +25,11 @@
 }
 
 @media (--tablet-landscape-up) {
-  .dropdown > div {
+  .dropdown > ul {
     display: none;
     position: absolute;
     bottom: inherit;
     left: inherit;
     width: auto;
-  }
-
-  .dropdown > div > ul {
-    margin: 0;
   }
 }
