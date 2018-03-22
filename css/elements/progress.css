@@ -9,6 +9,12 @@ progress {
   box-shadow: var(--shadow);
   margin: var(--margin);
 }
+progress:first-child {
+  margin-left: 0;
+}
+progress:last-child {
+  margin-right: 0;
+}
 
 progress::-webkit-progress-bar {
   /* For IE10 */
