@@ -11,3 +11,9 @@ select:hover,
 select:focus {
   border-color: var(--primary-color-active);
 }
+select:first-child {
+  margin-left: 0;
+}
+select:last-child {
+  margin-right: 0;
+}

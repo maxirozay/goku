@@ -11,6 +11,12 @@ input:hover,
 input:focus {
   border-color: var(--primary-color-active);
 }
+input:first-child {
+  margin-left: 0;
+}
+input:last-child {
+  margin-right: 0;
+}
 
 label {
   display: inline-block;

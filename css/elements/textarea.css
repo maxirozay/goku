@@ -11,3 +11,9 @@ textarea:hover,
 textarea:focus {
   border-color: var(--primary-color-active);
 }
+textarea:first-child {
+  margin-left: 0;
+}
+textarea:last-child {
+  margin-right: 0;
+}

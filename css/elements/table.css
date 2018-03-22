@@ -5,6 +5,12 @@ table {
   table-layout: fixed;
   margin: var(--margin);
 }
+table:first-child {
+  margin-left: 0;
+}
+table:last-child {
+  margin-right: 0;
+}
 
 th {
   border-bottom: var(--border-width) solid var(--primary-color);
