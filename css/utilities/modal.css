@@ -17,9 +17,9 @@
 .modal__content {
   background-color: white;
   position: relative;
-  color: var(--primary-color-text);
+  color: black;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
+  border: var(--border-width) solid white;
   padding: var(--padding);
   box-shadow: var(--shadow);
   margin: auto;
