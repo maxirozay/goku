@@ -7,11 +7,9 @@ nav {
  * Nav links
  */
 
-nav > ul > li > a {
+nav > ul > li > a,
+nav > ul > li > .dropdown > a {
   color: var(--primary-color-text) !important;
-}
-nav > ul > li > a:active {
-  color: var(--secondary-color) !important;
 }
 
 nav > ul:last-child {
