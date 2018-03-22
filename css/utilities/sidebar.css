@@ -18,6 +18,7 @@
   }
   .sidebar__toggle .bar {
     transition: .3s;
+    background-color: var(--primary-color);
   }
   .sidebar__toggle .bar:first-child {
     transform: translateY(1px) rotate(-40deg);
