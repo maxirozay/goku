@@ -1,5 +1,4 @@
 table {
-  border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   border-collapse: collapse;
   box-shadow: var(--shadow);
