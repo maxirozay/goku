@@ -4,7 +4,6 @@ a:link {
   border: var(--border-width);
 }
 
-a:visited,
 a:hover {
   color: var(--secondary-color);
 }
