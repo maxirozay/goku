@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "postcss css/goku.css --watch --dir docs/css/",
     "docs": "yarn dev & yarn browser-sync start --ss 'docs' --files 'docs'",
-    "build": "yarn postcss css/goku.css --dir dist/ && set BROWSERSLIST_ENV='legacy' && yarn postcss css/goku.css -o dist/goku-legacy.css && cp dist/goku.css docs/css/"
+    "build": "yarn postcss css/goku.css --dir dist/&&set BROWSERSLIST_ENV=legacy&&yarn postcss css/goku.css -o dist/goku-legacy.css&&cp dist/goku.css docs/css/"
   },
   "husky": {
     "hooks": {
