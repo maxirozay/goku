@@ -2,8 +2,11 @@
   display: inline-block;
 }
 
-.dropdown:hover > ul,
-.dropdown:focus-within > ul {
+/* hover and focus-within are separated because focus-within break on IE */
+.dropdown:hover ul {
+  display: block;
+}
+.dropdown:focus-within ul {
   display: block;
 }
 
