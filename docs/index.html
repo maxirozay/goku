@@ -94,18 +94,6 @@
           </label>
         </div>
 
-        <h3>Try to change the padding.</h3>
-        <label class="w">
-          Padding
-          <input class="w" type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
-        </label>
-
-        <h3>Try to change the margin.</h3>
-        <label class="w">
-          Margin
-          <input class="w" type="text" value="0.2rem 0.8rem 0.2rem 0" onkeyup="document.documentElement.style.setProperty('--margin', event.target.value)">
-        </label>
-
         <h3>Try to change the shadow.</h3>
         <label class="w">
           Shadow
@@ -513,14 +501,73 @@
 &lt;/div&gt;</code></pre>
 
         <h3>Spacing</h3>
-        <div class="">
-        <span class="margin" style="border: 1px solid">
-          margin
-        </span>
-        <span class="padding" style="border: 1px solid">
-          padding
-        </span>
+        <div>
+          <span class="margin" style="border: 1px solid">
+            margin
+          </span>
+          <span class="padding" style="border: 1px solid">
+            padding
+          </span>
         </div>
+
+        <h4>Try to change the padding class.</h4>
+        <label class="w">
+          Padding
+          <input class="w" type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
+        </label>
+
+        <h4>Try to change the margin class.</h4>
+        <label class="w">
+          Margin
+          <input class="w" type="text" value="0.2rem 0.8rem 0.2rem 0" onkeyup="document.documentElement.style.setProperty('--margin', event.target.value)">
+        </label>
+
+        <h4>Horizontal and vertical groups</h4>
+        <div class="group--vertical">
+          <div class="group--horizontal">
+            <button type="button">button</button>
+            <button type="button">button</button>
+            <button type="button">button</button>
+          </div>
+          <div>
+            <button type="button">button</button>
+          </div>
+          <div>
+            <button type="button">button</button>
+          </div>
+          <div>
+            <button type="button">button</button>
+          </div>
+        </div>
+        <p>Code:</p>
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="group--vertical"&gt;
+  &lt;div class="group--horizontal"&gt;
+    &lt;button type="button"&gt;button&lt;/button&gt;
+    &lt;button type="button"&gt;button&lt;/button&gt;
+    &lt;button type="button"&gt;button&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button type="button"&gt;button&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button type="button"&gt;button&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button type="button"&gt;button&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4>Try to change the group--horizontal class.</h4>
+        <label class="w">
+          Margin
+          <input class="w" type="text" value="0.2rem" onkeyup="document.documentElement.style.setProperty('--group-horizontal', event.target.value)">
+        </label>
+
+        <h4>Try to change the group--vertical class.</h4>
+        <label class="w">
+          Margin
+          <input class="w" type="text" value="0.4rem" onkeyup="document.documentElement.style.setProperty('--group-vertical', event.target.value)">
+        </label>
 
         <h3>Typo</h3>
         <span class="small">small</span>
