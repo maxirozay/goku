@@ -5,7 +5,6 @@ input {
   margin: var(--margin);
   display: block;
   max-width: calc(100% - 0.85rem);
-  box-shadow: var(--shadow);
 }
 input:hover,
 input:focus {
