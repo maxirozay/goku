@@ -11,6 +11,8 @@
   --border-width: 1px;
   --padding: 0.2rem 0.4rem 0.2rem 0.4rem;
   --margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+  --group-horizontal: 0.2rem;
+  --group-vertical: 0.4rem;
   --shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 
