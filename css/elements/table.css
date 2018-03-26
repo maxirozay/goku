@@ -26,5 +26,5 @@ tr:nth-child(even) {
   background-color: rgba(128, 128, 128, 0.2);
 }
 tr:hover {
-  background-color: var(--primary-color-active);
+  background-color: rgba(128, 128, 128, 0.3);
 }
