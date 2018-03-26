@@ -20,6 +20,7 @@ button:enabled:focus {
 button:enabled:active {
   background-color: var(--primary-color-active);
   border-color: var(--primary-color-active);
+  box-shadow: none;
 }
 
 button:first-child {
