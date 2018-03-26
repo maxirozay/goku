@@ -29,5 +29,8 @@
     "postcss-import": "^11.1.0",
     "stylelint": "^9.1.1",
     "stylelint-config-standard": "^18.2.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
   }
 }
