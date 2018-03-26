@@ -1,4 +1,5 @@
 :root {
+  --font-family: sans-serif;
   --primary-color: lightgray;
   --primary-color-text: black;
   --primary-color-active: #888;

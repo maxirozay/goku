@@ -20,7 +20,8 @@
         <p>
           You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="primary">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
         </p>
-        <pre class="primary"><code class="language-css" data-lang="css">--primary-color: lightgray;
+        <pre class="primary"><code class="language-css" data-lang="css">--font-family: sans-serif;
+--primary-color: lightgray;
 --primary-color-text: black;
 --primary-color-active: #888;
 --secondary-color: #444;
@@ -31,6 +32,9 @@
 --padding: 0.2rem 0.4rem 0.2rem 0.4rem;
 --margin: 0.2rem 0.8rem 0.2rem 0;
 --shadow: 0 0.1rem 0.1rem #bbb;</code></pre>
+
+        <h3>Try to change the font-family</h3>
+        <input class="w" type="text" value="sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
 
         <h3>Try to change the colors.</h3>
         <div class="grid  text-center">
