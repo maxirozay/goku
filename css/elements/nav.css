@@ -21,7 +21,7 @@ nav a {
 
 nav > ul > li > a,
 nav > ul > li > .dropdown {
-  padding: 0.4rem;
+  padding: 0.4rem !important;
   border: 0.2rem solid var(--primary-color) !important;
   border-radius: 0 !important;
 }
