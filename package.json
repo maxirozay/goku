@@ -13,17 +13,11 @@
   "scripts": {
     "dev": "postcss css/goku.css --watch --dir docs/css/",
     "docs": "yarn dev & yarn browser-sync start --ss 'docs' --files 'docs'",
-    "build": "yarn postcss css/goku.css --dir dist/&&set BROWSERSLIST_ENV=legacy&&yarn postcss css/goku.css -o dist/goku-legacy.css&&cp dist/goku.css docs/css/"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn build && git add dist docs/css"
-    }
+    "build": "yarn postcss css/goku.css --dir dist/&&set BROWSERSLIST_ENV=legacy&&yarn postcss css/goku.css -o dist/goku-legacy.css&&cp dist/goku.css docs/css/ && git add dist docs/css -f"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "cssnano": "^3.10.0",
-    "husky": "^0.15.0-rc.9",
     "postcss-cli": "^5.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
