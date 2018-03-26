@@ -15,20 +15,19 @@ nav > ul:last-child {
  width: 100%;
 }
 
-nav > ul > li {
-  padding: 0.6rem 0 0.6rem 0;
+nav a {
+  color: var(--primary-color-text) !important;
 }
 
 nav > ul > li > a,
-nav > ul > li > .dropdown > a {
-  color: var(--primary-color-text) !important;
+nav > ul > li > .dropdown {
   padding: 0.4rem;
   border: 0.2rem solid var(--primary-color) !important;
   border-radius: 0 !important;
 }
 
 nav > ul > li > a:hover,
-nav > ul > li > .dropdown > a:hover {
+nav > ul > li > .dropdown:hover {
   border-left-color: var(--primary-color-text) !important;
 }
 
@@ -116,20 +115,18 @@ nav .bar:last-child {
 
   nav > ul > li {
     float: left;
-    padding-top: 0.8rem !important;
-    padding-bottom: 0.8rem !important;
   }
   nav > ul > li.right {
     float: right;
   }
 
   nav > ul > li > a,
-  nav > ul > li > .dropdown > a {
+  nav > ul > li > .dropdown {
     padding-top: 0.6rem !important;
     padding-bottom: 0.65rem !important;
   }
   nav > ul > li > a:hover,
-  nav > ul > li > .dropdown > a:hover {
+  nav > ul > li > .dropdown:hover {
     border-left-color: var(--primary-color) !important;
     border-bottom-color: var(--secondary-color) !important;
   }
@@ -137,7 +134,7 @@ nav .bar:last-child {
   /* Dropdown */
   .nav__dropdown .dropdown > ul {
     position: absolute;
-    margin-top: 0.6rem;
+    margin-top: 0.9rem;
     margin-left: 0;
   }
 }
