@@ -43,14 +43,14 @@
 .group--horizontal > * {
   margin-right: var(--group-horizontal);
 }
-.group--horizontal:last-child {
+.group--horizontal > *:last-child {
   margin-right: 0;
 }
 
 .group--vertical > * {
   margin-bottom: var(--group-vertical);
 }
-.group--vertical:last-child {
+.group--vertical > *:last-child {
   margin-bottom: 0;
 }
 
