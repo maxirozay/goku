@@ -1,19 +1,19 @@
 a:link,
 a:visited {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--primary-color-active);
   border: var(--border-width) solid transparent;
   border-radius: var(--border-radius);
   display: inline-block;
+  padding: var(--padding);
 }
 
 a:hover {
-  color: var(--primary-color-active);
+  border-color: var(--primary-color-active);
 }
 
 a:active {
-  color: var(--primary-color-active);
-  border-color: var(--primary-color-active);
+  color: var(--primary-color);
 }
 
 a:focus {
