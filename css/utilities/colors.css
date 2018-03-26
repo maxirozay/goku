@@ -4,7 +4,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .primary-outlined {
@@ -13,7 +12,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .secondary {
@@ -22,7 +20,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color);
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .secondary-outlined {
@@ -31,7 +28,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color);
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .success {
@@ -40,7 +36,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color);
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .success-outlined {
@@ -49,7 +44,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color);
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .error {
@@ -58,7 +52,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color);
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .error-outlined {
@@ -67,7 +60,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color);
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .white {
@@ -76,7 +68,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid white;
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }
 
 .white-outlined {
@@ -85,5 +76,4 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid white;
   padding: var(--padding);
-  box-shadow: var(--shadow);
 }

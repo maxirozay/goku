@@ -5,7 +5,6 @@ textarea {
   padding: var(--padding);
   margin: var(--margin);
   width: calc(100% - 0.85rem);
-  box-shadow: var(--shadow);
 }
 textarea:hover,
 textarea:focus {
