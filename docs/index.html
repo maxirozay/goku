@@ -95,9 +95,9 @@
         </div>
 
         <h3>Try to change the shadow.</h3>
-        <label class="w">
+        <label>
           Shadow
-          <input class="w" type="text" value="0 0.1rem 0.1rem #bbb" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
+          <input type="text" value="0 0.1rem 0.1rem #bbb" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
         </label>
 
       </section>
@@ -124,6 +124,17 @@
             <input class="align-center" type="date">
           </label>
         </div>
+
+        <h4>Vertical input</h4>
+        <label class="label--vertical">
+          Text
+          <input type="text">
+        </label>
+        <p>Code:</p>
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;label class="label--vertical"&gt;
+  Text
+  &lt;input type="text"&gt;
+&lt;/label&gt;</code></pre>
 
         <h3>Link</h3>
         <a href="#">Link</a>
@@ -511,15 +522,15 @@
         </div>
 
         <h4>Try to change the padding class.</h4>
-        <label class="w">
+        <label class="label--vertical">
           padding
-          <input class="w" type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
+          <input type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
         </label>
 
         <h4>Try to change the margin class.</h4>
-        <label class="w">
+        <label class="label--vertical">
           margin
-          <input class="w" type="text" value="0.2rem 0.8rem 0.2rem 0" onkeyup="document.documentElement.style.setProperty('--margin', event.target.value)">
+          <input type="text" value="0.2rem 0.8rem 0.2rem 0" onkeyup="document.documentElement.style.setProperty('--margin', event.target.value)">
         </label>
 
         <h4>Horizontal and vertical groups</h4>
@@ -552,15 +563,15 @@
 &lt;/div&gt;</code></pre>
 
         <h4>Try to change the group--horizontal class.</h4>
-        <label class="w">
+        <label class="label--vertical">
           margin-right
-          <input class="w" type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--group-horizontal', event.target.value)">
+          <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--group-horizontal', event.target.value)">
         </label>
 
         <h4>Try to change the group--vertical class.</h4>
-        <label class="w">
+        <label class="label--vertical">
           margin-bottom
-          <input class="w" type="text" value="1rem" onkeyup="document.documentElement.style.setProperty('--group-vertical', event.target.value)">
+          <input type="text" value="1rem" onkeyup="document.documentElement.style.setProperty('--group-vertical', event.target.value)">
         </label>
 
         <h3>Typo</h3>

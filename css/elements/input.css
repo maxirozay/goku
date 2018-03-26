@@ -2,7 +2,6 @@ input {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
-  display: block;
   max-width: calc(100% - 0.85rem);
 }
 input:hover,
@@ -16,6 +15,11 @@ input:last-child {
   margin-right: 0;
 }
 
-label {
-  display: inline-block;
+.label--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.label--vertical > * {
+  margin-top: 0.5rem;
 }
