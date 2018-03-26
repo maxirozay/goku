@@ -1,7 +1,7 @@
 a:link,
 a:visited {
   text-decoration: none;
-  color: var(--primary-color-active);
+  color: var(--primary-color);
   border: var(--border-width) solid transparent;
   border-radius: var(--border-radius);
   display: inline-block;
@@ -13,7 +13,7 @@ a:hover {
 }
 
 a:active {
-  color: var(--primary-color);
+  color: var(--primary-color-active);
 }
 
 a:focus {
