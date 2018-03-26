@@ -64,6 +64,9 @@
 .text-right {
   text-align: right;
 }
+.text-left {
+  text-align: left;
+}
 
 .align-center {
   margin: auto !important;

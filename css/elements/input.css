@@ -20,6 +20,6 @@ input:last-child {
   flex-direction: column;
 }
 
-.label--vertical > * {
+.label--vertical > * + * {
   margin-top: 0.5rem;
 }
