@@ -14,6 +14,14 @@
   padding: var(--padding);
 }
 
+.primary-transparent {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: none;
+  padding: var(--padding);
+  box-shadow: none;
+}
+
 .secondary {
   background-color: var(--secondary-color);
   color: var(--secondary-color-text);
