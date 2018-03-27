@@ -69,7 +69,8 @@
 }
 
 .align-center {
-  margin: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .align-right {
   margin-left: auto !important;
