@@ -50,7 +50,7 @@
 
 .group--vertical > * {
   margin-bottom: var(--group-vertical);
-  display: block;
+  display: table;
 }
 .group--vertical > *:last-child {
   margin-bottom: 0;
