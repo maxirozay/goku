@@ -15,6 +15,30 @@ input:last-child {
   margin-right: 0;
 }
 
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+input[type='checkbox'] ~ span {
+  border: var(--border-width) solid var(--primary-color);
+  border-radius: var(--border-radius);
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  margin-top: 0.1rem;
+}
+input[type='checkbox']:hover ~ span {
+  border-color: var(--primary-color-active);
+}
+input[type='checkbox']:active ~ span {
+  box-shadow: none;
+}
+input[type='checkbox']:checked ~ span {
+  background: var(--primary-color);
+}
+
+
 .label--vertical > * + * {
   margin-top: 0.5rem;
 }
