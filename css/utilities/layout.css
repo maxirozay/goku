@@ -42,6 +42,7 @@
 
 .group--horizontal > * {
   margin-right: var(--group-horizontal);
+  display: inline-block;
 }
 .group--horizontal > *:last-child {
   margin-right: 0;
@@ -49,6 +50,7 @@
 
 .group--vertical > * {
   margin-bottom: var(--group-vertical);
+  display: block;
 }
 .group--vertical > *:last-child {
   margin-bottom: 0;
