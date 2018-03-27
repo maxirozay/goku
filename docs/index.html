@@ -110,6 +110,7 @@
         <button type="button" disabled="true">Disabled Button</button>
 
         <h3>Input</h3>
+        <h4>Type</h4>
         <div class="grid  text-center">
           <label class="col4">
             Text
@@ -124,15 +125,21 @@
             <input class="align-center" type="date">
           </label>
         </div>
+        <p>For a checkbox you must add a span after the input.</p>
+        <label>
+          Checkbox
+          <input type="checkbox">
+          <span></span>
+        </label>
 
-        <h4>Vertical input</h4>
+        <h4>Vertical label</h4>
         <label class="label--vertical">
-          <span>Text</span>
+          <div>Text</div>
           <input type="text">
         </label>
         <p>Code:</p>
         <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;label class="label--vertical"&gt;
-  &lt;span&gt;Text&lt;/span&gt;
+  &lt;div&gt;Text&lt;/div&gt;
   &lt;input type="text"&gt;
 &lt;/label&gt;</code></pre>
 
@@ -386,9 +393,12 @@
           text-right
         </div>
         <br>
-        <input class="align-center" type="text" value="align-center">
-        <br>
-        <input class="align-right" type="text" value="align-right">
+        <div class="primary  align-center" style="width: 100px">
+          align-center
+        </div>
+        <div class="primary  align-right" style="width: 100px">
+          align-right
+        </div>
         <br>
         <div class="primary-outlined  clearfix">
           clearfix
