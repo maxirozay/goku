@@ -38,6 +38,29 @@ input[type='checkbox']:checked ~ span {
   background: var(--primary-color);
 }
 
+input[type='file'] {
+  position: absolute;
+  opacity: 0;
+	width: 0.1px;
+	height: 0.1px;
+  overflow: hidden;
+}
+input[type='file'] ~ span {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  border: var(--border-width) solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  display: inline-block;
+  box-shadow: var(--shadow);
+  margin-top: 0.1rem;
+}
+input[type='file']:hover ~ span {
+  border-color: var(--primary-color-active);
+}
+input[type='file']:active ~ span {
+  box-shadow: none;
+}
 
 .label--vertical > * + * {
   margin-top: 0.5rem;
