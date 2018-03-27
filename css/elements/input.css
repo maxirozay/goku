@@ -15,11 +15,6 @@ input:last-child {
   margin-right: 0;
 }
 
-.label--vertical {
-  display: flex;
-  flex-direction: column;
-}
-
 .label--vertical > * + * {
   margin-top: 0.5rem;
 }
