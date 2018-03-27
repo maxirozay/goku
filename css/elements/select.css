@@ -3,7 +3,7 @@ select {
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
-  padding: var(--padding);
+  padding: calc(var(--padding) - 0.2rem);
   box-shadow: var(--shadow);
 }
 select:hover,
