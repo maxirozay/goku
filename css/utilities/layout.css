@@ -40,20 +40,12 @@
   margin: var(--margin) !important;
 }
 
-.group--horizontal > * {
-  margin-right: var(--group-horizontal);
-  display: inline-block;
-}
-.group--horizontal > *:last-child {
-  margin-right: 0;
+.group-margin--horizontal > * + * {
+  margin-left: 0.5rem;
 }
 
-.group--vertical > * {
-  margin-bottom: var(--group-vertical);
-  display: table;
-}
-.group--vertical > *:last-child {
-  margin-bottom: 0;
+.group-margin--vertical > * + * {
+  margin-top: 0.5rem;
 }
 
 /*
