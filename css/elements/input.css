@@ -51,7 +51,6 @@ input[type='file'] ~ span {
   border: var(--border-width) solid var(--primary-color);
   border-radius: var(--border-radius);
   padding: var(--padding);
-  display: inline-block;
   box-shadow: var(--shadow);
   margin-top: 0.1rem;
 }
