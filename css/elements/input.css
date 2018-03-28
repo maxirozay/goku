@@ -45,22 +45,24 @@ input[type='file'] {
 	height: 0.1px;
   overflow: hidden;
 }
-input[type='file'] ~ span {
+input[type='file'] ~ div {
   background-color: var(--primary-color);
   color: var(--primary-color-text);
   border: var(--border-width) solid var(--primary-color);
   border-radius: var(--border-radius);
   padding: var(--padding);
+  width: 200px;
   box-shadow: var(--shadow);
-  margin-top: 0.1rem;
+  margin-top: 0.5rem;
 }
-input[type='file']:hover ~ span {
+input[type='file']:hover ~ div {
   border-color: var(--primary-color-active);
 }
-input[type='file']:active ~ span {
+input[type='file']:active ~ div {
   box-shadow: none;
 }
 
-.label--vertical > * + * {
+label > input {
+  display: block;
   margin-top: 0.5rem;
 }
