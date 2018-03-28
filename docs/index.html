@@ -37,8 +37,8 @@
         <input class="w" type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
 
         <h3>Try to change the colors.</h3>
-        <div class="grid  text-center">
-          <label class="col3">
+        <div class="flex  text-center">
+          <label class="flex-item  margin">
             Primary color
             <input
               class="align-center"
@@ -46,7 +46,7 @@
               value="#d3d3d3"
               onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
           </label>
-          <label class="col3">
+          <label class="flex-item  margin">
             Primary color text
             <input
               class="align-center"
@@ -54,7 +54,7 @@
               value="#000000"
               onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
           </label>
-          <label class="col3">
+          <label class="flex-item  margin">
             Primary color active
             <input
               class="align-center"
@@ -62,7 +62,7 @@
               value="#888888"
               onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
           </label>
-          <label class="col3">
+          <label class="flex-item  margin">
             Secondary color
             <input
               class="align-center"
@@ -73,8 +73,8 @@
         </div>
 
         <h3>Try to change the border.</h3>
-        <div class="grid  text-center">
-          <label class="col6">
+        <div class="flex  text-center">
+          <label class="flex-item  margin  label--vertical">
             Border radius
             <input
               class="align-center"
@@ -83,7 +83,7 @@
               min="0"
               onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
           </label>
-          <label class="col6">
+          <label class="flex-item  margin  label--vertical">
             Border width
             <input
               class="align-center"
@@ -95,8 +95,10 @@
         </div>
 
         <h3>Try to change the shadow.</h3>
-        <label>
-          Shadow
+        <label class="label--vertical">
+          <div>
+            Shadow
+          </div>
           <input type="text" value="0 0.1rem 0.1rem #bbb" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
         </label>
 
@@ -110,38 +112,36 @@
         <button type="button" disabled="true">Disabled Button</button>
 
         <h3>Input</h3>
+        <p>Use the class <code class="language-css" data-lang="css">label--vertical</code> on a label and put the text in a <code class="language-html" data-lang="html">div</code> to show the label on top of the input.</p>
         <h4>Type</h4>
-        <div class="grid  text-center">
-          <label class="col4">
-            Text
+        <div class="flex  text-center">
+          <label class="flex-item  margin  label--vertical">
+            <div>Text</div>
             <input class="align-center" type="text">
           </label>
-          <label class="col4">
-            Number
+          <label class="flex-item  margin  label--vertical">
+            <div>Number</div>
             <input class="align-center" type="number">
           </label>
-          <label class="col4">
-            Date
+          <label class="flex-item  margin  label--vertical">
+            <div>Date</div>
             <input class="align-center" type="date">
           </label>
         </div>
-        <p>For a checkbox you must add a span after the input.</p>
-        <label>
-          Checkbox
-          <input type="checkbox">
-          <span></span>
-        </label>
 
-        <h4>Vertical label</h4>
-        <label class="label--vertical">
-          <div>Text</div>
-          <input type="text">
-        </label>
-        <p>Code:</p>
-        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;label class="label--vertical"&gt;
-  &lt;div&gt;Text&lt;/div&gt;
-  &lt;input type="text"&gt;
-&lt;/label&gt;</code></pre>
+        <p>For checkbox and file inputs you must add an span after the input.</p>
+        <div class="flex  text-center">
+          <label class="flex-item  margin">
+            Checkbox
+            <input type="checkbox">
+            <span></span>
+          </label>
+          <label class="flex-item  margin">
+            File
+            <input type="file">
+            <span>File Name</span>
+          </label>
+        </div>
 
         <h3>Link</h3>
         <a href="#">Link</a>
