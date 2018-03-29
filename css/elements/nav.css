@@ -18,7 +18,7 @@ nav > ul:last-child {
   width: 100%;
 }
 
-nav a {
+nav > ul > li > a {
   color: var(--primary-color-text) !important;
 }
 
