@@ -41,7 +41,7 @@
 
         <h3>Try to change the colors.</h3>
         <div class="flex  text-center">
-          <label class="flex-item">
+          <label class="flex-auto">
             Primary color
             <input
               class="align-center"
@@ -49,7 +49,7 @@
               value="#d3d3d3"
               onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             Primary color text
             <input
               class="align-center"
@@ -57,7 +57,7 @@
               value="#000000"
               onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             Primary color active
             <input
               class="align-center"
@@ -65,7 +65,7 @@
               value="#888888"
               onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             Secondary color
             <input
               class="align-center"
@@ -77,7 +77,7 @@
 
         <h3>Try to change the border.</h3>
         <div class="flex  text-center">
-          <label class="flex-item">
+          <label class="flex-auto">
             Border radius
             <input
               class="align-center"
@@ -86,7 +86,7 @@
               min="0"
               onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             Border width
             <input
               class="align-center"
@@ -115,15 +115,15 @@
         <h3>Input</h3>
         <h4>Type</h4>
         <div class="flex  text-center">
-          <label class="flex-item">
+          <label class="flex-auto">
             <div>Text</div>
             <input class="align-center" type="text">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             <div>Number</div>
             <input class="align-center" type="number">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             <div>Date</div>
             <input class="align-center" type="date">
           </label>
@@ -317,17 +317,31 @@
 
         <h4>Flex</h4>
         <p>
-          Use the <code class="primary">flex-item</code> class inside an element containing the <code class="primary">flex</code> class.
+          Use the <code class="primary">flex-auto</code> class inside an element containing the <code class="primary">flex</code> class to automatically fill the space.
         </p>
         <div class="flex">
-          <div class="primary-outlined  flex-item">
-            flex-item
+          <div class="primary-outlined  flex-auto">
+            flex-auto
           </div>
-          <div class="primary-outlined  flex-item">
-            flex-item
+          <div class="primary-outlined  flex-auto">
+            flex-auto
           </div>
-          <div class="primary-outlined  flex-item">
-            flex-item
+          <div class="primary-outlined  flex-auto">
+            flex-auto
+          </div>
+        </div>
+        <p>
+          You can also use <code class="primary">flex-x</code> where x is a digit from 1 to 8.
+        </p>
+        <div class="flex">
+          <div class="primary-outlined  flex-2">
+            flex-2
+          </div>
+          <div class="primary-outlined  flex-4">
+            flex-4
+          </div>
+          <div class="primary-outlined  flex-8">
+            flex-8
           </div>
         </div>
 
@@ -461,7 +475,7 @@
             </div>
           </div>
 
-          <div class="primary-outlined  flex-item">
+          <div class="primary-outlined  flex-auto">
             content
           </div>
 
@@ -502,7 +516,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class="primary-outlined  flex-item"&gt;
+  &lt;div class="primary-outlined  flex-auto"&gt;
     content
   &lt;/div&gt;
 
@@ -543,19 +557,19 @@
 
         <h4>Try to change the margin class.</h4>
         <div class="flex">
-          <label class="flex-item">
+          <label class="flex-auto">
             margin-top
             <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             margin-right
             <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             margin-bottom
             <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             margin-left
             <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
           </label>
@@ -571,11 +585,11 @@
         <h2>Exemple</h2>
         <p>Description</p>
         <div class="flex">
-          <label class="flex-item">
+          <label class="flex-auto">
             Enter your name
             <input type="text">
           </label>
-          <label class="flex-item">
+          <label class="flex-auto">
             Enter your email
             <input type="email">
           </label>
