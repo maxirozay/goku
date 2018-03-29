@@ -129,19 +129,24 @@
           </label>
         </div>
 
-        <p>For checkbox and file inputs you must add an span after the input.</p>
-        <div class="flex  text-center">
-          <label class="label__checkbox  flex-item">
-            Checkbox
-            <input type="checkbox">
-            <span></span>
-          </label>
-          <label class="flex-item">
-            File
-            <input type="file">
-            <div class="align-center">File Name</div>
-          </label>
-        </div>
+        <p>For checkbox you must add an span after the input and the class <code class="language-css" data-lang="css">label__checkbox</code> on the label.</p>
+        <label class="label__checkbox">
+          Checkbox
+          <input type="checkbox">
+          <span></span>
+        </label>
+        <p>File</p>
+        <label>
+          Regular file input
+          <input type="file">
+        </label>
+        <label class="label__file">
+          Dropbox file input
+          <div>
+            Click or drop your file here
+          </div>
+          <input type="file">
+        </label>
 
         <h3>Link</h3>
         <a href="#">Link</a>
