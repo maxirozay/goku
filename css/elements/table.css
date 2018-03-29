@@ -3,6 +3,7 @@ table {
   border-collapse: collapse;
   box-shadow: var(--shadow);
   table-layout: fixed;
+  margin: var(--margin);
 }
 table:first-child {
   margin-left: 0;

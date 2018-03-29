@@ -3,6 +3,7 @@ textarea {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
+  margin: var(--margin);
   width: calc(100% - 0.85rem);
 }
 textarea:hover,

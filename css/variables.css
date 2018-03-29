@@ -10,9 +10,11 @@
   --border-radius: 4px;
   --border-width: 1px;
   --padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-  --margin: 0.2rem 0.2rem 0.2rem 0.2rem;
-  --group-margin--horizontal: 0.5rem;
-  --group-margin--vertical: 0.5rem;
+  --margin-t: 0.5rem;
+  --margin-r: 0.5rem;
+  --margin-b: 0.5rem;
+  --margin-l: 0.5rem;
+  --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
 

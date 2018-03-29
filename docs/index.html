@@ -30,7 +30,7 @@
 --border-radius: 4px;
 --border-width: 1px;
 --padding: 0.2rem 0.4rem 0.2rem 0.4rem;
---margin: 0.2rem 0.8rem 0.2rem 0;
+--margin: 0.5rem;
 --shadow: 0 0.1rem 0.1rem #bbb;</code></pre>
 
         <h3>Try to change the font-family</h3>
@@ -74,7 +74,7 @@
 
         <h3>Try to change the border.</h3>
         <div class="flex  text-center">
-          <label class="flex-item  margin  group-margin--vertical">
+          <label class="flex-item">
             Border radius
             <input
               class="align-center"
@@ -83,7 +83,7 @@
               min="0"
               onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
           </label>
-          <label class="flex-item  margin  group-margin--vertical">
+          <label class="flex-item">
             Border width
             <input
               class="align-center"
@@ -95,7 +95,7 @@
         </div>
 
         <h3>Try to change the shadow.</h3>
-        <label class="group-margin--vertical">
+        <label>
           Shadow
           <input type="text" value="0 0.1rem 0.1rem #bbb" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
         </label>
@@ -112,15 +112,15 @@
         <h3>Input</h3>
         <h4>Type</h4>
         <div class="flex  text-center">
-          <label class="flex-item  margin  group-margin--vertical">
+          <label class="flex-item">
             <div>Text</div>
             <input class="align-center" type="text">
           </label>
-          <label class="flex-item  margin  group-margin--vertical">
+          <label class="flex-item">
             <div>Number</div>
             <input class="align-center" type="number">
           </label>
-          <label class="flex-item  margin  group-margin--vertical">
+          <label class="flex-item">
             <div>Date</div>
             <input class="align-center" type="date">
           </label>
@@ -128,12 +128,12 @@
 
         <p>For checkbox and file inputs you must add an span after the input.</p>
         <div class="flex  text-center">
-          <label class="flex-item  margin">
+          <label class="label__checkbox  flex-item">
             Checkbox
             <input type="checkbox">
             <span></span>
           </label>
-          <label class="flex-item  margin">
+          <label class="flex-item">
             File
             <input type="file">
             <div class="align-center">File Name</div>
@@ -183,10 +183,10 @@
             <li class="nav__dropdown right">
               <div class="dropdown">
                 <a role="button" tabindex="0">Dropdown</a>
-                <ul class="primary">
-                  <li><a>Item 1</a></li>
-                  <li><a>Item 2</a></li>
-                </ul>
+                <div class="dropdown__content  primary">
+                  <a>Item 1</a>
+                  <a>Item 2</a>
+                </div>
               </div>
             </li>
           </ul>
@@ -212,11 +212,11 @@
     &lt;li class="right"&gt;&lt;a href="#"&gt;Login&lt;/a&gt;&lt;/li&gt;
     &lt;li class="nav__dropdown right"&gt;
       &lt;div class="dropdown"&gt;
-      &lt;a role="button" tabindex="0"&gt;Dropdown&lt;/a&gt;
-        &lt;ul class="primary"&gt;
-          &lt;li&gt;&lt;a&gt;Item 1&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a&gt;Item 2&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
+        &lt;a role="button" tabindex="0"&gt;Dropdown&lt;/a&gt;
+        &lt;div class="dropdown__content  primary"&gt;
+          &lt;a&gt;Item 1&lt;/a&gt;
+          &lt;a&gt;Item 2&lt;/a&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
@@ -281,32 +281,32 @@
 
         <div class="dropdown">
           <button type="button">Buttons Dropdown</button>
-          <ul>
-            <li><button type="button">Item 1</button></li>
-            <li><button type="button">Item 2</button></li>
-          </ul>
+          <div class="dropdown__content">
+            <button type="button">Item 1</button>
+            <button type="button">Item 2</button>
+          </div>
         </div>
         <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;button type="button"&gt;Buttons Dropdown&lt;/button&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;button type="button"&gt;Item 1&lt;/button&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;button type="button"&gt;Item 2&lt;/button&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;div class="dropdown__content"&gt;
+    &lt;button type="button"&gt;Item 1&lt;/button&gt;
+    &lt;button type="button"&gt;Item 2&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-        <div class="dropdown">
-          <a class="primary" role="button" tabindex="0">Links Dropdown</a>
-          <ul class="primary">
-            <li><a role="button" tabindex="0">Item 1</a></li>
-            <li><a role="button" tabindex="0">Item 2</a></li>
-          </ul>
+        <div class="primary dropdown">
+          <a  role="button" tabindex="0">Links Dropdown</a>
+          <div class="dropdown__content  primary">
+            <a role="button" tabindex="0">Item 1</a>
+            <a role="button" tabindex="0">Item 2</a>
+          </div>
         </div>
-        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="dropdown"&gt;
-  &lt;a class="primary" role="button" tabindex="0"&gt;Links Dropdown&lt;/a&gt;
-  &lt;ul class="primary"&gt;
-    &lt;li&gt;&lt;a role="button" tabindex="0"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a role="button" tabindex="0"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="primary dropdown"&gt;
+  &lt;a  role="button" tabindex="0"&gt;Links Dropdown&lt;/a&gt;
+  &lt;div class="dropdown__content  primary"&gt;
+    &lt;a role="button" tabindex="0"&gt;Item 1&lt;/a&gt;
+    &lt;a role="button" tabindex="0"&gt;Item 2&lt;/a&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
         <h3>Layout</h3>
@@ -332,7 +332,7 @@
           You can use any class from <code class="primary">col1</code> to <code class="primary">col12</code> and from <code class="primary">row1</code> to <code class="primary">row12</code> inside an element with the <code class="primary">grid</code> class.
           Use the <code class="primary">gap</code> class to add a gap between the elements.
         </p>
-        <div class="grid gap">
+        <div class="grid">
           <div class="primary-outlined  col12">col12</div>
           <div class="primary-outlined  col2 row6">col2 row6</div>
           <div class="primary-outlined  col4 row2">col4 row2</div>
@@ -385,18 +385,15 @@
         <div class="primary-outlined  text-center">
           text-center
         </div>
-        <br>
         <div class="primary-outlined  text-right">
           text-right
         </div>
-        <br>
         <div class="primary  align-center" style="width: 100px">
           align-center
         </div>
         <div class="primary  align-right" style="width: 100px">
           align-right
         </div>
-        <br>
         <div class="primary-outlined  clearfix">
           clearfix
           <span class="primary  float-right">float-right</span>
@@ -519,6 +516,7 @@
 &lt;/div&gt;</code></pre>
 
         <h3>Spacing</h3>
+        <p>You can use the classes <code class="language-css" data-lang="css">no-padding</code> and <code class="language-css" data-lang="css">no-margin</code> if you don't want the margin or padding.</p>
         <div>
           <span class="margin" style="border: 1px solid">
             margin
@@ -529,69 +527,95 @@
         </div>
 
         <h4>Try to change the padding class.</h4>
-        <label class="group-margin--vertical">
+        <label>
           padding
           <input type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
         </label>
 
         <h4>Try to change the margin class.</h4>
-        <label class="group-margin--vertical">
-          margin
-          <input type="text" value="0.2rem 0.8rem 0.2rem 0" onkeyup="document.documentElement.style.setProperty('--margin', event.target.value)">
-        </label>
-
-        <h4>Horizontal and vertical groups</h4>
-        <div class="group-margin--vertical">
-          <div class="group-margin--horizontal">
-            <button type="button">button</button>
-            <button type="button">button</button>
-            <button type="button">button</button>
-          </div>
-          <div class="group-margin--horizontal">
-            <button type="button">button</button>
-            <button type="button">button</button>
-          </div>
-          <div class="group-margin--horizontal">
-            <button type="button">button</button>
-            <button type="button">button</button>
-            <button type="button">button</button>
-          </div>
+        <div class="flex">
+          <label class="flex-item">
+            margin-top
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
+          </label>
+          <label class="flex-item">
+            margin-right
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
+          </label>
+          <label class="flex-item">
+            margin-bottom
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
+          </label>
+          <label class="flex-item">
+            margin-left
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
+          </label>
         </div>
-        <p>Code:</p>
-        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="group-margin--vertical"&gt;
-  &lt;div class="group-margin--horizontal"&gt;
-    &lt;button type="button"&gt;button&lt;/button&gt;
-    &lt;button type="button"&gt;button&lt;/button&gt;
-    &lt;button type="button"&gt;button&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="group-margin--horizontal"&gt;
-    &lt;button type="button"&gt;button&lt;/button&gt;
-    &lt;button type="button"&gt;button&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="group-margin--horizontal"&gt;
-    &lt;button type="button"&gt;button&lt;/button&gt;
-    &lt;button type="button"&gt;button&lt;/button&gt;
-    &lt;button type="button"&gt;button&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-        <h4>Try to change the group--horizontal class.</h4>
-        <label>
-          margin-left
-          <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--group-margin--horizontal', event.target.value)">
-        </label>
-
-        <h4>Try to change the group--vertical class.</h4>
-        <label>
-          margin-top
-          <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--group-margin--vertical', event.target.value)">
-        </label>
 
         <h3>Typo</h3>
         <span class="small">small</span>
         <a class="small" href="#">small</a>
         <button class="small">small</button>
 
+      </section>
+      <section>
+        <h2>Exemple</h2>
+        <p>Description</p>
+        <div class="flex">
+          <label class="flex-item">
+            Enter your name
+            <input type="text">
+          </label>
+          <label class="flex-item">
+            Enter your email
+            <input type="email">
+          </label>
+        </div>
+        <label>
+          Comment
+          <textarea name="name" rows="2"></textarea>
+        </label>
+        <label class="label__checkbox">
+          Do you want to subscribe to our newsletter?
+          <input type="checkbox">
+          <span></span>
+        </label>
+        <div class="primary  clearfix">
+          This content need a some buttons on the side.
+          <br>
+          This is a new line.
+          <span class="float-right">
+            <button type="button">Edit</button>
+            <button type="button" class="success">Save</button>
+            <button type="button" class="error">Delete</button>
+          </span>
+        </div>
+        <a href="#">Say Hi!</a>
+        <table class="w  text-center">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bob</td>
+              <td>26</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Shopping list</h4>
+        <ul>
+          <li>
+            Chicken
+            <ul>
+              <li>Nuggets</li>
+              <li>Drums</li>
+            </ul>
+          </li>
+          <li>Water</li>
+        </ul>
       </section>
     </div>
 
