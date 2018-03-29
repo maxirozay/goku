@@ -1,5 +1,6 @@
 .sidebar__toggle {
   display: none;
+  margin: 0;
 }
 
 #sidebar__toggle,

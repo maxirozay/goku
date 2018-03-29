@@ -3,32 +3,32 @@
 }
 
 /* hover and focus-within are separated because focus-within break on IE */
-.dropdown:hover ul {
-  display: block;
+.dropdown:hover .dropdown__content {
+  display: flex;
 }
-.dropdown:focus-within ul {
-  display: block;
-}
-
-.dropdown > ul {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 0.2rem;
-  max-height: 50vh;
-  overflow-y: auto;
-}
-
-.dropdown li {
-  margin-bottom: 0.2rem;
+.dropdown:focus-within .dropdown__content {
+  display: flex;
 }
 
 .dropdown a {
   cursor: pointer;
 }
 
+.dropdown__content {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.dropdown__content > a {
+  margin: var(--margin);
+}
+
 @media (--tablet-landscape-up) {
-  .dropdown > ul {
+  .dropdown__content {
     position: absolute;
     bottom: inherit;
     left: inherit;

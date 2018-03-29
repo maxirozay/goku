@@ -7,12 +7,15 @@ nav {
  * Nav links
  */
 
+nav > ul {
+  margin: 0;
+}
 nav > ul:last-child {
- background-color: var(--primary-color);
- position: fixed;
- bottom: -100%;
- transition: 0.3s;
- width: 100%;
+  background-color: var(--primary-color);
+  position: fixed;
+  bottom: -100%;
+  transition: 0.3s;
+  width: 100%;
 }
 
 nav a {
@@ -61,7 +64,7 @@ nav > ul > li > .dropdown:hover {
 .bar {
   width: 12px;
   height: 2px;
-  margin: 4px auto;
+  margin: 3px auto;
   background-color: var(--secondary-color);
 }
 
@@ -71,8 +74,9 @@ nav label {
   right: 1.5rem;
   cursor: pointer;
   padding: 0.25rem;
-  margin-top: 0.75rem;
+  margin: 0.75rem 0 0 0;
   width: auto;
+  display: block;
 }
 
 /* Drawer toggle icon */
@@ -84,7 +88,7 @@ nav .bar:last-child {
 }
 
 /* Dropdown */
-.nav__dropdown .dropdown > ul {
+.nav__dropdown .dropdown > .dropdown__content {
   margin-top: 1rem;
   margin-left: 1rem;
   position: relative;
@@ -132,7 +136,7 @@ nav .bar:last-child {
   }
 
   /* Dropdown */
-  .nav__dropdown .dropdown > ul {
+  .nav__dropdown .dropdown > .dropdown__content {
     position: absolute;
     margin-top: 0.9rem;
     margin-left: 0;

@@ -2,17 +2,11 @@ input {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
-  max-width: calc(100% - 0.85rem);
+  margin: var(--margin);
 }
 input:hover,
 input:focus {
   border-color: var(--primary-color-active);
-}
-input:first-child {
-  margin-left: 0;
-}
-input:last-child {
-  margin-right: 0;
 }
 
 input[type='checkbox'] {
@@ -62,7 +56,17 @@ input[type='file']:active ~ div {
   box-shadow: none;
 }
 
-label > input {
-  display: block;
-  margin-top: 0.5rem;
+.label__checkbox {
+  display: inline;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: var(--margin);
+}
+
+label > input, textarea {
+  margin-left: 0;
+  margin-right: 0;
 }

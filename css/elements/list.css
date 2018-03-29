@@ -1,6 +1,6 @@
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: var(--margin);
   padding: 0;
 }
 
