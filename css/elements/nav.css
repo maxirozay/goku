@@ -7,31 +7,20 @@ nav {
  * Nav links
  */
 
-nav > ul {
-  margin: 0;
-}
-nav > ul:last-child {
+nav > div:last-child {
   background-color: var(--primary-color);
   position: fixed;
   bottom: -100%;
   transition: 0.3s;
   width: 100%;
 }
+nav > div:last-child > * {
+  display: block;
+  margin: var(--margin);
+}
 
-nav a {
+nav > div > a {
   color: var(--primary-color-text) !important;
-}
-
-nav > ul > li > a,
-nav > ul > li > .dropdown {
-  padding: 0.4rem !important;
-  border: 0.2rem solid var(--primary-color) !important;
-  border-radius: 0 !important;
-}
-
-nav > ul > li > a:hover,
-nav > ul > li > .dropdown:hover {
-  border-left-color: var(--primary-color-text) !important;
 }
 
 /**
@@ -42,7 +31,7 @@ nav > ul > li > .dropdown:hover {
 #nav__toggle {
   display: none;
 }
-#nav__toggle:checked ~ ul {
+#nav__toggle:checked ~ div {
   bottom: 0;
 }
 
@@ -69,7 +58,7 @@ nav > ul > li > .dropdown:hover {
 }
 
 /* Nav drawer toggle */
-nav label {
+nav > div:last-child > label {
   position: absolute;
   right: 1.5rem;
   cursor: pointer;
@@ -87,15 +76,6 @@ nav .bar:last-child {
   transform: translate(4px, -4px) rotate(-45deg);
 }
 
-/* Dropdown */
-.nav__dropdown .dropdown > .dropdown__content {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  position: relative;
-  border: none;
-  box-shadow: none;
-}
-
 /**
  * Nav large screen
  */
@@ -108,35 +88,27 @@ nav .bar:last-child {
     padding-right: 1rem;
   }
 
-  nav label,
+  nav > div:last-child > label,
   .nav__sticky-toggle {
     display: none;
   }
 
-  nav > ul:last-child {
+  nav > div {
+    display: inline;
+  }
+  nav > div:last-child {
     position: inherit;
   }
 
-  nav > ul > li {
-    float: left;
+  nav > div:last-child > * {
+    display: inline-block;
   }
-  nav > ul > li.right {
+  nav > div:last-child > .right {
     float: right;
   }
 
-  nav > ul > li > a,
-  nav > ul > li > .dropdown {
-    padding-top: 0.6rem !important;
-    padding-bottom: 0.65rem !important;
-  }
-  nav > ul > li > a:hover,
-  nav > ul > li > .dropdown:hover {
-    border-left-color: var(--primary-color) !important;
-    border-bottom-color: var(--secondary-color) !important;
-  }
-
   /* Dropdown */
-  .nav__dropdown .dropdown > .dropdown__content {
+  nav .dropdown > .dropdown__content {
     position: absolute;
     margin-top: 0.9rem;
     margin-left: 0;

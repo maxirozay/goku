@@ -33,31 +33,41 @@ input[type='checkbox']:checked ~ span {
 }
 
 input[type='file'] {
-  position: absolute;
-  opacity: 0;
-	width: 0.1px;
-	height: 0.1px;
-  overflow: hidden;
-}
-input[type='file'] ~ div {
   background-color: var(--primary-color);
   color: var(--primary-color-text);
-  border: var(--border-width) solid var(--primary-color);
-  border-radius: var(--border-radius);
-  padding: var(--padding);
-  width: 200px;
   box-shadow: var(--shadow);
-  margin-top: 0.5rem;
-}
-input[type='file']:hover ~ div {
-  border-color: var(--primary-color-active);
-}
-input[type='file']:active ~ div {
-  box-shadow: none;
 }
 
 .label__checkbox {
   display: inline;
+}
+
+.label__file {
+  display: absolute;
+  width: 270px;
+  height: 140px;
+}
+.label__file > div {
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  padding: var(--padding);
+  margin-top: 1.75rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  line-height: 100px;
+  width: 250px;
+}
+.label__file:hover > div {
+  border-color: var(--primary-color-active);
+}
+.label__file > input[type='file'] {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  opacity: 0;
 }
 
 label {

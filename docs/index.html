@@ -129,19 +129,24 @@
           </label>
         </div>
 
-        <p>For checkbox and file inputs you must add an span after the input.</p>
-        <div class="flex  text-center">
-          <label class="label__checkbox  flex-item">
-            Checkbox
-            <input type="checkbox">
-            <span></span>
-          </label>
-          <label class="flex-item">
-            File
-            <input type="file">
-            <div class="align-center">File Name</div>
-          </label>
-        </div>
+        <p>For checkbox you must add an span after the input and the class <code class="language-css" data-lang="css">label__checkbox</code> on the label.</p>
+        <label class="label__checkbox">
+          Checkbox
+          <input type="checkbox">
+          <span></span>
+        </label>
+        <p>File</p>
+        <label>
+          Regular file input
+          <input type="file">
+        </label>
+        <label class="label__file">
+          Dropbox file input
+          <div>
+            Click or drop your file here
+          </div>
+          <input type="file">
+        </label>
 
         <h3>Link</h3>
         <a href="#">Link</a>
@@ -171,28 +176,26 @@
           <div class="bar"></div>
         </label>
         <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-          </ul>
+          <div>
+          <a href="#">Home</a>
+          </div>
           <input id="nav__toggle" type="checkbox" autocomplete="off">
-          <ul>
+          <div>
             <label for="nav__toggle">
               <div class="bar"></div>
               <div class="bar"></div>
             </label>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li class="right"><a href="#">Login</a></li>
-            <li class="nav__dropdown right">
-              <div class="dropdown">
-                <a role="button" tabindex="0">Dropdown</a>
-                <div class="dropdown__content  primary">
-                  <a>Item 1</a>
-                  <a>Item 2</a>
-                </div>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#" class="right">Login</a>
+            <div class="dropdown  right  primary">
+              <a role="button" tabindex="0">Dropdown</a>
+              <div class="dropdown__content">
+                <a>Item 1</a>
+                <a>Item 2</a>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </nav>
 
         <p>Code:</p>
@@ -201,28 +204,26 @@
   &lt;div class="bar"&gt;&lt;/div&gt;
 &lt;/label&gt;
 &lt;nav&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;div&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/div&gt;
   &lt;input id="nav__toggle" type="checkbox" autocomplete="off"&gt;
-  &lt;ul&gt;
+  &lt;div&gt;
     &lt;label for="nav__toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
-    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="right"&gt;&lt;a href="#"&gt;Login&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="nav__dropdown right"&gt;
-      &lt;div class="dropdown"&gt;
-        &lt;a role="button" tabindex="0"&gt;Dropdown&lt;/a&gt;
-        &lt;div class="dropdown__content  primary"&gt;
-          &lt;a&gt;Item 1&lt;/a&gt;
-          &lt;a&gt;Item 2&lt;/a&gt;
-        &lt;/div&gt;
+    &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+    &lt;a href="#" class="right"&gt;Login&lt;/a&gt;
+    &lt;div class="dropdown  right  primary"&gt;
+      &lt;a role="button" tabindex="0"&gt;Dropdown&lt;/a&gt;
+      &lt;div class="dropdown__content"&gt;
+        &lt;a&gt;Item 1&lt;/a&gt;
+        &lt;a&gt;Item 2&lt;/a&gt;
       &lt;/div&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
 
         <h3>Progress</h3>
@@ -297,16 +298,16 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-        <div class="primary dropdown">
-          <a  role="button" tabindex="0">Links Dropdown</a>
-          <div class="dropdown__content  primary">
+        <div class="dropdown">
+          <button type="button">Links Dropdown</button>
+          <div class="dropdown__content">
             <a role="button" tabindex="0">Item 1</a>
             <a role="button" tabindex="0">Item 2</a>
           </div>
         </div>
-        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="primary dropdown"&gt;
-  &lt;a  role="button" tabindex="0"&gt;Links Dropdown&lt;/a&gt;
-  &lt;div class="dropdown__content  primary"&gt;
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="dropdown  primary"&gt;
+  &lt;button type="button"&gt;Links Dropdown&lt;/button&gt;
+  &lt;div class="dropdown__content"&gt;
     &lt;a role="button" tabindex="0"&gt;Item 1&lt;/a&gt;
     &lt;a role="button" tabindex="0"&gt;Item 2&lt;/a&gt;
   &lt;/div&gt;
