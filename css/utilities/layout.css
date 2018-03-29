@@ -9,10 +9,18 @@
 }
 
 .w {
-  width: calc(100% - var(--margin-l) - var(--margin-r));
+  width: 100%;
 }
 
 .h {
+  height: 100%;
+}
+
+.w-margin {
+  width: calc(100% - var(--margin-l) - var(--margin-r));
+}
+
+.h-margin {
   height: calc(100% - var(--margin-t) - var(--margin-b));
 }
 
