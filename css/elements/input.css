@@ -80,3 +80,8 @@ label > input, textarea {
   margin-left: 0;
   margin-right: 0;
 }
+
+form {
+  padding-top: var(--margin-t);
+  padding-bottom: var(--margin-b);
+}
