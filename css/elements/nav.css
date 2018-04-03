@@ -14,7 +14,7 @@ nav > div:last-child {
   transition: 0.3s;
   width: 100%;
 }
-nav > div:last-child > * {
+nav > div > * {
   display: block;
   margin: var(--margin);
 }
