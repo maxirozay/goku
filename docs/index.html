@@ -584,25 +584,28 @@
       <section>
         <h2>Exemple</h2>
         <p>Description</p>
-        <div class="flex">
-          <label class="flex-auto">
-            Enter your name
-            <input type="text">
+        <form class="clearfix">
+          <div class="flex">
+            <label class="flex-auto">
+              Enter your name
+              <input type="text">
+            </label>
+            <label class="flex-auto">
+              Enter your email
+              <input type="email">
+            </label>
+          </div>
+          <label>
+            Comment
+            <textarea name="name" rows="2"></textarea>
           </label>
-          <label class="flex-auto">
-            Enter your email
-            <input type="email">
+          <label class="label__checkbox">
+            Do you want to subscribe to our newsletter?
+            <input type="checkbox">
+            <span></span>
           </label>
-        </div>
-        <label>
-          Comment
-          <textarea name="name" rows="2"></textarea>
-        </label>
-        <label class="label__checkbox">
-          Do you want to subscribe to our newsletter?
-          <input type="checkbox">
-          <span></span>
-        </label>
+          <button class="float-right" type="button">Confirm</button>
+        </form>
         <div class="primary  clearfix">
           This content need a some buttons on the side.
           <br>
