@@ -18,7 +18,7 @@
         <h2>Customization</h2>
 
         <p>
-          You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="primary">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
+          You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
         </p>
         <pre class="primary"><code class="language-css" data-lang="css">--font-family: sans-serif;
 --primary-color: lightgray;
@@ -29,14 +29,20 @@
 --error-color: red;
 --border-radius: 4px;
 --border-width: 1px;
---padding: 0.2rem 0.4rem 0.2rem 0.4rem;
---margin: 0.5rem;
+--padding-t: 0.25rem;
+--padding-r: 0.5rem;
+--padding-b: 0.25rem;
+--padding-l: 0.5rem;
+--margin-t: 0.5rem;
+--margin-r: 0.5rem;
+--margin-b: 0.5rem;
+--margin-l: 0.5rem;
 --shadow: 0 0.1rem 0.1rem #bbb;</code></pre>
 
         <h3>Try to change the font-family</h3>
         <label>
           font-family
-          <input class="w-margin" type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
+          <input class="w mx0" type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
         </label>
 
         <h3>Try to change the colors.</h3>
@@ -188,8 +194,8 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#" class="right">Login</a>
-            <div class="dropdown  right  primary">
-              <a role="button" tabindex="0">Dropdown</a>
+            <div class="dropdown  right">
+              <button type="button">Dropdown</button>
               <div class="dropdown__content">
                 <a>Item 1</a>
                 <a>Item 2</a>
@@ -199,7 +205,7 @@
         </nav>
 
         <p>Code:</p>
-        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;label class="nav__sticky-toggle" for="nav__toggle"&gt;
+        <pre class="primary"><code class="language-html" data-lang="html">&lt;label class="nav__sticky-toggle" for="nav__toggle"&gt;
   &lt;div class="bar"&gt;&lt;/div&gt;
   &lt;div class="bar"&gt;&lt;/div&gt;
 &lt;/label&gt;
@@ -227,7 +233,7 @@
 &lt;/nav&gt;</code></pre>
 
         <h3>Progress</h3>
-        <progress class="w-margin" value="50" max="100"></progress>
+        <progress class="w mx0" value="50" max="100"></progress>
 
         <h3>Select</h3>
         <select>
@@ -290,7 +296,7 @@
             <button type="button">Item 2</button>
           </div>
         </div>
-        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="dropdown"&gt;
+        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;button type="button"&gt;Buttons Dropdown&lt;/button&gt;
   &lt;div class="dropdown__content"&gt;
     &lt;button type="button"&gt;Item 1&lt;/button&gt;
@@ -305,7 +311,7 @@
             <a role="button" tabindex="0">Item 2</a>
           </div>
         </div>
-        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="dropdown  primary"&gt;
+        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;button type="button"&gt;Links Dropdown&lt;/button&gt;
   &lt;div class="dropdown__content"&gt;
     &lt;a role="button" tabindex="0"&gt;Item 1&lt;/a&gt;
@@ -317,7 +323,7 @@
 
         <h4>Flex</h4>
         <p>
-          Use the <code class="primary">flex-auto</code> class inside an element containing the <code class="primary">flex</code> class to automatically fill the space.
+          Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space.
         </p>
         <div class="flex">
           <div class="primary-outlined  flex-auto">
@@ -331,7 +337,7 @@
           </div>
         </div>
         <p>
-          You can also use <code class="primary">flex-x</code> where x is a digit from 1 to 8.
+          You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
         </p>
         <div class="flex">
           <div class="primary-outlined  flex-2">
@@ -432,10 +438,8 @@
 }</code></pre>
 
         <h4>Size</h4>
-        <p>The <code class="primary">w</code> class takes 100% of the width and the <code class="primary">h</code> class takes 100% of the height.</p>
+        <p>The <code class="language-css" data-lang="css">w</code> class takes 100% of the width and the <code class="language-css" data-lang="css">h</code> class takes 100% of the height.</p>
         <button type="button" class="w">w</button>
-        <p>The <code class="primary">w-margin</code> and <code class="primary">h-margin</code> class takes 100% of the width or height minus the margin.</p>
-        <button type="button" class="w-margin">w</button>
 
         <h3>Sidebar</h3>
         <div class="flex">
@@ -479,7 +483,7 @@
         </div>
 
         <p>Code:</p>
-        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="flex"&gt;
+        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="flex"&gt;
 
   &lt;div class="secondary"&gt;
     &lt;input id="sidebar__toggle" type="checkbox" autocomplete="off"&gt;
@@ -520,21 +524,39 @@
 &lt;/div&gt;</code></pre>
 
         <h3>Spacing</h3>
-        <p>You can use the classes <code class="language-css" data-lang="css">no-padding</code> and <code class="language-css" data-lang="css">no-margin</code> if you don't want the margin or padding.</p>
+        <p>You can try to add x, y, t, r, b or l before the size of the margin or padding to affect only some sides.</p>
         <div>
-          <span class="margin" style="border: 1px solid">
-            margin
-          </span>
-          <span class="padding" style="border: 1px solid">
-            padding
-          </span>
+          <button class="m0" style="border: 1px solid">m0</button>
+          <button class="m1" style="border: 1px solid">m1</button>
+          <button class="m2" style="border: 1px solid">m2</button>
+          <button class="m3" style="border: 1px solid">m3</button>
+        </div>
+        <div>
+          <button class="p0" style="border: 1px solid">p0</button>
+          <button class="p1" style="border: 1px solid">p1</button>
+          <button class="p2" style="border: 1px solid">p2</button>
+          <button class="p3" style="border: 1px solid">p3</button>
         </div>
 
         <h4>Try to change the padding class.</h4>
-        <label>
-          padding
-          <input type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
-        </label>
+        <div class="flex">
+          <label class="flex-auto">
+            padding-top
+            <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            padding-right
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-r', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            padding-bottom
+            <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-b', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            padding-left
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
+          </label>
+        </div>
 
         <h4>Try to change the margin class.</h4>
         <div class="flex">
@@ -598,7 +620,7 @@
           </span>
         </div>
         <a href="#">Say Hi!</a>
-        <table class="w-margin  text-center">
+        <table class="w mx0  text-center">
           <thead>
             <tr>
               <th>User</th>

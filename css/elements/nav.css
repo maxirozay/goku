@@ -26,6 +26,15 @@ nav > div > a {
 }
 
 /**
+ * Nav dropdown
+ */
+
+ nav .dropdown > button {
+   box-shadow: none;
+   margin: 0;
+ }
+
+/**
  * Nav toggle
  */
 
@@ -112,7 +121,6 @@ nav .bar:last-child {
   /* Dropdown */
   nav .dropdown > .dropdown__content {
     position: absolute;
-    margin-top: 0.9rem;
     margin-left: 0;
   }
 }
