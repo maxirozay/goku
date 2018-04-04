@@ -1,9 +1,4 @@
 section {
   padding-top: 2rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid gray;
-}
-
-section:last-child {
-  border-bottom: none;
 }
