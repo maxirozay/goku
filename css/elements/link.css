@@ -1,0 +1,21 @@
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--primary-color);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--border-radius);
+  display: inline-block;
+  padding: var(--padding);
+}
+
+a:hover {
+  border-color: var(--primary-color-active);
+}
+
+a:active {
+  color: var(--primary-color-active);
+}
+
+a:focus {
+  text-decoration: underline;
+}

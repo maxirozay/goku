@@ -1,0 +1,42 @@
+.dropdown {
+  display: inline-block;
+}
+
+/* hover and focus-within are separated because focus-within break on IE */
+.dropdown:hover .dropdown__content {
+  display: flex;
+}
+.dropdown:focus-within .dropdown__content {
+  display: flex;
+}
+
+.dropdown a {
+  cursor: pointer;
+}
+
+.dropdown__content {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  max-height: 50vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow);
+  background-color: var(--secondary-color);
+  color: var(--secondary-color-text);
+  border: var(--border-width) solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  margin: 0 var(--margin-r) var(--margin-b) var(--margin-l);
+}
+
+.dropdown__content > a {
+  margin: var(--margin);
+}
+
+@media (--tablet-landscape-up) {
+  .dropdown__content {
+    position: absolute;
+    bottom: inherit;
+    left: inherit;
+  }
+}

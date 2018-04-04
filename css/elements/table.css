@@ -1,0 +1,30 @@
+table {
+  border: var(--border-width) solid var(--primary-color);
+  border-collapse: collapse;
+  box-shadow: var(--shadow);
+  table-layout: fixed;
+  margin: var(--margin);
+}
+table:first-child {
+  margin-left: 0;
+}
+table:last-child {
+  margin-right: 0;
+}
+
+th {
+  border-bottom: var(--border-width) solid var(--primary-color);
+}
+
+tr,
+th,
+td {
+  padding: var(--padding);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+tr:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}

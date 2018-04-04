@@ -1,0 +1,108 @@
+.sidebar__toggle {
+  display: none;
+  margin: 0;
+}
+
+#sidebar__toggle,
+#sidebar__toggle_right {
+  display: none;
+}
+
+@media (--tablet-landscape-up) {
+  .sidebar__toggle {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top: 0.5rem;
+    display: block;
+    cursor: pointer;
+  }
+  .sidebar__toggle .bar {
+    transition: .3s;
+    background-color: var(--primary-color);
+  }
+  .sidebar__toggle .bar:first-child {
+    transform: translateY(1px) rotate(-40deg);
+  }
+  .sidebar__toggle .bar:last-child {
+    transform: translateY(3px) rotate(40deg);
+  }
+
+
+  .sidebar__content {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar__title {
+    margin-top: 0.4rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+  }
+
+  #sidebar__toggle:checked ~ .sidebar__toggle .bar:first-child {
+    transform: translate(1px, 1px) rotate(40deg);
+  }
+  #sidebar__toggle:checked ~ .sidebar__toggle .bar:last-child {
+    transform: translate(1px, 3px) rotate(-40deg);
+  }
+  #sidebar__toggle:checked ~ .sidebar__content {
+    display: none;
+  }
+  #sidebar__toggle:checked ~ .sidebar__toggle {
+    float: none;
+  }
+  #sidebar__toggle:checked ~ .sidebar__title {
+    writing-mode: vertical-lr;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  /**
+   * Right Sidebar
+   */
+
+  .sidebar_right .sidebar__toggle {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 0.5rem;
+  }
+  .sidebar_right .sidebar__toggle .bar:first-child {
+    transform: translate(2px, 1px) rotate(40deg);
+  }
+  .sidebar_right .sidebar__toggle .bar:last-child {
+    transform: translate(2px, 3px) rotate(-40deg);
+  }
+
+  .sidebar_right .sidebar__content {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .sidebar_right .sidebar__title {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  #sidebar__toggle_right:checked ~ .sidebar__toggle .bar:first-child {
+    transform: translate(-1px, 1px) rotate(-40deg);
+  }
+  #sidebar__toggle_right:checked ~ .sidebar__toggle .bar:last-child {
+    transform: translate(-1px, 3px) rotate(40deg);
+  }
+  #sidebar__toggle_right:checked ~ .sidebar__content {
+    display: none;
+  }
+  #sidebar__toggle_right:checked ~ .sidebar__toggle {
+    float: none;
+  }
+  #sidebar__toggle_right:checked ~ .sidebar__title {
+    writing-mode: vertical-lr;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

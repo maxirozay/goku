@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/goku.css">
+    <title>Goku CSS - Documentation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+  </head>
+  <body style="background-color: whitesmoke;">
+    <div class="portrait  white">
+
+      <h1>Goku CSS - Documentation</h1>
+
+      <section>
+        <h2>Customization</h2>
+
+        <p>
+          You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="primary">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
+        </p>
+        <pre class="primary"><code class="language-css" data-lang="css">--font-family: sans-serif;
+--primary-color: lightgray;
+--primary-color-text: black;
+--primary-color-active: #888;
+--secondary-color: #444;
+--success-color: #55ff44;
+--error-color: red;
+--border-radius: 4px;
+--border-width: 1px;
+--padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+--margin: 0.5rem;
+--shadow: 0 0.1rem 0.1rem #bbb;</code></pre>
+
+        <h3>Try to change the font-family</h3>
+        <label>
+          font-family
+          <input class="w-margin" type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
+        </label>
+
+        <h3>Try to change the colors.</h3>
+        <div class="flex  text-center">
+          <label class="flex-auto">
+            Primary color
+            <input
+              class="align-center"
+              type="color"
+              value="#d3d3d3"
+              onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            Primary color text
+            <input
+              class="align-center"
+              type="color"
+              value="#000000"
+              onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            Primary color active
+            <input
+              class="align-center"
+              type="color"
+              value="#888888"
+              onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            Secondary color
+            <input
+              class="align-center"
+              type="color"
+              value="#444444"
+              onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
+          </label>
+        </div>
+
+        <h3>Try to change the border.</h3>
+        <div class="flex  text-center">
+          <label class="flex-auto">
+            Border radius
+            <input
+              class="align-center"
+              type="number"
+              value="4"
+              min="0"
+              onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
+          </label>
+          <label class="flex-auto">
+            Border width
+            <input
+              class="align-center"
+              type="number"
+              value="1"
+              min="0"
+              onchange="document.documentElement.style.setProperty('--border-width', event.target.value + 'px')">
+          </label>
+        </div>
+
+        <h3>Try to change the shadow.</h3>
+        <label>
+          Shadow
+          <input type="text" value="0 0.1rem 0.1rem #bbb" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
+        </label>
+
+      </section>
+      <section>
+        <h2>Elements</h2>
+        <p>You don't need to do do anything for the basic HTML elements. They are already styled based on the values of CSS variables.</p>
+
+        <h3>Button</h3>
+        <button type="button">Button</button>
+        <button type="button" disabled="true">Disabled Button</button>
+
+        <h3>Input</h3>
+        <h4>Type</h4>
+        <div class="flex  text-center">
+          <label class="flex-auto">
+            <div>Text</div>
+            <input class="align-center" type="text">
+          </label>
+          <label class="flex-auto">
+            <div>Number</div>
+            <input class="align-center" type="number">
+          </label>
+          <label class="flex-auto">
+            <div>Date</div>
+            <input class="align-center" type="date">
+          </label>
+        </div>
+
+        <p>For checkbox you must add an span after the input and the class <code class="language-css" data-lang="css">label__checkbox</code> on the label.</p>
+        <label class="label__checkbox">
+          Checkbox
+          <input type="checkbox">
+          <span></span>
+        </label>
+        <p>File</p>
+        <label>
+          Regular file input
+          <input type="file">
+        </label>
+        <label class="label__file">
+          Dropbox file input
+          <div>
+            Click or drop your file here
+          </div>
+          <input type="file">
+        </label>
+
+        <h3>Link</h3>
+        <a href="#">Link</a>
+
+        <h3>List</h3>
+        <ul>
+          <li>Item 1</li>
+          <li>
+            Item 2
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>
+                Item 3
+                <ul>
+                  <li><a href="#">Link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Item 3</li>
+        </ul>
+
+        <h3>Nav</h3>
+        <label class="nav__sticky-toggle" for="nav__toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </label>
+        <nav>
+          <div>
+          <a href="#">Home</a>
+          </div>
+          <input id="nav__toggle" type="checkbox" autocomplete="off">
+          <div>
+            <label for="nav__toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#" class="right">Login</a>
+            <div class="dropdown  right  primary">
+              <a role="button" tabindex="0">Dropdown</a>
+              <div class="dropdown__content">
+                <a>Item 1</a>
+                <a>Item 2</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <p>Code:</p>
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;label class="nav__sticky-toggle" for="nav__toggle"&gt;
+  &lt;div class="bar"&gt;&lt;/div&gt;
+  &lt;div class="bar"&gt;&lt;/div&gt;
+&lt;/label&gt;
+&lt;nav&gt;
+  &lt;div&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;input id="nav__toggle" type="checkbox" autocomplete="off"&gt;
+  &lt;div&gt;
+    &lt;label for="nav__toggle"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+    &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+    &lt;a href="#" class="right"&gt;Login&lt;/a&gt;
+    &lt;div class="dropdown  right  primary"&gt;
+      &lt;a role="button" tabindex="0"&gt;Dropdown&lt;/a&gt;
+      &lt;div class="dropdown__content"&gt;
+        &lt;a&gt;Item 1&lt;/a&gt;
+        &lt;a&gt;Item 2&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+        <h3>Progress</h3>
+        <progress class="w-margin" value="50" max="100"></progress>
+
+        <h3>Select</h3>
+        <select>
+          <option>Item 1</option>
+          <option>Item 2</option>
+        </select>
+
+        <h3>Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Origin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Goku</td>
+              <td>Vegeta</td>
+            </tr>
+            <tr>
+              <td>Vegeta</td>
+              <td>Vegeta</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Textarea</h3>
+        <label>
+          Text
+          <textarea rows="4"></textarea>
+        </label>
+
+      </section>
+      <section>
+        <h2>Utilities</h2>
+        <p>The utilities classes used in those elements are the one displayed on each element.</p>
+
+        <h3>Colors</h3>
+        <div class="grid gap">
+          <div class="primary  col3">primary</div>
+          <div class="primary-outlined  col3">primary-outlined</div>
+          <div class="primary-transparent  col3">primary-transparent</div>
+          <div class="secondary  col3">secondary</div>
+          <div class="secondary-outlined  col3">secondary-outlined</div>
+          <div class="success  col3">success</div>
+          <div class="success-outlined  col3">success-outlined</div>
+          <div class="error  col3">error</div>
+          <div class="error-outlined  col3">error-outlined</div>
+          <div class="white  col3">white</div>
+          <div class="white-outlined  col3">white-outlined</div>
+        </div>
+
+        <h3>Dropdown</h3>
+
+        <div class="dropdown">
+          <button type="button">Buttons Dropdown</button>
+          <div class="dropdown__content">
+            <button type="button">Item 1</button>
+            <button type="button">Item 2</button>
+          </div>
+        </div>
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="dropdown"&gt;
+  &lt;button type="button"&gt;Buttons Dropdown&lt;/button&gt;
+  &lt;div class="dropdown__content"&gt;
+    &lt;button type="button"&gt;Item 1&lt;/button&gt;
+    &lt;button type="button"&gt;Item 2&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <div class="dropdown">
+          <button type="button">Links Dropdown</button>
+          <div class="dropdown__content">
+            <a role="button" tabindex="0">Item 1</a>
+            <a role="button" tabindex="0">Item 2</a>
+          </div>
+        </div>
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="dropdown  primary"&gt;
+  &lt;button type="button"&gt;Links Dropdown&lt;/button&gt;
+  &lt;div class="dropdown__content"&gt;
+    &lt;a role="button" tabindex="0"&gt;Item 1&lt;/a&gt;
+    &lt;a role="button" tabindex="0"&gt;Item 2&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Layout</h3>
+
+        <h4>Flex</h4>
+        <p>
+          Use the <code class="primary">flex-auto</code> class inside an element containing the <code class="primary">flex</code> class to automatically fill the space.
+        </p>
+        <div class="flex">
+          <div class="primary-outlined  flex-auto">
+            flex-auto
+          </div>
+          <div class="primary-outlined  flex-auto">
+            flex-auto
+          </div>
+          <div class="primary-outlined  flex-auto">
+            flex-auto
+          </div>
+        </div>
+        <p>
+          You can also use <code class="primary">flex-x</code> where x is a digit from 1 to 8.
+        </p>
+        <div class="flex">
+          <div class="primary-outlined  flex-2">
+            flex-2
+          </div>
+          <div class="primary-outlined  flex-4">
+            flex-4
+          </div>
+          <div class="primary-outlined  flex-8">
+            flex-8
+          </div>
+        </div>
+
+        <h4>Grid</h4>
+        <p>
+          You can use any class from <code class="primary">col1</code> to <code class="primary">col12</code> and from <code class="primary">row1</code> to <code class="primary">row12</code> inside an element with the <code class="primary">grid</code> class.
+          Use the <code class="primary">gap</code> class to add a gap between the elements.
+        </p>
+        <div class="grid">
+          <div class="primary-outlined  col12">col12</div>
+          <div class="primary-outlined  col2 row6">col2 row6</div>
+          <div class="primary-outlined  col4 row2">col4 row2</div>
+          <div class="primary-outlined  col4">col4</div>
+          <div class="primary-outlined  col2">col4</div>
+          <div class="primary-outlined  col6">col6</div>
+          <div class="primary-outlined  col4 row2">col4 row2</div>
+          <div class="primary-outlined  col4">col4</div>
+          <div class="primary-outlined  col2">col4</div>
+          <div class="primary-outlined  col6">col6</div>
+          <div class="primary-outlined  col10">col10</div>
+        </div>
+
+        <h4>Loading</h4>
+        <button type="button" class="loading" disabled>loading</button>
+        <pre class="primary"><code class="language-html" data-lang="html">&lt;button type="button" class="loading" disabled&gt;loading&lt;/button&gt;</code></pre>
+
+        <h4>Modal</h4>
+        <button type="button" onclick="document.getElementById('modal').style.display = 'flex'">Open Modal</button>
+        <div id="modal" class="modal" style="display: none;">
+          <div class="modal__background" onclick="document.getElementById('modal').style.display = 'none'">
+            <p style="color: white;">modal__background</p>
+          </div>
+          <div class="modal__content">
+            modal__content
+          </div>
+        </div>
+        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
+  &lt;div class="modal__background"&gt;&lt;/div&gt;
+  &lt;div class="modal__content"&gt;
+    modal__content
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4>Overflow</h4>
+        <div class="primary  overflow-x" style="width: 50px;">
+          overflow-x
+        </div>
+        <br>
+        <div class="primary  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
+          overflow-y
+        </div>
+
+        <h4>Portrait</h4>
+        <div class="portrait">
+          This div is centered and will never be more than 1200 pixels width. 1200 pixels is our desktop breakpoints but you can change the portrait class' max-width if you would like another size.
+        </div>
+
+        <h4>Position</h4>
+        <div class="primary-outlined  text-center">
+          text-center
+        </div>
+        <div class="primary-outlined  text-right">
+          text-right
+        </div>
+        <div class="primary  align-center" style="width: 100px">
+          align-center
+        </div>
+        <div class="primary  align-right" style="width: 100px">
+          align-right
+        </div>
+        <div class="primary-outlined  clearfix">
+          clearfix
+          <span class="primary  float-right">float-right</span>
+        </div>
+        <div class="primary-outlined  clearfix">
+          clearfix
+          <span class="primary  float-left">float-left</span>
+        </div>
+        <p>You can also use the following classes:</p>
+        <pre class="primary"><code class="language-css" data-lang="css">.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.static {
+  position: static;
+}
+.sticky {
+  position: sticky;
+}
+
+.top {
+  top: 0;
+}
+.right {
+  right: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.left {
+  left: 0;
+}</code></pre>
+
+        <h4>Size</h4>
+        <p>The <code class="primary">w</code> class takes 100% of the width and the <code class="primary">h</code> class takes 100% of the height.</p>
+        <button type="button" class="w">w</button>
+        <p>The <code class="primary">w-margin</code> and <code class="primary">h-margin</code> class takes 100% of the width or height minus the margin.</p>
+        <button type="button" class="w-margin">w</button>
+
+        <h3>Sidebar</h3>
+        <div class="flex">
+
+          <div class="secondary">
+            <input id="sidebar__toggle" type="checkbox" autocomplete="off">
+            <label class="sidebar__toggle" for="sidebar__toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+            <div class="sidebar__title">Sidebar</div>
+            <div class="sidebar__content">
+              <ul>
+                <li>Products</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="primary-outlined  flex-auto">
+            content
+          </div>
+
+          <div class="secondary  sidebar_right">
+            <input id="sidebar__toggle_right" type="checkbox" autocomplete="off">
+            <label class="sidebar__toggle" for="sidebar__toggle_right">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+            <div class="sidebar__title">Sidebar</div>
+            <div class="sidebar__content">
+              <ul>
+                <li>Products</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <p>Code:</p>
+        <pre class="primary"><code class="language-html" language="html" data-lang="html">&lt;div class="flex"&gt;
+
+  &lt;div class="secondary"&gt;
+    &lt;input id="sidebar__toggle" type="checkbox" autocomplete="off"&gt;
+    &lt;label class="sidebar__toggle" for="sidebar__toggle"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+    &lt;div class="sidebar__title"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="sidebar__content"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Products&lt;/li&gt;
+        &lt;li&gt;About&lt;/li&gt;
+        &lt;li&gt;Contact&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="primary-outlined  flex-auto"&gt;
+    content
+  &lt;/div&gt;
+
+  &lt;div class="secondary  sidebar_right"&gt;
+    &lt;input id="sidebar__toggle_right" type="checkbox" autocomplete="off"&gt;
+    &lt;label class="sidebar__toggle" for="sidebar__toggle_right"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+    &lt;div class="sidebar__title"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="sidebar__content"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Products&lt;/li&gt;
+        &lt;li&gt;About&lt;/li&gt;
+        &lt;li&gt;Contact&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+        <h3>Spacing</h3>
+        <p>You can use the classes <code class="language-css" data-lang="css">no-padding</code> and <code class="language-css" data-lang="css">no-margin</code> if you don't want the margin or padding.</p>
+        <div>
+          <span class="margin" style="border: 1px solid">
+            margin
+          </span>
+          <span class="padding" style="border: 1px solid">
+            padding
+          </span>
+        </div>
+
+        <h4>Try to change the padding class.</h4>
+        <label>
+          padding
+          <input type="text" value="0.2rem 0.4rem 0.2rem 0.4rem" onkeyup="document.documentElement.style.setProperty('--padding', event.target.value)">
+        </label>
+
+        <h4>Try to change the margin class.</h4>
+        <div class="flex">
+          <label class="flex-auto">
+            margin-top
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            margin-right
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            margin-bottom
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            margin-left
+            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
+          </label>
+        </div>
+
+        <h3>Typo</h3>
+        <span class="small">small</span>
+        <a class="small" href="#">small</a>
+        <button class="small">small</button>
+
+      </section>
+      <section>
+        <h2>Exemple</h2>
+        <p>Description</p>
+        <form class="clearfix">
+          <div class="flex">
+            <label class="flex-auto">
+              Enter your name
+              <input type="text">
+            </label>
+            <label class="flex-auto">
+              Enter your email
+              <input type="email">
+            </label>
+          </div>
+          <label>
+            Comment
+            <textarea name="name" rows="2"></textarea>
+          </label>
+          <label class="label__checkbox">
+            Do you want to subscribe to our newsletter?
+            <input type="checkbox">
+            <span></span>
+          </label>
+          <button class="float-right" type="button">Confirm</button>
+        </form>
+        <div class="primary  clearfix">
+          This content need a some buttons on the side.
+          <br>
+          This is a new line.
+          <span class="float-right">
+            <button type="button">Edit</button>
+            <button type="button" class="success">Save</button>
+            <button type="button" class="error">Delete</button>
+          </span>
+        </div>
+        <a href="#">Say Hi!</a>
+        <table class="w-margin  text-center">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bob</td>
+              <td>26</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Shopping list</h4>
+        <ul>
+          <li>
+            Chicken
+            <ul>
+              <li>Nuggets</li>
+              <li>Drums</li>
+            </ul>
+          </li>
+          <li>Water</li>
+        </ul>
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+  </body>
+</html>

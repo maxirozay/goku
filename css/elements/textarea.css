@@ -1,0 +1,18 @@
+textarea {
+  background-color: white;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  padding: var(--padding);
+  margin: var(--margin);
+  display: block;
+}
+textarea:hover,
+textarea:focus {
+  border-color: var(--primary-color-active);
+}
+textarea:first-child {
+  margin-left: 0;
+}
+textarea:last-child {
+  margin-right: 0;
+}

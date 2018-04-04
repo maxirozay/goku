@@ -1,0 +1,87 @@
+input {
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  padding: var(--padding);
+  margin: var(--margin);
+}
+input:hover,
+input:focus {
+  border-color: var(--primary-color-active);
+}
+
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+input[type='checkbox'] ~ span {
+  border: var(--border-width) solid var(--primary-color);
+  border-radius: var(--border-radius);
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  margin-top: 0.1rem;
+}
+input[type='checkbox']:hover ~ span {
+  border-color: var(--primary-color-active);
+}
+input[type='checkbox']:active ~ span {
+  box-shadow: none;
+}
+input[type='checkbox']:checked ~ span {
+  background: var(--primary-color);
+}
+
+input[type='file'] {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  box-shadow: var(--shadow);
+}
+
+.label__checkbox {
+  display: inline;
+}
+
+.label__file {
+  display: absolute;
+  width: 270px;
+  height: 140px;
+}
+.label__file > div {
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  padding: var(--padding);
+  margin-top: 1.75rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  line-height: 100px;
+  width: 250px;
+}
+.label__file:hover > div {
+  border-color: var(--primary-color-active);
+}
+.label__file > input[type='file'] {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  opacity: 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: var(--margin);
+}
+
+label > input, textarea {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+form {
+  padding-top: var(--margin-t);
+  padding-bottom: var(--margin-b);
+}

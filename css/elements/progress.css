@@ -1,0 +1,35 @@
+progress {
+
+  /* For IE10 */
+  color: var(--primary-color);
+
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  box-shadow: var(--shadow);
+  margin: var(--margin);
+}
+progress:first-child {
+  margin-left: 0;
+}
+progress:last-child {
+  margin-right: 0;
+}
+
+progress::-webkit-progress-bar {
+  /* For IE10 */
+  color: var(--secondary-color);
+
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--secondary-color);
+}
+
+progress::-moz-progress-bar {
+  /* For IE10 */
+  color: var(--secondary-color);
+
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--secondary-color);
+}

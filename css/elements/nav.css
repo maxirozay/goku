@@ -1,0 +1,118 @@
+nav {
+  background-color: var(--primary-color);
+}
+
+/**
+ * Nav links
+ */
+
+nav > div:last-child {
+  background-color: var(--primary-color);
+  position: fixed;
+  bottom: -100%;
+  transition: 0.3s;
+  width: 100%;
+}
+nav > div:last-child > * {
+  display: block;
+}
+
+nav > div > * {
+  margin: var(--margin);
+}
+
+nav > div > a {
+  color: var(--primary-color-text) !important;
+}
+
+/**
+ * Nav toggle
+ */
+
+/* Nav state */
+#nav__toggle {
+  display: none;
+}
+#nav__toggle:checked ~ div {
+  bottom: 0;
+}
+
+/* Nav sticky toggle */
+.nav__sticky-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.7rem;
+  cursor: pointer;
+  width: auto;
+}
+
+/* Sticky toggle icon */
+.nav__sticky-toggle .bar {
+  width: 16px;
+}
+.bar {
+  width: 12px;
+  height: 2px;
+  margin: 3px auto;
+  background-color: var(--secondary-color);
+}
+
+/* Nav drawer toggle */
+nav > div:last-child > label {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin: 0.75rem 0 0 0;
+  width: auto;
+  display: block;
+}
+
+/* Drawer toggle icon */
+nav .bar {
+  transform: translate(-4px, 2px) rotate(45deg);
+}
+nav .bar:last-child {
+  transform: translate(4px, -4px) rotate(-45deg);
+}
+
+/**
+ * Nav large screen
+ */
+
+@media (--tablet-landscape-up) {
+  nav {
+    overflow: auto;
+    top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  nav > div:last-child > label,
+  .nav__sticky-toggle {
+    display: none;
+  }
+
+  nav > div {
+    display: inline;
+  }
+  nav > div:last-child {
+    position: inherit;
+  }
+
+  nav > div:last-child > * {
+    display: inline-block;
+  }
+  nav > div:last-child > .right {
+    float: right;
+  }
+
+  /* Dropdown */
+  nav .dropdown > .dropdown__content {
+    position: absolute;
+    margin-top: 0.9rem;
+    margin-left: 0;
+  }
+}
