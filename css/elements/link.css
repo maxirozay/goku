@@ -4,7 +4,6 @@ a:visited {
   color: var(--primary-color);
   border: var(--border-width) solid transparent;
   border-radius: var(--border-radius);
-  display: inline-block;
   padding: var(--padding);
 }
 
