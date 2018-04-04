@@ -42,7 +42,7 @@
         <h3>Try to change the font-family</h3>
         <label>
           font-family
-          <input class="w mx0" type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
+          <input type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
         </label>
 
         <h3>Try to change the colors.</h3>
@@ -110,6 +110,7 @@
         </label>
 
       </section>
+      <hr>
       <section>
         <h2>Elements</h2>
         <p>You don't need to do do anything for the basic HTML elements. They are already styled based on the values of CSS variables.</p>
@@ -268,6 +269,7 @@
         </label>
 
       </section>
+      <hr>
       <section>
         <h2>Utilities</h2>
         <p>The utilities classes used in those elements are the one displayed on each element.</p>
@@ -526,16 +528,16 @@
         <h3>Spacing</h3>
         <p>You can try to add x, y, t, r, b or l before the size of the margin or padding to affect only some sides.</p>
         <div>
-          <button class="m0" style="border: 1px solid">m0</button>
-          <button class="m1" style="border: 1px solid">m1</button>
-          <button class="m2" style="border: 1px solid">m2</button>
-          <button class="m3" style="border: 1px solid">m3</button>
+          <button class="m0">m0</button>
+          <button class="m1">m1</button>
+          <button class="m2">m2</button>
+          <button class="m3">m3</button>
         </div>
         <div>
-          <button class="p0" style="border: 1px solid">p0</button>
-          <button class="p1" style="border: 1px solid">p1</button>
-          <button class="p2" style="border: 1px solid">p2</button>
-          <button class="p3" style="border: 1px solid">p3</button>
+          <button class="p0">p0</button>
+          <button class="p1">p1</button>
+          <button class="p2">p2</button>
+          <button class="p3">p3</button>
         </div>
 
         <h4>Try to change the padding class.</h4>
@@ -584,8 +586,9 @@
         <button class="small">small</button>
 
       </section>
+      <hr>
       <section>
-        <h2>Exemple</h2>
+        <h2>Example</h2>
         <p>Description</p>
         <form class="clearfix">
           <div class="flex">
@@ -609,18 +612,19 @@
           </label>
           <button class="float-right" type="button">Confirm</button>
         </form>
-        <div class="primary  clearfix">
+        <div class="secondary  clearfix">
           This content need a some buttons on the side.
           <br>
           This is a new line.
+            <a href="#">Say Hi!</a>
           <span class="float-right">
             <button type="button">Edit</button>
             <button type="button" class="success">Save</button>
             <button type="button" class="error">Delete</button>
           </span>
         </div>
-        <a href="#">Say Hi!</a>
-        <table class="w mx0  text-center">
+        <h4>Users</h4>
+        <table class="text-center">
           <thead>
             <tr>
               <th>User</th>
@@ -631,6 +635,10 @@
             <tr>
               <td>Bob</td>
               <td>26</td>
+            </tr>
+            <tr>
+              <td>Alice</td>
+              <td>22</td>
             </tr>
           </tbody>
         </table>
