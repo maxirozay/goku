@@ -1,6 +1,6 @@
 .primary {
   background-color: var(--primary-color);
-  color: var(--primary-color-text);
+  color: var(--primary-color-text) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
@@ -9,7 +9,7 @@
 
 .primary-outlined {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
@@ -18,7 +18,7 @@
 
 .primary-transparent {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   border: none;
   padding: var(--padding);
   margin: var(--margin);
@@ -27,7 +27,7 @@
 
 .secondary {
   background-color: var(--secondary-color);
-  color: var(--secondary-color-text);
+  color: var(--secondary-color-text) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color);
   padding: var(--padding);
@@ -36,7 +36,7 @@
 
 .secondary-outlined {
   background-color: transparent;
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color);
   padding: var(--padding);
@@ -45,7 +45,7 @@
 
 .success {
   background-color: var(--success-color);
-  color: black;
+  color: black !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color);
   padding: var(--padding);
@@ -54,7 +54,7 @@
 
 .success-outlined {
   background-color: transparent;
-  color: var(--success-color);
+  color: var(--success-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color);
   padding: var(--padding);
@@ -63,7 +63,7 @@
 
 .error {
   background-color: var(--error-color);
-  color: black;
+  color: black !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color);
   padding: var(--padding);
@@ -72,7 +72,7 @@
 
 .error-outlined {
   background-color: transparent;
-  color: var(--error-color);
+  color: var(--error-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color);
   padding: var(--padding);
@@ -81,7 +81,7 @@
 
 .white {
   background-color: white;
-  color: black;
+  color: black !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid white;
   padding: var(--padding);
@@ -90,7 +90,7 @@
 
 .white-outlined {
   background-color: transparent;
-  color: white;
+  color: white !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid white;
   padding: var(--padding);
