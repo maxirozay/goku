@@ -43,7 +43,6 @@ input[type='file'] {
 }
 
 .label__file {
-  display: absolute;
   width: 270px;
   height: 140px;
 }
