@@ -306,9 +306,13 @@
   display: flex;
   flex-direction: column;
 }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (--tablet-landscape-up) {
   .flex {
-    display: flex;
     flex-direction: row;
   }
 }
