@@ -38,6 +38,10 @@ input[type='file'] {
   box-shadow: var(--shadow);
 }
 
+input[type='color'] {
+  padding: 0;
+}
+
 .label__checkbox {
   display: inline;
 }
