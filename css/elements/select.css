@@ -3,7 +3,7 @@ select {
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
-  padding: calc(var(--padding) - 0.2rem);
+  padding: calc(var(--padding-t) - 0.2rem) calc(var(--padding-r) - 0.2rem) calc(var(--padding-b) - 0.2rem) calc(var(--padding-l) - 0.2rem);
   margin: var(--margin);
   box-shadow: var(--shadow);
 }
