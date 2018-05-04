@@ -2,6 +2,6 @@
 
 ## Getting started
 
-- Install dependencies: `yarn`
-- Watch sources files (`css` dir) with: `yarn dev`
-- Build files in `dist` folder with: `yarn build`
+To use Goku CSS you only need to install and import it.
+- Install with: `yarn add -D goku-css` or `npm install --save-dev goku-css`
+- Import `goku-css` or `goku-css/dist/goku-legacy.css` for Internet Explorer support
