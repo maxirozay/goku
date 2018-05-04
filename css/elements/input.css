@@ -69,7 +69,7 @@ input[type='color'] {
 .label__file > input[type='file'] {
   position: absolute;
   width: 250px;
-  height: 100px;
+  height: 125px;
   opacity: 0;
 }
 
