@@ -38,12 +38,15 @@ input[type='file'] {
   box-shadow: var(--shadow);
 }
 
+input[type='color'] {
+  padding: 0;
+}
+
 .label__checkbox {
   display: inline;
 }
 
 .label__file {
-  display: absolute;
   width: 270px;
   height: 140px;
 }
@@ -66,7 +69,7 @@ input[type='file'] {
 .label__file > input[type='file'] {
   position: absolute;
   width: 250px;
-  height: 100px;
+  height: 125px;
   opacity: 0;
 }
 

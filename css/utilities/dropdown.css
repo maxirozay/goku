@@ -23,7 +23,7 @@
   overflow-y: auto;
   box-shadow: var(--shadow);
   background-color: var(--secondary-color);
-  color: var(--secondary-color-text);
+  color: var(--secondary-color-text) !important;
   border: var(--border-width) solid var(--secondary-color);
   border-radius: var(--border-radius);
   margin: 0 var(--margin-r) var(--margin-b) var(--margin-l);
