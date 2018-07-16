@@ -6,6 +6,7 @@ button {
   padding: var(--padding);
   margin: var(--margin);
   box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 button:disabled {

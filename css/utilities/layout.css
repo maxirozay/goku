@@ -31,25 +31,48 @@
  * Spacing
  */
 
+.m {
+  margin: auto !important;
+}
 .m0 {
   margin: 0 !important;
+}
+.mx {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .mx0 {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+.my {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
 .my0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+.mt {
+  margin-top: auto !important;
+}
 .mt0 {
   margin-top: 0 !important;
+}
+.mr {
+  margin-right: auto !important;
 }
 .mr0 {
   margin-right: 0 !important;
 }
+.mb {
+  margin-bottom: auto !important;
+}
 .mb0 {
   margin-bottom: 0 !important;
+}
+.ml {
+  margin-left: auto !important;
 }
 .ml0 {
   margin-left: 0 !important;
@@ -247,14 +270,6 @@
 }
 .text-left {
   text-align: left;
-}
-
-.align-center {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-.align-right {
-  margin-left: auto !important;
 }
 
 .absolute {
