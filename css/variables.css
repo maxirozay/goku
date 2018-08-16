@@ -15,9 +15,9 @@
   --padding-l: 0.5rem;
   --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
   --margin-t: 0.5rem;
-  --margin-r: 0.5rem;
+  --margin-r: 0.25rem;
   --margin-b: 0.5rem;
-  --margin-l: 0.5rem;
+  --margin-l: 0.25rem;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
 }
