@@ -76,6 +76,7 @@ label {
   display: flex;
   flex-direction: column;
   margin: var(--margin);
+  margin-bottom: 0;
 }
 
 label > input, textarea {
