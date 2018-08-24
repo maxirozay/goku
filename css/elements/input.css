@@ -72,6 +72,30 @@ input[type='color'] {
   opacity: 0;
 }
 
+.label__file--button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  padding: var(--padding);
+  margin: var(--margin);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.label__file--button:hover,
+.label__file--button:focus {
+  border-color: var(--primary-color-active);
+}
+.label__file--button:active {
+  background-color: var(--primary-color-active);
+  border-color: var(--primary-color-active);
+  box-shadow: none;
+}
+.label__file--button > input[type='file'] {
+  display: none;
+}
+
 label {
   display: flex;
   flex-direction: column;
