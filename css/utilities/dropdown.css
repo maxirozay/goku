@@ -27,10 +27,7 @@
   border: var(--border-width) solid var(--secondary-color);
   border-radius: var(--border-radius);
   margin: 0 var(--margin-r) var(--margin-b) var(--margin-l);
-}
-
-.dropdown__content > a {
-  margin: var(--margin);
+  padding: var(--padding);
 }
 
 @media (--tablet-landscape-up) {
