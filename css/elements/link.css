@@ -10,10 +10,12 @@ a:visited {
 
 a:hover {
   border-color: var(--primary-color-active);
+  box-shadow: var(--shadow);
 }
 
 a:active {
   color: var(--primary-color-active);
+  box-shadow: none;
 }
 
 a:focus {
