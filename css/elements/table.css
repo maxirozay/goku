@@ -1,9 +1,7 @@
 table {
-  border: var(--border-width) solid var(--primary-color);
   border-collapse: collapse;
-  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
   table-layout: fixed;
-  margin: var(--margin);
 }
 table:first-child {
   margin-left: 0;
@@ -23,7 +21,7 @@ td {
 }
 
 tr:nth-child(even) {
-  background-color: rgba(128, 128, 128, 0.2);
+  background-color: rgba(128, 128, 128, 0.1);
 }
 tr:hover {
   background-color: rgba(128, 128, 128, 0.3);
