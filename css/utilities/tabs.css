@@ -1,0 +1,21 @@
+.tabs {
+  margin-left: var(--margin-l);
+  margin-right: var(--margin-r);
+}
+.tabs > * {
+  margin: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: var(--border-width) solid var(--primary-color);
+  box-shadow: none;
+}
+.tabs > .active {
+  color: inherit;
+  border-bottom: none;
+}
+.tabs__content {
+  margin-top: 0;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
