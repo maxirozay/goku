@@ -94,11 +94,6 @@ nav .bar:last-child {
  */
 
 @media (--tablet-landscape-up) {
-  nav {
-    overflow: auto;
-    top: 0;
-  }
-
   nav > div:last-child > label,
   .nav__sticky-toggle {
     display: none;
@@ -120,7 +115,6 @@ nav .bar:last-child {
 
   /* Dropdown */
   nav .dropdown > .dropdown__content {
-    position: absolute;
     margin-left: 0;
   }
 }
