@@ -13,6 +13,7 @@ nav > div:last-child {
   left: 0;
   right: 0;
   transition: 0.3s;
+  z-index: 1000;
 }
 nav > div:last-child > * {
   display: block;
