@@ -335,6 +335,9 @@
 .flex-auto {
   flex: auto;
 }
+.flex-0 {
+  flex: 0;
+}
 .flex-1 {
   flex: 1;
 }
@@ -358,4 +361,8 @@
 }
 .flex-8 {
   flex: 8;
+}
+
+.mirror {
+  transform: rotate(180deg);
 }

@@ -31,13 +31,13 @@
             <button type="button">Utilities</button>
             <div class="dropdown__content">
               <a href="#colors">Colors</a>
+              <a href="#drawer">Drawer</a>
               <a href="#dropdown">Dropdown</a>
               <a href="#flex">Flex</a>
               <a href="#loading">Loading</a>
               <a href="#modal">Modal</a>
               <a href="#overflow">Overflow</a>
               <a href="#size">Size</a>
-              <a href="#sidebar">Sidebar</a>
               <a href="#spacing">Spacing</a>
               <a href="#tabs">Tabs</a>
               <a href="#typo">Typo</a>
@@ -401,6 +401,67 @@
           <div class="white-outlined  flex-1">white-outlined</div>
         </div>
 
+        <h3 id="drawer">Drawer</h3>
+        <p>
+          You can play with the class <code class="language-css" data-lang="css">flex-0</code> and <code class="language-css" data-lang="css">flex-1</code> on the drawers <code class="language-html" data-lang="html">div</code> to have a smooth resize effect.
+        </p>
+        <div class="drawer-layout">
+          <input id="left-toggle" class="drawer-layout__input" type="checkbox">
+          <div class="secondary">
+            <div class="mr1">
+              This is the left drawer.
+            </div>
+            <label class="drawer-layout__toggle" for="left-toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+          </div>
+
+          <div class="flex-4  primary-outlined">
+            This is the main content.
+          </div>
+
+          <input id="right-toggle" class="drawer-layout__input" type="checkbox">
+          <div class="secondary">
+            <div class="mr1">
+              This is the right drawer.
+            </div>
+            <label class="drawer-layout__toggle  mirror" for="right-toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </label>
+          </div>
+        </div>
+
+        <p>Code:</p>
+        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
+  &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
+  &lt;div class="secondary"&gt;
+    &lt;div class="mr1"&gt;
+      This is the left drawer.
+    &lt;/div&gt;
+    &lt;label class="drawer-layout__toggle" for="left-toggle"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="flex-4  primary-outlined"&gt;
+    This is the main content.
+  &lt;/div&gt;
+
+  &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
+  &lt;div class="secondary"&gt;
+    &lt;div class="mr1"&gt;
+      This is the right drawer.
+    &lt;/div&gt;
+    &lt;label class="drawer-layout__toggle  mirror" for="right-toggle"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
         <h3 id="dropdown">Dropdown</h3>
 
         <div class="dropdown">
@@ -567,88 +628,6 @@
         <h3 id="size">Size</h3>
         <p>The <code class="language-css" data-lang="css">w</code> class takes 100% of the width and the <code class="language-css" data-lang="css">h</code> class takes 100% of the height.</p>
         <button type="button" class="w  m0">w</button>
-
-        <h3 id="sidebar">Sidebar</h3>
-        <div class="flex">
-
-          <div class="secondary">
-            <input id="sidebar__toggle" type="checkbox" autocomplete="off">
-            <label class="sidebar__toggle" for="sidebar__toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </label>
-            <div class="sidebar__title">Sidebar</div>
-            <div class="sidebar__content">
-              <ul>
-                <li>Products</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="primary-outlined  flex-auto">
-            content
-          </div>
-
-          <div class="secondary  sidebar_right">
-            <input id="sidebar__toggle_right" type="checkbox" autocomplete="off">
-            <label class="sidebar__toggle" for="sidebar__toggle_right">
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </label>
-            <div class="sidebar__title">Sidebar</div>
-            <div class="sidebar__content">
-              <ul>
-                <li>Products</li>
-                <li>About</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-        <p>Code:</p>
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="flex"&gt;
-
-  &lt;div class="secondary"&gt;
-    &lt;input id="sidebar__toggle" type="checkbox" autocomplete="off"&gt;
-    &lt;label class="sidebar__toggle" for="sidebar__toggle"&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-    &lt;/label&gt;
-    &lt;div class="sidebar__title"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="sidebar__content"&gt;
-      &lt;ul&gt;
-        &lt;li&gt;Products&lt;/li&gt;
-        &lt;li&gt;About&lt;/li&gt;
-        &lt;li&gt;Contact&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class="primary-outlined  flex-auto"&gt;
-    content
-  &lt;/div&gt;
-
-  &lt;div class="secondary  sidebar_right"&gt;
-    &lt;input id="sidebar__toggle_right" type="checkbox" autocomplete="off"&gt;
-    &lt;label class="sidebar__toggle" for="sidebar__toggle_right"&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-    &lt;/label&gt;
-    &lt;div class="sidebar__title"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="sidebar__content"&gt;
-      &lt;ul&gt;
-        &lt;li&gt;Products&lt;/li&gt;
-        &lt;li&gt;About&lt;/li&gt;
-        &lt;li&gt;Contact&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;/div&gt;</code></pre>
 
         <h3 id="spacing">Spacing</h3>
         <p>
