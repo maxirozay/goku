@@ -13,6 +13,7 @@ nav > div:last-child {
   left: 0;
   right: 0;
   transition: 0.3s;
+  z-index: 1000;
 }
 nav > div:last-child > * {
   display: block;
@@ -63,6 +64,7 @@ nav > div > a {
 /* Sticky toggle icon */
 .nav__sticky-toggle .bar {
   width: 16px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .bar {
   width: 12px;
