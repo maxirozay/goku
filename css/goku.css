@@ -27,10 +27,10 @@
  */
 
 @import "utilities/colors.css";
+@import "utilities/drawer.css";
 @import "utilities/dropdown.css";
 @import "utilities/layout.css";
 @import "utilities/loading.css";
 @import "utilities/modal.css";
-@import "utilities/sidebar.css";
 @import "utilities/tabs.css";
 @import "utilities/typo.css";
