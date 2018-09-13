@@ -37,8 +37,9 @@
 .drawer-layout__toggle .bar {
   transition: .3s;
   background-color: var(--primary-color);
-  margin: 2px auto;
-  width: 10px;
+  margin: 1px auto;
+  width: 12px;
+  height: 4px;
 }
 .drawer-layout__toggle .bar:first-child {
   transform: rotate(45deg);
