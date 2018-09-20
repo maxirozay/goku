@@ -1,6 +1,8 @@
 input {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
   padding: var(--padding);
   margin: var(--margin);
 }
