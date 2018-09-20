@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--link-color);
   border: var(--border-width) solid transparent;
   border-radius: var(--border-radius);
   padding: var(--padding);

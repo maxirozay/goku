@@ -3,8 +3,9 @@
   --primary-color: #444;
   --primary-color-text: #eee;
   --primary-color-active: #888;
-  --secondary-color: #eee;
-  --secondary-color-text: #000;
+  --secondary-color: #666;
+  --secondary-color-text: #fff;
+  --link-color: #0f0;
   --success-color: #55ff44;
   --error-color: red;
   --border-radius: 4px;

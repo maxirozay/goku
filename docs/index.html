@@ -84,8 +84,9 @@
 --primary-color: #444;
 --primary-color-text: #eee;
 --primary-color-active: #888;
---secondary-color: #eee;
---secondary-color-text: #000;
+--secondary-color: #666;
+--secondary-color-text: #fff;
+--link-color: #0f0;
 --success-color: #55ff44;
 --error-color: red;
 --border-radius: 4px;
@@ -137,7 +138,7 @@
             <input
               class="mx"
               type="color"
-              value="#eeeeee"
+              value="#666666"
               onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
           </label>
           <label class="flex-auto">
@@ -145,8 +146,16 @@
             <input
               class="mx"
               type="color"
-              value="#000000"
+              value="#ffffff"
               onchange="document.documentElement.style.setProperty('--secondary-color-text', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            Link color
+            <input
+              class="mx"
+              type="color"
+              value="#00ff00"
+              onchange="document.documentElement.style.setProperty('--link-color', event.target.value)">
           </label>
         </div>
 
