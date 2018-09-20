@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
   </head>
-  <body>
+  <body class="dark m0 p0">
 
     <div class="fixed  w">
       <label class="nav__sticky-toggle" for="nav__toggle">
@@ -80,12 +80,12 @@
         <p>
           You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
         </p>
-        <pre class="primary"><code class="language-css" data-lang="css">--font-family: sans-serif;
+        <pre class="secondary"><code class="language-css" data-lang="css">--font-family: sans-serif;
 --primary-color: #444;
 --primary-color-text: #eee;
 --primary-color-active: #888;
 --secondary-color: #eee;
---secondary-color-text: #444;
+--secondary-color-text: #000;
 --success-color: #55ff44;
 --error-color: red;
 --border-radius: 4px;
@@ -113,7 +113,7 @@
             <input
               class="mx"
               type="color"
-              value="#d3d3d3"
+              value="#444444"
               onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
           </label>
           <label class="flex-auto">
@@ -121,7 +121,7 @@
             <input
               class="mx"
               type="color"
-              value="#000000"
+              value="#eeeeee"
               onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
           </label>
           <label class="flex-auto">
@@ -137,8 +137,16 @@
             <input
               class="mx"
               type="color"
-              value="#444444"
+              value="#eeeeee"
               onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            Secondary color text
+            <input
+              class="mx"
+              type="color"
+              value="#000000"
+              onchange="document.documentElement.style.setProperty('--secondary-color-text', event.target.value)">
           </label>
         </div>
 
@@ -255,7 +263,7 @@
           </div>
           <input type="file">
         </label>
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;label class="label__file"&gt;
+        <pre class="secondary"><code class="language-html" data-lang="html">&lt;label class="label__file"&gt;
   Dropbox file input
   &lt;div&gt;
     Click or drop your file here
@@ -318,7 +326,7 @@
         </nav>
 
         <p>Code:</p>
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;label class="nav__sticky-toggle" for="nav__toggle"&gt;
+        <pre class="secondary"><code class="language-html" data-lang="html">&lt;label class="nav__sticky-toggle" for="nav__toggle"&gt;
   &lt;div class="bar"&gt;&lt;/div&gt;
   &lt;div class="bar"&gt;&lt;/div&gt;
 &lt;/label&gt;
@@ -335,7 +343,7 @@
     &lt;a href="#"&gt;About&lt;/a&gt;
     &lt;a href="#"&gt;Contact&lt;/a&gt;
     &lt;a href="#" class="right"&gt;Login&lt;/a&gt;
-    &lt;div class="dropdown  right  primary"&gt;
+    &lt;div class="dropdown  right"&gt;
       &lt;button type="button"&gt;Dropdown&lt;/button&gt;
       &lt;div class="dropdown__content"&gt;
         &lt;a&gt;Item 1&lt;/a&gt;
@@ -397,8 +405,10 @@
           <div class="success-outlined  flex-1">success-outlined</div>
           <div class="error  flex-1">error</div>
           <div class="error-outlined  flex-1">error-outlined</div>
-          <div class="white  flex-auto">white</div>
+          <div class="white  flex-1">white</div>
           <div class="white-outlined  flex-1">white-outlined</div>
+          <div class="dark  flex-1">dark</div>
+          <div class="dark-outlined  flex-1">dark-outlined</div>
         </div>
 
         <h3 id="drawer">Drawer</h3>
@@ -417,7 +427,7 @@
             </label>
           </div>
 
-          <div class="flex-4  primary-outlined">
+          <div class="flex-4  secondary-outlined">
             This is the main content.
           </div>
 
@@ -434,7 +444,7 @@
         </div>
 
         <p>Code:</p>
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
+        <pre class="secondary"><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
   &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
   &lt;div class="secondary"&gt;
     &lt;div class="mr1"&gt;
@@ -446,7 +456,7 @@
     &lt;/label&gt;
   &lt;/div&gt;
 
-  &lt;div class="flex-4  primary-outlined"&gt;
+  &lt;div class="flex-4  secondary-outlined"&gt;
     This is the main content.
   &lt;/div&gt;
 
@@ -471,7 +481,7 @@
             <button type="button">Item 2</button>
           </div>
         </div>
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
+        <pre class="secondary"><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;button type="button"&gt;Buttons Dropdown&lt;/button&gt;
   &lt;div class="dropdown__content"&gt;
     &lt;button type="button"&gt;Item 1&lt;/button&gt;
@@ -486,7 +496,7 @@
             <a>Item 2</a>
           </div>
         </div>
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
+        <pre class="secondary"><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;button type="button"&gt;Links Dropdown&lt;/button&gt;
   &lt;div class="dropdown__content"&gt;
     &lt;a&gt;Item 1&lt;/a&gt;
@@ -499,13 +509,13 @@
           Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space.
         </p>
         <div class="flex">
-          <div class="primary-outlined  flex-auto">
+          <div class="secondary-outlined  flex-auto">
             flex-auto
           </div>
-          <div class="primary-outlined  flex-auto">
+          <div class="secondary-outlined  flex-auto">
             flex-auto
           </div>
-          <div class="primary-outlined  flex-auto">
+          <div class="secondary-outlined  flex-auto">
             flex-auto
           </div>
         </div>
@@ -513,32 +523,32 @@
           You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
         </p>
         <div class="flex">
-          <div class="primary-outlined  flex-2">
+          <div class="secondary-outlined  flex-2">
             flex-2
           </div>
-          <div class="primary-outlined  flex-4">
+          <div class="secondary-outlined  flex-4">
             flex-4
           </div>
-          <div class="primary-outlined  flex-8">
+          <div class="secondary-outlined  flex-8">
             flex-8
           </div>
         </div>
         <p>
           Use <code class="language-css" data-lang="css">flex-column</code> on the parent if you want to take all the width and stack your elements.
         </p>
-        <div class="primary-outlined  flex-column">
+        <div class="secondary-outlined  flex-column">
           flex-column
-          <div class="primary-outlined">
+          <div class="secondary-outlined">
           </div>
-          <div class="primary-outlined">
+          <div class="secondary-outlined">
           </div>
-          <div class="primary-outlined">
+          <div class="secondary-outlined">
           </div>
         </div>
 
         <h3 id="loading">Loading</h3>
         <button type="button" class="loading" disabled>loading</button>
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;button type="button" class="loading" disabled&gt;loading&lt;/button&gt;</code></pre>
+        <pre class="secondary"><code class="language-html" data-lang="html">&lt;button type="button" class="loading" disabled&gt;loading&lt;/button&gt;</code></pre>
 
         <h3 id="modal">Modal</h3>
         <button type="button" onclick="document.getElementById('myModal').style.display = 'flex'">Open Modal</button>
@@ -550,7 +560,7 @@
             modal__content
           </div>
         </div>
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
+        <pre class="secondary"><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
   &lt;div class="modal__background"&gt;&lt;/div&gt;
   &lt;div class="modal__content"&gt;
     modal__content
@@ -558,11 +568,11 @@
 &lt;/div&gt;</code></pre>
 
         <h3 id="overflow">Overflow</h3>
-        <div class="primary  overflow-x" style="width: 50px;">
+        <div class="secondary  overflow-x" style="width: 50px;">
           overflow-x
         </div>
         <br>
-        <div class="primary  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
+        <div class="secondary  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
           overflow-y
         </div>
 
@@ -572,31 +582,31 @@
         </div>
 
         <h3 id="position">Position</h3>
-        <div class="primary-outlined  text-center">
+        <div class="secondary-outlined  text-center">
           text-center
         </div>
-        <div class="primary-outlined  text-right">
+        <div class="secondary-outlined  text-right">
           text-right
         </div>
-        <div class="primary  mx" style="width: 100px">
+        <div class="secondary  mx" style="width: 100px">
           mx
         </div>
-        <div class="primary  ml" style="width: 100px">
+        <div class="secondary  ml" style="width: 100px">
           ml
         </div>
-        <div class="primary  mr" style="width: 100px">
+        <div class="secondary  mr" style="width: 100px">
           mr
         </div>
-        <div class="primary-outlined  clearfix">
+        <div class="secondary-outlined  clearfix">
           clearfix
-          <span class="primary  float-right">float-right</span>
+          <span class="secondary  float-right">float-right</span>
         </div>
-        <div class="primary-outlined  clearfix">
+        <div class="secondary-outlined  clearfix">
           clearfix
-          <span class="primary  float-left">float-left</span>
+          <span class="secondary  float-left">float-left</span>
         </div>
         <p>You can also use the following classes:</p>
-        <pre class="primary"><code class="language-css" data-lang="css">.absolute {
+        <pre class="secondary"><code class="language-css" data-lang="css">.absolute {
   position: absolute;
 }
 .fixed {
@@ -653,7 +663,7 @@
             flex-1
           </button>
           <button type="button" class="flex-1  active  secondary">
-            primary-outlined active flex-1
+            secondary-outlined active flex-1
           </button>
           <button type="button" class="flex-1">
             flex-1
@@ -666,7 +676,7 @@
           secondary tabs__content
         </div>
 
-        <pre class="primary"><code class="language-html" data-lang="html">&lt;div class="tabs flex"&gt;
+        <pre class="secondary"><code class="language-html" data-lang="html">&lt;div class="tabs flex"&gt;
   &lt;button type="button" class="flex-1"&gt;
     flex-1
   &lt;/button&gt;
@@ -680,7 +690,7 @@
     flex-1
   &lt;/button&gt;
 &lt;/div&gt;
-&lt;div class="primary-outlined tabs__content"&gt;
+&lt;div class="secondary-outlined tabs__content"&gt;
   secondary tabs__content
 &lt;/div&gt;</code></pre>
 
@@ -707,7 +717,7 @@
           </div>
           <label>
             Comment
-            <textarea name="name" rows="2"></textarea>
+            <textarea name="name" rows="2" placeholder="..."></textarea>
           </label>
           <label class="label__checkbox">
             Do you want to subscribe to our newsletter?
