@@ -11,7 +11,7 @@
   </head>
   <body class="dark m0 p0">
 
-    <div class="fixed  w">
+    <div class="fixed top w">
       <label class="nav__sticky-toggle" for="nav__toggle">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -81,11 +81,13 @@
           You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
         </p>
         <pre class="secondary"><code class="language-css" data-lang="css">--font-family: sans-serif;
+--font-weight: 300;
 --primary-color: #444;
 --primary-color-text: #eee;
 --primary-color-active: #888;
---secondary-color: #eee;
---secondary-color-text: #000;
+--secondary-color: #666;
+--secondary-color-text: #fff;
+--link-color: #0f0;
 --success-color: #55ff44;
 --error-color: red;
 --border-radius: 4px;
@@ -104,6 +106,10 @@
         <label>
           font-family
           <input type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
+        </label>
+        <label>
+          font-weight
+          <input type="text" value="300" onkeyup="document.documentElement.style.setProperty('--font-weight', event.target.value)">
         </label>
 
         <h3>Try to change the colors.</h3>
@@ -137,7 +143,7 @@
             <input
               class="mx"
               type="color"
-              value="#eeeeee"
+              value="#666666"
               onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
           </label>
           <label class="flex-auto">
@@ -145,8 +151,16 @@
             <input
               class="mx"
               type="color"
-              value="#000000"
+              value="#ffffff"
               onchange="document.documentElement.style.setProperty('--secondary-color-text', event.target.value)">
+          </label>
+          <label class="flex-auto">
+            Link color
+            <input
+              class="mx"
+              type="color"
+              value="#00ff00"
+              onchange="document.documentElement.style.setProperty('--link-color', event.target.value)">
           </label>
         </div>
 
