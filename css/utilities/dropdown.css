@@ -2,8 +2,8 @@
   display: inline-block;
 }
 
-/* hover and focus-within are separated because focus-within break on IE */
-.dropdown:hover .dropdown__content {
+/* focus and focus-within are separated because focus-within break on IE */
+.dropdown > *:focus ~ .dropdown__content {
   display: flex;
 }
 .dropdown:focus-within .dropdown__content {
