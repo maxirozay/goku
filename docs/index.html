@@ -78,7 +78,7 @@
         <h2>Customization</h2>
 
         <p>
-          You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
+          You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
         </p>
         <pre class="secondary"><code class="language-css" data-lang="css">--font-family: sans-serif;
 --font-weight: 300;
@@ -431,11 +431,11 @@
         </p>
         <div class="drawer-layout">
           <input id="left-toggle" class="drawer-layout__input" type="checkbox">
-          <div class="secondary">
+          <div class="secondary p0">
             <div class="mr1">
               This is the left drawer.
             </div>
-            <label class="drawer-layout__toggle" for="left-toggle">
+            <label class="drawer-layout__toggle px1 py2" for="left-toggle">
               <div class="bar"></div>
               <div class="bar"></div>
             </label>
@@ -446,11 +446,11 @@
           </div>
 
           <input id="right-toggle" class="drawer-layout__input" type="checkbox">
-          <div class="secondary">
+          <div class="secondary p0">
             <div class="mr1">
               This is the right drawer.
             </div>
-            <label class="drawer-layout__toggle  mirror" for="right-toggle">
+            <label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle">
               <div class="bar"></div>
               <div class="bar"></div>
             </label>
@@ -460,11 +460,11 @@
         <p>Code:</p>
         <pre class="secondary"><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
   &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="secondary"&gt;
+  &lt;div class="secondary p0"&gt;
     &lt;div class="mr1"&gt;
       This is the left drawer.
     &lt;/div&gt;
-    &lt;label class="drawer-layout__toggle" for="left-toggle"&gt;
+    &lt;label class="drawer-layout__toggle px1 py2" for="left-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
@@ -475,11 +475,11 @@
   &lt;/div&gt;
 
   &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="secondary"&gt;
+  &lt;div class="secondary p0"&gt;
     &lt;div class="mr1"&gt;
       This is the right drawer.
     &lt;/div&gt;
-    &lt;label class="drawer-layout__toggle  mirror" for="right-toggle"&gt;
+    &lt;label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
