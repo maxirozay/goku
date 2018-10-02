@@ -2,11 +2,7 @@
   display: inline-block;
 }
 
-/* hover and focus-within are separated because focus-within break on IE */
-.dropdown:hover .dropdown__content {
-  display: flex;
-}
-.dropdown:focus-within .dropdown__content {
+.dropdown > *:focus ~ .dropdown__content {
   display: flex;
 }
 
@@ -29,6 +25,9 @@
   margin: 0 var(--margin-r) var(--margin-b) var(--margin-l);
   padding: var(--padding);
   z-index: 1000;
+}
+.dropdown__content:hover {
+  display: flex;
 }
 
 @media (--tablet-landscape-up) {
