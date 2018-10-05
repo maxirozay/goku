@@ -48,30 +48,27 @@ input[type='color'] {
 }
 
 .label__file {
-  width: 270px;
+  width: 250px;
   height: 140px;
-}
-.label__file > div {
-  position: absolute;
   background-color: var(--primary-color);
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
-  padding: var(--padding);
-  margin-top: 1.75rem;
   box-shadow: var(--shadow);
   text-align: center;
-  line-height: 100px;
-  width: 250px;
+  display: flex;
+  justify-content: center;
 }
-.label__file:hover > div {
+.label__file:hover {
   border-color: var(--primary-color-active);
 }
 .label__file > input[type='file'] {
   position: absolute;
   width: 250px;
-  height: 125px;
+  height: 140px;
   opacity: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .label__file--button {
