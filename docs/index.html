@@ -28,7 +28,7 @@
           </label>
           <a href="#example" class="right">Example</a>
           <div class="dropdown  right">
-            <button type="button" class="aaa">Utilities</button>
+            <button type="button">Utilities</button>
             <div class="dropdown__content">
               <a href="#colors">Colors</a>
               <a href="#drawer">Drawer</a>
@@ -270,18 +270,13 @@
           Regular file input
           <input type="file">
         </label>
+        <p class="ml1">Dropbox</p>
         <label class="label__file">
           Dropbox file input
-          <div>
-            Click or drop your file here
-          </div>
           <input type="file">
         </label>
         <pre class="secondary"><code class="language-html" data-lang="html">&lt;label class="label__file"&gt;
   Dropbox file input
-  &lt;div&gt;
-    Click or drop your file here
-  &lt;/div&gt;
   &lt;input type="file"&gt;
 &lt;/label&gt;</code></pre>
         <label class="label__file--button">
@@ -489,14 +484,16 @@
         <h3 id="dropdown">Dropdown</h3>
 
         <div class="dropdown">
-          <button type="button">Buttons Dropdown</button>
+          <label for="dropdown1">Click Dropdown</label>
+          <input id="dropdown1" type="checkbox">
           <div class="dropdown__content">
             <button type="button">Item 1</button>
             <button type="button">Item 2</button>
           </div>
         </div>
         <pre class="secondary"><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
-  &lt;button type="button"&gt;Buttons Dropdown&lt;/button&gt;
+  &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
+  &lt;input id="dropdown1" type="checkbox"&gt;
   &lt;div class="dropdown__content"&gt;
     &lt;button type="button"&gt;Item 1&lt;/button&gt;
     &lt;button type="button"&gt;Item 2&lt;/button&gt;
@@ -504,14 +501,14 @@
 &lt;/div&gt;</code></pre>
 
         <div class="dropdown">
-          <button type="button">Links Dropdown</button>
+          <button type="button">Hover Dropdown</button>
           <div class="dropdown__content">
             <a>Item 1</a>
             <a>Item 2</a>
           </div>
         </div>
         <pre class="secondary"><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
-  &lt;button type="button"&gt;Links Dropdown&lt;/button&gt;
+  &lt;button type="button"&gt;Hover Dropdown&lt;/button&gt;
   &lt;div class="dropdown__content"&gt;
     &lt;a&gt;Item 1&lt;/a&gt;
     &lt;a&gt;Item 2&lt;/a&gt;

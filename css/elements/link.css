@@ -5,6 +5,7 @@ a {
   border-radius: var(--border-radius);
   padding: var(--padding);
   display: inline-block;
+  cursor: pointer;
 }
 
 a:hover {
