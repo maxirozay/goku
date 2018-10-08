@@ -24,4 +24,6 @@
   padding: var(--padding);
   box-shadow: var(--shadow);
   margin: auto;
+  max-height: 80%;
+  overflow-y: auto;
 }
