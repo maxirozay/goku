@@ -37,6 +37,7 @@ input[type='file'] {
   background-color: var(--primary-color);
   color: var(--primary-color-text);
   box-shadow: var(--shadow);
+  cursor: pointer;
 }
 
 input[type='color'] {
