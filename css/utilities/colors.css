@@ -1,107 +1,107 @@
 .primary {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
   color: var(--primary-color-text) !important;
-  border: var(--border-width) solid var(--primary-color);
+  border: var(--border-width) solid var(--primary-color) !important;
   border-radius: var(--border-radius);
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .primary-outlined {
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--primary-color) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
+  border: var(--border-width) solid var(--primary-color) !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .primary-transparent {
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--primary-color) !important;
-  border: none;
+  border: none !important;
   padding: var(--padding);
   margin: var(--margin);
   box-shadow: none;
 }
 
 .secondary {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color) !important;
   color: var(--secondary-color-text) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--secondary-color);
+  border: var(--border-width) solid var(--secondary-color) !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .secondary-outlined {
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--secondary-color) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--secondary-color);
+  border: var(--border-width) solid var(--secondary-color) !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .success {
-  background-color: var(--success-color);
+  background-color: var(--success-color) !important;
   color: #333 !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--success-color);
+  border: var(--border-width) solid var(--success-color) !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .success-outlined {
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--success-color) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--success-color);
+  border: var(--border-width) solid var(--success-color) !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .error {
-  background-color: var(--error-color);
+  background-color: var(--error-color) !important;
   color: #333 !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--error-color);
+  border: var(--border-width) solid var(--error-color) !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .error-outlined {
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--error-color) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--error-color);
+  border: var(--border-width) solid var(--error-color) !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .white {
-  background-color: white;
+  background-color: white !important;
   color: #333 !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid white;
+  border: var(--border-width) solid white !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .white-outlined {
-  background-color: transparent;
+  background-color: transparent !important;
   color: white !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid white;
+  border: var(--border-width) solid white !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
 .dark {
-  background-color: #323232;
+  background-color: #323232 !important;
   color: #eee !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid #323232;
+  border: var(--border-width) solid #323232 !important;
   padding: var(--padding);
   margin: var(--margin);
 }
@@ -109,6 +109,6 @@
 .dark-outlined {
   color: #323232 !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid #323232;
+  border: var(--border-width) solid #323232 !important;
   padding: var(--padding);
 }
