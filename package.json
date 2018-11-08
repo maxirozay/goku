@@ -1,6 +1,6 @@
 {
   "name": "goku-css",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "CSS Framework",
   "main": "dist/goku.css",
   "repository": "git@github.com:maxirozay/goku.git",
