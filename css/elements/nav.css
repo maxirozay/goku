@@ -1,12 +1,10 @@
 nav {
   background-color: var(--primary-color);
+  height: 48px;
+  display: flex;
 }
 
-/**
- * Nav links
- */
-
-nav > div:last-child {
+nav > .content {
   background-color: var(--primary-color);
   position: fixed;
   bottom: -100%;
@@ -15,108 +13,47 @@ nav > div:last-child {
   transition: 0.3s;
   z-index: 1000;
 }
-nav > div:last-child > * {
+nav > .content > * {
   display: block;
+  padding: .5rem 1rem;
 }
 
-nav > div > * {
-  margin: var(--margin);
-}
-
-nav > div > a {
-  color: var(--primary-color-text) !important;
-}
-
-/**
- * Nav dropdown
- */
-
- nav .dropdown > button {
-   width: 100%;
-   text-align: left;
-   box-shadow: none;
-   margin: 0;
- }
-
-/**
- * Nav toggle
- */
-
-/* Nav state */
-#nav__toggle {
-  display: none;
-}
-#nav__toggle:checked ~ div {
-  bottom: 0;
-}
-
-/* Nav sticky toggle */
-.nav__sticky-toggle {
+nav > .toggle {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 0;
-  padding: 0.9rem;
   cursor: pointer;
-  width: auto;
+  z-index: 1001;
+  margin: 0;
+  padding: 14px;
 }
-
-/* Sticky toggle icon */
-.nav__sticky-toggle .bar {
+nav > .toggle > div {
   width: 16px;
+  height: 2px;
+  margin: 4px;
+  background-color: var(--secondary-color);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-.bar {
-  width: 12px;
-  height: 2px;
-  margin: 3px auto;
-  background-color: var(--secondary-color);
+#nav-toggle {
+  display: none;
+}
+#nav-toggle:checked ~ .content {
+    bottom: 0;
 }
 
-/* Nav drawer toggle */
-nav > div:last-child > label {
-  position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-  padding: 0.5rem;
-  display: block;
-}
-
-/* Drawer toggle icon */
-nav .bar {
-  transform: translate(-4px, 2px) rotate(45deg);
-}
-nav .bar:last-child {
-  transform: translate(4px, -4px) rotate(-45deg);
-}
-
-/**
- * Nav large screen
- */
-
-@media (--tablet-landscape-up) {
-  nav > div:last-child > label,
-  .nav__sticky-toggle {
-    display: none;
+@media (min-width: 600px) {
+  nav > .content {
+    display: flex;
+    position: static;
+    flex: auto;
+    margin: 0 .5rem;
   }
-
-  nav > div {
-    display: inline;
-  }
-  nav > div:last-child {
-    position: inherit;
-  }
-
-  nav > div:last-child > * {
+  nav > .content > * {
     display: inline-block;
+    margin: auto 0;
+    padding: var(--padding);
   }
-  nav > div:last-child > .right {
-    float: right;
-  }
-
-  /* Dropdown */
-  nav .dropdown > .dropdown__content {
-    margin-left: 0;
+  nav > .toggle {
+    display: none;
   }
 }

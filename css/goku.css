@@ -26,6 +26,7 @@
  * Utilities
  */
 
+@import "utilities/borders.css";
 @import "utilities/colors.css";
 @import "utilities/drawer.css";
 @import "utilities/dropdown.css";

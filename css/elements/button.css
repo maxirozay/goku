@@ -7,6 +7,7 @@ button {
   margin: var(--margin);
   box-shadow: var(--shadow);
   cursor: pointer;
+  font-weight: inherit;
 }
 
 button:disabled {
