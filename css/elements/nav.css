@@ -43,7 +43,6 @@ nav > .toggle > div {
 
 @media (min-width: 600px) {
   nav > .content {
-    background-color: white;
     display: flex;
     align-items: center;
     position: static;
