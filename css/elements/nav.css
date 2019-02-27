@@ -43,14 +43,15 @@ nav > .toggle > div {
 
 @media (min-width: 600px) {
   nav > .content {
+    background-color: white;
     display: flex;
+    align-items: center;
     position: static;
     flex: auto;
     margin: 0 .5rem;
   }
   nav > .content > * {
     display: inline-block;
-    margin: auto 0;
     padding: var(--padding);
   }
   nav > .toggle {
