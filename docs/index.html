@@ -12,23 +12,31 @@
   <body class="dark m0 p0">
 
     <div class="fixed top w">
-      <label class="nav__sticky-toggle" for="nav__toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </label>
       <nav>
-        <div>
-          <a href="/">Goku CSS</a>
-        </div>
-        <input id="nav__toggle" type="checkbox" autocomplete="off">
-        <div class="right">
-          <label for="nav__toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </label>
-          <a href="#example" class="right">Example</a>
-          <div class="dropdown  right">
-            <button type="button">Utilities</button>
+        <label class="toggle" for="nav-toggle">
+          <div></div>
+          <div></div>
+        </label>
+        <input id="nav-toggle" type="checkbox">
+        <a href="/" class="my mx2">Goku CSS</a>
+        <div class="content">
+          <a href="#customization" class="ml">Customization</a>
+          <div class="dropdown">
+            <button type="button" class="m0">Elements</button>
+            <div class="dropdown__content">
+              <a href="#button">Button</a>
+              <a href="#input">Input</a>
+              <a href="#link">Link</a>
+              <a href="#list">List</a>
+              <a href="#nav">Nav</a>
+              <a href="#progress">Progress</a>
+              <a href="#select">Select</a>
+              <a href="#table">Table</a>
+              <a href="#textarea">Textarea</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button type="button" class="m0">Utilities</button>
             <div class="dropdown__content">
               <a href="#borders">Borders</a>
               <a href="#colors">Colors</a>
@@ -44,21 +52,7 @@
               <a href="#typo">Typo</a>
             </div>
           </div>
-          <div class="dropdown  right">
-            <button type="button">Elements</button>
-            <div class="dropdown__content">
-              <a href="#button">Button</a>
-              <a href="#input">Input</a>
-              <a href="#link">Link</a>
-              <a href="#list">List</a>
-              <a href="#nav">Nav</a>
-              <a href="#progress">Progress</a>
-              <a href="#select">Select</a>
-              <a href="#table">Table</a>
-              <a href="#textarea">Textarea</a>
-            </div>
-          </div>
-          <a href="#customization" class="right">Customization</a>
+          <a href="#example">Example</a>
         </div>
       </nav>
     </div>
@@ -308,58 +302,30 @@
         </ul>
 
         <h3 id="nav">Nav</h3>
-        <label class="nav__sticky-toggle" for="nav__toggle">
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </label>
+        <p>If you have a small screen try the main menu to see how it looks on mobile.</p>
         <nav>
-          <div>
-          <a href="#">Home</a>
-          </div>
-          <input id="nav__toggle" type="checkbox" autocomplete="off">
-          <div>
-            <label for="nav__toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </label>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#" class="right">Login</a>
-            <div class="dropdown  right">
-              <button type="button">Dropdown</button>
-              <div class="dropdown__content">
-                <a>Item 1</a>
-                <a>Item 2</a>
-              </div>
-            </div>
+          <div class="my ml3">Nav</div>
+          <div class="content mx3">
+            <a href="#">link 1</a>
+            <a href="#" class="mr">link 2</a>
+            <a href="#">link 3</a>
+            <button type="button" name="button">button</button>
           </div>
         </nav>
 
         <p>Code:</p>
-        <pre><code class="language-html" data-lang="html">&lt;label class="nav__sticky-toggle" for="nav__toggle"&gt;
-  &lt;div class="bar"&gt;&lt;/div&gt;
-  &lt;div class="bar"&gt;&lt;/div&gt;
-&lt;/label&gt;
-&lt;nav&gt;
-  &lt;div&gt;
-  &lt;a href="#"&gt;Home&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;input id="nav__toggle" type="checkbox" autocomplete="off"&gt;
-  &lt;div&gt;
-    &lt;label for="nav__toggle"&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-    &lt;/label&gt;
-    &lt;a href="#"&gt;About&lt;/a&gt;
-    &lt;a href="#"&gt;Contact&lt;/a&gt;
-    &lt;a href="#" class="right"&gt;Login&lt;/a&gt;
-    &lt;div class="dropdown  right"&gt;
-      &lt;button type="button"&gt;Dropdown&lt;/button&gt;
-      &lt;div class="dropdown__content"&gt;
-        &lt;a&gt;Item 1&lt;/a&gt;
-        &lt;a&gt;Item 2&lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+        <pre><code class="language-html" data-lang="html">&lt;nav&gt;
+  &lt;label class="toggle" for="nav-toggle"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/label&gt;
+  &lt;input id="nav-toggle" type="checkbox"&gt;
+  &lt;div class="my ml3"&gt;Nav&lt;/div&gt;
+  &lt;div class="content mx3"&gt;
+    &lt;a href="#"&gt;link 1&lt;/a&gt;
+    &lt;a href="#" class="mr"&gt;link 2&lt;/a&gt;
+    &lt;a href="#"&gt;link 3&lt;/a&gt;
+    &lt;button type="button" name="button"&gt;button&lt;/button&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
 
