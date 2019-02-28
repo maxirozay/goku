@@ -48,6 +48,7 @@ nav > .toggle > div {
     position: static;
     flex: auto;
     margin: 0 .5rem;
+    transition: 0s;
   }
   nav > .content > * {
     display: inline-block;
