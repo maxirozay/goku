@@ -11,7 +11,7 @@ nav > .content {
   left: 0;
   right: 0;
   transition: 0.3s;
-  z-index: 1000;
+  z-index: 100;
 }
 nav > .content > * {
   display: block;
@@ -23,7 +23,7 @@ nav > .toggle {
   top: 0;
   right: 0;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 101;
   margin: 0;
   padding: 14px;
 }
@@ -44,13 +44,13 @@ nav > .toggle > div {
 @media (min-width: 600px) {
   nav > .content {
     display: flex;
+    align-items: center;
     position: static;
     flex: auto;
     margin: 0 .5rem;
   }
   nav > .content > * {
     display: inline-block;
-    margin: auto 0;
     padding: var(--padding);
   }
   nav > .toggle {
