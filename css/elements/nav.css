@@ -3,6 +3,10 @@ nav {
   height: 48px;
   display: flex;
 }
+nav > a,
+nav > .content > a {
+  color: var(--primary-color-text);
+}
 
 nav > .content {
   background-color: var(--primary-color);
