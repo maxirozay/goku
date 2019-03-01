@@ -11,744 +11,748 @@
   </head>
   <body class="dark m0 p0">
 
-    <div class="fixed top w">
-      <nav>
-        <label class="toggle" for="nav-toggle">
-          <div></div>
-          <div></div>
-        </label>
-        <input id="nav-toggle" type="checkbox">
-        <a href="/" class="my mx2">Goku CSS</a>
-        <div class="content">
-          <a href="#customization" class="ml">Customization</a>
-          <div class="dropdown">
-            <button type="button" class="m0">Elements</button>
-            <div class="dropdown__content m0">
-              <a href="#button">Button</a>
-              <a href="#input">Input</a>
-              <a href="#link">Link</a>
-              <a href="#list">List</a>
-              <a href="#nav">Nav</a>
-              <a href="#progress">Progress</a>
-              <a href="#select">Select</a>
-              <a href="#table">Table</a>
-              <a href="#textarea">Textarea</a>
-            </div>
+    <nav>
+      <label class="toggle" for="nav-toggle">
+        <div></div>
+        <div></div>
+      </label>
+      <input id="nav-toggle" type="checkbox">
+      <a href="/" class="my mx2">Goku CSS</a>
+      <div class="content">
+        <a href="#customization" class="ml">Customization</a>
+        <div class="dropdown">
+          <button type="button" class="m0 no-shadow">Elements</button>
+          <div class="dropdown__content m0">
+            <a href="#button">Button</a>
+            <a href="#input">Input</a>
+            <a href="#link">Link</a>
+            <a href="#list">List</a>
+            <a href="#nav">Nav</a>
+            <a href="#progress">Progress</a>
+            <a href="#select">Select</a>
+            <a href="#table">Table</a>
+            <a href="#textarea">Textarea</a>
           </div>
-          <div class="dropdown">
-            <button type="button" class="m0">Utilities</button>
-            <div class="dropdown__content m0">
-              <a href="#borders">Borders</a>
-              <a href="#colors">Colors</a>
-              <a href="#drawer">Drawer</a>
-              <a href="#dropdown">Dropdown</a>
-              <a href="#flex">Flex</a>
-              <a href="#loading">Loading</a>
-              <a href="#modal">Modal</a>
-              <a href="#overflow">Overflow</a>
-              <a href="#size">Size</a>
-              <a href="#spacing">Spacing</a>
-              <a href="#tabs">Tabs</a>
-              <a href="#typo">Typo</a>
-            </div>
+        </div>
+        <div class="dropdown">
+          <button type="button" class="m0 no-shadow">Utilities</button>
+          <div class="dropdown__content m0">
+            <a href="#borders">Borders</a>
+            <a href="#colors">Colors</a>
+            <a href="#drawer">Drawer</a>
+            <a href="#dropdown">Dropdown</a>
+            <a href="#flex">Flex</a>
+            <a href="#loading">Loading</a>
+            <a href="#modal">Modal</a>
+            <a href="#overflow">Overflow</a>
+            <a href="#size">Size</a>
+            <a href="#spacing">Spacing</a>
+            <a href="#shadow">Shadow</a>
+            <a href="#tabs">Tabs</a>
+            <a href="#typo">Typo</a>
           </div>
-          <a href="#example">Example</a>
         </div>
-      </nav>
-    </div>
+        <a href="#example">Example</a>
+      </div>
+    </nav>
 
-    <div class="portrait  p1 pt3">
+    <div class="overflow-y relative" style="height: calc(100vh - 50px)">
+      <div class="portrait  p1 pt3">
 
-      <section>
-        <h2>Getting started</h2>
-        <p>
-          To use Goku CSS you only need to install and import it.
-        </p>
-        Install with: <code class="language-bash">yarn add -D goku-css</code> or <code class="language-bash">npm install --save-dev goku-css</code>
-        <br>
-        Then import 'goku-css' or 'goku-css/dist/goku-legacy.css' for Internet Explorer
-      </section>
-      <hr>
-      <section id="customization">
-        <h2>Customization</h2>
+        <section>
+          <h2>Getting started</h2>
+          <p>
+            To use Goku CSS you only need to install and import it.
+          </p>
+          Install with: <code class="language-bash">yarn add -D goku-css</code> or <code class="language-bash">npm install --save-dev goku-css</code>
+          <br>
+          Then import 'goku-css' or 'goku-css/dist/goku-legacy.css' for Internet Explorer
+        </section>
+        <hr>
+        <section id="customization">
+          <h2>Customization</h2>
 
-        <p>
-          You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
-        </p>
-        <pre><code class="language-css" data-lang="css">--font-family: sans-serif;
---font-weight: 300;
---primary-color: #444;
---primary-color-text: #eee;
---primary-color-active: #888;
---secondary-color: #666;
---secondary-color-text: #fff;
---link-color: #0f0;
---success-color: #55ff44;
---error-color: red;
---border-radius: 4px;
---border-width: 1px;
---padding-t: 0.25rem;
---padding-r: 0.5rem;
---padding-b: 0.25rem;
---padding-l: 0.5rem;
---margin-t: 0.5rem;
---margin-r: 0.25rem;
---margin-b: 0.5rem;
---margin-l: 0.25rem;
---shadow: 0 0.1rem 0.25rem #bbb;</code></pre>
+          <p>
+            You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
+          </p>
+          <pre><code class="language-css" data-lang="css">--font-family: sans-serif;
+  --font-weight: 300;
+  --primary-color: #444;
+  --primary-color-text: #eee;
+  --primary-color-active: #888;
+  --secondary-color: #666;
+  --secondary-color-text: #fff;
+  --link-color: #0f0;
+  --success-color: #55ff44;
+  --error-color: red;
+  --border-radius: 4px;
+  --border-width: 1px;
+  --padding-t: 0.25rem;
+  --padding-r: 0.5rem;
+  --padding-b: 0.25rem;
+  --padding-l: 0.5rem;
+  --margin-t: 0.5rem;
+  --margin-r: 0.25rem;
+  --margin-b: 0.5rem;
+  --margin-l: 0.25rem;
+  --shadow: 0 0.1rem 0.25rem #bbb;</code></pre>
 
-        <h3>Try to change the font-family</h3>
-        <label>
-          font-family
-          <input type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
-        </label>
-        <label>
-          font-weight
-          <input type="text" value="300" onkeyup="document.documentElement.style.setProperty('--font-weight', event.target.value)">
-        </label>
-
-        <h3>Try to change the colors.</h3>
-        <div class="flex  text-center">
-          <label class="flex-auto">
-            Primary color
-            <input
-              class="mx"
-              type="color"
-              value="#444444"
-              onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
+          <h3>Try to change the font-family</h3>
+          <label>
+            font-family
+            <input type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
           </label>
-          <label class="flex-auto">
-            Primary color text
-            <input
-              class="mx"
-              type="color"
-              value="#eeeeee"
-              onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
+          <label>
+            font-weight
+            <input type="text" value="300" onkeyup="document.documentElement.style.setProperty('--font-weight', event.target.value)">
           </label>
-          <label class="flex-auto">
-            Primary color active
-            <input
-              class="mx"
-              type="color"
-              value="#888888"
-              onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            Secondary color
-            <input
-              class="mx"
-              type="color"
-              value="#666666"
-              onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            Secondary color text
-            <input
-              class="mx"
-              type="color"
-              value="#ffffff"
-              onchange="document.documentElement.style.setProperty('--secondary-color-text', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            Link color
-            <input
-              class="mx"
-              type="color"
-              value="#00ff00"
-              onchange="document.documentElement.style.setProperty('--link-color', event.target.value)">
-          </label>
-        </div>
 
-        <h3>Try to change the border.</h3>
-        <div class="flex  text-center">
-          <label class="flex-auto">
-            Border radius
-            <input
-              class="mx"
-              type="number"
-              value="4"
-              min="0"
-              onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
-          </label>
-          <label class="flex-auto">
-            Border width
-            <input
-              class="mx"
-              type="number"
-              value="1"
-              min="0"
-              onchange="document.documentElement.style.setProperty('--border-width', event.target.value + 'px')">
-          </label>
-        </div>
-
-        <h3>Try to change the shadow.</h3>
-        <label>
-          Shadow
-          <input type="text" value="0 0.1rem 0.25rem rgba(0, 0, 0, 0.4)" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
-        </label>
-
-        <h3>Try to change the padding class.</h3>
-        <div class="flex">
-          <label class="flex-auto">
-            padding-top
-            <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            padding-right
-            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-r', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            padding-bottom
-            <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-b', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            padding-left
-            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
-          </label>
-        </div>
-
-        <h3>Try to change the margin class.</h3>
-        <div class="flex">
-          <label class="flex-auto">
-            margin-top
-            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            margin-right
-            <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            margin-bottom
-            <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
-          </label>
-          <label class="flex-auto">
-            margin-left
-            <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
-          </label>
-        </div>
-
-      </section>
-      <hr>
-      <section>
-        <h2>Elements</h2>
-        <p>You don't need to do do anything for the basic HTML elements. They are already styled based on the values of CSS variables.</p>
-
-        <h3 id="button">Button</h3>
-        <button type="button">Button</button>
-        <button type="button" disabled="true">Disabled Button</button>
-
-        <h3 id="input">Input</h3>
-        <h4>Type</h4>
-        <div class="flex  text-center">
-          <label class="flex-auto">
-            <div>Text</div>
-            <input class="mx" type="text">
-          </label>
-          <label class="flex-auto">
-            <div>Number</div>
-            <input class="mx" type="number">
-          </label>
-          <label class="flex-auto">
-            <div>Date</div>
-            <input class="mx" type="date">
-          </label>
-        </div>
-
-        <p>For checkbox you must add a span after the input and the class <code class="language-css" data-lang="css">label__checkbox</code> on the label.</p>
-        <label class="label__checkbox">
-          <input type="checkbox">
-          <span></span>
-          Checkbox
-        </label>
-        <p>File</p>
-        <label>
-          Regular file input
-          <input type="file">
-        </label>
-        <p class="ml1">Dropbox</p>
-        <label class="label__file">
-          Dropbox file input
-          <input type="file">
-        </label>
-        <pre><code class="language-html" data-lang="html">&lt;label class="label__file"&gt;
-  Dropbox file input
-  &lt;input type="file"&gt;
-&lt;/label&gt;</code></pre>
-        <label class="label__file--button">
-          label__file--button
-          <input type="file">
-        </label>
-
-        <h3 id="link">Link</h3>
-        <a href="#">Link</a>
-
-        <h3 id="list">List</h3>
-        <ul>
-          <li>Item 1</li>
-          <li>
-            Item 2
-            <ul>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>
-                Item 3
-                <ul>
-                  <li><a href="#">Link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Item 3</li>
-        </ul>
-
-        <h3 id="nav">Nav</h3>
-        <p>If you have a small screen try the main menu to see how it looks on mobile.</p>
-        <nav>
-          <div class="my ml3">Nav</div>
-          <div class="content mx3">
-            <a href="#">link 1</a>
-            <a href="#" class="mr">link 2</a>
-            <a href="#">link 3</a>
-            <button type="button" name="button">button</button>
-          </div>
-        </nav>
-
-        <p>Code:</p>
-        <pre><code class="language-html" data-lang="html">&lt;nav&gt;
-  &lt;label class="toggle" for="nav-toggle"&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;div&gt;&lt;/div&gt;
-  &lt;/label&gt;
-  &lt;input id="nav-toggle" type="checkbox"&gt;
-  &lt;div class="my ml3"&gt;Nav&lt;/div&gt;
-  &lt;div class="content mx3"&gt;
-    &lt;a href="#"&gt;link 1&lt;/a&gt;
-    &lt;a href="#" class="mr"&gt;link 2&lt;/a&gt;
-    &lt;a href="#"&gt;link 3&lt;/a&gt;
-    &lt;button type="button" name="button"&gt;button&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/nav&gt;</code></pre>
-
-        <h3 id="progress">Progress</h3>
-        <progress class="w mx0" value="50" max="100"></progress>
-
-        <h3 id="select">Select</h3>
-        <select>
-          <option>Item 1</option>
-          <option>Item 2</option>
-        </select>
-
-        <h3 id="table">Table</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Username</th>
-              <th>Origin</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Goku</td>
-              <td>Vegeta</td>
-            </tr>
-            <tr>
-              <td>Vegeta</td>
-              <td>Vegeta</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3 id="textarea">Textarea</h3>
-        <label>
-          Text
-          <textarea rows="4"></textarea>
-        </label>
-
-      </section>
-      <hr>
-      <section>
-        <h2>Utilities</h2>
-        <p>The utilities classes used in those elements are the one displayed on each element.</p>
-
-        <h3 id="borders">Borders</h3>
-        You can remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code>.
-
-        <h3 id="colors">Colors</h3>
-        <div class="flex">
-          <div class="primary  flex-1">primary</div>
-          <div class="primary-outlined  flex-1">primary-outlined</div>
-          <div class="primary-transparent  flex-1">primary-transparent</div>
-          <div class="secondary  flex-1">secondary</div>
-          <div class="secondary-outlined  flex-1">secondary-outlined</div>
-          <div class="success  flex-1">success</div>
-          <div class="success-outlined  flex-1">success-outlined</div>
-          <div class="error  flex-1">error</div>
-          <div class="error-outlined  flex-1">error-outlined</div>
-          <div class="white  flex-1">white</div>
-          <div class="white-outlined  flex-1">white-outlined</div>
-          <div class="dark  flex-1">dark</div>
-          <div class="dark-outlined  flex-1">dark-outlined</div>
-        </div>
-
-        <h3 id="drawer">Drawer</h3>
-        <p>
-          You can play with the class <code class="language-css" data-lang="css">flex-0</code> and <code class="language-css" data-lang="css">flex-1</code> on the drawers <code class="language-html" data-lang="html">div</code> to have a smooth resize effect.
-        </p>
-        <div class="drawer-layout">
-          <input id="left-toggle" class="drawer-layout__input" type="checkbox">
-          <div class="secondary p0">
-            <div class="mr1">
-              This is the left drawer.
-            </div>
-            <label class="drawer-layout__toggle px1 py2" for="left-toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
+          <h3>Try to change the colors.</h3>
+          <div class="flex  text-center">
+            <label class="flex-auto">
+              Primary color
+              <input
+                class="mx"
+                type="color"
+                value="#444444"
+                onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              Primary color text
+              <input
+                class="mx"
+                type="color"
+                value="#eeeeee"
+                onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              Primary color active
+              <input
+                class="mx"
+                type="color"
+                value="#888888"
+                onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              Secondary color
+              <input
+                class="mx"
+                type="color"
+                value="#666666"
+                onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              Secondary color text
+              <input
+                class="mx"
+                type="color"
+                value="#ffffff"
+                onchange="document.documentElement.style.setProperty('--secondary-color-text', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              Link color
+              <input
+                class="mx"
+                type="color"
+                value="#00ff00"
+                onchange="document.documentElement.style.setProperty('--link-color', event.target.value)">
             </label>
           </div>
 
-          <div class="flex-4  secondary-outlined">
-            This is the main content.
-          </div>
-
-          <input id="right-toggle" class="drawer-layout__input" type="checkbox">
-          <div class="secondary p0">
-            <div class="mr1">
-              This is the right drawer.
-            </div>
-            <label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
+          <h3>Try to change the border.</h3>
+          <div class="flex  text-center">
+            <label class="flex-auto">
+              Border radius
+              <input
+                class="mx"
+                type="number"
+                value="4"
+                min="0"
+                onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
+            </label>
+            <label class="flex-auto">
+              Border width
+              <input
+                class="mx"
+                type="number"
+                value="1"
+                min="0"
+                onchange="document.documentElement.style.setProperty('--border-width', event.target.value + 'px')">
             </label>
           </div>
-        </div>
 
-        <p>Code:</p>
-        <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
-  &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="secondary p0"&gt;
-    &lt;div class="mr1"&gt;
-      This is the left drawer.
-    &lt;/div&gt;
-    &lt;label class="drawer-layout__toggle px1 py2" for="left-toggle"&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
+          <h3>Try to change the shadow.</h3>
+          <label>
+            Shadow
+            <input type="text" value="0 0.1rem 0.25rem rgba(0, 0, 0, 0.4)" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
+          </label>
 
-  &lt;div class="flex-4  secondary-outlined"&gt;
-    This is the main content.
-  &lt;/div&gt;
-
-  &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="secondary p0"&gt;
-    &lt;div class="mr1"&gt;
-      This is the right drawer.
-    &lt;/div&gt;
-    &lt;label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle"&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-    &lt;/label&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-        <h3 id="dropdown">Dropdown</h3>
-
-        <div class="dropdown">
-          <label for="dropdown1">Click Dropdown</label>
-          <input id="dropdown1" type="checkbox">
-          <div class="dropdown__content">
-            <button type="button">Item 1</button>
-            <button type="button">Item 2</button>
-          </div>
-        </div>
-        <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
-  &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
-  &lt;input id="dropdown1" type="checkbox"&gt;
-  &lt;div class="dropdown__content"&gt;
-    &lt;button type="button"&gt;Item 1&lt;/button&gt;
-    &lt;button type="button"&gt;Item 2&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-        <div class="dropdown">
-          <button type="button">Hover Dropdown</button>
-          <div class="dropdown__content">
-            <a>Item 1</a>
-            <a>Item 2</a>
-          </div>
-        </div>
-        <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
-  &lt;button type="button"&gt;Hover Dropdown&lt;/button&gt;
-  &lt;div class="dropdown__content"&gt;
-    &lt;a&gt;Item 1&lt;/a&gt;
-    &lt;a&gt;Item 2&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-        <h3 id="flex">Flex</h3>
-        <p>
-          Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space.
-        </p>
-        <div class="flex">
-          <div class="secondary-outlined  flex-auto">
-            flex-auto
-          </div>
-          <div class="secondary-outlined  flex-auto">
-            flex-auto
-          </div>
-          <div class="secondary-outlined  flex-auto">
-            flex-auto
-          </div>
-        </div>
-        <p>
-          You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
-        </p>
-        <div class="flex">
-          <div class="secondary-outlined  flex-2">
-            flex-2
-          </div>
-          <div class="secondary-outlined  flex-4">
-            flex-4
-          </div>
-          <div class="secondary-outlined  flex-8">
-            flex-8
-          </div>
-        </div>
-        <p>
-          Use <code class="language-css" data-lang="css">flex-column</code> on the parent if you want to take all the width and stack your elements.
-        </p>
-        <div class="secondary-outlined  flex-column">
-          flex-column
-          <div class="secondary-outlined">
-          </div>
-          <div class="secondary-outlined">
-          </div>
-          <div class="secondary-outlined">
-          </div>
-        </div>
-
-        <h3 id="loading">Loading</h3>
-        <button type="button" class="loading" disabled>loading</button>
-        <pre><code class="language-html" data-lang="html">&lt;button type="button" class="loading" disabled&gt;loading&lt;/button&gt;</code></pre>
-
-        <h3 id="modal">Modal</h3>
-        <button type="button" onclick="document.getElementById('myModal').style.display = 'flex'">Open Modal</button>
-        <div id="myModal" class="modal" style="display: none;">
-          <div class="modal__background" onclick="document.getElementById('myModal').style.display = 'none'">
-            <p style="color: white;">modal__background</p>
-          </div>
-          <div class="modal__content">
-            modal__content
-          </div>
-        </div>
-        <pre><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
-  &lt;div class="modal__background"&gt;&lt;/div&gt;
-  &lt;div class="modal__content"&gt;
-    modal__content
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-        <h3 id="overflow">Overflow</h3>
-        <div class="secondary  overflow-x" style="width: 50px;">
-          overflow-x
-        </div>
-        <br>
-        <div class="secondary  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
-          overflow-y
-        </div>
-
-        <h3 id="portrait">Portrait</h3>
-        <div class="portrait">
-          This div is centered and will never be more than 1200 pixels width. 1200 pixels is our desktop breakpoints but you can change the portrait class' max-width if you would like another size.
-        </div>
-
-        <h3 id="position">Position</h3>
-        <div class="secondary-outlined  text-center">
-          text-center
-        </div>
-        <div class="secondary-outlined  text-right">
-          text-right
-        </div>
-        <div class="secondary  mx" style="width: 100px">
-          mx
-        </div>
-        <div class="secondary  ml" style="width: 100px">
-          ml
-        </div>
-        <div class="secondary  mr" style="width: 100px">
-          mr
-        </div>
-        <div class="secondary-outlined  clearfix">
-          clearfix
-          <span class="secondary  float-right">float-right</span>
-        </div>
-        <div class="secondary-outlined  clearfix">
-          clearfix
-          <span class="secondary  float-left">float-left</span>
-        </div>
-        <p>You can also use the following classes:</p>
-        <pre><code class="language-css" data-lang="css">.absolute {
-  position: absolute;
-}
-.fixed {
-  position: fixed;
-}
-.relative {
-  position: relative;
-}
-.static {
-  position: static;
-}
-.sticky {
-  position: sticky;
-}
-
-.top {
-  top: 0;
-}
-.right {
-  right: 0;
-}
-.bottom {
-  bottom: 0;
-}
-.left {
-  left: 0;
-}</code></pre>
-
-        <h3 id="size">Size</h3>
-        <p>The <code class="language-css" data-lang="css">w</code> class takes 100% of the width and the <code class="language-css" data-lang="css">h</code> class takes 100% of the height.</p>
-        <button type="button" class="w  m0">w</button>
-
-        <h3 id="spacing">Spacing</h3>
-        <p>
-          You can try to add x, y, t, r, b or l before the size of the margin or padding to affect only some sides (e.g. my1, px1).
-          For the margin, if you don't specify a size, like m or mx, the margin will be set to auto.
-        </p>
-        <div>
-          <button class="m0">m0</button>
-          <button class="m1">m1</button>
-          <button class="m2">m2</button>
-          <button class="m3">m3</button>
-        </div>
-        <div>
-          <button class="p0">p0</button>
-          <button class="p1">p1</button>
-          <button class="p2">p2</button>
-          <button class="p3">p3</button>
-        </div>
-
-        <h3 id="tabs">Tabs</h3>
-        <div class="tabs flex">
-          <button type="button" class="flex-1">
-            flex-1
-          </button>
-          <button type="button" class="flex-1  active  secondary">
-            flex-1  active  secondary
-          </button>
-          <button type="button" class="flex-1">
-            flex-1
-          </button>
-          <button type="button" class="flex-1">
-            flex-1
-          </button>
-        </div>
-        <div class="secondary  tabs__content">
-          secondary tabs__content
-        </div>
-
-        <pre><code class="language-html" data-lang="html">&lt;div class="tabs flex"&gt;
-  &lt;button type="button" class="flex-1"&gt;
-    flex-1
-  &lt;/button&gt;
-  &lt;button type="button" class="flex-1  active  secondary"&gt;
-    flex-1 active secondary
-  &lt;/button&gt;
-  &lt;button type="button" class="flex-1"&gt;
-    flex-1
-  &lt;/button&gt;
-  &lt;button type="button" class="flex-1"&gt;
-    flex-1
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="secondary-outlined tabs__content"&gt;
-  secondary tabs__content
-&lt;/div&gt;</code></pre>
-
-        <h3 id="typo">Typo</h3>
-        <span class="small">small</span>
-        <a class="small" href="#">small</a>
-        <button class="small">small</button>
-
-      </section>
-      <hr>
-      <section id="example">
-        <h2>Example</h2>
-        <p>Description</p>
-        <form class="clearfix">
+          <h3>Try to change the padding class.</h3>
           <div class="flex">
             <label class="flex-auto">
-              Enter your name
-              <input type="text">
+              padding-top
+              <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
             </label>
             <label class="flex-auto">
-              Enter your email
-              <input type="email">
+              padding-right
+              <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-r', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              padding-bottom
+              <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-b', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              padding-left
+              <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
             </label>
           </div>
-          <label>
-            Comment
-            <textarea name="name" rows="2" placeholder="..."></textarea>
-          </label>
+
+          <h3>Try to change the margin class.</h3>
+          <div class="flex">
+            <label class="flex-auto">
+              margin-top
+              <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              margin-right
+              <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              margin-bottom
+              <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
+            </label>
+            <label class="flex-auto">
+              margin-left
+              <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
+            </label>
+          </div>
+
+        </section>
+        <hr>
+        <section>
+          <h2>Elements</h2>
+          <p>You don't need to do do anything for the basic HTML elements. They are already styled based on the values of CSS variables.</p>
+
+          <h3 id="button">Button</h3>
+          <button type="button">Button</button>
+          <button type="button" disabled="true">Disabled Button</button>
+
+          <h3 id="input">Input</h3>
+          <h4>Type</h4>
+          <div class="flex  text-center">
+            <label class="flex-auto">
+              <div>Text</div>
+              <input class="mx" type="text">
+            </label>
+            <label class="flex-auto">
+              <div>Number</div>
+              <input class="mx" type="number">
+            </label>
+            <label class="flex-auto">
+              <div>Date</div>
+              <input class="mx" type="date">
+            </label>
+          </div>
+
+          <p>For checkbox you must add a span after the input and the class <code class="language-css" data-lang="css">label__checkbox</code> on the label.</p>
           <label class="label__checkbox">
-            Do you want to subscribe to our newsletter?
             <input type="checkbox">
             <span></span>
+            Checkbox
           </label>
-          <button class="float-right" type="button">Confirm</button>
-        </form>
-        <div class="secondary  clearfix">
-          This content need some buttons on the side.
+          <p>File</p>
+          <label>
+            Regular file input
+            <input type="file">
+          </label>
+          <p class="ml1">Dropbox</p>
+          <label class="label__file">
+            Dropbox file input
+            <input type="file">
+          </label>
+          <pre><code class="language-html" data-lang="html">&lt;label class="label__file"&gt;
+    Dropbox file input
+    &lt;input type="file"&gt;
+  &lt;/label&gt;</code></pre>
+          <label class="label__file--button">
+            label__file--button
+            <input type="file">
+          </label>
+
+          <h3 id="link">Link</h3>
+          <a href="#">Link</a>
+
+          <h3 id="list">List</h3>
+          <ul>
+            <li>Item 1</li>
+            <li>
+              Item 2
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>
+                  Item 3
+                  <ul>
+                    <li><a href="#">Link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Item 3</li>
+          </ul>
+
+          <h3 id="nav">Nav</h3>
+          <p>If you have a small screen try the main menu to see how it looks on mobile.</p>
+          <nav>
+            <div class="my ml3">Nav</div>
+            <div class="content mx3">
+              <a href="#">link 1</a>
+              <a href="#" class="mr">link 2</a>
+              <a href="#">link 3</a>
+              <button type="button" name="button">button</button>
+            </div>
+          </nav>
+
+          <p>Code:</p>
+          <pre><code class="language-html" data-lang="html">&lt;nav&gt;
+    &lt;label class="toggle" for="nav-toggle"&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+    &lt;/label&gt;
+    &lt;input id="nav-toggle" type="checkbox"&gt;
+    &lt;div class="my ml3"&gt;Nav&lt;/div&gt;
+    &lt;div class="content mx3"&gt;
+      &lt;a href="#"&gt;link 1&lt;/a&gt;
+      &lt;a href="#" class="mr"&gt;link 2&lt;/a&gt;
+      &lt;a href="#"&gt;link 3&lt;/a&gt;
+      &lt;button type="button" name="button"&gt;button&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;</code></pre>
+
+          <h3 id="progress">Progress</h3>
+          <progress class="w mx0" value="50" max="100"></progress>
+
+          <h3 id="select">Select</h3>
+          <select>
+            <option>Item 1</option>
+            <option>Item 2</option>
+          </select>
+
+          <h3 id="table">Table</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Origin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Goku</td>
+                <td>Vegeta</td>
+              </tr>
+              <tr>
+                <td>Vegeta</td>
+                <td>Vegeta</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 id="textarea">Textarea</h3>
+          <label>
+            Text
+            <textarea rows="4"></textarea>
+          </label>
+
+        </section>
+        <hr>
+        <section>
+          <h2>Utilities</h2>
+          <p>The utilities classes used in those elements are the one displayed on each element.</p>
+
+          <h3 id="borders">Borders</h3>
+          You can remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code>.
+
+          <h3 id="colors">Colors</h3>
+          <div class="flex">
+            <div class="primary  flex-1">primary</div>
+            <div class="primary-outlined  flex-1">primary-outlined</div>
+            <div class="primary-transparent  flex-1">primary-transparent</div>
+            <div class="secondary  flex-1">secondary</div>
+            <div class="secondary-outlined  flex-1">secondary-outlined</div>
+            <div class="success  flex-1">success</div>
+            <div class="success-outlined  flex-1">success-outlined</div>
+            <div class="error  flex-1">error</div>
+            <div class="error-outlined  flex-1">error-outlined</div>
+            <div class="white  flex-1">white</div>
+            <div class="white-outlined  flex-1">white-outlined</div>
+            <div class="dark  flex-1">dark</div>
+            <div class="dark-outlined  flex-1">dark-outlined</div>
+          </div>
+
+          <h3 id="drawer">Drawer</h3>
+          <p>
+            You can play with the class <code class="language-css" data-lang="css">flex-0</code> and <code class="language-css" data-lang="css">flex-1</code> on the drawers <code class="language-html" data-lang="html">div</code> to have a smooth resize effect.
+          </p>
+          <div class="drawer-layout">
+            <input id="left-toggle" class="drawer-layout__input" type="checkbox">
+            <div class="secondary p0">
+              <div class="mr1">
+                This is the left drawer.
+              </div>
+              <label class="drawer-layout__toggle px1 py2" for="left-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </label>
+            </div>
+
+            <div class="flex-4  secondary-outlined">
+              This is the main content.
+            </div>
+
+            <input id="right-toggle" class="drawer-layout__input" type="checkbox">
+            <div class="secondary p0">
+              <div class="mr1">
+                This is the right drawer.
+              </div>
+              <label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </label>
+            </div>
+          </div>
+
+          <p>Code:</p>
+          <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
+    &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
+    &lt;div class="secondary p0"&gt;
+      &lt;div class="mr1"&gt;
+        This is the left drawer.
+      &lt;/div&gt;
+      &lt;label class="drawer-layout__toggle px1 py2" for="left-toggle"&gt;
+        &lt;div class="bar"&gt;&lt;/div&gt;
+        &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flex-4  secondary-outlined"&gt;
+      This is the main content.
+    &lt;/div&gt;
+
+    &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
+    &lt;div class="secondary p0"&gt;
+      &lt;div class="mr1"&gt;
+        This is the right drawer.
+      &lt;/div&gt;
+      &lt;label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle"&gt;
+        &lt;div class="bar"&gt;&lt;/div&gt;
+        &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+
+          <h3 id="dropdown">Dropdown</h3>
+
+          <div class="dropdown">
+            <label for="dropdown1">Click Dropdown</label>
+            <input id="dropdown1" type="checkbox">
+            <div class="dropdown__content">
+              <button type="button">Item 1</button>
+              <button type="button">Item 2</button>
+            </div>
+          </div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
+    &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
+    &lt;input id="dropdown1" type="checkbox"&gt;
+    &lt;div class="dropdown__content"&gt;
+      &lt;button type="button"&gt;Item 1&lt;/button&gt;
+      &lt;button type="button"&gt;Item 2&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+
+          <div class="dropdown">
+            <button type="button">Hover Dropdown</button>
+            <div class="dropdown__content">
+              <a>Item 1</a>
+              <a>Item 2</a>
+            </div>
+          </div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
+    &lt;button type="button"&gt;Hover Dropdown&lt;/button&gt;
+    &lt;div class="dropdown__content"&gt;
+      &lt;a&gt;Item 1&lt;/a&gt;
+      &lt;a&gt;Item 2&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+
+          <h3 id="flex">Flex</h3>
+          <p>
+            Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space.
+          </p>
+          <div class="flex">
+            <div class="secondary-outlined  flex-auto">
+              flex-auto
+            </div>
+            <div class="secondary-outlined  flex-auto">
+              flex-auto
+            </div>
+            <div class="secondary-outlined  flex-auto">
+              flex-auto
+            </div>
+          </div>
+          <p>
+            You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
+          </p>
+          <div class="flex">
+            <div class="secondary-outlined  flex-2">
+              flex-2
+            </div>
+            <div class="secondary-outlined  flex-4">
+              flex-4
+            </div>
+            <div class="secondary-outlined  flex-8">
+              flex-8
+            </div>
+          </div>
+          <p>
+            Use <code class="language-css" data-lang="css">flex-column</code> on the parent if you want to take all the width and stack your elements.
+          </p>
+          <div class="secondary-outlined  flex-column">
+            flex-column
+            <div class="secondary-outlined">
+            </div>
+            <div class="secondary-outlined">
+            </div>
+            <div class="secondary-outlined">
+            </div>
+          </div>
+
+          <h3 id="loading">Loading</h3>
+          <button type="button" class="loading" disabled>loading</button>
+          <pre><code class="language-html" data-lang="html">&lt;button type="button" class="loading" disabled&gt;loading&lt;/button&gt;</code></pre>
+
+          <h3 id="modal">Modal</h3>
+          <button type="button" onclick="document.getElementById('myModal').style.display = 'flex'">Open Modal</button>
+          <div id="myModal" class="modal" style="display: none;">
+            <div class="modal__background" onclick="document.getElementById('myModal').style.display = 'none'">
+              <p style="color: white;">modal__background</p>
+            </div>
+            <div class="modal__content">
+              modal__content
+            </div>
+          </div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
+    &lt;div class="modal__background"&gt;&lt;/div&gt;
+    &lt;div class="modal__content"&gt;
+      modal__content
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+
+          <h3 id="overflow">Overflow</h3>
+          <div class="secondary  overflow-x" style="width: 50px;">
+            overflow-x
+          </div>
           <br>
-          This is a new line.
-            <a href="#">Say Hi!</a>
-          <span class="float-right">
-            <button type="button">Edit</button>
-            <button type="button" class="success">Save</button>
-            <button type="button" class="error">Delete</button>
-          </span>
-        </div>
-        <h4>Users</h4>
-        <table class="text-center">
-          <thead>
-            <tr>
-              <th>User</th>
-              <th>Age</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Bob</td>
-              <td>26</td>
-            </tr>
-            <tr>
-              <td>Alice</td>
-              <td>22</td>
-            </tr>
-          </tbody>
-        </table>
-        <h4>Shopping list</h4>
-        <ul>
-          <li>
-            Chicken
-            <ul>
-              <li>Nuggets</li>
-              <li>Drums</li>
-            </ul>
-          </li>
-          <li>Water</li>
-        </ul>
-      </section>
+          <div class="secondary  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
+            overflow-y
+          </div>
+
+          <h3 id="portrait">Portrait</h3>
+          <div class="portrait">
+            This div is centered and will never be more than 1200 pixels width. 1200 pixels is our desktop breakpoints but you can change the portrait class' max-width if you would like another size.
+          </div>
+
+          <h3 id="position">Position</h3>
+          <div class="secondary-outlined  text-center">
+            text-center
+          </div>
+          <div class="secondary-outlined  text-right">
+            text-right
+          </div>
+          <div class="secondary  mx" style="width: 100px">
+            mx
+          </div>
+          <div class="secondary  ml" style="width: 100px">
+            ml
+          </div>
+          <div class="secondary  mr" style="width: 100px">
+            mr
+          </div>
+          <div class="secondary-outlined  clearfix">
+            clearfix
+            <span class="secondary  float-right">float-right</span>
+          </div>
+          <div class="secondary-outlined  clearfix">
+            clearfix
+            <span class="secondary  float-left">float-left</span>
+          </div>
+          <p>You can also use the following classes:</p>
+          <pre><code class="language-css" data-lang="css">.absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .static {
+    position: static;
+  }
+  .sticky {
+    position: sticky;
+  }
+
+  .top {
+    top: 0;
+  }
+  .right {
+    right: 0;
+  }
+  .bottom {
+    bottom: 0;
+  }
+  .left {
+    left: 0;
+  }</code></pre>
+
+          <h3 id="size">Size</h3>
+          <p>The <code class="language-css" data-lang="css">w</code> class takes 100% of the width and the <code class="language-css" data-lang="css">h</code> class takes 100% of the height.</p>
+          <button type="button" class="w  m0">w</button>
+
+          <h3 id="spacing">Spacing</h3>
+          <p>
+            You can try to add x, y, t, r, b or l before the size of the margin or padding to affect only some sides (e.g. my1, px1).
+            For the margin, if you don't specify a size, like m or mx, the margin will be set to auto.
+          </p>
+          <div>
+            <button class="m0">m0</button>
+            <button class="m1">m1</button>
+            <button class="m2">m2</button>
+            <button class="m3">m3</button>
+          </div>
+          <div>
+            <button class="p0">p0</button>
+            <button class="p1">p1</button>
+            <button class="p2">p2</button>
+            <button class="p3">p3</button>
+          </div>
+
+          <h3 id="shadow">Shadow</h3>
+          You can use the class <code class="language-css" data-lang="css">shadow</code> and <code class="language-css" data-lang="css">no-shadow</code> to add or remove shadow.
+
+          <h3 id="tabs">Tabs</h3>
+          <div class="tabs flex">
+            <button type="button" class="flex-1">
+              flex-1
+            </button>
+            <button type="button" class="flex-1  active  secondary">
+              flex-1  active  secondary
+            </button>
+            <button type="button" class="flex-1">
+              flex-1
+            </button>
+            <button type="button" class="flex-1">
+              flex-1
+            </button>
+          </div>
+          <div class="secondary  tabs__content">
+            secondary tabs__content
+          </div>
+
+          <pre><code class="language-html" data-lang="html">&lt;div class="tabs flex"&gt;
+    &lt;button type="button" class="flex-1"&gt;
+      flex-1
+    &lt;/button&gt;
+    &lt;button type="button" class="flex-1  active  secondary"&gt;
+      flex-1 active secondary
+    &lt;/button&gt;
+    &lt;button type="button" class="flex-1"&gt;
+      flex-1
+    &lt;/button&gt;
+    &lt;button type="button" class="flex-1"&gt;
+      flex-1
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="secondary-outlined tabs__content"&gt;
+    secondary tabs__content
+  &lt;/div&gt;</code></pre>
+
+          <h3 id="typo">Typo</h3>
+          <span class="small">small</span>
+          <a class="small" href="#">small</a>
+          <button class="small">small</button>
+
+        </section>
+        <hr>
+        <section id="example">
+          <h2>Example</h2>
+          <p>Description</p>
+          <form class="clearfix">
+            <div class="flex">
+              <label class="flex-auto">
+                Enter your name
+                <input type="text">
+              </label>
+              <label class="flex-auto">
+                Enter your email
+                <input type="email">
+              </label>
+            </div>
+            <label>
+              Comment
+              <textarea name="name" rows="2" placeholder="..."></textarea>
+            </label>
+            <label class="label__checkbox">
+              Do you want to subscribe to our newsletter?
+              <input type="checkbox">
+              <span></span>
+            </label>
+            <button class="float-right" type="button">Confirm</button>
+          </form>
+          <div class="secondary  clearfix">
+            This content need some buttons on the side.
+            <br>
+            This is a new line.
+              <a href="#">Say Hi!</a>
+            <span class="float-right">
+              <button type="button">Edit</button>
+              <button type="button" class="success">Save</button>
+              <button type="button" class="error">Delete</button>
+            </span>
+          </div>
+          <h4>Users</h4>
+          <table class="text-center">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bob</td>
+                <td>26</td>
+              </tr>
+              <tr>
+                <td>Alice</td>
+                <td>22</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Shopping list</h4>
+          <ul>
+            <li>
+              Chicken
+              <ul>
+                <li>Nuggets</li>
+                <li>Drums</li>
+              </ul>
+            </li>
+            <li>Water</li>
+          </ul>
+        </section>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
