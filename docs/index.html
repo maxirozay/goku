@@ -76,7 +76,7 @@
             You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
           </p>
           <pre><code class="language-css" data-lang="css">--font-family: sans-serif;
-  --font-weight: 300;
+  --font-weight: normal;
   --primary-color: #444;
   --primary-color-text: #eee;
   --primary-color-active: #888;
@@ -104,7 +104,7 @@
           </label>
           <label>
             font-weight
-            <input type="text" value="300" onkeyup="document.documentElement.style.setProperty('--font-weight', event.target.value)">
+            <input type="text" value="normal" onkeyup="document.documentElement.style.setProperty('--font-weight', event.target.value)">
           </label>
 
           <h3>Try to change the colors.</h3>
