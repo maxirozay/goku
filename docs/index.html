@@ -76,26 +76,26 @@
             You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
           </p>
           <pre><code class="language-css" data-lang="css">--font-family: sans-serif;
-  --font-weight: normal;
-  --primary-color: #444;
-  --primary-color-text: #eee;
-  --primary-color-active: #888;
-  --secondary-color: #666;
-  --secondary-color-text: #fff;
-  --link-color: #0f0;
-  --success-color: #55ff44;
-  --error-color: red;
-  --border-radius: 4px;
-  --border-width: 1px;
-  --padding-t: 0.25rem;
-  --padding-r: 0.5rem;
-  --padding-b: 0.25rem;
-  --padding-l: 0.5rem;
-  --margin-t: 0.5rem;
-  --margin-r: 0.25rem;
-  --margin-b: 0.5rem;
-  --margin-l: 0.25rem;
-  --shadow: 0 0.1rem 0.25rem #bbb;</code></pre>
+--font-weight: normal;
+--primary-color: #444;
+--primary-color-text: #eee;
+--primary-color-active: #888;
+--secondary-color: #666;
+--secondary-color-text: #fff;
+--link-color: #0f0;
+--success-color: #55ff44;
+--error-color: red;
+--border-radius: 4px;
+--border-width: 1px;
+--padding-t: 0.25rem;
+--padding-r: 0.5rem;
+--padding-b: 0.25rem;
+--padding-l: 0.5rem;
+--margin-t: 0.5rem;
+--margin-r: 0.25rem;
+--margin-b: 0.5rem;
+--margin-l: 0.25rem;
+--shadow: 0 0.1rem 0.25rem #bbb;</code></pre>
 
           <h3>Try to change the font-family</h3>
           <label>
@@ -271,9 +271,9 @@
             <input type="file">
           </label>
           <pre><code class="language-html" data-lang="html">&lt;label class="label__file"&gt;
-    Dropbox file input
-    &lt;input type="file"&gt;
-  &lt;/label&gt;</code></pre>
+  Dropbox file input
+  &lt;input type="file"&gt;
+&lt;/label&gt;</code></pre>
           <label class="label__file--button">
             label__file--button
             <input type="file">
@@ -315,19 +315,19 @@
 
           <p>Code:</p>
           <pre><code class="language-html" data-lang="html">&lt;nav&gt;
-    &lt;label class="toggle" for="nav-toggle"&gt;
-      &lt;div&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;/div&gt;
-    &lt;/label&gt;
-    &lt;input id="nav-toggle" type="checkbox"&gt;
-    &lt;div class="my ml3"&gt;Nav&lt;/div&gt;
-    &lt;div class="content mx3"&gt;
-      &lt;a href="#"&gt;link 1&lt;/a&gt;
-      &lt;a href="#" class="mr"&gt;link 2&lt;/a&gt;
-      &lt;a href="#"&gt;link 3&lt;/a&gt;
-      &lt;button type="button" name="button"&gt;button&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/nav&gt;</code></pre>
+  &lt;label class="toggle" for="nav-toggle"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/label&gt;
+  &lt;input id="nav-toggle" type="checkbox"&gt;
+  &lt;div class="my ml3"&gt;Nav&lt;/div&gt;
+  &lt;div class="content mx3"&gt;
+    &lt;a href="#"&gt;link 1&lt;/a&gt;
+    &lt;a href="#" class="mr"&gt;link 2&lt;/a&gt;
+    &lt;a href="#"&gt;link 3&lt;/a&gt;
+    &lt;button type="button" name="button"&gt;button&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
 
           <h3 id="progress">Progress</h3>
           <progress class="w mx0" value="50" max="100"></progress>
@@ -424,32 +424,32 @@
 
           <p>Code:</p>
           <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
-    &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
-    &lt;div class="secondary p0"&gt;
-      &lt;div class="mr1"&gt;
-        This is the left drawer.
-      &lt;/div&gt;
-      &lt;label class="drawer-layout__toggle px1 py2" for="left-toggle"&gt;
-        &lt;div class="bar"&gt;&lt;/div&gt;
-        &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;/label&gt;
+  &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
+  &lt;div class="secondary p0"&gt;
+    &lt;div class="mr1"&gt;
+      This is the left drawer.
     &lt;/div&gt;
+    &lt;label class="drawer-layout__toggle px1 py2" for="left-toggle"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
 
-    &lt;div class="flex-4  secondary-outlined"&gt;
-      This is the main content.
-    &lt;/div&gt;
+  &lt;div class="flex-4  secondary-outlined"&gt;
+    This is the main content.
+  &lt;/div&gt;
 
-    &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
-    &lt;div class="secondary p0"&gt;
-      &lt;div class="mr1"&gt;
-        This is the right drawer.
-      &lt;/div&gt;
-      &lt;label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle"&gt;
-        &lt;div class="bar"&gt;&lt;/div&gt;
-        &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;/label&gt;
+  &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
+  &lt;div class="secondary p0"&gt;
+    &lt;div class="mr1"&gt;
+      This is the right drawer.
     &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+    &lt;label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle"&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+      &lt;div class="bar"&gt;&lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
           <h3 id="dropdown">Dropdown</h3>
 
@@ -462,13 +462,13 @@
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
-    &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
-    &lt;input id="dropdown1" type="checkbox"&gt;
-    &lt;div class="dropdown__content"&gt;
-      &lt;button type="button"&gt;Item 1&lt;/button&gt;
-      &lt;button type="button"&gt;Item 2&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+  &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
+  &lt;input id="dropdown1" type="checkbox"&gt;
+  &lt;div class="dropdown__content"&gt;
+    &lt;button type="button"&gt;Item 1&lt;/button&gt;
+    &lt;button type="button"&gt;Item 2&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
           <div class="dropdown">
             <button type="button">Hover Dropdown</button>
@@ -478,12 +478,12 @@
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
-    &lt;button type="button"&gt;Hover Dropdown&lt;/button&gt;
-    &lt;div class="dropdown__content"&gt;
-      &lt;a&gt;Item 1&lt;/a&gt;
-      &lt;a&gt;Item 2&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+  &lt;button type="button"&gt;Hover Dropdown&lt;/button&gt;
+  &lt;div class="dropdown__content"&gt;
+    &lt;a&gt;Item 1&lt;/a&gt;
+    &lt;a&gt;Item 2&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
           <h3 id="flex">Flex</h3>
           <p>
@@ -542,11 +542,11 @@
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
-    &lt;div class="modal__background"&gt;&lt;/div&gt;
-    &lt;div class="modal__content"&gt;
-      modal__content
-    &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+  &lt;div class="modal__background"&gt;&lt;/div&gt;
+  &lt;div class="modal__content"&gt;
+    modal__content
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
           <h3 id="overflow">Overflow</h3>
           <div class="secondary  overflow-x" style="width: 50px;">
@@ -588,33 +588,33 @@
           </div>
           <p>You can also use the following classes:</p>
           <pre><code class="language-css" data-lang="css">.absolute {
-    position: absolute;
-  }
-  .fixed {
-    position: fixed;
-  }
-  .relative {
-    position: relative;
-  }
-  .static {
-    position: static;
-  }
-  .sticky {
-    position: sticky;
-  }
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.static {
+  position: static;
+}
+.sticky {
+  position: sticky;
+}
 
-  .top {
-    top: 0;
-  }
-  .right {
-    right: 0;
-  }
-  .bottom {
-    bottom: 0;
-  }
-  .left {
-    left: 0;
-  }</code></pre>
+.top {
+  top: 0;
+}
+.right {
+  right: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.left {
+  left: 0;
+}</code></pre>
 
           <h3 id="size">Size</h3>
           <p>The <code class="language-css" data-lang="css">w</code> class takes 100% of the width and the <code class="language-css" data-lang="css">h</code> class takes 100% of the height.</p>
@@ -661,22 +661,22 @@
           </div>
 
           <pre><code class="language-html" data-lang="html">&lt;div class="tabs flex"&gt;
-    &lt;button type="button" class="flex-1"&gt;
-      flex-1
-    &lt;/button&gt;
-    &lt;button type="button" class="flex-1  active  secondary"&gt;
-      flex-1 active secondary
-    &lt;/button&gt;
-    &lt;button type="button" class="flex-1"&gt;
-      flex-1
-    &lt;/button&gt;
-    &lt;button type="button" class="flex-1"&gt;
-      flex-1
-    &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="secondary-outlined tabs__content"&gt;
-    secondary tabs__content
-  &lt;/div&gt;</code></pre>
+  &lt;button type="button" class="flex-1"&gt;
+    flex-1
+  &lt;/button&gt;
+  &lt;button type="button" class="flex-1  active  secondary"&gt;
+    flex-1 active secondary
+  &lt;/button&gt;
+  &lt;button type="button" class="flex-1"&gt;
+    flex-1
+  &lt;/button&gt;
+  &lt;button type="button" class="flex-1"&gt;
+    flex-1
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="secondary-outlined tabs__content"&gt;
+  secondary tabs__content
+&lt;/div&gt;</code></pre>
 
           <h3 id="typo">Typo</h3>
           <span class="small">small</span>
