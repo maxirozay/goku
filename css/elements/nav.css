@@ -9,7 +9,7 @@ nav > .content > a {
 }
 
 nav > .content {
-  background-color: var(--primary-color);
+  background-color: inherit;
   position: fixed;
   bottom: -100%;
   left: 0;
@@ -17,7 +17,8 @@ nav > .content {
   transition: 0.3s;
   z-index: 100;
 }
-nav > .content > * {
+nav > .content > *,
+nav > .content > .dropdown > button {
   display: block;
   padding: .5rem 1rem;
 }
@@ -54,7 +55,8 @@ nav > .toggle > div {
     margin: 0 .5rem;
     transition: 0s;
   }
-  nav > .content > * {
+  nav > .content > *,
+  nav > .content > .dropdown > button {
     display: inline-block;
     padding: var(--padding);
   }
