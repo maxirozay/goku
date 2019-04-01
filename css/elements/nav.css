@@ -2,6 +2,7 @@ nav {
   background-color: var(--primary-color);
   height: 48px;
   display: flex;
+  z-index: 100;
 }
 nav > a,
 nav > .content > a {
