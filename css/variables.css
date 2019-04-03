@@ -21,7 +21,7 @@
   --margin-b: 0.5rem;
   --margin-l: 0.25rem;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.4);
+  --shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 /* Why this breakpoints? https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862 */
