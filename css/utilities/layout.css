@@ -323,7 +323,7 @@
 }
 .flex-column {
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 @media (--tablet-landscape-up) {
