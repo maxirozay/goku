@@ -321,15 +321,26 @@
   display: flex;
   flex-direction: column;
 }
-.flex-column {
-  display: flex;
-  flex-direction: column !important;
-}
-
 @media (--tablet-landscape-up) {
   .flex {
     flex-direction: row;
   }
+
+  .flex > * {
+    margin-right: var(--margin-r);
+  }
+  .flex > *:last-child {
+    margin-right: 0;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column > * {
+  margin-right: 0;
 }
 
 .flex-auto {

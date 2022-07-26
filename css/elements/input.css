@@ -8,6 +8,7 @@ input {
   font-size: 1em;
   font-family: inherit;
   line-height: 1;
+  padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
 }
 input:hover,
 input:focus {
@@ -72,7 +73,6 @@ input[type='color'] {
   width: 250px;
   height: 140px;
   opacity: 0;
-  margin: 0;
   padding: 0;
 }
 
@@ -83,7 +83,6 @@ input[type='color'] {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
-  margin: var(--margin);
   box-shadow: var(--shadow);
   cursor: pointer;
 }
@@ -103,8 +102,7 @@ input[type='color'] {
 label {
   display: flex;
   flex-direction: column;
-  margin: var(--margin);
-  margin-bottom: 0;
+  margin-bottom: var(--margin-b);
 }
 
 label > input, textarea {
