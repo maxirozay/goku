@@ -3,6 +3,9 @@
   flex-direction: row;
 }
 
+.drawer-layout__input {
+  display: none !important;
+}
 .drawer-layout__input + div {
   transition: 1s all;
   display: flex;
