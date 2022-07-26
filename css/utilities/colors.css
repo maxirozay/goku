@@ -64,28 +64,28 @@
   background-color: var(--light-color) !important;
   color: var(--light-text) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid white !important;
+  border: var(--border-width) solid var(--light-color) !important;
 }
 
 .light-outlined {
   background-color: transparent !important;
   color: var(--light-color) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid white !important;
+  border: var(--border-width) solid var(--light-color) !important;
 }
 
 .dark {
   background-color: var(--dark-color) !important;
   color: var(--dark-text) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid #323232 !important;
+  border: var(--border-width) solid var(--dark-color) !important;
 }
 
 .dark-outlined {
   background-color: transparent !important;
   color: var(--dark-color) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid #323232 !important;
+  border: var(--border-width) solid var(--dark-color) !important;
 }
 
 .theme {
