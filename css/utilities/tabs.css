@@ -1,7 +1,3 @@
-.tabs {
-  margin-left: var(--margin-l);
-  margin-right: var(--margin-r);
-}
 .tabs > * {
   margin: 0;
   border-bottom-right-radius: 0;
