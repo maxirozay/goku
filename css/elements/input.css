@@ -26,6 +26,7 @@ input[type=checkbox] {
   transition: .3s all;
   border-radius: 1em;
   margin: 0;
+  vertical-align: text-top;
 }
 input[type=checkbox]:checked {
   border: 1px solid var(--primary-color);
