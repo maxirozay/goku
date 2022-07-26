@@ -101,3 +101,32 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background) !important;
 }
+
+
+.theme-soft {
+  background: var(--color-background-soft);
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-soft) !important;
+}
+
+.theme-soft-outlined {
+  background-color: transparent !important;
+  color: var(--color-background-soft);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-soft) !important;
+}
+
+.theme-strong {
+  background: var(--color-background-strong);
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-strong) !important;
+}
+
+.theme-strong-outlined {
+  background-color: transparent !important;
+  color: var(--color-background-strong);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-strong) !important;
+}
