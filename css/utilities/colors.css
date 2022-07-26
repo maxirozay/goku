@@ -3,8 +3,6 @@
   color: var(--primary-color-text) !important;
   border: var(--border-width) solid var(--primary-color) !important;
   border-radius: var(--border-radius);
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .primary-outlined {
@@ -12,17 +10,12 @@
   color: var(--primary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .primary-transparent {
   background-color: transparent !important;
   color: var(--primary-color) !important;
   border: none !important;
-  padding: var(--padding);
-  margin: var(--margin);
-  box-shadow: none;
 }
 
 .secondary {
@@ -30,8 +23,6 @@
   color: var(--secondary-color-text) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .secondary-outlined {
@@ -39,8 +30,6 @@
   color: var(--secondary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .success {
@@ -48,8 +37,6 @@
   color: #333 !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .success-outlined {
@@ -57,8 +44,6 @@
   color: var(--success-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .error {
@@ -66,8 +51,6 @@
   color: #333 !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .error-outlined {
@@ -75,8 +58,6 @@
   color: var(--error-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .light {
@@ -84,8 +65,6 @@
   color: var(--light-text) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid white !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .light-outlined {
@@ -93,8 +72,6 @@
   color: var(--light-bg) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid white !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .dark {
@@ -102,8 +79,6 @@
   color: var(--dark-text) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid #323232 !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .dark-outlined {
@@ -111,5 +86,4 @@
   color: var(--dark-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid #323232 !important;
-  padding: var(--padding);
 }
