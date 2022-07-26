@@ -8,10 +8,10 @@
   --secondary-color-text: #000;
   --dark-color: #222;
   --dark-text: #fff;
-  --light-bg: #fff;
+  --light-color: #eee;
   --light-text: #000;
   --success-color: #4d4;
-  --error-color: #f32;
+  --error-color: #f54;
   --border-radius: 4px;
   --border-width: 1px;
   --padding-t: 0.5rem;
@@ -28,15 +28,15 @@
 }
 
 :root {
-  --color-background: #fff;
-  --color-text: #000;
+  --color-background: var(--light-color);
+  --color-text: var(--light-text);
   --link-color: var(--primary-color);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #222;
-    --color-text: #fff;
+    --color-background: var(--dark-color);
+    --color-text: var(--dark-text);
   }
 }
 
