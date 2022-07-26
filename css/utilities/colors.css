@@ -87,3 +87,17 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid #323232 !important;
 }
+
+.theme {
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background) !important;
+}
+
+.theme-outlined {
+  background-color: transparent !important;
+  color: var(--color-background);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background) !important;
+}
