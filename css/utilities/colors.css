@@ -79,18 +79,18 @@
   margin: var(--margin);
 }
 
-.white {
-  background-color: white !important;
-  color: #333 !important;
+.light {
+  background-color: var(--light-bg) !important;
+  color: var(--light-text) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid white !important;
   padding: var(--padding);
   margin: var(--margin);
 }
 
-.white-outlined {
+.light-outlined {
   background-color: transparent !important;
-  color: white !important;
+  color: var(--light-bg) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid white !important;
   padding: var(--padding);
@@ -98,8 +98,8 @@
 }
 
 .dark {
-  background-color: #323232 !important;
-  color: #eee !important;
+  background-color: var(--dark-color) !important;
+  color: var(--dark-text) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid #323232 !important;
   padding: var(--padding);
@@ -107,7 +107,8 @@
 }
 
 .dark-outlined {
-  color: #323232 !important;
+  background-color: transparent !important;
+  color: var(--dark-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid #323232 !important;
   padding: var(--padding);

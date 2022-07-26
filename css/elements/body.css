@@ -3,4 +3,6 @@ body {
   font-weight: var(--font-weight);
   margin: 0;
   padding: 0;
+  background: var(--color-background);
+  color: var(--color-text);
 }
