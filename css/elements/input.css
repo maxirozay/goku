@@ -55,8 +55,8 @@ input[type='color'] {
 }
 
 .label__file {
-  width: 250px;
-  height: 140px;
+  min-width: 250px;
+  height: 60px;
   background-color: var(--primary-color);
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
@@ -72,7 +72,7 @@ input[type='color'] {
 .label__file > input[type='file'] {
   position: absolute;
   width: 250px;
-  height: 140px;
+  height: 60px;
   opacity: 0;
   padding: 0;
 }
