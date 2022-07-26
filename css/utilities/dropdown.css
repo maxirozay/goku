@@ -1,5 +1,10 @@
 .dropdown {
   display: inline-block;
+  margin-right: var(--margin-r);
+}
+
+button:last-child {
+  margin-right: 0;
 }
 
 .dropdown > label {
@@ -8,6 +13,7 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
+  margin: 0;
   box-shadow: var(--shadow);
   cursor: pointer;
 }
