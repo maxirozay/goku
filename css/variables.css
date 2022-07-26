@@ -1,11 +1,11 @@
 :root {
   --font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
   --font-weight: normal;
-  --primary-color: #333;
-  --primary-color-text: #eee;
+  --primary-color: #f84;
+  --primary-color-text: #fff;
   --primary-color-active: #888;
-  --secondary-color: #888;
-  --secondary-color-text: #fff;
+  --secondary-color: #fff;
+  --secondary-color-text: #000;
   --dark-color: #222;
   --dark-text: #fff;
   --light-bg: #fff;
@@ -20,9 +20,9 @@
   --padding-l: 0.5rem;
   --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
   --margin-t: 0.5rem;
-  --margin-r: 0.5rem;
+  --margin-r: 0.25rem;
   --margin-b: 0.5rem;
-  --margin-l: 0.5rem;
+  --margin-l: 0.25rem;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
 }
