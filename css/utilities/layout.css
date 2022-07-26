@@ -316,9 +316,14 @@
  * Flex
  */
 
-.flex {
+ .flex {
   display: flex;
   flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
 }
 @media (--tablet-landscape-up) {
   .flex {
