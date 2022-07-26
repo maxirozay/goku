@@ -8,6 +8,9 @@ button {
   box-shadow: var(--shadow);
   cursor: pointer;
   font-weight: inherit;
+  font-size: 1em;
+  font-family: inherit;
+  line-height: 1;
 }
 
 button:disabled {

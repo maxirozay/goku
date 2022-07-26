@@ -5,6 +5,9 @@ input {
   color: var(--primary-color-text);
   padding: var(--padding);
   margin: var(--margin);
+  font-size: 1em;
+  font-family: inherit;
+  line-height: 1;
 }
 input:hover,
 input:focus {
