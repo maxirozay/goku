@@ -3,12 +3,13 @@ select {
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
-  padding: calc(var(--padding-t) / 2 - 0.2em) calc(var(--padding-r) - 0.2em) calc(var(--padding-b) / 2 - 0.2em) calc(var(--padding-l) - 0.2em);
+  padding: calc(var(--padding-t) / 2 - 1px) var(--padding-r) calc(var(--padding-b) / 2 - 1px) var(--padding-l);
   margin-right: var(--margin-r);
+  margin-top: var(--margin-t);
+  margin-bottom: var(--margin-b);
   box-shadow: var(--shadow);
   font-size: 1em;
   font-family: inherit;
-  line-height: 1;
 }
 select:hover,
 select:focus {
