@@ -325,6 +325,7 @@
   align-items: center;
   justify-content: center;
 }
+
 @media (--tablet-landscape-up) {
   .flex {
     flex-direction: row;
@@ -341,6 +342,11 @@
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-column > * {
