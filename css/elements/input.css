@@ -110,6 +110,7 @@ label {
 label > input, textarea {
   margin-left: 0;
   margin-right: 0;
+  margin-top: .25em;
 }
 
 form {
