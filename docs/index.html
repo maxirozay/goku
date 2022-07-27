@@ -122,7 +122,7 @@
 
           <h3>Try to change the colors.</h3>
           <div class="flex  text-center">
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Primary color
               <input
                 class="mx"
@@ -130,7 +130,7 @@
                 value="#444444"
                 onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Primary color text
               <input
                 class="mx"
@@ -138,7 +138,7 @@
                 value="#eeeeee"
                 onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Primary color active
               <input
                 class="mx"
@@ -146,7 +146,7 @@
                 value="#888888"
                 onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Secondary color
               <input
                 class="mx"
@@ -154,7 +154,7 @@
                 value="#666666"
                 onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Secondary color text
               <input
                 class="mx"
@@ -174,7 +174,7 @@
 
           <h3>Try to change the border.</h3>
           <div class="flex  text-center">
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Border radius
               <input
                 class="mx"
@@ -202,15 +202,15 @@
 
           <h3>Try to change the padding class.</h3>
           <div class="flex">
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               padding-top
               <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               padding-right
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-r', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               padding-bottom
               <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-b', event.target.value)">
             </label>
@@ -222,15 +222,15 @@
 
           <h3>Try to change the margin class.</h3>
           <div class="flex">
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               margin-top
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               margin-right
               <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               margin-bottom
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
             </label>
@@ -254,24 +254,24 @@
 
           <h3 id="input">Input</h3>
           <h4>Type</h4>
-          <div class="flex  text-center">
-            <label class="flex-auto">
-              <div>Text</div>
-              <input class="mx" type="text">
+          <div class="flex">
+            <label class="flex-auto pr1">
+              Text
+              <input type="text">
+            </label>
+            <label class="flex-auto pr1">
+              Number
+              <input type="number">
             </label>
             <label class="flex-auto">
-              <div>Number</div>
-              <input class="mx" type="number">
-            </label>
-            <label class="flex-auto">
-              <div>Date</div>
-              <input class="mx" type="date">
+              Date
+              <input type="date">
             </label>
           </div>
 
           <label class="label__checkbox">
             Checkbox
-            <input type="checkbox">
+            <input class="ml1" type="checkbox">
           </label>
           <p>File</p>
           <label>
@@ -571,7 +571,6 @@
             <button>
               button
             </button>
-            <input type="text">
             <div class="theme-strong p1" style="height: 80px">
               div
             </div>
@@ -740,7 +739,7 @@
           <p>Description</p>
           <form class="clearfix">
             <div class="flex">
-              <label class="flex-auto">
+              <label class="flex-auto mr1">
                 Enter your name
                 <input type="text">
               </label>
