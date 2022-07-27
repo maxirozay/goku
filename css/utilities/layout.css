@@ -310,26 +310,41 @@
 .clearfix::after {
   content: "";
   clear: both;
-  display: table;
 }
 
 /*
  * Flex
  */
 
-.flex {
+ .flex {
   display: flex;
   flex-direction: column;
 }
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+@media (--tablet-landscape-up) {
+  .flex {
+    flex-direction: row;
+  }
+
+  .flex > * {
+    margin-right: var(--margin-r);
+  }
+  .flex > *:last-child {
+    margin-right: 0;
+  }
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
 }
 
-@media (--tablet-landscape-up) {
-  .flex {
-    flex-direction: row;
-  }
+.flex-column > * {
+  margin-right: 0;
 }
 
 .flex-auto {

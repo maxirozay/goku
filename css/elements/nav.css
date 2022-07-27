@@ -2,6 +2,7 @@ nav {
   background-color: var(--primary-color);
   height: 48px;
   display: flex;
+  z-index: 100;
 }
 nav > a,
 nav > .content > a {
@@ -46,7 +47,7 @@ nav > .toggle > div {
     bottom: 0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   nav > .content {
     display: flex;
     align-items: center;

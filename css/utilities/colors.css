@@ -3,8 +3,6 @@
   color: var(--primary-color-text) !important;
   border: var(--border-width) solid var(--primary-color) !important;
   border-radius: var(--border-radius);
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .primary-outlined {
@@ -12,17 +10,12 @@
   color: var(--primary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .primary-transparent {
   background-color: transparent !important;
   color: var(--primary-color) !important;
   border: none !important;
-  padding: var(--padding);
-  margin: var(--margin);
-  box-shadow: none;
 }
 
 .secondary {
@@ -30,8 +23,6 @@
   color: var(--secondary-color-text) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .secondary-outlined {
@@ -39,8 +30,6 @@
   color: var(--secondary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .success {
@@ -48,8 +37,6 @@
   color: #333 !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .success-outlined {
@@ -57,8 +44,6 @@
   color: var(--success-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .error {
@@ -66,8 +51,6 @@
   color: #333 !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
 .error-outlined {
@@ -75,40 +58,75 @@
   color: var(--error-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color) !important;
-  padding: var(--padding);
-  margin: var(--margin);
 }
 
-.white {
-  background-color: white !important;
-  color: #333 !important;
+.light {
+  background-color: var(--light-color) !important;
+  color: var(--light-text) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid white !important;
-  padding: var(--padding);
-  margin: var(--margin);
+  border: var(--border-width) solid var(--light-color) !important;
 }
 
-.white-outlined {
+.light-outlined {
   background-color: transparent !important;
-  color: white !important;
+  color: var(--light-color) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid white !important;
-  padding: var(--padding);
-  margin: var(--margin);
+  border: var(--border-width) solid var(--light-color) !important;
 }
 
 .dark {
-  background-color: #323232 !important;
-  color: #eee !important;
+  background-color: var(--dark-color) !important;
+  color: var(--dark-text) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid #323232 !important;
-  padding: var(--padding);
-  margin: var(--margin);
+  border: var(--border-width) solid var(--dark-color) !important;
 }
 
 .dark-outlined {
-  color: #323232 !important;
+  background-color: transparent !important;
+  color: var(--dark-color) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid #323232 !important;
-  padding: var(--padding);
+  border: var(--border-width) solid var(--dark-color) !important;
+}
+
+.theme {
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background) !important;
+}
+
+.theme-outlined {
+  background-color: transparent !important;
+  color: var(--color-background);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background) !important;
+}
+
+
+.theme-soft {
+  background: var(--color-background-soft);
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-soft) !important;
+}
+
+.theme-soft-outlined {
+  background-color: transparent !important;
+  color: var(--color-background-soft);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-soft) !important;
+}
+
+.theme-strong {
+  background: var(--color-background-strong);
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-strong) !important;
+}
+
+.theme-strong-outlined {
+  background-color: transparent !important;
+  color: var(--color-background-strong);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-strong) !important;
 }

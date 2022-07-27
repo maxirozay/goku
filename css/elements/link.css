@@ -1,21 +1,15 @@
 a {
   text-decoration: none;
   color: var(--link-color);
-  border: var(--border-width) solid transparent;
-  border-radius: var(--border-radius);
-  padding: var(--padding);
-  display: inline-block;
   cursor: pointer;
 }
 
 a:hover {
-  border-color: var(--primary-color-active);
-  box-shadow: var(--shadow);
+  color: var(--primary-color-active);
 }
 
 a:active {
   color: var(--primary-color-active);
-  box-shadow: none;
 }
 
 a:focus {

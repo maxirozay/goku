@@ -5,32 +5,39 @@ input {
   color: var(--primary-color-text);
   padding: var(--padding);
   margin: var(--margin);
+  font-size: 1em;
+  font-family: inherit;
+  line-height: 1;
+  padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
 }
 input:hover,
 input:focus {
   border-color: var(--primary-color-active);
 }
 
-input[type='checkbox'] {
-  display: none
-}
-input[type='checkbox'] ~ span {
-  border: var(--border-width) solid var(--primary-color);
-  border-radius: var(--border-radius);
-  height: 1rem;
-  width: 1rem;
+input[type=checkbox] {
+  appearance: none;
   display: inline-block;
-  box-shadow: var(--shadow);
-  margin-top: 0.1rem;
+  background: radial-gradient(#eee 65%, #888 75%);
+  border: 1px solid #888;
+  border-right-width: 1em;
+  width: 2em;
+  height: 1em;
+  transition: .3s all;
+  border-radius: 1em;
+  margin: 0;
+  vertical-align: text-top;
 }
-input[type='checkbox']:hover ~ span {
-  border-color: var(--primary-color-active);
+input[type=checkbox]:checked {
+  background: radial-gradient(#fff 65%, var(--primary-color) 75%);
+  border: 1px solid var(--primary-color);
+  border-left-width: 1em;
 }
-input[type='checkbox']:active ~ span {
-  box-shadow: none;
+input[type=checkbox]:disabled {
+  background: var(--color-background);
 }
-input[type='checkbox']:checked ~ span {
-  background: var(--primary-color-active);
+input[type=checkbox]:checked:disabled {
+  background: var(--primary-color);
 }
 
 input[type='file'] {
@@ -45,12 +52,12 @@ input[type='color'] {
 }
 
 .label__checkbox {
-  display: inline;
+  display: inline-block;
 }
 
 .label__file {
-  width: 250px;
-  height: 140px;
+  min-width: 250px;
+  height: 60px;
   background-color: var(--primary-color);
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
@@ -66,9 +73,8 @@ input[type='color'] {
 .label__file > input[type='file'] {
   position: absolute;
   width: 250px;
-  height: 140px;
+  height: 60px;
   opacity: 0;
-  margin: 0;
   padding: 0;
 }
 
@@ -79,7 +85,6 @@ input[type='color'] {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
-  margin: var(--margin);
   box-shadow: var(--shadow);
   cursor: pointer;
 }
@@ -99,13 +104,13 @@ input[type='color'] {
 label {
   display: flex;
   flex-direction: column;
-  margin: var(--margin);
-  margin-bottom: 0;
+  margin-bottom: var(--margin-b);
 }
 
 label > input, textarea {
   margin-left: 0;
   margin-right: 0;
+  margin-top: .25em;
 }
 
 form {

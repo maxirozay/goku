@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
   </head>
-  <body class="dark m0 p0">
+  <body class="m0 p0">
 
     <nav>
       <label class="toggle" for="nav-toggle">
@@ -84,6 +84,14 @@
 --primary-color-active: #888;
 --secondary-color: #666;
 --secondary-color-text: #fff;
+--dark-color: #222;
+--dark-text: #fff;
+--dark-color-soft: #333;
+--dark-color-strong: #000;
+--light-color: #fff;
+--light-color-soft: #ddd;
+--light-color-strong: #fff;
+--light-text: #000;
 --link-color: #0f0;
 --success-color: #55ff44;
 --error-color: red;
@@ -97,7 +105,7 @@
 --margin-r: 0.25rem;
 --margin-b: 0.5rem;
 --margin-l: 0.25rem;
---shadow: 0 0.1rem 0.25rem #bbb;</code></pre>
+--shadow: 0 1px 1px rgba(0, 0, 0, 0.4);</code></pre>
 
           <h3>Try to change the font-family</h3>
           <label>
@@ -186,7 +194,7 @@
           <h3>Try to change the shadow.</h3>
           <label>
             Shadow
-            <input type="text" value="0 0.1rem 0.25rem rgba(0, 0, 0, 0.4)" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
+            <input type="text" value="0 1px 1px rgba(0, 0, 0, 0.4)" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
           </label>
 
           <h3>Try to change the padding class.</h3>
@@ -236,8 +244,10 @@
           <p>You don't need to do do anything for the basic HTML elements. They are already styled based on the values of CSS variables.</p>
 
           <h3 id="button">Button</h3>
-          <button type="button">Button</button>
-          <button type="button" disabled="true">Disabled Button</button>
+          <div>
+            <button type="button">Button</button>
+            <button type="button" disabled="true">Disabled Button</button>
+          </div>
 
           <h3 id="input">Input</h3>
           <h4>Type</h4>
@@ -256,18 +266,16 @@
             </label>
           </div>
 
-          <p>For checkbox you must add a span after the input and the class <code class="language-css" data-lang="css">label__checkbox</code> on the label.</p>
           <label class="label__checkbox">
-            <input type="checkbox">
-            <span></span>
             Checkbox
+            <input type="checkbox">
           </label>
           <p>File</p>
           <label>
             Regular file input
             <input type="file">
           </label>
-          <p class="ml1">Dropbox</p>
+          <p>Dropbox</p>
           <label class="label__file">
             Dropbox file input
             <input type="file">
@@ -386,10 +394,12 @@
             <div class="success-outlined  flex-1">success-outlined</div>
             <div class="error  flex-1">error</div>
             <div class="error-outlined  flex-1">error-outlined</div>
-            <div class="white  flex-1">white</div>
-            <div class="white-outlined  flex-1">white-outlined</div>
-            <div class="dark  flex-1">dark</div>
-            <div class="dark-outlined  flex-1">dark-outlined</div>
+            <div class="theme  flex-1">theme</div>
+            <div class="theme-outlined  flex-1">theme-outlined</div>
+            <div class="theme-soft  flex-1">theme-soft</div>
+            <div class="theme-soft-outlined  flex-1">theme-soft-outlined</div>
+            <div class="theme-strong  flex-1">theme-strong</div>
+            <div class="theme-strong-outlined  flex-1">theme-strong-outlined</div>
           </div>
 
           <h3 id="drawer">Drawer</h3>
@@ -398,8 +408,8 @@
           </p>
           <div class="drawer-layout">
             <input id="left-toggle" class="drawer-layout__input" type="checkbox">
-            <div class="secondary p0">
-              <div class="mr1">
+            <div class="theme-strong">
+              <div class="p1">
                 This is the left drawer.
               </div>
               <label class="drawer-layout__toggle px1 py2" for="left-toggle">
@@ -408,13 +418,13 @@
               </label>
             </div>
 
-            <div class="flex-4  secondary-outlined">
+            <div class="flex-4 p1 theme-soft">
               This is the main content.
             </div>
 
             <input id="right-toggle" class="drawer-layout__input" type="checkbox">
-            <div class="secondary p0">
-              <div class="mr1">
+            <div class="theme-strong">
+              <div class="p1">
                 This is the right drawer.
               </div>
               <label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle">
@@ -427,7 +437,7 @@
           <p>Code:</p>
           <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
   &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="secondary p0"&gt;
+  &lt;div class="theme-soft p0"&gt;
     &lt;div class="mr1"&gt;
       This is the left drawer.
     &lt;/div&gt;
@@ -437,12 +447,12 @@
     &lt;/label&gt;
   &lt;/div&gt;
 
-  &lt;div class="flex-4  secondary-outlined"&gt;
+  &lt;div class="flex-4  theme-soft"&gt;
     This is the main content.
   &lt;/div&gt;
 
   &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="secondary p0"&gt;
+  &lt;div class="theme-soft p0"&gt;
     &lt;div class="mr1"&gt;
       This is the right drawer.
     &lt;/div&gt;
@@ -492,13 +502,13 @@
             Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space.
           </p>
           <div class="flex">
-            <div class="secondary-outlined  flex-auto">
+            <div class="theme-soft  flex-auto p1">
               flex-auto
             </div>
-            <div class="secondary-outlined  flex-auto">
+            <div class="theme-soft  flex-auto p1">
               flex-auto
             </div>
-            <div class="secondary-outlined  flex-auto">
+            <div class="theme-soft  flex-auto p1">
               flex-auto
             </div>
           </div>
@@ -506,26 +516,42 @@
             You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
           </p>
           <div class="flex">
-            <div class="secondary-outlined  flex-2">
+            <div class="theme-soft  flex-2 p1">
               flex-2
             </div>
-            <div class="secondary-outlined  flex-4">
+            <div class="theme-soft  flex-4 p1">
               flex-4
             </div>
-            <div class="secondary-outlined  flex-8">
+            <div class="theme-soft  flex-8 p1">
               flex-8
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-column</code> on the parent if you want to take all the width and stack your elements.
           </p>
-          <div class="secondary-outlined  flex-column">
-            flex-column
-            <div class="secondary-outlined">
+          <div class="theme-soft  flex-column">
+            <div class="p1">
+              row 1
             </div>
-            <div class="secondary-outlined">
+            <div class="p1">
+              row 2
             </div>
-            <div class="secondary-outlined">
+            <div class="p1">
+              row 3
+            </div>
+          </div>
+          <p>
+            Use <code class="language-css" data-lang="css">flex center</code> to align everything in the center.
+          </p>
+          <div class="theme-soft  flex flex-center">
+            <div class="p1">
+              text
+            </div>
+            <button class="p1">
+              button
+            </button>
+            <div class="theme-strong p1" style="height: 80px">
+              div
             </div>
           </div>
 
@@ -551,11 +577,11 @@
 &lt;/div&gt;</code></pre>
 
           <h3 id="overflow">Overflow</h3>
-          <div class="secondary  overflow-x" style="width: 50px;">
+          <div class="theme-soft  overflow-x" style="width: 50px;">
             overflow-x
           </div>
           <br>
-          <div class="secondary  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
+          <div class="theme-soft  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
             overflow-y
           </div>
 
@@ -565,28 +591,28 @@
           </div>
 
           <h3 id="position">Position</h3>
-          <div class="secondary-outlined  text-center">
+          <div class="theme-soft my1 text-center">
             text-center
           </div>
-          <div class="secondary-outlined  text-right">
+          <div class="theme-soft my1 text-right">
             text-right
           </div>
-          <div class="secondary  mx" style="width: 100px">
+          <div class="theme-soft  mx my1" style="width: 100px">
             mx
           </div>
-          <div class="secondary  ml" style="width: 100px">
+          <div class="theme-soft  ml my1" style="width: 100px">
             ml
           </div>
-          <div class="secondary  mr" style="width: 100px">
+          <div class="theme-soft  mr my1" style="width: 100px">
             mr
           </div>
-          <div class="secondary-outlined  clearfix">
-            clearfix
-            <span class="secondary  float-right">float-right</span>
+          <div class="theme-soft  clearfix my1">
+            <span class="theme-strong">clearfix</span>
+            <span class="theme-soft  float-right">float-right</span>
           </div>
-          <div class="secondary-outlined  clearfix">
-            clearfix
-            <span class="secondary  float-left">float-left</span>
+          <div class="theme-soft  clearfix my1">
+            <span class="theme-strong">clearfix</span>
+            <span class="theme-soft  float-left">float-left</span>
           </div>
           <p>You can also use the following classes:</p>
           <pre><code class="language-css" data-lang="css">.absolute {
@@ -648,8 +674,8 @@
             <button type="button" class="flex-1">
               flex-1
             </button>
-            <button type="button" class="flex-1  active  secondary">
-              flex-1  active  secondary
+            <button type="button" class="flex-1  active  theme-soft">
+              flex-1  active  theme-soft
             </button>
             <button type="button" class="flex-1">
               flex-1
@@ -658,16 +684,16 @@
               flex-1
             </button>
           </div>
-          <div class="secondary  tabs__content">
-            secondary tabs__content
+          <div class="theme-soft p1 tabs__content">
+            theme-soft tabs__content
           </div>
 
           <pre><code class="language-html" data-lang="html">&lt;div class="tabs flex"&gt;
   &lt;button type="button" class="flex-1"&gt;
     flex-1
   &lt;/button&gt;
-  &lt;button type="button" class="flex-1  active  secondary"&gt;
-    flex-1 active secondary
+  &lt;button type="button" class="flex-1  active  theme-soft"&gt;
+    flex-1 active theme-soft
   &lt;/button&gt;
   &lt;button type="button" class="flex-1"&gt;
     flex-1
@@ -676,8 +702,8 @@
     flex-1
   &lt;/button&gt;
 &lt;/div&gt;
-&lt;div class="secondary-outlined tabs__content"&gt;
-  secondary tabs__content
+&lt;div class="theme-soft tabs__content"&gt;
+  theme-soft tabs__content
 &lt;/div&gt;</code></pre>
 
           <h3 id="typo">Typo</h3>
@@ -712,7 +738,7 @@
             </label>
             <button class="float-right" type="button">Confirm</button>
           </form>
-          <div class="secondary  clearfix">
+          <div class="theme-soft p1 clearfix">
             This content need some buttons on the side.
             <br>
             This is a new line.
