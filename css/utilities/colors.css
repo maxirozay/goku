@@ -97,7 +97,7 @@
 
 .theme-outlined {
   background-color: transparent !important;
-  color: var(--color-background);
+  color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background) !important;
 }
@@ -112,7 +112,7 @@
 
 .theme-soft-outlined {
   background-color: transparent !important;
-  color: var(--color-background-soft);
+  color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-soft) !important;
 }
@@ -126,7 +126,7 @@
 
 .theme-strong-outlined {
   background-color: transparent !important;
-  color: var(--color-background-strong);
+  color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-strong) !important;
 }
@@ -140,7 +140,7 @@
 
 .theme-secondary-outlined {
   background-color: transparent !important;
-  color: var(--color-background-secondary);
+  color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-secondary) !important;
 }
