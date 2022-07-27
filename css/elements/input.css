@@ -2,7 +2,7 @@ input {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   background-color: var(--color-background-secondary);
-  color: var(--primary-color-text);
+  color: inherit;
   padding: var(--padding);
   margin: 1px;
   font-size: 1em;
