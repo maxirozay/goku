@@ -130,3 +130,17 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-strong) !important;
 }
+
+.theme-secondary {
+  background: var(--color-background-secondary);
+  color: var(--color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-secondary) !important;
+}
+
+.theme-secondary-outlined {
+  background-color: transparent !important;
+  color: var(--color-background-secondary);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-background-secondary) !important;
+}
