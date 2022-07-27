@@ -6,7 +6,7 @@ nav {
 }
 nav > a,
 nav > .content > a {
-  color: var(--primary-color-text);
+  color: inherit;
 }
 
 nav > .content {
