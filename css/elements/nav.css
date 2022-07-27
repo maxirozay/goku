@@ -1,5 +1,6 @@
 nav {
   background-color: var(--primary-color);
+  color: var(--primary-color-text);
   height: 48px;
   display: flex;
   z-index: 100;
