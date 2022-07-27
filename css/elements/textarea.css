@@ -1,5 +1,5 @@
 textarea {
-  background-color: var(--primary-color);
+  background-color: var(--color-background-secondary);
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
