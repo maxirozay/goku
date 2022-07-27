@@ -20,15 +20,15 @@
   --error-color: #f43;
   --border-radius: 4px;
   --border-width: 1px;
-  --padding-t: 0.5rem;
-  --padding-r: 0.5rem;
-  --padding-b: 0.5rem;
-  --padding-l: 0.5rem;
+  --padding-t: 0.5em;
+  --padding-r: 0.5em;
+  --padding-b: 0.5em;
+  --padding-l: 0.5em;
   --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
-  --margin-t: 0.5rem;
-  --margin-r: 0.25rem;
-  --margin-b: 0.5rem;
-  --margin-l: 0.25rem;
+  --margin-t: 0.5em;
+  --margin-r: 0.5em;
+  --margin-b: 0.5em;
+  --margin-l: 0.5em;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
 }
