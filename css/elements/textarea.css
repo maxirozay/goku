@@ -4,6 +4,7 @@ textarea {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding);
+  margin: 1px;
   display: block;
   font-size: 1em;
   font-family: inherit;

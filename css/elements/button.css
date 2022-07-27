@@ -5,6 +5,7 @@ button {
   border: var(--border-width) solid var(--primary-color);
   padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
   box-shadow: var(--shadow);
+  margin: 1px;
   cursor: pointer;
   font-weight: inherit;
   font-size: 1em;

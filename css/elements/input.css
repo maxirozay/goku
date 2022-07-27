@@ -4,6 +4,7 @@ input {
   background-color: var(--color-background-secondary);
   color: var(--primary-color-text);
   padding: var(--padding);
+  margin: 1px;
   font-size: 1em;
   font-family: inherit;
   padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
