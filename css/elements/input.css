@@ -1,7 +1,7 @@
 input {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
-  background-color: var(--color-background-secondary);
+  background-color: inherit;
   color: inherit;
   padding: var(--padding);
   margin: 1px;
