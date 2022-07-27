@@ -1,8 +1,9 @@
 .primary {
   background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
   color: var(--primary-color-text) !important;
-  border: var(--border-width) solid var(--primary-color) !important;
   border-radius: var(--border-radius);
+  margin: 1px;
 }
 
 .primary-outlined {
@@ -10,19 +11,22 @@
   color: var(--primary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color) !important;
+  margin: 1px;
 }
 
 .primary-transparent {
   background-color: transparent !important;
+  border-color: transparent !important;
   color: var(--primary-color) !important;
-  border: none !important;
+  margin: 1px;
 }
 
 .secondary {
   background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
   color: var(--secondary-color-text) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--secondary-color) !important;
+  margin: 1px;
 }
 
 .secondary-outlined {
@@ -30,13 +34,15 @@
   color: var(--secondary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color) !important;
+  margin: 1px;
 }
 
 .success {
   background-color: var(--success-color) !important;
+  border-color: var(--success-color) !important;
   color: #333 !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--success-color) !important;
+  margin: 1px;
 }
 
 .success-outlined {
@@ -44,13 +50,15 @@
   color: var(--success-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color) !important;
+  margin: 1px;
 }
 
 .error {
   background-color: var(--error-color) !important;
+  border-color: var(--error-color) !important;
   color: #333 !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--error-color) !important;
+  margin: 1px;
 }
 
 .error-outlined {
@@ -58,13 +66,15 @@
   color: var(--error-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color) !important;
+  margin: 1px;
 }
 
 .light {
   background-color: var(--light-color) !important;
+  border-color: var(--light-color) !important;
   color: var(--light-text) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--light-color) !important;
+  margin: 1px;
 }
 
 .light-outlined {
@@ -72,13 +82,15 @@
   color: var(--light-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--light-color) !important;
+  margin: 1px;
 }
 
 .dark {
   background-color: var(--dark-color) !important;
+  border-color: var(--dark-color) !important;
   color: var(--dark-text) !important;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--dark-color) !important;
+  margin: 1px;
 }
 
 .dark-outlined {
@@ -86,13 +98,15 @@
   color: var(--dark-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--dark-color) !important;
+  margin: 1px;
 }
 
 .theme {
-  background: var(--color-background);
+  background-color: var(--color-background);
+  border-color: var(--color-background);
   color: var(--color-text);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-background) !important;
+  margin: 1px;
 }
 
 .theme-outlined {
@@ -100,14 +114,16 @@
   color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background) !important;
+  margin: 1px;
 }
 
 
 .theme-soft {
-  background: var(--color-background-soft);
+  background-color: var(--color-background-soft);
+  border-color: var(--color-background-soft);
   color: var(--color-text);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-background-soft) !important;
+  margin: 1px;
 }
 
 .theme-soft-outlined {
@@ -115,13 +131,15 @@
   color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-soft) !important;
+  margin: 1px;
 }
 
 .theme-strong {
-  background: var(--color-background-strong);
+  background-color: var(--color-background-strong);
+  border-color: var(--color-background-strong);
   color: var(--color-text);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-background-strong) !important;
+  margin: 1px;
 }
 
 .theme-strong-outlined {
@@ -129,13 +147,15 @@
   color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-strong) !important;
+  margin: 1px;
 }
 
 .theme-secondary {
-  background: var(--color-background-secondary);
+  background-color: var(--color-background-secondary);
+  border-color: var(--color-background-secondary);
   color: var(--color-text);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-background-secondary) !important;
+  margin: 1px;
 }
 
 .theme-secondary-outlined {
@@ -143,4 +163,5 @@
   color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-secondary) !important;
+  margin: 1px;
 }
