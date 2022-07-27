@@ -332,13 +332,6 @@
   .flex {
     flex-direction: row;
   }
-
-  .flex > * {
-    margin-right: var(--margin-r);
-  }
-  .flex > *:last-child {
-    margin-right: 0;
-  }
 }
 
 .flex-column {
@@ -349,10 +342,6 @@
 .flex-row {
   display: flex;
   flex-direction: row;
-}
-
-.flex-column > * {
-  margin-right: 0;
 }
 
 .flex-auto {
