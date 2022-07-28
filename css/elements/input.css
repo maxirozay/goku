@@ -15,49 +15,21 @@ input:focus {
   border-color: var(--primary-color-active);
 }
 
-.label__file {
-  min-width: 250px;
-  height: 60px;
+.label__file,
+.label__file--button {
+  display: inline-block;
+  padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
   background-color: var(--primary-color);
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   box-shadow: var(--shadow);
   text-align: center;
-  display: flex;
-  justify-content: center;
 }
 .label__file:hover {
   border-color: var(--primary-color-active);
 }
 .label__file > input[type='file'] {
-  position: absolute;
-  width: 250px;
-  height: 60px;
-  opacity: 0;
-  padding: 0;
-}
-
-.label__file--button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  padding: var(--padding);
-  box-shadow: var(--shadow);
-  cursor: pointer;
-}
-.label__file--button:hover,
-.label__file--button:focus {
-  border-color: var(--primary-color-active);
-}
-.label__file--button:active {
-  background-color: var(--primary-color-active);
-  border-color: var(--primary-color-active);
-  box-shadow: none;
-}
-.label__file--button > input[type='file'] {
   display: none;
 }
 
