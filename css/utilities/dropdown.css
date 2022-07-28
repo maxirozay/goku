@@ -1,9 +1,10 @@
 .dropdown {
-  display: inline-block;
+  display: inherit;
+  position: relative;
 }
 
-button:last-child {
-  margin-right: 0;
+.dropdown > * {
+  flex: inherit;
 }
 
 .dropdown > label {
@@ -62,6 +63,7 @@ button:last-child {
 @media (--tablet-landscape-up) {
   .dropdown__content {
     display: none;
+    top: 100%;
     position: absolute;
     bottom: inherit;
     right: inherit;
