@@ -44,9 +44,9 @@ button:last-child {
   max-height: 50vh;
   overflow-y: auto;
   box-shadow: var(--shadow);
-  background-color: var(--secondary-color);
-  color: var(--secondary-color-text) !important;
-  border: var(--border-width) solid var(--secondary-color);
+  background-color: var(--color-background);
+  color: var(--color-text) !important;
+  border: var(--border-width) solid var(--color-background);
   border-radius: var(--border-radius);
   margin: 0;
   padding: var(--padding);
