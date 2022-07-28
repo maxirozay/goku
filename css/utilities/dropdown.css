@@ -12,7 +12,7 @@ button:last-child {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
-  margin: 0;
+  margin: 1px;
   box-shadow: var(--shadow);
   cursor: pointer;
 }
