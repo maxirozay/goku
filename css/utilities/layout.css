@@ -9,10 +9,12 @@
 
 .w {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .h {
   height: 100%;
+  box-sizing: border-box;
 }
 
 /*
