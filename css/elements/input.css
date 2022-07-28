@@ -39,6 +39,7 @@ label {
   align-items: center;
   align-content: center;
   margin-bottom: var(--margin-b);
+  line-height: 1.15;
 }
 
 label > input,
