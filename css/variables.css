@@ -31,6 +31,7 @@
   --margin-l: 0.5em;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  --drawer-width: 300px
 }
 
 :root {

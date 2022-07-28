@@ -400,16 +400,11 @@
           </div>
 
           <h3 id="drawer">Drawer</h3>
-          <p>
-            You can play with the class <code class="language-css" data-lang="css">flex-0</code> and <code class="language-css" data-lang="css">flex-1</code> on the drawers <code class="language-html" data-lang="html">div</code> to have a smooth resize effect.
-          </p>
           <div class="drawer-layout">
             <input id="left-toggle" class="drawer-layout__input" type="checkbox">
-            <div class="theme-strong">
-              <div class="p1">
-                This is the left drawer.
-              </div>
-              <label class="drawer-layout__toggle px1 py2" for="left-toggle">
+            <div class="theme-strong p1 pb3">
+              This is the left drawer.
+              <label class="drawer-layout__toggle  absolute bottom left" for="left-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
               </label>
@@ -420,11 +415,9 @@
             </div>
 
             <input id="right-toggle" class="drawer-layout__input" type="checkbox">
-            <div class="theme-strong">
-              <div class="p1">
-                This is the right drawer.
-              </div>
-              <label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle">
+            <div class="theme-strong p1 pb3">
+              This is the right drawer.
+              <label class="drawer-layout__toggle  mirror absolute bottom right" for="right-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
               </label>
@@ -434,11 +427,9 @@
           <p>Code:</p>
           <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
   &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="theme-soft p0"&gt;
-    &lt;div class="mr1"&gt;
-      This is the left drawer.
-    &lt;/div&gt;
-    &lt;label class="drawer-layout__toggle px1 py2" for="left-toggle"&gt;
+  &lt;div class="theme-strong p1 pb3"&gt;
+    This is the left drawer.
+    &lt;label class="drawer-layout__toggle absolute bottom left" for="left-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
@@ -449,11 +440,9 @@
   &lt;/div&gt;
 
   &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="theme-soft p0"&gt;
-    &lt;div class="mr1"&gt;
-      This is the right drawer.
-    &lt;/div&gt;
-    &lt;label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle"&gt;
+  &lt;div class="theme-strong p1 pb3"&gt;
+    This is the right drawer.
+    &lt;label class="drawer-layout__toggle mirror absolute bottom right" for="right-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
