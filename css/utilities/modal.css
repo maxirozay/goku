@@ -16,11 +16,11 @@
 }
 
 .modal__content {
-  background-color: white;
+  background-color: var(--color-background);
+  color: var(--color-text);
   z-index: 1001;
-  color: black;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid white;
+  border: var(--border-width) solid var(--color-background);
   padding: var(--padding);
   box-shadow: var(--shadow);
   margin: auto;
