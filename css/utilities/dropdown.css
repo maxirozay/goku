@@ -1,6 +1,5 @@
 .dropdown {
   display: inline-block;
-  margin-right: var(--margin-r);
 }
 
 button:last-child {
