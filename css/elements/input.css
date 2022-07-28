@@ -8,7 +8,6 @@ input {
   font-size: 1em;
   font-family: inherit;
   padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
-  width: 100%;
 }
 input:hover,
 input:focus {
@@ -46,6 +45,7 @@ label > textarea  {
   margin-left: 0;
   margin-right: 0;
   margin-top: .25em;
+  width: 100%;
 }
 
 form {
