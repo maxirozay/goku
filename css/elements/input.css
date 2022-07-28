@@ -8,6 +8,7 @@ input {
   font-size: 1em;
   font-family: inherit;
   padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
+  line-height: 1.15;
 }
 input:hover,
 input:focus {
