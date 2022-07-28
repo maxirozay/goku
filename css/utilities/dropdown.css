@@ -50,7 +50,7 @@ button:last-child {
   border-radius: var(--border-radius);
   margin: 0;
   padding: var(--padding);
-  z-index: 10000;
+  z-index: 1000;
   transition: all .3s ease;
   transform: translateY(150%);
 }
