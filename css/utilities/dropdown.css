@@ -1,10 +1,13 @@
 .dropdown {
-  display: inherit;
+  display: inline-block;
   position: relative;
+  margin: 1px;
 }
 
-.dropdown > * {
-  flex: inherit;
+.dropdown > label,
+.dropdown > button {
+  width: 100%;
+  margin: 0;
 }
 
 .dropdown > label {
@@ -13,8 +16,6 @@
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
-  margin: 1px;
-  box-shadow: var(--shadow);
   cursor: pointer;
   text-align: center;
   display: inline-block;
@@ -43,12 +44,12 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  max-height: 50vh;
+  max-height: 75vh;
   overflow-y: auto;
-  box-shadow: var(--shadow);
-  background-color: var(--color-background);
+  box-shadow: 0 0 3px #0003;
+  background-color: var(--color-background-soft);
   color: var(--color-text) !important;
-  border: var(--border-width) solid var(--color-background);
+  border: var(--border-width) solid var(--color-background-soft);
   border-radius: var(--border-radius);
   margin: 0;
   padding: var(--padding);
