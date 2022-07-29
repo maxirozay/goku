@@ -25,6 +25,7 @@ input:focus {
   border: var(--border-width) solid var(--primary-color);
   box-shadow: var(--shadow);
   text-align: center;
+  margin: 1px;
 }
 .label__file:hover {
   border-color: var(--primary-color-active);
