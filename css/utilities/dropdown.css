@@ -1,6 +1,5 @@
 .dropdown {
   display: inline-block;
-  position: relative;
   margin: 1px;
 }
 
@@ -65,7 +64,6 @@
 @media (--tablet-landscape-up) {
   .dropdown__content {
     display: none;
-    top: 100%;
     position: absolute;
     bottom: inherit;
     right: inherit;
