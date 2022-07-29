@@ -158,6 +158,10 @@
   margin-left: calc(var(--margin-l) * 4) !important;
 }
 
+.p-input {
+  padding: var(--padding-input);
+}
+
 .p0 {
   padding: 0 !important;
 }

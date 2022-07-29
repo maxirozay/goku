@@ -15,7 +15,7 @@
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
-  padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
+  padding: var(--padding-input);
   cursor: pointer;
   text-align: center;
   display: inline-block;

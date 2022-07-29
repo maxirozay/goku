@@ -1,14 +1,7 @@
 select {
   background-color: var(--primary-color);
   color: var(--primary-color-text);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  padding: calc(var(--padding-t) / 2 - 1px) var(--padding-r) calc(var(--padding-b) / 2 - 1px) var(--padding-l);
-  margin: 1px;
-  box-shadow: var(--shadow);
-  font-size: 1em;
-  font-family: inherit;
-  line-height: 1.15;
+  appearance: none;
 }
 select:hover,
 select:focus {
