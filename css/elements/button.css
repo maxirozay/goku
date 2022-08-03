@@ -1,6 +1,7 @@
 button {
-  background-color: var(--primary-color);
+  background-color: var(--color-button);
   color: var(--primary-color-text);
+  box-shadow: var(--shadow);
 }
 
 button:disabled {

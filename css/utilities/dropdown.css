@@ -11,7 +11,8 @@
 }
 
 .dropdown > label {
-  background-color: var(--primary-color);
+  background-color: var(--color-button);
+  box-shadow: var(--shadow);
   color: var(--primary-color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);

@@ -1,7 +1,8 @@
 select {
-  background-color: var(--primary-color);
+  background-color: var(----color-button);
   color: var(--primary-color-text);
   appearance: none;
+  box-shadow: var(--shadow);
 }
 select:hover,
 select:focus {
