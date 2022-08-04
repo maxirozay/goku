@@ -1,7 +1,7 @@
 textarea {
   background-color: var(--color-input);
   color: var(--color-text);
-  border-color: var(--color-input);
+  border-color: var(--color-input-border);
 }
 textarea:hover,
 textarea:focus {

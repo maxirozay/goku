@@ -15,7 +15,7 @@
   box-shadow: var(--shadow);
   color: var(--color-button-text);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
+  border: var(--border-width) solid var(--color-button-border);
   padding: var(--padding-input);
   cursor: pointer;
   text-align: center;

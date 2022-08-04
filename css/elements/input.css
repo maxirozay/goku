@@ -1,7 +1,7 @@
 input {
   background-color: var(--color-input);
   color: var(--color-text);
-  border-color: var(--color-input);
+  border-color: var(--color-input-border);
 }
 input:hover,
 input:focus {

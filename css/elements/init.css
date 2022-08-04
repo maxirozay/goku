@@ -6,7 +6,8 @@ select {
   font-weight: inherit;
   font-size: 1em;
   font-family: inherit;
-  border: var(--border-width) solid var(--color-button);
+  border-width: var(--border-width);
+  border-style: solid;
   border-radius: var(--border-radius);
   padding: var(--padding-input);
   box-sizing: border-box;
