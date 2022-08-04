@@ -13,7 +13,7 @@
 .dropdown > label {
   background-color: var(--color-button);
   box-shadow: var(--shadow);
-  color: var(--primary-color-text);
+  color: var(--color-button-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color);
   padding: var(--padding-input);

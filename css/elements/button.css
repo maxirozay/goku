@@ -1,6 +1,6 @@
 button {
   background-color: var(--color-button);
-  color: var(--primary-color-text);
+  color: var(--color-button-text);
   box-shadow: var(--shadow);
 }
 

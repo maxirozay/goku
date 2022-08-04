@@ -1,6 +1,6 @@
 select {
   background-color: var(----color-button);
-  color: var(--primary-color-text);
+  color: var(--color-button-text);
   appearance: none;
   box-shadow: var(--shadow);
 }
