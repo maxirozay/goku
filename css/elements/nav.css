@@ -53,7 +53,7 @@ nav > .toggle > div {
     bottom: 0;
 }
 
-@media (min-width: 900px) {
+@media (--tablet-landscape-up) {
   nav > .content {
     display: flex;
     align-items: center;
