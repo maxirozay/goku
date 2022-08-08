@@ -1,12 +1,14 @@
 nav {
   background-color: var(--primary-color);
+  color: var(--primary-color-text);
   height: 48px;
   display: flex;
   z-index: 100;
+  position: relative;
 }
 nav > a,
 nav > .content > a {
-  color: var(--primary-color-text);
+  color: inherit;
 }
 
 nav > .content {
@@ -25,13 +27,17 @@ nav > .content > .dropdown > button {
 }
 
 nav > .toggle {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   cursor: pointer;
   z-index: 101;
   margin: 0;
-  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--padding);
 }
 nav > .toggle > div {
   width: 16px;
@@ -47,7 +53,7 @@ nav > .toggle > div {
     bottom: 0;
 }
 
-@media (min-width: 900px) {
+@media (--tablet-landscape-up) {
   nav > .content {
     display: flex;
     align-items: center;

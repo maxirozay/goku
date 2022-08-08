@@ -1,21 +1,25 @@
 .dropdown {
   display: inline-block;
-  margin-right: var(--margin-r);
+  margin: 1px;
 }
 
-button:last-child {
-  margin-right: 0;
+.dropdown > label,
+.dropdown > button {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .dropdown > label {
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
-  margin: 0;
+  background-color: var(--color-button);
   box-shadow: var(--shadow);
+  color: var(--color-button-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-button-border);
+  padding: var(--padding-input);
   cursor: pointer;
+  text-align: center;
+  display: inline-block;
 }
 .dropdown > label:hover,
 .dropdown > label:focus {
@@ -41,16 +45,16 @@ button:last-child {
   position: fixed;
   bottom: 0;
   right: 0;
-  max-height: 50vh;
+  max-height: 75vh;
   overflow-y: auto;
-  box-shadow: var(--shadow);
-  background-color: var(--secondary-color);
-  color: var(--secondary-color-text) !important;
-  border: var(--border-width) solid var(--secondary-color);
+  box-shadow: 0 0 3px #0003;
+  background-color: var(--color-background-soft);
+  color: var(--color-text) !important;
+  border: var(--border-width) solid var(--color-background-soft);
   border-radius: var(--border-radius);
   margin: 0;
   padding: var(--padding);
-  z-index: 10000;
+  z-index: 1000;
   transition: all .3s ease;
   transform: translateY(150%);
 }

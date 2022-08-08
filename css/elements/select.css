@@ -1,14 +1,9 @@
 select {
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  padding: calc(var(--padding-t) / 2 - 0.2em) calc(var(--padding-r) - 0.2em) calc(var(--padding-b) / 2 - 0.2em) calc(var(--padding-l) - 0.2em);
-  margin-right: var(--margin-r);
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  border-color: var(--color-button-border);
+  appearance: none;
   box-shadow: var(--shadow);
-  font-size: 1em;
-  font-family: inherit;
-  line-height: 1;
 }
 select:hover,
 select:focus {

@@ -2,7 +2,7 @@
   margin: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  border-bottom: var(--border-width) solid var(--primary-color);
+  border-bottom: none;
   box-shadow: none;
 }
 .tabs > .active {

@@ -1,41 +1,49 @@
 .drawer-layout {
   display: flex;
   flex-direction: row;
+  position: relative;
+  overflow: hidden;
 }
 
 .drawer-layout__input {
   display: none !important;
 }
-.drawer-layout__input + div {
-  transition: 1s all;
-  display: flex;
-}
-.drawer-layout__input:checked + div {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-}
-@media (--tablet-landscape-up) {
-  .drawer-layout__input:checked + div {
-    position: inherit;
-  }
-}
 
 .drawer-layout__input + div > div {
-  display: none;
-  flex: auto;
+  transition: all .3s;
+  box-sizing: border-box;
   overflow-y: auto;
+  max-height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
-.drawer-layout__input:checked + div > div {
-  display: block;
+.drawer-layout__input:first-child:checked + div > div {
+  right: 100%;
+  left: -100%;
+}
+.drawer-layout__input:not(:first-child):checked + div > div {
+  left: 100%;
+  right: -100%;
+}
+@media (--tablet-portait-up) {
+  .drawer-layout__input + div > div {
+    position: static;
+    width: var(--drawer-width);
+  }
+  .drawer-layout__input:first-child:checked + div > div {
+    margin-left: calc(var(--drawer-width) * -1);
+  }
+  .drawer-layout__input:not(:first-child):checked + div > div {
+    margin-right: calc(var(--drawer-width) * -1);
+  }
 }
 
 .drawer-layout__toggle {
   margin: auto;
   cursor: pointer;
+  display: inline-block;
+  padding: var(--padding);
 }
 .drawer-layout__toggle .bar {
   transition: .3s;
@@ -45,14 +53,14 @@
   height: 4px;
 }
 .drawer-layout__toggle .bar:first-child {
-  transform: rotate(45deg);
-}
-.drawer-layout__toggle .bar:last-child {
-  transform:  rotate(-45deg);
-}
-.drawer-layout__input:checked + div > .drawer-layout__toggle .bar:first-child {
   transform: rotate(-45deg);
 }
-.drawer-layout__input:checked + div > .drawer-layout__toggle .bar:last-child {
+.drawer-layout__toggle .bar:last-child {
+  transform:  rotate(45deg);
+}
+.drawer-layout__input:checked + div > .drawer-layout__toggle .bar:first-child {
   transform: rotate(45deg);
+}
+.drawer-layout__input:checked + div > .drawer-layout__toggle .bar:last-child {
+  transform: rotate(-45deg);
 }

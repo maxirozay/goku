@@ -1,6 +1,6 @@
 {
   "name": "goku-css",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "CSS Framework",
   "main": "dist/goku.css",
   "repository": "git@github.com:maxirozay/goku.git",
@@ -13,15 +13,15 @@
   "scripts": {
     "dev": "postcss css/goku.css --watch --dir docs/css/",
     "docs": "npm run dev & npm run browser-sync start --ss 'docs' --files 'docs'",
-    "build": "postcss css/goku.css --dir dist/ && BROWSERSLIST_ENV='legacy' postcss css/goku.css -o dist/goku-legacy.css && cp dist/goku.css docs/css/ && git add dist docs/css -f"
+    "build": "postcss css/goku.css --dir dist/ && set BROWSERSLIST_ENV=legacy&& postcss css/goku.css -o dist/goku-legacy.css && cp dist/goku.css docs/css/ && git add dist docs/css -f"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.27.10",
     "cssnano": "^5.1.12",
     "postcss-cli": "^10.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^14.1.0",
-    "stylelint": "^9.1.1",
-    "stylelint-config-standard": "^18.2.0"
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0"
   }
 }

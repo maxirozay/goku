@@ -2,40 +2,60 @@
   --font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
   --font-weight: normal;
   --primary-color: #f84;
-  --primary-color-text: #fff;
+  --primary-color-text: #000;
   --primary-color-active: #888;
   --secondary-color: #fff;
   --secondary-color-text: #000;
-  --dark-color: #222;
+  --dark-color: #333;
+  --dark-color-secondary: #222;
   --dark-text: #fff;
+  --dark-input: #444;
+  --dark-input-border: #444;
+  --dark-button: #f84;
+  --dark-button-border: #f84;
+  --dark-button-text: #000;
   --dark-color-soft: #333;
   --dark-color-strong: #000;
-  --light-color: #eee;
+  --light-color: #fff;
+  --light-color-secondary: #eee;
   --light-text: #000;
+  --light-input: #ddd;
+  --light-input-border: #ddd;
+  --light-button: #f84;
+  --light-button-border: #f84;
+  --light-button-text: #000;
   --light-color-soft: #ddd;
   --light-color-strong: #fff;
   --success-color: #3d3;
   --error-color: #f43;
   --border-radius: 4px;
   --border-width: 1px;
-  --padding-t: 0.5rem;
-  --padding-r: 0.5rem;
-  --padding-b: 0.5rem;
-  --padding-l: 0.5rem;
+  --padding-t: 0.5em;
+  --padding-r: 0.5em;
+  --padding-b: 0.5em;
+  --padding-l: 0.5em;
   --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
-  --margin-t: 0.5rem;
-  --margin-r: 0.25rem;
-  --margin-b: 0.5rem;
-  --margin-l: 0.25rem;
+  --padding-input: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
+  --margin-t: 0.5em;
+  --margin-r: 0.5em;
+  --margin-b: 0.5em;
+  --margin-l: 0.5em;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  --drawer-width: 300px
 }
 
 :root {
   --color-background: var(--light-color);
   --color-background-soft: var(--light-color-soft);
   --color-background-strong: var(--light-color-strong);
+  --color-background-secondary: var(--light-color-secondary);
   --color-text: var(--light-text);
+  --color-input: var(--light-input);
+  --color-input-border: var(--light-input-border);
+  --color-button: var(--light-button);
+  --color-button-border: var(--light-button-border);
+  --color-button-text: var(--light-button-text);
   --link-color: var(--primary-color);
 }
 
@@ -44,7 +64,13 @@
     --color-background: var(--dark-color);
     --color-background-soft: var(--dark-color-soft);
     --color-background-strong: var(--dark-color-strong);
+    --color-background-secondary: var(--dark-color-secondary);
     --color-text: var(--dark-text);
+    --color-input: var(--dark-input);
+    --color-input-border: var(--dark-input-border);
+    --color-button: var(--dark-button);
+    --color-button-border: var(--dark-button-border);
+    --color-button-text: var(--dark-button-text);
   }
 }
 

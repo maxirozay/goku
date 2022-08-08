@@ -77,35 +77,75 @@
           <p>
             You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
           </p>
-          <pre><code class="language-css" data-lang="css">--font-family: sans-serif;
---font-weight: normal;
---primary-color: #444;
---primary-color-text: #eee;
---primary-color-active: #888;
---secondary-color: #666;
---secondary-color-text: #fff;
---dark-color: #222;
---dark-text: #fff;
---dark-color-soft: #333;
---dark-color-strong: #000;
---light-color: #fff;
---light-color-soft: #ddd;
---light-color-strong: #fff;
---light-text: #000;
---link-color: #0f0;
---success-color: #55ff44;
---error-color: red;
---border-radius: 4px;
---border-width: 1px;
---padding-t: 0.25rem;
---padding-r: 0.5rem;
---padding-b: 0.25rem;
---padding-l: 0.5rem;
---margin-t: 0.5rem;
---margin-r: 0.25rem;
---margin-b: 0.5rem;
---margin-l: 0.25rem;
---shadow: 0 1px 1px rgba(0, 0, 0, 0.4);</code></pre>
+          <pre><code class="language-css" data-lang="css">:root {
+  --font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+  --font-weight: normal;
+  --primary-color: #f84;
+  --primary-color-text: #000;
+  --primary-color-active: #888;
+  --secondary-color: #fff;
+  --secondary-color-text: #000;
+  --dark-color: #333;
+  --dark-color-secondary: #222;
+  --dark-text: #fff;
+  --dark-input: #888;
+  --dark-input-border: #444;
+  --dark-button: #f84;
+  --dark-button-border: #f84;
+  --dark-button-text: #000;
+  --dark-color-soft: #333;
+  --dark-color-strong: #000;
+  --light-color: #fff;
+  --light-color-secondary: #eee;
+  --light-text: #000;
+  --light-input: #ddd;
+  --light-input-border: #ddd;
+  --light-button: #f84;
+  --light-button-border: #f84;
+  --light-button-text: #000;
+  --light-color-soft: #ddd;
+  --light-color-strong: #fff;
+  --success-color: #3d3;
+  --error-color: #f43;
+  --border-radius: 4px;
+  --border-width: 1px;
+  --padding-t: 0.5em;
+  --padding-r: 0.5em;
+  --padding-b: 0.5em;
+  --padding-l: 0.5em;
+  --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
+  --padding-input: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
+  --margin-t: 0.5em;
+  --margin-r: 0.5em;
+  --margin-b: 0.5em;
+  --margin-l: 0.5em;
+  --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
+  --shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  --drawer-width: 300px
+}
+
+:root {
+  --color-background: var(--light-color);
+  --color-background-soft: var(--light-color-soft);
+  --color-background-strong: var(--light-color-strong);
+  --color-background-secondary: var(--light-color-secondary);
+  --color-text: var(--light-text);
+  --color-input: var(--light-input);
+  --color-button: var(--light-button);
+  --link-color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--dark-color);
+    --color-background-soft: var(--dark-color-soft);
+    --color-background-strong: var(--dark-color-strong);
+    --color-background-secondary: var(--dark-color-secondary);
+    --color-text: var(--dark-text);
+    --color-input: var(--dark-input);
+    --color-button: var(--dark-button);
+  }
+}</code></pre>
 
           <h3>Try to change the font-family</h3>
           <label>
@@ -119,59 +159,32 @@
 
           <h3>Try to change the colors.</h3>
           <div class="flex  text-center">
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Primary color
               <input
-                class="mx"
                 type="color"
-                value="#444444"
+                value="#ff8f4f"
                 onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Primary color text
               <input
-                class="mx"
                 type="color"
-                value="#eeeeee"
+                value="#000000"
                 onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
             </label>
-            <label class="flex-auto">
-              Primary color active
+            <label class="flex-auto mr1">
+              Button
               <input
-                class="mx"
                 type="color"
-                value="#888888"
-                onchange="document.documentElement.style.setProperty('--primary-color-active', event.target.value)">
-            </label>
-            <label class="flex-auto">
-              Secondary color
-              <input
-                class="mx"
-                type="color"
-                value="#666666"
-                onchange="document.documentElement.style.setProperty('--secondary-color', event.target.value)">
-            </label>
-            <label class="flex-auto">
-              Secondary color text
-              <input
-                class="mx"
-                type="color"
-                value="#ffffff"
-                onchange="document.documentElement.style.setProperty('--secondary-color-text', event.target.value)">
-            </label>
-            <label class="flex-auto">
-              Link color
-              <input
-                class="mx"
-                type="color"
-                value="#00ff00"
-                onchange="document.documentElement.style.setProperty('--link-color', event.target.value)">
+                value="#ff8f4f"
+                onchange="document.documentElement.style.setProperty('--color-button', event.target.value)">
             </label>
           </div>
 
           <h3>Try to change the border.</h3>
           <div class="flex  text-center">
-            <label class="flex-auto">
+            <label class="flex-auto mr1">
               Border radius
               <input
                 class="mx"
@@ -199,19 +212,19 @@
 
           <h3>Try to change the padding class.</h3>
           <div class="flex">
-            <label class="flex-auto">
+            <label class="flex-1 mr1">
               padding-top
               <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-1 mr1">
               padding-right
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-r', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-1 mr1">
               padding-bottom
               <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--padding-b', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-1">
               padding-left
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
             </label>
@@ -219,19 +232,19 @@
 
           <h3>Try to change the margin class.</h3>
           <div class="flex">
-            <label class="flex-auto">
+            <label class="flex-1 mr1">
               margin-top
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-1 mr1">
               margin-right
               <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-1 mr1">
               margin-bottom
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
             </label>
-            <label class="flex-auto">
+            <label class="flex-1">
               margin-left
               <input type="text" value="0.25rem" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
             </label>
@@ -251,24 +264,24 @@
 
           <h3 id="input">Input</h3>
           <h4>Type</h4>
-          <div class="flex  text-center">
-            <label class="flex-auto">
-              <div>Text</div>
-              <input class="mx" type="text">
+          <div class="flex">
+            <label class="flex-auto pr1">
+              Text
+              <input type="text">
+            </label>
+            <label class="flex-auto pr1">
+              Number
+              <input type="number">
             </label>
             <label class="flex-auto">
-              <div>Number</div>
-              <input class="mx" type="number">
-            </label>
-            <label class="flex-auto">
-              <div>Date</div>
-              <input class="mx" type="date">
+              Date
+              <input type="date">
             </label>
           </div>
 
-          <label class="label__checkbox">
+          <label>
             Checkbox
-            <input type="checkbox">
+            <input class="ml1" type="checkbox">
           </label>
           <p>File</p>
           <label>
@@ -284,10 +297,6 @@
   Dropbox file input
   &lt;input type="file"&gt;
 &lt;/label&gt;</code></pre>
-          <label class="label__file--button">
-            label__file--button
-            <input type="file">
-          </label>
 
           <h3 id="link">Link</h3>
           <a href="#">Link</a>
@@ -385,49 +394,46 @@
 
           <h3 id="colors">Colors</h3>
           <div class="flex">
-            <div class="primary  flex-1">primary</div>
-            <div class="primary-outlined  flex-1">primary-outlined</div>
-            <div class="primary-transparent  flex-1">primary-transparent</div>
-            <div class="secondary  flex-1">secondary</div>
-            <div class="secondary-outlined  flex-1">secondary-outlined</div>
-            <div class="success  flex-1">success</div>
-            <div class="success-outlined  flex-1">success-outlined</div>
-            <div class="error  flex-1">error</div>
-            <div class="error-outlined  flex-1">error-outlined</div>
-            <div class="theme  flex-1">theme</div>
-            <div class="theme-outlined  flex-1">theme-outlined</div>
-            <div class="theme-soft  flex-1">theme-soft</div>
-            <div class="theme-soft-outlined  flex-1">theme-soft-outlined</div>
-            <div class="theme-strong  flex-1">theme-strong</div>
-            <div class="theme-strong-outlined  flex-1">theme-strong-outlined</div>
+            <div class="primary  flex-1 p1">primary</div>
+            <div class="primary-outlined  flex-1 p1">primary-outlined</div>
+            <div class="primary-transparent  flex-1 p1">primary-transparent</div>
+            <div class="secondary  flex-1 p1">secondary</div>
+            <div class="secondary-outlined  flex-1 p1">secondary-outlined</div>
+            <div class="success  flex-1 p1">success</div>
+            <div class="success-outlined  flex-1 p1">success-outlined</div>
+            <div class="error  flex-1 p1">error</div>
+            <div class="error-outlined  flex-1 p1">error-outlined</div>
+          </div>
+          <div class="flex mt1">
+            <div class="theme  flex-1 p1">theme</div>
+            <div class="theme-outlined  flex-1 p1">theme-outlined</div>
+            <div class="theme-soft  flex-1 p1">theme-soft</div>
+            <div class="theme-soft-outlined  flex-1 p1">theme-soft-outlined</div>
+            <div class="theme-strong  flex-1 p1">theme-strong</div>
+            <div class="theme-strong-outlined  flex-1 p1">theme-strong-outlined</div>
+            <div class="theme-secondary  flex-1 p1">theme-secondary</div>
+            <div class="theme-secondary-outlined  flex-1 p1">theme-secondary-outlined</div>
           </div>
 
           <h3 id="drawer">Drawer</h3>
-          <p>
-            You can play with the class <code class="language-css" data-lang="css">flex-0</code> and <code class="language-css" data-lang="css">flex-1</code> on the drawers <code class="language-html" data-lang="html">div</code> to have a smooth resize effect.
-          </p>
           <div class="drawer-layout">
             <input id="left-toggle" class="drawer-layout__input" type="checkbox">
-            <div class="theme-strong">
-              <div class="p1">
-                This is the left drawer.
-              </div>
-              <label class="drawer-layout__toggle px1 py2" for="left-toggle">
+            <div>
+              <div class="theme-strong p1 pb3 h">This is the left drawer.</div>
+              <label class="drawer-layout__toggle  absolute bottom left" for="left-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
               </label>
             </div>
 
-            <div class="flex-4 p1 theme-soft">
+            <div class="flex-4 p1 theme-soft pb3">
               This is the main content.
             </div>
 
             <input id="right-toggle" class="drawer-layout__input" type="checkbox">
-            <div class="theme-strong">
-              <div class="p1">
-                This is the right drawer.
-              </div>
-              <label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle">
+            <div>
+              <div class="theme-strong p1 pb3 h">This is the right drawer.</div>
+              <label class="drawer-layout__toggle  mirror absolute bottom right" for="right-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
               </label>
@@ -437,26 +443,22 @@
           <p>Code:</p>
           <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
   &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="theme-soft p0"&gt;
-    &lt;div class="mr1"&gt;
-      This is the left drawer.
-    &lt;/div&gt;
-    &lt;label class="drawer-layout__toggle px1 py2" for="left-toggle"&gt;
+  &lt;div&gt;
+    &lt;div lass="theme-strong p1 pb3 h"&gt;This is the left drawer.&lt;/div&gt;
+    &lt;label class="drawer-layout__toggle absolute bottom left" for="left-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 
-  &lt;div class="flex-4  theme-soft"&gt;
+  &lt;div class="flex-4  theme-soft pb3"&gt;
     This is the main content.
   &lt;/div&gt;
 
   &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
-  &lt;div class="theme-soft p0"&gt;
-    &lt;div class="mr1"&gt;
-      This is the right drawer.
-    &lt;/div&gt;
-    &lt;label class="drawer-layout__toggle px1 py2  mirror" for="right-toggle"&gt;
+  &lt;div&gt;
+    &lt;div class="theme-strong p1 pb3 h"&gt;This is the right drawer.&lt;/div&gt;
+    &lt;label class="drawer-layout__toggle mirror absolute bottom right" for="right-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
@@ -541,13 +543,27 @@
             </div>
           </div>
           <p>
-            Use <code class="language-css" data-lang="css">flex center</code> to align everything in the center.
+            Use <code class="language-css" data-lang="css">flex-row</code> to keep row direction on small screen.
+          </p>
+          <div class="theme-soft  flex-row">
+            <div class="p1 flex-1">
+              col 1
+            </div>
+            <div class="p1 flex-1">
+              col 2
+            </div>
+            <div class="p1 flex-1">
+              col 3
+            </div>
+          </div>
+          <p>
+            Use <code class="language-css" data-lang="css">flex-center</code> to align everything in the center.
           </p>
           <div class="theme-soft  flex flex-center">
             <div class="p1">
               text
             </div>
-            <button class="p1">
+            <button>
               button
             </button>
             <div class="theme-strong p1" style="height: 80px">
@@ -718,7 +734,7 @@
           <p>Description</p>
           <form class="clearfix">
             <div class="flex">
-              <label class="flex-auto">
+              <label class="flex-auto mr1">
                 Enter your name
                 <input type="text">
               </label>
@@ -731,7 +747,7 @@
               Comment
               <textarea name="name" rows="2" placeholder="..."></textarea>
             </label>
-            <label class="label__checkbox">
+            <label>
               Do you want to subscribe to our newsletter?
               <input type="checkbox">
               <span></span>

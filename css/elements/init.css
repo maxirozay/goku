@@ -1,0 +1,14 @@
+button,
+input,
+textarea,
+select {
+  margin: 1px;
+  font-weight: inherit;
+  font-size: 1em;
+  font-family: inherit;
+  border-width: var(--border-width);
+  border-style: solid;
+  border-radius: var(--border-radius);
+  padding: var(--padding-input);
+  box-sizing: border-box;
+}

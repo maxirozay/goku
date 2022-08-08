@@ -1,18 +1,51 @@
 input {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
-  padding: var(--padding);
-  margin: var(--margin);
-  font-size: 1em;
-  font-family: inherit;
-  line-height: 1;
-  padding: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border-color: var(--color-input-border);
 }
 input:hover,
 input:focus {
   border-color: var(--primary-color-active);
+}
+
+.label__file,
+.label__file--button {
+  display: inline-block;
+  padding: var(--padding-input);
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--primary-color);
+  box-shadow: var(--shadow);
+  text-align: center;
+  margin: 1px;
+}
+.label__file:hover {
+  border-color: var(--primary-color-active);
+}
+.label__file > input[type='file'] {
+  display: none;
+}
+
+label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  margin-bottom: var(--margin-b);
+}
+
+label > input,
+label > textarea  {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: .25em;
+  width: 100%;
+}
+
+form {
+  padding-top: var(--margin-t);
+  padding-bottom: var(--margin-b);
 }
 
 input[type=checkbox] {
@@ -26,7 +59,6 @@ input[type=checkbox] {
   transition: .3s all;
   border-radius: 1em;
   margin: 0;
-  vertical-align: text-top;
 }
 input[type=checkbox]:checked {
   background: radial-gradient(#fff 65%, var(--primary-color) 75%);
@@ -47,73 +79,20 @@ input[type='file'] {
   cursor: pointer;
 }
 
-input[type='color'] {
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+  border-radius: 100%;
+	width: 1em;
+	height: 1em;
   padding: 0;
+  margin: 0;
+  margin-left: .25em;
 }
-
-.label__checkbox {
-  display: inline-block;
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
 }
-
-.label__file {
-  min-width: 250px;
-  height: 60px;
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  box-shadow: var(--shadow);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-.label__file:hover {
-  border-color: var(--primary-color-active);
-}
-.label__file > input[type='file'] {
-  position: absolute;
-  width: 250px;
-  height: 60px;
-  opacity: 0;
-  padding: 0;
-}
-
-.label__file--button {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  padding: var(--padding);
-  box-shadow: var(--shadow);
-  cursor: pointer;
-}
-.label__file--button:hover,
-.label__file--button:focus {
-  border-color: var(--primary-color-active);
-}
-.label__file--button:active {
-  background-color: var(--primary-color-active);
-  border-color: var(--primary-color-active);
-  box-shadow: none;
-}
-.label__file--button > input[type='file'] {
-  display: none;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: var(--margin-b);
-}
-
-label > input, textarea {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: .25em;
-}
-
-form {
-  padding-top: var(--margin-t);
-  padding-bottom: var(--margin-b);
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+  border-radius: 100%;
 }
