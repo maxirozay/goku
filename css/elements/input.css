@@ -12,10 +12,10 @@ input:focus {
 .label__file--button {
   display: inline-block;
   padding: var(--padding-input);
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
+  background-color: var(--color-button);
+  color: var(--color-button-text);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
+  border: var(--border-width) solid var(--color-button-border);
   box-shadow: var(--shadow);
   text-align: center;
   margin: 1px;
