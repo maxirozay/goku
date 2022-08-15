@@ -35,7 +35,7 @@ label {
   margin-bottom: var(--margin-b);
 }
 
-label > input,
+label > input:not([type=checkbox]),
 label > textarea  {
   margin-left: 0;
   margin-right: 0;
@@ -58,7 +58,7 @@ input[type=checkbox] {
   height: 1em;
   transition: .3s all;
   border-radius: 1em;
-  margin: 0;
+  margin: 0 0 0 auto;
 }
 input[type=checkbox]:checked {
   background: radial-gradient(#fff 65%, var(--primary-color) 75%);
