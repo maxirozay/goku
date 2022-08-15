@@ -35,7 +35,7 @@ label {
   margin-bottom: var(--margin-b);
 }
 
-label > input:not([type=checkbox]),
+label > input,
 label > textarea  {
   margin-left: 0;
   margin-right: 0;
