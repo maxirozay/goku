@@ -21,10 +21,12 @@
 .drawer-layout__input:first-child:checked + div > div {
   right: 100%;
   left: -100%;
+  z-index: 1;
 }
 .drawer-layout__input:not(:first-child):checked + div > div {
   left: 100%;
   right: -100%;
+  z-index: 2;
 }
 @media (--tablet-portait-up) {
   .drawer-layout__input + div > div {
