@@ -577,19 +577,13 @@
 
           <h3 id="modal">Modal</h3>
           <button type="button" onclick="document.getElementById('myModal').style.display = 'flex'">Open Modal</button>
-          <div id="myModal" class="modal" style="display: none;">
-            <div class="modal__background" onclick="document.getElementById('myModal').style.display = 'none'">
-              <p style="color: white;">modal__background</p>
-            </div>
-            <div class="modal__content">
-              modal__content
+          <div id="myModal" class="modal" style="display: none;" onclick="document.getElementById('myModal').style.display = 'none'">
+            <div onclick="event.stopPropagation()">
+              last child
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
-  &lt;div class="modal__background"&gt;&lt;/div&gt;
-  &lt;div class="modal__content"&gt;
-    modal__content
-  &lt;/div&gt;
+  &lt;div&gt;last child&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
           <h3 id="overflow">Overflow</h3>

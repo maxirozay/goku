@@ -6,16 +6,10 @@
   left: 0;
   display: flex;
   z-index: 10000;
-}
-
-.modal__background {
-  height: 100%;
-  width: 100%;
-  position: absolute;
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.modal__content {
+.modal > div:last-child {
   background-color: var(--color-background);
   color: var(--color-text);
   z-index: 10001;
