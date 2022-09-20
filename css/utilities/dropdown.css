@@ -34,12 +34,12 @@
 .dropdown > input {
   display: none;
 }
-.dropdown > input:checked ~ .dropdown__content,
-.dropdown:hover > button ~ .dropdown__content {
+.dropdown > input:checked ~ div,
+.dropdown:hover > button ~ div {
   transform: translateY(0);
 }
 
-.dropdown__content {
+.dropdown > div {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -58,12 +58,12 @@
   transition: all .3s ease;
   transform: translateY(150%);
 }
-.dropdown__content > * {
+.dropdown > div > * {
   margin: 0 0 1px 0;
 }
 
 @media (--tablet-landscape-up) {
-  .dropdown__content {
+  .dropdown > div {
     display: none;
     position: absolute;
     bottom: inherit;
@@ -72,9 +72,9 @@
     transform: translateY(0);
   }
 
-  .dropdown > input:checked ~ .dropdown__content,
-  .dropdown:hover > button ~ .dropdown__content,
-  .dropdown > button:focus ~ .dropdown__content {
+  .dropdown > input:checked ~ div,
+  .dropdown:hover > button ~ div,
+  .dropdown > button:focus ~ div {
     display: flex;
   }
 }

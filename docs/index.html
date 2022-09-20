@@ -22,7 +22,7 @@
         <a href="#customization" class="ml">Customization</a>
         <div class="dropdown p0">
           <button type="button" class="w m0 no-shadow text-left">Elements</button>
-          <div class="dropdown__content m0">
+          <div>
             <a href="#button">Button</a>
             <a href="#input">Input</a>
             <a href="#link">Link</a>
@@ -36,7 +36,7 @@
         </div>
         <div class="dropdown p0">
           <button type="button" class="w m0 no-shadow text-left">Utilities</button>
-          <div class="dropdown__content m0">
+          <div>
             <a href="#borders">Borders</a>
             <a href="#colors">Colors</a>
             <a href="#drawer">Drawer</a>
@@ -470,7 +470,7 @@
           <div class="dropdown">
             <label for="dropdown1">Click Dropdown</label>
             <input id="dropdown1" type="checkbox">
-            <div class="dropdown__content">
+            <div>
               <button type="button">Item 1</button>
               <button type="button">Item 2</button>
             </div>
@@ -478,7 +478,7 @@
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
   &lt;input id="dropdown1" type="checkbox"&gt;
-  &lt;div class="dropdown__content"&gt;
+  &lt;div&gt;
     &lt;button type="button"&gt;Item 1&lt;/button&gt;
     &lt;button type="button"&gt;Item 2&lt;/button&gt;
   &lt;/div&gt;
@@ -486,14 +486,14 @@
 
           <div class="dropdown">
             <button type="button">Hover Dropdown</button>
-            <div class="dropdown__content">
+            <div>
               <a>Item 1</a>
               <a>Item 2</a>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;button type="button"&gt;Hover Dropdown&lt;/button&gt;
-  &lt;div class="dropdown__content"&gt;
+  &lt;div&gt;
     &lt;a&gt;Item 1&lt;/a&gt;
     &lt;a&gt;Item 2&lt;/a&gt;
   &lt;/div&gt;
@@ -577,19 +577,13 @@
 
           <h3 id="modal">Modal</h3>
           <button type="button" onclick="document.getElementById('myModal').style.display = 'flex'">Open Modal</button>
-          <div id="myModal" class="modal" style="display: none;">
-            <div class="modal__background" onclick="document.getElementById('myModal').style.display = 'none'">
-              <p style="color: white;">modal__background</p>
-            </div>
-            <div class="modal__content">
-              modal__content
+          <div id="myModal" class="modal" style="display: none;" onclick="document.getElementById('myModal').style.display = 'none'">
+            <div onclick="event.stopPropagation()">
+              last child
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
-  &lt;div class="modal__background"&gt;&lt;/div&gt;
-  &lt;div class="modal__content"&gt;
-    modal__content
-  &lt;/div&gt;
+  &lt;div&gt;last child&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
           <h3 id="overflow">Overflow</h3>
