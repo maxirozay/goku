@@ -8,8 +8,7 @@ input:focus {
   border-color: var(--primary-color-active);
 }
 
-.label__file,
-.label__file--button {
+.label__file {
   display: inline-block;
   padding: var(--padding-input);
   background-color: var(--color-button);
@@ -19,12 +18,19 @@ input:focus {
   box-shadow: var(--shadow);
   text-align: center;
   margin: 1px;
+  position: relative;
 }
 .label__file:hover {
   border-color: var(--primary-color-active);
 }
 .label__file > input[type='file'] {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
 }
 
 label {
