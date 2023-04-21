@@ -3,6 +3,7 @@ button {
   color: var(--color-button-text);
   border-color: var(--color-button-border);
   box-shadow: var(--shadow);
+  font-weight: bold;
 }
 
 button:disabled {

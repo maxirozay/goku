@@ -9,6 +9,7 @@ nav {
 nav > a,
 nav > .content > a {
   color: inherit;
+  font-weight: bold;
 }
 
 nav > .content {
