@@ -7,10 +7,10 @@
   --primary-color: #f84;
   --primary-color-text: #000;
   --primary-color-active: #888;
-  --secondary-color: #fff;
-  --secondary-color-text: #000;
-  --dark-color: #333;
-  --dark-color-secondary: #222;
+  --secondary-color: #888;
+  --secondary-color-text: #fff;
+  --dark-color: #2c2c2c;
+  --dark-color-secondary: #333;
   --dark-text: #fff;
   --dark-input: #444;
   --dark-input-border: #444;
@@ -22,15 +22,15 @@
   --light-color: #fff;
   --light-color-secondary: #eee;
   --light-text: #000;
-  --light-input: #ddd;
-  --light-input-border: #ddd;
+  --light-input: #eee;
+  --light-input-border: #eee;
   --light-button: #f84;
   --light-button-border: #f84;
   --light-button-text: #000;
-  --light-color-soft: #ddd;
+  --light-color-soft: #eee;
   --light-color-strong: #fff;
-  --success-color: #3d3;
-  --error-color: #f43;
+  --success-color: #4b4;
+  --error-color: #e54;
   --border-radius: 4px;
   --border-width: 1px;
   --padding-t: 0.5em;
@@ -44,7 +44,7 @@
   --margin-b: 0.5em;
   --margin-l: 0.5em;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  --shadow: 0 0 3px #8884;
   --drawer-width: 300px
 }
 
@@ -52,7 +52,6 @@
   --color-background: var(--light-color);
   --color-background-soft: var(--light-color-soft);
   --color-background-strong: var(--light-color-strong);
-  --color-background-secondary: var(--light-color-secondary);
   --color-text: var(--light-text);
   --color-input: var(--light-input);
   --color-input-border: var(--light-input-border);
