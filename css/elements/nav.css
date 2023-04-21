@@ -1,6 +1,6 @@
 nav {
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
+  background-color: var(--color-background);
+  color: var(--color-text);
   height: 48px;
   display: flex;
   z-index: 100;
@@ -50,7 +50,7 @@ nav > .toggle > div {
   display: none;
 }
 #nav-toggle:checked ~ .content {
-    bottom: 0;
+  bottom: 0;
 }
 
 @media (--tablet-landscape-up) {
