@@ -11,6 +11,8 @@
   background: none;
   color: inherit;
   border: none;
+  font-weight: normal;
+  padding: 0;
 }
 .dropdown > div::after {
   content: '.';

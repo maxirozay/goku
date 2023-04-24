@@ -10,7 +10,6 @@ nav {
 nav > a,
 nav > .content > a {
   color: inherit;
-  font-weight: bold;
 }
 
 nav > .content {
@@ -72,7 +71,6 @@ nav > .toggle > div {
     flex: auto;
     margin: 0 .5rem;
     transition: 0s;
-    box-shadow: none;
   }
   nav > .content > *,
   nav > .content > .dropdown > button {

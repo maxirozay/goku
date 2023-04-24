@@ -11,12 +11,12 @@
   --secondary-color-text: #fff;
   --dark-color: #1a1a1a;
   --dark-color-secondary: #282828;
-  --dark-text: #fff;
+  --dark-text: #e7e7e7;
   --dark-input: #444;
   --dark-input-border: #444;
   --dark-button: #f84;
   --dark-button-border: #f84;
-  --dark-button-text: #000;
+  --dark-button-text: #1a1a1a;
   --dark-color-soft: #333;
   --dark-color-strong: #000;
   --light-color: #fff;
@@ -26,7 +26,7 @@
   --light-input-border: #eee;
   --light-button: #f84;
   --light-button-border: #f84;
-  --light-button-text: #000;
+  --light-button-text: #1a1a1a;
   --light-color-soft: #eee;
   --light-color-strong: #fff;
   --success-color: #4b4;
@@ -52,6 +52,7 @@
   --color-background: var(--light-color);
   --color-background-soft: var(--light-color-soft);
   --color-background-strong: var(--light-color-strong);
+  --color-background-secondary: var(--light-color-secondary);
   --color-text: var(--light-text);
   --color-input: var(--light-input);
   --color-input-border: var(--light-input-border);
