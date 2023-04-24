@@ -40,7 +40,7 @@
 .success {
   background-color: var(--success-color) !important;
   border-color: var(--success-color) !important;
-  color: #333 !important;
+  color: #000 !important;
   border-radius: var(--border-radius);
   margin: 1px;
 }
@@ -56,7 +56,7 @@
 .error {
   background-color: var(--error-color) !important;
   border-color: var(--error-color) !important;
-  color: #333 !important;
+  color: #000 !important;
   border-radius: var(--border-radius);
   margin: 1px;
 }

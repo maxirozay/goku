@@ -11,12 +11,12 @@
   </head>
   <body class="m0 p0">
 
-    <nav>
+    <nav class="shadow">
+      <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle">
         <div></div>
         <div></div>
       </label>
-      <input id="nav-toggle" type="checkbox">
       <a href="/" class="my mx2">Goku CSS</a>
       <div class="content">
         <a href="#customization" class="ml">Customization</a>
@@ -58,7 +58,7 @@
       </div>
     </nav>
 
-    <div class="overflow-y relative" style="height: calc(100vh - 50px)">
+    <div class="overflow-y relative" style="height: calc(100vh - 3em)">
       <div class="portrait  p1 pt3">
 
         <section>
@@ -78,17 +78,20 @@
             You can modifiy any following CSS variable. You can do it with Javascript with something like <code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code>.
           </p>
           <pre><code class="language-css" data-lang="css">:root {
-  --font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+  --font-family: Inter, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu,
+  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-weight: normal;
+  --font-size: 1em;
+  --line-height: 1.2;
   --primary-color: #f84;
   --primary-color-text: #000;
   --primary-color-active: #888;
-  --secondary-color: #fff;
-  --secondary-color-text: #000;
-  --dark-color: #333;
-  --dark-color-secondary: #222;
+  --secondary-color: #888;
+  --secondary-color-text: #fff;
+  --dark-color: #1a1a1a;
+  --dark-color-secondary: #282828;
   --dark-text: #fff;
-  --dark-input: #888;
+  --dark-input: #444;
   --dark-input-border: #444;
   --dark-button: #f84;
   --dark-button-border: #f84;
@@ -98,15 +101,15 @@
   --light-color: #fff;
   --light-color-secondary: #eee;
   --light-text: #000;
-  --light-input: #ddd;
-  --light-input-border: #ddd;
+  --light-input: #eee;
+  --light-input-border: #eee;
   --light-button: #f84;
   --light-button-border: #f84;
   --light-button-text: #000;
-  --light-color-soft: #ddd;
+  --light-color-soft: #eee;
   --light-color-strong: #fff;
-  --success-color: #3d3;
-  --error-color: #f43;
+  --success-color: #4b4;
+  --error-color: #e54;
   --border-radius: 4px;
   --border-width: 1px;
   --padding-t: 0.5em;
@@ -120,7 +123,7 @@
   --margin-b: 0.5em;
   --margin-l: 0.5em;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  --shadow: 0 0 3px #8884;
   --drawer-width: 300px
 }
 
@@ -322,7 +325,7 @@
 
           <h3 id="nav">Nav</h3>
           <p>If you have a small screen try the main menu to see how it looks on mobile.</p>
-          <nav>
+          <nav style="z-index:0">
             <div class="my ml3">Nav</div>
             <div class="content mx3">
               <a href="#">link 1</a>
@@ -334,11 +337,11 @@
 
           <p>Code:</p>
           <pre><code class="language-html" data-lang="html">&lt;nav&gt;
+  &lt;input id="nav-toggle" type="checkbox"&gt;
   &lt;label class="toggle" for="nav-toggle"&gt;
     &lt;div&gt;&lt;/div&gt;
     &lt;div&gt;&lt;/div&gt;
   &lt;/label&gt;
-  &lt;input id="nav-toggle" type="checkbox"&gt;
   &lt;div class="my ml3"&gt;Nav&lt;/div&gt;
   &lt;div class="content mx3"&gt;
     &lt;a href="#"&gt;link 1&lt;/a&gt;
@@ -468,16 +471,16 @@
           <h3 id="dropdown">Dropdown</h3>
 
           <div class="dropdown">
-            <label for="dropdown1">Click Dropdown</label>
             <input id="dropdown1" type="checkbox">
+            <label for="dropdown1">Click Dropdown</label>
             <div>
               <button type="button">Item 1</button>
               <button type="button">Item 2</button>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
-  &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
   &lt;input id="dropdown1" type="checkbox"&gt;
+  &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
   &lt;div&gt;
     &lt;button type="button"&gt;Item 1&lt;/button&gt;
     &lt;button type="button"&gt;Item 2&lt;/button&gt;
@@ -794,5 +797,10 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <script>
+      window.addEventListener('hashchange', () => {
+        document.getElementById('nav-toggle').checked = false
+      })
+    </script>
   </body>
 </html>

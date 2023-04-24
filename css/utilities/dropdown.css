@@ -8,34 +8,56 @@
   width: 100%;
   margin: 0;
   box-sizing: border-box;
+  background: none;
+  color: inherit;
+  border: none;
 }
-
-.dropdown > label {
-  background-color: var(--color-button);
-  box-shadow: var(--shadow);
-  color: var(--color-button-text);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-button-border);
-  padding: var(--padding-input);
-  cursor: pointer;
-  text-align: center;
+.dropdown > div::after {
+  content: '.';
+  color: transparent;
+  width: .5em;
+  height: .5em;
+  border-right: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-text);
+  transform: rotate(45deg);
+  display: block;
+  margin: .5em auto;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.dropdown:hover::before,
+.dropdown > input:checked ~ label::before {
+  content: '';
+  width: 1.5em;
+  height: 1.5em;
+  margin: auto;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1001;
+}
+.dropdown > label::after,
+.dropdown > button::after {
+  content: '';
+  width: .25em;
+  height: .25em;
+  border-right: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-text);
+  transform: rotate(45deg);
   display: inline-block;
-}
-.dropdown > label:hover,
-.dropdown > label:focus {
-  border-color: var(--primary-color-active);
-}
-.dropdown > label:active {
-  background-color: var(--primary-color-active);
-  border-color: var(--primary-color-active);
-  box-shadow: none;
+  margin: 0em .5em .25em .5em;
 }
 
 .dropdown > input {
   display: none;
 }
 .dropdown > input:checked ~ div,
-.dropdown:hover > button ~ div {
+.dropdown > button:hover ~ div,
+.dropdown > div:hover {
   transform: translateY(0);
 }
 
@@ -44,6 +66,7 @@
   flex-direction: column;
   position: fixed;
   bottom: 0;
+  left: 0;
   right: 0;
   max-height: 75vh;
   overflow-y: auto;
@@ -58,8 +81,8 @@
   transition: all .3s ease;
   transform: translateY(150%);
 }
-.dropdown > div > * {
-  margin: 0 0 1px 0;
+.dropdown > div > *:not(:first-child) {
+  margin-top: var(--margin-t);
 }
 
 @media (--tablet-landscape-up) {
@@ -76,5 +99,11 @@
   .dropdown:hover > button ~ div,
   .dropdown > button:focus ~ div {
     display: flex;
+  }
+
+  .dropdown > div::after,
+  .dropdown::before,
+  .dropdown > label::before {
+    display: none;
   }
 }

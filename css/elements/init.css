@@ -4,7 +4,8 @@ textarea,
 select {
   margin: 1px;
   font-weight: inherit;
-  font-size: 1em;
+  font-size: inherit;
+  line-height: inherit;
   font-family: inherit;
   border-width: var(--border-width);
   border-style: solid;
