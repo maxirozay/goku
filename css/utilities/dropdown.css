@@ -51,8 +51,8 @@
   transition: all .3s ease;
   transform: translateY(150%);
 }
-.dropdown > div > * {
-  margin: 0 0 1px 0;
+.dropdown > div > *:not(:first-child) {
+  margin-top: var(--margin-t);
 }
 
 @media (--tablet-landscape-up) {
