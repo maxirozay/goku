@@ -71,7 +71,6 @@ nav > .toggle > div {
     flex: auto;
     margin: 0 .5rem;
     transition: 0s;
-    box-shadow: none;
   }
   nav > .content > *,
   nav > .content > .dropdown > button {
