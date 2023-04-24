@@ -12,11 +12,11 @@
   <body class="m0 p0">
 
     <nav class="shadow">
+      <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle">
         <div></div>
         <div></div>
       </label>
-      <input id="nav-toggle" type="checkbox">
       <a href="/" class="my mx2">Goku CSS</a>
       <div class="content">
         <a href="#customization" class="ml">Customization</a>
@@ -58,7 +58,7 @@
       </div>
     </nav>
 
-    <div class="overflow-y relative" style="height: calc(100vh - 50px)">
+    <div class="overflow-y relative" style="height: calc(100vh - 3em)">
       <div class="portrait  p1 pt3">
 
         <section>
@@ -325,7 +325,7 @@
 
           <h3 id="nav">Nav</h3>
           <p>If you have a small screen try the main menu to see how it looks on mobile.</p>
-          <nav>
+          <nav style="z-index:0">
             <div class="my ml3">Nav</div>
             <div class="content mx3">
               <a href="#">link 1</a>
@@ -337,11 +337,11 @@
 
           <p>Code:</p>
           <pre><code class="language-html" data-lang="html">&lt;nav&gt;
+  &lt;input id="nav-toggle" type="checkbox"&gt;
   &lt;label class="toggle" for="nav-toggle"&gt;
     &lt;div&gt;&lt;/div&gt;
     &lt;div&gt;&lt;/div&gt;
   &lt;/label&gt;
-  &lt;input id="nav-toggle" type="checkbox"&gt;
   &lt;div class="my ml3"&gt;Nav&lt;/div&gt;
   &lt;div class="content mx3"&gt;
     &lt;a href="#"&gt;link 1&lt;/a&gt;
@@ -797,5 +797,10 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <script>
+      window.addEventListener('hashchange', () => {
+        document.getElementById('nav-toggle').checked = false
+      })
+    </script>
   </body>
 </html>
