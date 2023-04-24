@@ -52,6 +52,7 @@
   --color-background: var(--light-color);
   --color-background-soft: var(--light-color-soft);
   --color-background-strong: var(--light-color-strong);
+  --color-background-secondary: var(--light-color-secondary);
   --color-text: var(--light-text);
   --color-input: var(--light-input);
   --color-input-border: var(--light-input-border);
