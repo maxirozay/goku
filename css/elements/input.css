@@ -15,7 +15,6 @@ input:focus {
   color: var(--color-button-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-button-border);
-  box-shadow: var(--shadow);
   text-align: center;
   margin: 1px;
   position: relative;
@@ -81,7 +80,6 @@ input[type=checkbox]:checked:disabled {
 input[type='file'] {
   background-color: var(--primary-color);
   color: var(--primary-color-text);
-  box-shadow: var(--shadow);
   cursor: pointer;
 }
 
