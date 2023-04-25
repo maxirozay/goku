@@ -23,7 +23,7 @@
   border-bottom: 2px solid var(--color-text);
   transform: rotate(45deg);
   display: block;
-  margin: .5em auto;
+  margin: .5em auto 0 auto;
   position: sticky;
   bottom: 0;
   right: 0;
@@ -32,8 +32,8 @@
 .dropdown:hover::before,
 .dropdown > input:checked ~ label::before {
   content: '';
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 1.75em;
   margin: auto;
   display: block;
   position: fixed;
