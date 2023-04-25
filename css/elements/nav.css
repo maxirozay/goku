@@ -22,8 +22,7 @@ nav > .content {
   transition: 0.3s;
   z-index: 100;
 }
-nav > .content > *,
-nav > .content > .dropdown > button {
+nav > .content > * {
   display: block;
   padding: .5rem 1rem;
 }
