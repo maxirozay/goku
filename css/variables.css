@@ -44,7 +44,7 @@
   --margin-b: 0.5em;
   --margin-l: 0.5em;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --shadow: 0 0 3px 1px #8884;
+  --shadow: 0 0 5px 5px var(--color-background);
   --drawer-width: 300px
 }
 
