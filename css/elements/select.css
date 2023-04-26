@@ -1,9 +1,8 @@
 select {
-  background-color: var(--color-button);
-  color: var(--color-button-text);
-  border-color: var(--color-button-border);
-  appearance: none;
-  box-shadow: var(--shadow);
+  background-color: var(--color-input);
+  color: var(--color-input-text);
+  border-color: var(--color-input-border);
+  padding-right: 0 !important;
 }
 select:hover,
 select:focus {

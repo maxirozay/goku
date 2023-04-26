@@ -11,10 +11,10 @@ input:focus {
 .label__file {
   display: inline-block;
   padding: var(--padding-input);
-  background-color: var(--color-button);
-  color: var(--color-button-text);
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border-color: var(--color-input-border);
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-button-border);
   text-align: center;
   margin: 1px;
   position: relative;
@@ -78,8 +78,9 @@ input[type=checkbox]:checked:disabled {
 }
 
 input[type='file'] {
-  background-color: var(--primary-color);
-  color: var(--primary-color-text);
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border-color: var(--color-input-border);
   cursor: pointer;
 }
 
