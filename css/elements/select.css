@@ -1,6 +1,6 @@
 select {
   background-color: var(--color-input);
-  color: var(--color-input-text);
+  color: var(--color-text);
   border-color: var(--color-input-border);
   padding-right: 0 !important;
 }
