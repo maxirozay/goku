@@ -20,8 +20,8 @@
       <a href="/" class="my mx2">Goku CSS</a>
       <div class="content">
         <a href="#customization" class="ml">Customization</a>
-        <div class="dropdown p0">
-          <button type="button" class="w m0 no-shadow text-left">Elements</button>
+        <div class="dropdown">
+          <button type="button">Elements</button>
           <div>
             <a href="#button">Button</a>
             <a href="#input">Input</a>
@@ -34,8 +34,8 @@
             <a href="#textarea">Textarea</a>
           </div>
         </div>
-        <div class="dropdown p0">
-          <button type="button" class="w m0 no-shadow text-left">Utilities</button>
+        <div class="dropdown">
+          <button type="button">Utilities</button>
           <div>
             <a href="#borders">Borders</a>
             <a href="#colors">Colors</a>
@@ -123,7 +123,7 @@
   --margin-b: 0.5em;
   --margin-l: 0.5em;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --shadow: 0 0 3px #8884;
+  --shadow: 0 0 5px 5px var(--color-background);
   --drawer-width: 300px
 }
 
@@ -134,7 +134,10 @@
   --color-background-secondary: var(--light-color-secondary);
   --color-text: var(--light-text);
   --color-input: var(--light-input);
+  --color-input-border: var(--light-input-border);
   --color-button: var(--light-button);
+  --color-button-border: var(--light-button-border);
+  --color-button-text: var(--light-button-text);
   --link-color: var(--primary-color);
 }
 
@@ -146,7 +149,10 @@
     --color-background-secondary: var(--dark-color-secondary);
     --color-text: var(--dark-text);
     --color-input: var(--dark-input);
+    --color-input-border: var(--dark-input-border);
     --color-button: var(--dark-button);
+    --color-button-border: var(--dark-button-border);
+    --color-button-text: var(--dark-button-text);
   }
 }</code></pre>
 

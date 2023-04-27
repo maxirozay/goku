@@ -9,11 +9,16 @@
   margin: 0;
   box-sizing: border-box;
   background: none;
+  text-align: left;
   color: inherit;
   border: none;
   font-weight: normal;
   padding: 0;
 }
+.dropdown > button:active {
+  background: none;
+}
+
 .dropdown > div::after {
   content: '.';
   color: transparent;
@@ -23,7 +28,7 @@
   border-bottom: 2px solid var(--color-text);
   transform: rotate(45deg);
   display: block;
-  margin: .5em auto;
+  margin: .5em auto 0 auto;
   position: sticky;
   bottom: 0;
   right: 0;
@@ -32,8 +37,8 @@
 .dropdown:hover::before,
 .dropdown > input:checked ~ label::before {
   content: '';
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 1.75em;
   margin: auto;
   display: block;
   position: fixed;
@@ -51,7 +56,8 @@
   border-bottom: 2px solid var(--color-text);
   transform: rotate(45deg);
   display: inline-block;
-  margin: 0em .5em .25em .5em;
+  margin: 0 0 .25em .5em;
+  text-align: left;
 }
 
 .dropdown > input {
