@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/goku.css">
     <title>Goku CSS - Documentation</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/twilight.min.css">
   </head>
   <body class="m0 p0">
 
@@ -59,14 +59,14 @@
     </nav>
 
     <div class="overflow-y relative" style="height: calc(100vh - 3em)">
-      <div class="portrait  p1 pt3">
+      <div class="portrait  p2">
 
         <section>
           <h2>Getting started</h2>
           <p>
             To use Goku CSS you only need to install and import it.
           </p>
-          Install with: <code class="language-bash">yarn add -D goku-css</code> or <code class="language-bash">npm install --save-dev goku-css</code>
+          <pre><code class="language-bash">yarn add goku-css</code> or <code class="language-bash">npm install goku-css</code></pre>
           <br>
           Then import 'goku-css' or 'goku-css/dist/goku-legacy.css' for Internet Explorer
         </section>
@@ -757,16 +757,16 @@
             </label>
             <button class="float-right" type="button">Confirm</button>
           </form>
-          <div class="theme-soft p1 clearfix">
+          <div class="theme-soft p1">
             This content need some buttons on the side.
             <br>
             This is a new line.
               <a href="#">Say Hi!</a>
-            <span class="float-right">
+            <div class="text-right">
               <button type="button">Edit</button>
               <button type="button" class="success">Save</button>
               <button type="button" class="error">Delete</button>
-            </span>
+            </div>
           </div>
           <h4>Users</h4>
           <table class="text-center">
@@ -808,5 +808,13 @@
         document.getElementById('nav-toggle').checked = false
       })
     </script>
+
+    <style>
+      pre {
+        border: 1px solid #8888;
+        border-radius: var(--border-radius);
+        padding: var(--padding);
+      }
+    </style>
   </body>
 </html>
