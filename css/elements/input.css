@@ -35,8 +35,6 @@ input:focus {
 label {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
   margin-bottom: var(--margin-b);
 }
 
