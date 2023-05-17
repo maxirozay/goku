@@ -89,6 +89,7 @@
   z-index: 1000;
   transition: all .3s ease;
   transform: translateY(150%);
+  white-space: nowrap;
 }
 .dropdown > div > *:not(:first-child) {
   margin-top: var(--margin-t);
