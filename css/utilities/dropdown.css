@@ -16,6 +16,9 @@
   font-weight: normal;
   padding: 0;
 }
+.dropdown > label {
+  display: inline-block;
+}
 .dropdown > button:active {
   background: none;
 }
