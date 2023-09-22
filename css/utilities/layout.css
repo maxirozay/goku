@@ -327,19 +327,13 @@
 
  .flex {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
 }
 
 .flex-center {
+  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (--tablet-landscape-up) {
-  .flex {
-    flex-direction: row;
-  }
 }
 
 .flex-column {
