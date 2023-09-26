@@ -7,7 +7,7 @@
 }
 
 .primary-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--primary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color) !important;
@@ -15,8 +15,8 @@
 }
 
 .primary-transparent {
-  background-color: transparent !important;
-  border-color: transparent !important;
+  background-color: #0000 !important;
+  border-color: #0000 !important;
   color: var(--primary-color) !important;
   margin: 1px;
 }
@@ -30,7 +30,7 @@
 }
 
 .secondary-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--secondary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color) !important;
@@ -46,7 +46,7 @@
 }
 
 .success-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--success-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color) !important;
@@ -62,7 +62,7 @@
 }
 
 .error-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--error-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color) !important;
@@ -78,7 +78,7 @@
 }
 
 .light-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--light-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--light-color) !important;
@@ -94,7 +94,7 @@
 }
 
 .dark-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--dark-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--dark-color) !important;
@@ -110,7 +110,7 @@
 }
 
 .theme-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background) !important;
@@ -127,7 +127,7 @@
 }
 
 .theme-soft-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-soft) !important;
@@ -143,7 +143,7 @@
 }
 
 .theme-strong-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-strong) !important;
@@ -159,7 +159,7 @@
 }
 
 .theme-secondary-outlined {
-  background-color: transparent !important;
+  background-color: #0000 !important;
   color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-secondary) !important;

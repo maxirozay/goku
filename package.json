@@ -2,26 +2,12 @@
 	"name": "goku-css",
 	"version": "5.3.12",
 	"description": "CSS Framework",
-	"main": "dist/goku.css",
+	"main": "css/goku.css",
 	"repository": "git@github.com:maxirozay/goku.git",
 	"contributors": [
 		"Maxime Rossier <rossier.maxime@gmail.com>",
 		"Julien Grünhagel <julien@rspt.ch>"
 	],
 	"license": "MIT",
-	"private": false,
-	"scripts": {
-		"dev": "postcss css/goku.css --watch --dir docs/css/",
-		"docs": "npm run dev & npm run browser-sync start --ss 'docs' --files 'docs'",
-		"build": "postcss css/goku.css --dir dist/ && cp dist/goku.css docs/css/ && git add dist docs/css -f"
-	},
-	"devDependencies": {
-		"browser-sync": "^2.27.10",
-		"cssnano": "^6.0.0",
-		"postcss-cli": "^10.0.0",
-		"postcss-cssnext": "^3.1.0",
-		"postcss-import": "^14.1.0",
-		"stylelint": "^15.6.0",
-		"stylelint-config-standard": "^33.0.0"
-	}
+	"private": false
 }

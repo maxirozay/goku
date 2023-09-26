@@ -62,7 +62,7 @@ nav > .toggle > div {
   transform: translateX(3px) rotate(-45deg);
 }
 
-@media (--tablet-landscape-up) {
+@media (min-width: 900px) {
   nav > .content {
     display: flex;
     align-items: center;

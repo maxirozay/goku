@@ -76,10 +76,3 @@
     --color-button-text: var(--dark-button-text);
   }
 }
-
-/* Why this breakpoints? https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862 */
-@custom-media --tablet-portait-up (min-width: 600px);
-/* Why this breakpoints? https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862 */
-@custom-media --tablet-landscape-up (min-width: 900px);
-/* Why this breakpoints? https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862 */
-@custom-media --breakpoint-desktop-up (min-width: 1200px);

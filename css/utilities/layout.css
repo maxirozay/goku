@@ -2,7 +2,7 @@
  * Size
  */
 
-@media (--breakpoint-desktop-up) {
+@media (min-width: 1200px) {
   .portrait {
     max-width: 1200px;
     margin: auto !important;

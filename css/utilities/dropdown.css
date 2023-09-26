@@ -25,7 +25,7 @@
 
 .dropdown > div::after {
   content: '.';
-  color: transparent;
+  color: #0000;
   width: .5em;
   height: .5em;
   border-right: 2px solid var(--color-text);
@@ -98,7 +98,7 @@
   margin-top: var(--margin-t);
 }
 
-@media (--tablet-landscape-up) {
+@media (min-width: 900px) {
   .dropdown > div {
     display: none;
     position: absolute;
