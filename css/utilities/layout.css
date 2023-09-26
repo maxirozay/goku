@@ -107,57 +107,57 @@
 }
 
 .m2 {
-  margin-top: calc(var(--margin-t) * 2) !important;
-  margin-right: calc(var(--margin-r) * 2) !important;
-  margin-bottom: calc(var(--margin-b) * 2) !important;
-  margin-left: calc(var(--margin-l) * 2) !important;
+  margin-top: calc(var(--margin-t) * var(--margin-ratio2)) !important;
+  margin-right: calc(var(--margin-r) * var(--margin-ratio2)) !important;
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2)) !important;
+  margin-left: calc(var(--margin-l) * var(--margin-ratio2)) !important;
 }
 .mx2 {
-  margin-left: calc(var(--margin-l) * 2) !important;
-  margin-right: calc(var(--margin-r) * 2) !important;
+  margin-left: calc(var(--margin-l) * var(--margin-ratio2)) !important;
+  margin-right: calc(var(--margin-r) * var(--margin-ratio2)) !important;
 }
 .my2 {
-  margin-top: calc(var(--margin-t) * 2) !important;
-  margin-bottom: calc(var(--margin-b) * 2) !important;
+  margin-top: calc(var(--margin-t) * var(--margin-ratio2)) !important;
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2)) !important;
 }
 .mt2 {
-  margin-top: calc(var(--margin-t) * 2) !important;
+  margin-top: calc(var(--margin-t) * var(--margin-ratio2)) !important;
 }
 .mr2 {
-  margin-right: calc(var(--margin-r) * 2) !important;
+  margin-right: calc(var(--margin-r) * var(--margin-ratio2)) !important;
 }
 .mb2 {
-  margin-bottom: calc(var(--margin-b) * 2) !important;
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2)) !important;
 }
 .ml2 {
-  margin-left: calc(var(--margin-l) * 2) !important;
+  margin-left: calc(var(--margin-l) * var(--margin-ratio2)) !important;
 }
 
 .m3 {
-  margin-top: calc(var(--margin-t) * 4) !important;
-  margin-right: calc(var(--margin-r) * 4) !important;
-  margin-bottom: calc(var(--margin-b) * 4) !important;
-  margin-left: calc(var(--margin-l) * 4) !important;
+  margin-top: calc(var(--margin-t) * var(--margin-ratio3)) !important;
+  margin-right: calc(var(--margin-r) * var(--margin-ratio3)) !important;
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio3)) !important;
+  margin-left: calc(var(--margin-l) * var(--margin-ratio3)) !important;
 }
 .mx3 {
-  margin-left: calc(var(--margin-l) * 4) !important;
-  margin-right: calc(var(--margin-r) * 4) !important;
+  margin-left: calc(var(--margin-l) * var(--margin-ratio3)) !important;
+  margin-right: calc(var(--margin-r) * var(--margin-ratio3)) !important;
 }
 .my3 {
-  margin-top: calc(var(--margin-t) * 4) !important;
-  margin-bottom: calc(var(--margin-b) * 4) !important;
+  margin-top: calc(var(--margin-t) * var(--margin-ratio3)) !important;
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio3)) !important;
 }
 .mt3 {
-  margin-top: calc(var(--margin-t) * 4) !important;
+  margin-top: calc(var(--margin-t) * var(--margin-ratio3)) !important;
 }
 .mr3 {
-  margin-right: calc(var(--margin-r) * 4) !important;
+  margin-right: calc(var(--margin-r) * var(--margin-ratio3)) !important;
 }
 .mb3 {
-  margin-bottom: calc(var(--margin-b) * 4) !important;
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio3)) !important;
 }
 .ml3 {
-  margin-left: calc(var(--margin-l) * 4) !important;
+  margin-left: calc(var(--margin-l) * var(--margin-ratio3)) !important;
 }
 
 .p-input {
@@ -213,57 +213,57 @@
 }
 
 .p2 {
-  padding-top: calc(var(--padding-t) * 2) !important;
-  padding-right: calc(var(--padding-r) * 2) !important;
-  padding-bottom: calc(var(--padding-b) * 2) !important;
-  padding-left: calc(var(--padding-l) * 2) !important;
+  padding-top: calc(var(--padding-t) * var(--padding-ratio2)) !important;
+  padding-right: calc(var(--padding-r) * var(--padding-ratio2)) !important;
+  padding-bottom: calc(var(--padding-b) * var(--padding-ratio2)) !important;
+  padding-left: calc(var(--padding-l) * var(--padding-ratio2)) !important;
 }
 .px2 {
-  padding-left: calc(var(--padding-l) * 2) !important;
-  padding-right: calc(var(--padding-r) * 2) !important;
+  padding-left: calc(var(--padding-l) * var(--padding-ratio2)) !important;
+  padding-right: calc(var(--padding-r) * var(--padding-ratio2)) !important;
 }
 .py2 {
-  padding-top: calc(var(--padding-t) * 2) !important;
-  padding-bottom: calc(var(--padding-b) * 2) !important;
+  padding-top: calc(var(--padding-t) * var(--padding-ratio2)) !important;
+  padding-bottom: calc(var(--padding-b) * var(--padding-ratio2)) !important;
 }
 .pt2 {
-  padding-top: calc(var(--padding-t) * 2) !important;
+  padding-top: calc(var(--padding-t) * var(--padding-ratio2)) !important;
 }
 .pr2 {
-  padding-right: calc(var(--padding-r) * 2) !important;
+  padding-right: calc(var(--padding-r) * var(--padding-ratio2)) !important;
 }
 .pb2 {
-  padding-bottom: calc(var(--padding-b) * 2) !important;
+  padding-bottom: calc(var(--padding-b) * var(--padding-ratio2)) !important;
 }
 .pl2 {
-  padding-left: calc(var(--padding-l) * 2) !important;
+  padding-left: calc(var(--padding-l) * var(--padding-ratio2)) !important;
 }
 
 .p3 {
-  padding-top: calc(var(--padding-t) * 4) !important;
-  padding-right: calc(var(--padding-r) * 4) !important;
-  padding-bottom: calc(var(--padding-b) * 4) !important;
-  padding-left: calc(var(--padding-l) * 4) !important;
+  padding-top: calc(var(--padding-t) * var(--padding-ratio3)) !important;
+  padding-right: calc(var(--padding-r) * var(--padding-ratio3)) !important;
+  padding-bottom: calc(var(--padding-b) * var(--padding-ratio3)) !important;
+  padding-left: calc(var(--padding-l) * var(--padding-ratio3)) !important;
 }
 .px3 {
-  padding-left: calc(var(--padding-l) * 4) !important;
-  padding-right: calc(var(--padding-r) * 4) !important;
+  padding-left: calc(var(--padding-l) * var(--padding-ratio3)) !important;
+  padding-right: calc(var(--padding-r) * var(--padding-ratio3)) !important;
 }
 .py3 {
-  padding-top: calc(var(--padding-t) * 4) !important;
-  padding-bottom: calc(var(--padding-b) * 4) !important;
+  padding-top: calc(var(--padding-t) * var(--padding-ratio3)) !important;
+  padding-bottom: calc(var(--padding-b) * var(--padding-ratio3)) !important;
 }
 .pt3 {
-  padding-top: calc(var(--padding-t) * 4) !important;
+  padding-top: calc(var(--padding-t) * var(--padding-ratio3)) !important;
 }
 .pr3 {
-  padding-right: calc(var(--padding-r) * 4) !important;
+  padding-right: calc(var(--padding-r) * var(--padding-ratio3)) !important;
 }
 .pb3 {
-  padding-bottom: calc(var(--padding-b) * 3) !important;
+  padding-bottom: calc(var(--padding-b) * var(--padding-ratio3)) !important;
 }
 .pl3 {
-  padding-left: calc(var(--padding-l) * 3) !important;
+  padding-left: calc(var(--padding-l) * var(--padding-ratio3)) !important;
 }
 
 /*
