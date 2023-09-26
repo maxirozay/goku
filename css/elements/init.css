@@ -2,7 +2,6 @@ button,
 input,
 textarea,
 select {
-  margin: 1px;
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;

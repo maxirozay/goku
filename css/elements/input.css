@@ -6,7 +6,6 @@
   border-color: var(--color-input-border);
   border-radius: var(--border-radius);
   text-align: center;
-  margin: 1px;
   position: relative;
 }
 .label__file:hover {
@@ -19,13 +18,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0;
 }
 
 label {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: var(--margin-b);
+  margin: calc(var(--margin-l) * var(--margin-ratio2)) 0;
 }
 
 label > input,
@@ -72,7 +70,6 @@ input[type="color"] {
 	width: 1em;
 	height: 1em;
   padding: 0;
-  margin: 0;
   margin-left: .25em;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
