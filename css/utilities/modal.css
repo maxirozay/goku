@@ -13,7 +13,6 @@
   background-color: var(--color-background);
   z-index: 10001;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-background);
   margin: auto;
   max-height: 80%;
   overflow-y: auto;
