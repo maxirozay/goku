@@ -513,7 +513,7 @@
 
           <h3 id="flex">Flex</h3>
           <p>
-            Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space.
+            Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space and adapt the orientation to the window size.
           </p>
           <div class="flex">
             <div class="theme-soft  flex-auto p1 m1">
@@ -569,9 +569,23 @@
             </div>
           </div>
           <p>
+            Use <code class="language-css" data-lang="css">flex-wrap</code> to show overflowing elements on a new line.
+          </p>
+          <div class="flex-wrap">
+            <div class="theme-soft  p1 m1" style="width: 100px">
+              100px
+            </div>
+            <div class="theme-soft  p1 m1" style="width: 200px">
+              200px
+            </div>
+            <div class="theme-soft  p1 m1" style="width: 1000px">
+              100px
+            </div>
+          </div>
+          <p>
             Use <code class="language-css" data-lang="css">flex-center</code> to align everything in the center.
           </p>
-          <div class="theme-soft  flex flex-center">
+          <div class="theme-soft  flex-center">
             <div class="p1">
               text
             </div>

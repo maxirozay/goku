@@ -325,7 +325,17 @@
  * Flex
  */
 
- .flex {
+.flex {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+.flex-wrap {
   display: flex;
   flex-wrap: wrap;
 }
@@ -343,8 +353,6 @@
 
 .flex-row {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
 }
 
 .flex-auto {
