@@ -87,17 +87,11 @@
   color: var(--color-text) !important;
   border: var(--border-width) solid var(--color-background-soft);
   border-radius: var(--border-radius);
-  margin: 0;
-  padding: var(--padding);
   z-index: 1000;
   transition: all .3s ease;
   transform: translateY(150%);
   white-space: nowrap;
 }
-.dropdown > div > *:not(:first-child) {
-  margin-top: var(--margin-t);
-}
-
 @media (min-width: 900px) {
   .dropdown > div {
     display: none;
