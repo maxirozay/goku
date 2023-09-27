@@ -810,6 +810,9 @@
       window.addEventListener('hashchange', () => {
         document.getElementById('nav-toggle').checked = false
       })
+      const hash = window.location.hash
+      window.location.hash = ''
+      window.location.hash = hash
     </script>
 
     <style>
