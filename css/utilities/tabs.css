@@ -1,3 +1,6 @@
+.tabs {
+  display: flex;
+}
 .tabs > * {
   margin: 0;
   border-bottom-right-radius: 0;
