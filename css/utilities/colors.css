@@ -3,22 +3,11 @@
   border-color: var(--primary-color) !important;
   color: var(--primary-color-text) !important;
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .primary-outlined {
-  background-color: transparent !important;
-  color: var(--primary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--primary-color) !important;
-  margin: 1px;
-}
-
-.primary-transparent {
-  background-color: transparent !important;
-  border-color: transparent !important;
-  color: var(--primary-color) !important;
-  margin: 1px;
 }
 
 .secondary {
@@ -26,15 +15,11 @@
   border-color: var(--secondary-color) !important;
   color: var(--secondary-color-text) !important;
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .secondary-outlined {
-  background-color: transparent !important;
-  color: var(--secondary-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color) !important;
-  margin: 1px;
 }
 
 .success {
@@ -42,15 +27,11 @@
   border-color: var(--success-color) !important;
   color: #1a1a1a !important;
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .success-outlined {
-  background-color: transparent !important;
-  color: var(--success-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--success-color) !important;
-  margin: 1px;
 }
 
 .error {
@@ -58,15 +39,11 @@
   border-color: var(--error-color) !important;
   color: #1a1a1a !important;
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .error-outlined {
-  background-color: transparent !important;
-  color: var(--error-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--error-color) !important;
-  margin: 1px;
 }
 
 .light {
@@ -74,15 +51,11 @@
   border-color: var(--light-color) !important;
   color: var(--light-text) !important;
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .light-outlined {
-  background-color: transparent !important;
-  color: var(--light-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--light-color) !important;
-  margin: 1px;
 }
 
 .dark {
@@ -90,15 +63,11 @@
   border-color: var(--dark-color) !important;
   color: var(--dark-text) !important;
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .dark-outlined {
-  background-color: transparent !important;
-  color: var(--dark-color) !important;
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--dark-color) !important;
-  margin: 1px;
 }
 
 .theme {
@@ -106,15 +75,11 @@
   border-color: var(--color-background);
   color: var(--color-text);
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .theme-outlined {
-  background-color: transparent !important;
-  color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background) !important;
-  margin: 1px;
 }
 
 
@@ -123,15 +88,11 @@
   border-color: var(--color-background-soft);
   color: var(--color-text);
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .theme-soft-outlined {
-  background-color: transparent !important;
-  color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-soft) !important;
-  margin: 1px;
 }
 
 .theme-strong {
@@ -139,15 +100,11 @@
   border-color: var(--color-background-strong);
   color: var(--color-text);
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .theme-strong-outlined {
-  background-color: transparent !important;
-  color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-strong) !important;
-  margin: 1px;
 }
 
 .theme-secondary {
@@ -155,13 +112,9 @@
   border-color: var(--color-background-secondary);
   color: var(--color-text);
   border-radius: var(--border-radius);
-  margin: 1px;
 }
 
 .theme-secondary-outlined {
-  background-color: transparent !important;
-  color: var(--color-text);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--color-background-secondary) !important;
-  margin: 1px;
 }

@@ -2,7 +2,6 @@ button,
 input,
 textarea,
 select {
-  margin: 1px;
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -12,4 +11,26 @@ select {
   border-radius: var(--border-radius);
   padding: var(--padding-input);
   box-sizing: border-box;
+}
+input,
+textarea,
+select {
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border-color: var(--color-input-border);
+}
+button:hover,
+button:focus,
+input:hover,
+input:focus
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus {
+  border-color: var(--primary-color-active);
+}
+
+*:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
