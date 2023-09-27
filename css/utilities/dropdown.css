@@ -25,7 +25,7 @@
 
 .dropdown > div::after {
   content: '.';
-  color: transparent;
+  color: #0000;
   width: .5em;
   height: .5em;
   border-right: 2px solid var(--color-text);
@@ -87,18 +87,12 @@
   color: var(--color-text) !important;
   border: var(--border-width) solid var(--color-background-soft);
   border-radius: var(--border-radius);
-  margin: 0;
-  padding: var(--padding);
   z-index: 1000;
   transition: all .3s ease;
   transform: translateY(150%);
   white-space: nowrap;
 }
-.dropdown > div > *:not(:first-child) {
-  margin-top: var(--margin-t);
-}
-
-@media (--tablet-landscape-up) {
+@media (min-width: 900px) {
   .dropdown > div {
     display: none;
     position: absolute;

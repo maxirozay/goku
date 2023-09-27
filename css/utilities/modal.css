@@ -9,14 +9,10 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.modal > div:last-child {
+.modal > div {
   background-color: var(--color-background);
-  color: var(--color-text);
   z-index: 10001;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-background);
-  padding: var(--padding);
-  box-shadow: var(--shadow);
   margin: auto;
   max-height: 80%;
   overflow-y: auto;

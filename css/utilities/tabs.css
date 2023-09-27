@@ -10,7 +10,7 @@
   border-bottom: none;
 }
 .tabs > .active:hover {
-  border-color: transparent;
+  border-color: #0000;
 }
 .tabs__content {
   margin-top: 0;

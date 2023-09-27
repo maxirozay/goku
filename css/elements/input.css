@@ -1,13 +1,3 @@
-input {
-  background-color: var(--color-input);
-  color: var(--color-text);
-  border-color: var(--color-input-border);
-}
-input:hover,
-input:focus {
-  border-color: var(--primary-color-active);
-}
-
 .label__file {
   display: inline-block;
   padding: var(--padding-input);
@@ -16,7 +6,6 @@ input:focus {
   border-color: var(--color-input-border);
   border-radius: var(--border-radius);
   text-align: center;
-  margin: 1px;
   position: relative;
 }
 .label__file:hover {
@@ -29,26 +18,18 @@ input:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0;
 }
 
 label {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: var(--margin-b);
+  margin: calc(var(--margin-l) * var(--margin-ratio2)) 0;
 }
 
 label > input,
 label > textarea  {
-  margin-left: 0;
-  margin-right: 0;
   margin-top: .25em;
   width: 100%;
-}
-
-form {
-  padding-top: var(--margin-t);
-  padding-bottom: var(--margin-b);
 }
 
 input[type=checkbox] {
@@ -89,7 +70,6 @@ input[type="color"] {
 	width: 1em;
 	height: 1em;
   padding: 0;
-  margin: 0;
   margin-left: .25em;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {

@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/goku.css">
+    <link rel="stylesheet" href="/css/goku.css">
     <title>Goku CSS - Documentation</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/twilight.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-twilight.min.css">
   </head>
   <body class="m0 p0">
 
@@ -17,41 +17,41 @@
         <div></div>
         <div></div>
       </label>
-      <a href="/" class="my mx2">Goku CSS</a>
+      <a href="/" class="my px2">Goku CSS</a>
       <div class="content">
         <a href="#customization" class="ml">Customization</a>
         <div class="dropdown">
           <button type="button">Elements</button>
           <div>
-            <a href="#button">Button</a>
-            <a href="#input">Input</a>
-            <a href="#link">Link</a>
-            <a href="#list">List</a>
-            <a href="#nav">Nav</a>
-            <a href="#progress">Progress</a>
-            <a href="#select">Select</a>
-            <a href="#table">Table</a>
-            <a href="#textarea">Textarea</a>
+            <a class="m2"  href="#button">Button</a>
+            <a class="m2"  href="#input">Input</a>
+            <a class="m2"  href="#link">Link</a>
+            <a class="m2"  href="#list">List</a>
+            <a class="m2"  href="#nav">Nav</a>
+            <a class="m2"  href="#progress">Progress</a>
+            <a class="m2"  href="#select">Select</a>
+            <a class="m2"  href="#table">Table</a>
+            <a class="m2"  href="#textarea">Textarea</a>
           </div>
         </div>
         <div class="dropdown">
           <button type="button">Utilities</button>
           <div>
-            <a href="#borders">Borders</a>
-            <a href="#colors">Colors</a>
-            <a href="#drawer">Drawer</a>
-            <a href="#dropdown">Dropdown</a>
-            <a href="#flex">Flex</a>
-            <a href="#loading">Loading</a>
-            <a href="#modal">Modal</a>
-            <a href="#overflow">Overflow</a>
-            <a href="#portrait">Portrait</a>
-            <a href="#position">Position</a>
-            <a href="#size">Size</a>
-            <a href="#spacing">Spacing</a>
-            <a href="#shadow">Shadow</a>
-            <a href="#tabs">Tabs</a>
-            <a href="#typo">Typo</a>
+            <a class="m2"  href="#borders">Borders</a>
+            <a class="m2"  href="#colors">Colors</a>
+            <a class="m2"  href="#drawer">Drawer</a>
+            <a class="m2"  href="#dropdown">Dropdown</a>
+            <a class="m2"  href="#flex">Flex</a>
+            <a class="m2"  href="#loading">Loading</a>
+            <a class="m2"  href="#modal">Modal</a>
+            <a class="m2"  href="#overflow">Overflow</a>
+            <a class="m2"  href="#portrait">Portrait</a>
+            <a class="m2"  href="#position">Position</a>
+            <a class="m2"  href="#size">Size</a>
+            <a class="m2"  href="#spacing">Spacing</a>
+            <a class="m2"  href="#shadow">Shadow</a>
+            <a class="m2"  href="#tabs">Tabs</a>
+            <a class="m2"  href="#typo">Typo</a>
           </div>
         </div>
         <a href="#example">Example</a>
@@ -68,7 +68,7 @@
           </p>
           <pre><code class="language-bash">yarn add goku-css</code> or <code class="language-bash">npm install goku-css</code></pre>
           <br>
-          Then import 'goku-css' or 'goku-css/dist/goku-legacy.css' for Internet Explorer
+          Then import 'goku-css'
         </section>
         <hr>
         <section id="customization">
@@ -116,12 +116,16 @@
   --padding-r: 0.5em;
   --padding-b: 0.5em;
   --padding-l: 0.5em;
+  --padding-ratio2: 2;
+  --padding-ratio3: 3;
   --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
   --padding-input: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
-  --margin-t: 0.5em;
-  --margin-r: 0.5em;
-  --margin-b: 0.5em;
-  --margin-l: 0.5em;
+  --margin-t: 1px;
+  --margin-r: 1px;
+  --margin-b: 1px;
+  --margin-l: 1px;
+  --margin-ratio2: 8;
+  --margin-ratio3: 16;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --shadow: 0 0 5px 5px var(--color-background);
   --drawer-width: 300px
@@ -405,7 +409,6 @@
           <div class="flex">
             <div class="primary  flex-1 p1">primary</div>
             <div class="primary-outlined  flex-1 p1">primary-outlined</div>
-            <div class="primary-transparent  flex-1 p1">primary-transparent</div>
             <div class="secondary  flex-1 p1">secondary</div>
             <div class="secondary-outlined  flex-1 p1">secondary-outlined</div>
             <div class="success  flex-1 p1">success</div>
@@ -480,8 +483,8 @@
             <input id="dropdown1" type="checkbox">
             <label for="dropdown1">Click Dropdown</label>
             <div>
-              <button type="button">Item 1</button>
-              <button type="button">Item 2</button>
+              <a class="m2">Item 1</a>
+              <a class="m2">Item 2</a>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
@@ -496,8 +499,8 @@
           <div class="dropdown">
             <button type="button">Hover Dropdown</button>
             <div>
-              <a>Item 1</a>
-              <a>Item 2</a>
+              <a class="m2">Item 1</a>
+              <a class="m2">Item 2</a>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
@@ -510,16 +513,16 @@
 
           <h3 id="flex">Flex</h3>
           <p>
-            Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space.
+            Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space and adapt the orientation to the window size.
           </p>
           <div class="flex">
-            <div class="theme-soft  flex-auto p1">
+            <div class="theme-soft  flex-auto p1 m1">
               flex-auto
             </div>
-            <div class="theme-soft  flex-auto p1">
+            <div class="theme-soft  flex-auto p1 m1">
               flex-auto
             </div>
-            <div class="theme-soft  flex-auto p1">
+            <div class="theme-soft  flex-auto p1 m1">
               flex-auto
             </div>
           </div>
@@ -527,48 +530,62 @@
             You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
           </p>
           <div class="flex">
-            <div class="theme-soft  flex-2 p1">
+            <div class="theme-soft  flex-2 p1 m1">
               flex-2
             </div>
-            <div class="theme-soft  flex-4 p1">
+            <div class="theme-soft  flex-4 p1 m1">
               flex-4
             </div>
-            <div class="theme-soft  flex-8 p1">
+            <div class="theme-soft  flex-8 p1 m1">
               flex-8
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-column</code> on the parent if you want to take all the width and stack your elements.
           </p>
-          <div class="theme-soft  flex-column">
-            <div class="p1">
+          <div class="flex-column">
+            <div class="theme-soft  p1 m1">
               row 1
             </div>
-            <div class="p1">
+            <div class="theme-soft  p1 m1">
               row 2
             </div>
-            <div class="p1">
+            <div class="theme-soft  p1 m1">
               row 3
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-row</code> to keep row direction on small screen.
           </p>
-          <div class="theme-soft  flex-row">
-            <div class="p1 flex-1">
+          <div class="flex-row">
+            <div class="theme-soft  p1 flex-1 m1">
               col 1
             </div>
-            <div class="p1 flex-1">
+            <div class="theme-soft  p1 flex-1 m1">
               col 2
             </div>
-            <div class="p1 flex-1">
+            <div class="theme-soft  p1 flex-1 m1">
               col 3
+            </div>
+          </div>
+          <p>
+            Use <code class="language-css" data-lang="css">flex-wrap</code> to show overflowing elements on a new line.
+          </p>
+          <div class="flex-wrap">
+            <div class="theme-soft  p1 m1" style="width: 100px">
+              100px
+            </div>
+            <div class="theme-soft  p1 m1" style="width: 200px">
+              200px
+            </div>
+            <div class="theme-soft  p1 m1" style="width: 1000px">
+              100px
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-center</code> to align everything in the center.
           </p>
-          <div class="theme-soft  flex flex-center">
+          <div class="theme-soft  flex-center">
             <div class="p1">
               text
             </div>
@@ -587,7 +604,7 @@
           <h3 id="modal">Modal</h3>
           <button type="button" onclick="document.getElementById('myModal').style.display = 'flex'">Open Modal</button>
           <div id="myModal" class="modal" style="display: none;" onclick="document.getElementById('myModal').style.display = 'none'">
-            <div onclick="event.stopPropagation()">
+            <div class="p2" onclick="event.stopPropagation()">
               last child
             </div>
           </div>
@@ -734,8 +751,8 @@
         <hr>
         <section id="example">
           <h2>Example</h2>
-          <p>Description</p>
-          <form class="clearfix">
+          <form class="clearfix mb3 p2 theme-secondary-outlined">
+            <b>Form</b>
             <div class="flex">
               <label class="flex-auto mr1">
                 Enter your name
@@ -807,6 +824,9 @@
       window.addEventListener('hashchange', () => {
         document.getElementById('nav-toggle').checked = false
       })
+      const hash = window.location.hash
+      window.location.hash = ''
+      window.location.hash = hash
     </script>
 
     <style>
@@ -814,6 +834,10 @@
         border: 1px solid #8888;
         border-radius: var(--border-radius);
         padding: var(--padding);
+      }
+      pre {
+        font-size: .75em;
+        line-height: 1 !important;
       }
     </style>
   </body>
