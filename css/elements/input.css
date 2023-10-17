@@ -27,7 +27,8 @@ label {
 }
 
 label > input,
-label > textarea  {
+label > textarea,
+label > select  {
   margin-top: .25em;
   width: 100%;
 }
