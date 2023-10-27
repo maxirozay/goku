@@ -27,7 +27,8 @@ label {
 }
 
 label > input,
-label > textarea  {
+label > textarea,
+label > select  {
   margin-top: .25em;
   width: 100%;
 }
@@ -43,6 +44,7 @@ input[type=checkbox] {
   transition: .2s all;
   border-radius: 9px;
   margin: 0 0 0 auto;
+  padding: 0;
 }
 input[type=checkbox]:checked {
   background: radial-gradient(#fff 65%, var(--primary-color) 75%);
