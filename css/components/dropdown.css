@@ -82,7 +82,7 @@
   right: 0;
   max-height: 75vh;
   overflow-y: auto;
-  box-shadow: 0 0 3px #0003;
+  box-shadow: var(--shadow);
   background-color: var(--color-fg);
   border-radius: var(--border-radius);
   z-index: 1000;
