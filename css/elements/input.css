@@ -72,7 +72,7 @@ input[type="color"] {
 	width: 1em;
 	height: 1em;
   padding: 0;
-  margin-left: .25em;
+  margin: 0 0 0 .25em;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
