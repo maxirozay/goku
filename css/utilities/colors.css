@@ -47,9 +47,9 @@
 }
 
 .bg {
-  background-color: var(--color-bg);
-  border-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--color-bg) !important;
+  border-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
   border-radius: var(--border-radius);
 }
 
@@ -59,9 +59,9 @@
 }
 
 .fg {
-  background-color: var(--color-fg);
-  border-color: var(--color-fg);
-  color: var(--color-text);
+  background-color: var(--color-fg) !important;
+  border-color: var(--color-fg) !important;
+  color: var(--color-text) !important;
   border-radius: var(--border-radius);
 }
 
