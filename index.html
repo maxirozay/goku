@@ -82,32 +82,28 @@
   Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-weight: normal;
   --font-size: 1em;
-  --line-height: 1.2;
+  --line-height: 1.25;
   --primary-color: #f84;
   --primary-color-text: #000;
   --primary-color-active: #888;
   --secondary-color: #888;
   --secondary-color-text: #fff;
-  --dark-color: #1a1a1a;
-  --dark-color-secondary: #282828;
+  --dark-bg: #1a1a1a;
+  --dark-fg: #282828;
   --dark-text: #e7e7e7;
   --dark-input: #444;
   --dark-input-border: #444;
   --dark-button: #f84;
   --dark-button-border: #f84;
   --dark-button-text: #1a1a1a;
-  --dark-color-soft: #333;
-  --dark-color-strong: #000;
-  --light-color: #fff;
-  --light-color-secondary: #eee;
+  --light-bg: #fff;
+  --light-fg: #eee;
   --light-text: #000;
   --light-input: #eee;
   --light-input-border: #eee;
   --light-button: #f84;
   --light-button-border: #f84;
   --light-button-text: #1a1a1a;
-  --light-color-soft: #eee;
-  --light-color-strong: #fff;
   --success-color: #4b4;
   --error-color: #e54;
   --border-radius: 4px;
@@ -127,15 +123,13 @@
   --margin-ratio2: 8;
   --margin-ratio3: 16;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --shadow: 0 0 5px 5px var(--color-background);
+  --shadow: 0 0 5px 5px var(--color-bg);
   --drawer-width: 300px
 }
 
 :root {
-  --color-background: var(--light-color);
-  --color-background-soft: var(--light-color-soft);
-  --color-background-strong: var(--light-color-strong);
-  --color-background-secondary: var(--light-color-secondary);
+  --color-bg: var(--light-bg);
+  --color-fg: var(--light-fg);
   --color-text: var(--light-text);
   --color-input: var(--light-input);
   --color-input-border: var(--light-input-border);
@@ -147,10 +141,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--dark-color);
-    --color-background-soft: var(--dark-color-soft);
-    --color-background-strong: var(--dark-color-strong);
-    --color-background-secondary: var(--dark-color-secondary);
+    --color-bg: var(--dark-bg);
+    --color-fg: var(--dark-fg);
     --color-text: var(--dark-text);
     --color-input: var(--dark-input);
     --color-input-border: var(--dark-input-border);
@@ -408,43 +400,39 @@
           <h3 id="colors">Colors</h3>
           <div class="flex">
             <div class="primary  flex-1 p1 m1">primary</div>
-            <div class="primary-outlined  flex-1 p1 m1">primary-outlined</div>
+            <div class="primary-border  flex-1 p1 m1">primary-border</div>
             <div class="secondary  flex-1 p1 m1">secondary</div>
-            <div class="secondary-outlined  flex-1 p1 m1">secondary-outlined</div>
+            <div class="secondary-border  flex-1 p1 m1">secondary-border</div>
             <div class="success  flex-1 p1 m1">success</div>
-            <div class="success-outlined  flex-1 p1 m1">success-outlined</div>
+            <div class="success-border  flex-1 p1 m1">success-border</div>
             <div class="error  flex-1 p1 m1">error</div>
-            <div class="error-outlined  flex-1 p1 m1">error-outlined</div>
+            <div class="error-border  flex-1 p1 m1">error-border</div>
           </div>
           <div class="flex mt1">
-            <div class="theme  flex-1 p1 m1">theme</div>
-            <div class="theme-outlined  flex-1 p1 m1">theme-outlined</div>
-            <div class="theme-soft  flex-1 p1 m1">theme-soft</div>
-            <div class="theme-soft-outlined  flex-1 p1 m1">theme-soft-outlined</div>
-            <div class="theme-strong  flex-1 p1 m1">theme-strong</div>
-            <div class="theme-strong-outlined  flex-1 p1 m1">theme-strong-outlined</div>
-            <div class="theme-secondary  flex-1 p1 m1">theme-secondary</div>
-            <div class="theme-secondary-outlined  flex-1 p1 m1">theme-secondary-outlined</div>
+            <div class="bg  flex-1 p1 m1">bg</div>
+            <div class="bg-border  flex-1 p1 m1">bg-border</div>
+            <div class="fg  flex-1 p1 m1">fg</div>
+            <div class="fg-border  flex-1 p1 m1">fg-border</div>
           </div>
 
           <h3 id="drawer">Drawer</h3>
           <div class="drawer-layout">
             <input id="left-toggle" class="drawer-layout__input" type="checkbox">
             <div>
-              <div class="theme-strong p1 pb3 h">This is the left drawer.</div>
+              <div class="fg p1 pb3 h">This is the left drawer.</div>
               <label class="drawer-layout__toggle  absolute bottom left" for="left-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
               </label>
             </div>
 
-            <div class="flex-4 p1 theme-soft pb3">
+            <div class="flex-4 p1 fg-border pb3">
               This is the main content.
             </div>
 
             <input id="right-toggle" class="drawer-layout__input" type="checkbox">
             <div>
-              <div class="theme-strong p1 pb3 h">This is the right drawer.</div>
+              <div class="fg p1 pb3 h">This is the right drawer.</div>
               <label class="drawer-layout__toggle  mirror absolute bottom right" for="right-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -456,20 +444,20 @@
           <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
   &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
   &lt;div&gt;
-    &lt;div lass="theme-strong p1 pb3 h"&gt;This is the left drawer.&lt;/div&gt;
+    &lt;div lass="fg p1 pb3 h"&gt;This is the left drawer.&lt;/div&gt;
     &lt;label class="drawer-layout__toggle absolute bottom left" for="left-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 
-  &lt;div class="flex-4  theme-soft pb3"&gt;
+  &lt;div class="flex-4  fg pb3"&gt;
     This is the main content.
   &lt;/div&gt;
 
   &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
   &lt;div&gt;
-    &lt;div class="theme-strong p1 pb3 h"&gt;This is the right drawer.&lt;/div&gt;
+    &lt;div class="fg p1 pb3 h"&gt;This is the right drawer.&lt;/div&gt;
     &lt;label class="drawer-layout__toggle mirror absolute bottom right" for="right-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
@@ -516,13 +504,13 @@
             Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space and adapt the orientation to the window size.
           </p>
           <div class="flex">
-            <div class="theme-soft  flex-auto p1 m1">
+            <div class="fg  flex-auto p1 m1">
               flex-auto
             </div>
-            <div class="theme-soft  flex-auto p1 m1">
+            <div class="fg  flex-auto p1 m1">
               flex-auto
             </div>
-            <div class="theme-soft  flex-auto p1 m1">
+            <div class="fg  flex-auto p1 m1">
               flex-auto
             </div>
           </div>
@@ -530,13 +518,13 @@
             You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
           </p>
           <div class="flex">
-            <div class="theme-soft  flex-2 p1 m1">
+            <div class="fg  flex-2 p1 m1">
               flex-2
             </div>
-            <div class="theme-soft  flex-4 p1 m1">
+            <div class="fg  flex-4 p1 m1">
               flex-4
             </div>
-            <div class="theme-soft  flex-8 p1 m1">
+            <div class="fg  flex-8 p1 m1">
               flex-8
             </div>
           </div>
@@ -544,13 +532,13 @@
             Use <code class="language-css" data-lang="css">flex-column</code> on the parent if you want to take all the width and stack your elements.
           </p>
           <div class="flex-column">
-            <div class="theme-soft  p1 m1">
+            <div class="fg  p1 m1">
               row 1
             </div>
-            <div class="theme-soft  p1 m1">
+            <div class="fg  p1 m1">
               row 2
             </div>
-            <div class="theme-soft  p1 m1">
+            <div class="fg  p1 m1">
               row 3
             </div>
           </div>
@@ -558,13 +546,13 @@
             Use <code class="language-css" data-lang="css">flex-row</code> to keep row direction on small screen.
           </p>
           <div class="flex-row">
-            <div class="theme-soft  p1 flex-1 m1">
+            <div class="fg  p1 flex-1 m1">
               col 1
             </div>
-            <div class="theme-soft  p1 flex-1 m1">
+            <div class="fg  p1 flex-1 m1">
               col 2
             </div>
-            <div class="theme-soft  p1 flex-1 m1">
+            <div class="fg  p1 flex-1 m1">
               col 3
             </div>
           </div>
@@ -572,27 +560,27 @@
             Use <code class="language-css" data-lang="css">flex-wrap</code> to show overflowing elements on a new line.
           </p>
           <div class="flex-wrap">
-            <div class="theme-soft  p1 m1" style="width: 100px">
+            <div class="fg  p1 m1" style="width: 100px">
               100px
             </div>
-            <div class="theme-soft  p1 m1" style="width: 200px">
+            <div class="fg  p1 m1" style="width: 200px">
               200px
             </div>
-            <div class="theme-soft  p1 m1" style="width: 1000px">
+            <div class="fg  p1 m1" style="width: 1000px">
               100px
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-center</code> to align everything in the center.
           </p>
-          <div class="theme-soft  flex-center">
+          <div class="fg  flex-center">
             <div class="p1">
               text
             </div>
             <button>
               button
             </button>
-            <div class="theme-strong p1" style="height: 80px">
+            <div class="fg p1" style="height: 80px">
               div
             </div>
           </div>
@@ -613,11 +601,11 @@
 &lt;/div&gt;</code></pre>
 
           <h3 id="overflow">Overflow</h3>
-          <div class="theme-soft  overflow-x" style="width: 50px;">
+          <div class="fg  overflow-x" style="width: 50px;">
             overflow-x
           </div>
           <br>
-          <div class="theme-soft  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
+          <div class="fg  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
             overflow-y
           </div>
 
@@ -627,28 +615,28 @@
           </div>
 
           <h3 id="position">Position</h3>
-          <div class="theme-soft my1 text-center">
+          <div class="fg my1 text-center">
             text-center
           </div>
-          <div class="theme-soft my1 text-right">
+          <div class="fg my1 text-right">
             text-right
           </div>
-          <div class="theme-soft  mx my1" style="width: 100px">
+          <div class="fg  mx my1" style="width: 100px">
             mx
           </div>
-          <div class="theme-soft  ml my1" style="width: 100px">
+          <div class="fg  ml my1" style="width: 100px">
             ml
           </div>
-          <div class="theme-soft  mr my1" style="width: 100px">
+          <div class="fg  mr my1" style="width: 100px">
             mr
           </div>
-          <div class="theme-soft  clearfix my1">
-            <span class="theme-strong">clearfix</span>
-            <span class="theme-soft  float-right">float-right</span>
+          <div class="fg  clearfix my1">
+            <span class="fg">clearfix</span>
+            <span class="fg  float-right">float-right</span>
           </div>
-          <div class="theme-soft  clearfix my1">
-            <span class="theme-strong">clearfix</span>
-            <span class="theme-soft  float-left">float-left</span>
+          <div class="fg  clearfix my1">
+            <span class="fg">clearfix</span>
+            <span class="fg  float-left">float-left</span>
           </div>
           <p>You can also use the following classes:</p>
           <pre><code class="language-css" data-lang="css">.absolute {
@@ -710,8 +698,8 @@
             <button type="button" class="flex-1">
               flex-1
             </button>
-            <button type="button" class="flex-1  active  theme-soft">
-              flex-1  active  theme-soft
+            <button type="button" class="flex-1  active  fg">
+              flex-1  active  fg
             </button>
             <button type="button" class="flex-1">
               flex-1
@@ -720,16 +708,16 @@
               flex-1
             </button>
           </div>
-          <div class="theme-soft p1 tabs__content">
-            theme-soft tabs__content
+          <div class="fg p1 tabs__content">
+            fg tabs__content
           </div>
 
           <pre><code class="language-html" data-lang="html">&lt;div class="tabs"&gt;
   &lt;button type="button" class="flex-1"&gt;
     flex-1
   &lt;/button&gt;
-  &lt;button type="button" class="flex-1  active  theme-soft"&gt;
-    flex-1 active theme-soft
+  &lt;button type="button" class="flex-1  active  fg"&gt;
+    flex-1 active fg
   &lt;/button&gt;
   &lt;button type="button" class="flex-1"&gt;
     flex-1
@@ -738,8 +726,8 @@
     flex-1
   &lt;/button&gt;
 &lt;/div&gt;
-&lt;div class="theme-soft tabs__content"&gt;
-  theme-soft tabs__content
+&lt;div class="fg tabs__content"&gt;
+  fg tabs__content
 &lt;/div&gt;</code></pre>
 
           <h3 id="typo">Typo</h3>
@@ -751,7 +739,7 @@
         <hr>
         <section id="example">
           <h2>Example</h2>
-          <form class="clearfix mb3 p2 theme-secondary-outlined">
+          <form class="clearfix mb3 p2 fg-border">
             <b>Form</b>
             <div class="flex">
               <label class="flex-auto mr1">
@@ -774,7 +762,7 @@
             </label>
             <button class="float-right" type="button">Confirm</button>
           </form>
-          <div class="theme-soft p1">
+          <div class="fg p1">
             This content need some buttons on the side.
             <br>
             This is a new line.

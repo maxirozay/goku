@@ -52,7 +52,7 @@ input[type=checkbox]:checked {
   border-left-width: 18px;
 }
 input[type=checkbox]:disabled {
-  background: var(--color-background);
+  background: var(--color-bg);
 }
 input[type=checkbox]:checked:disabled {
   background: var(--primary-color);

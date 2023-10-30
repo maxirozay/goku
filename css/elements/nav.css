@@ -1,5 +1,5 @@
 nav {
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   color: var(--color-text);
   height: 3em;
   display: flex;
