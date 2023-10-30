@@ -8,6 +8,12 @@
 		"Maxime Rossier <rossier.maxime@gmail.com>",
 		"Julien Grünhagel <julien@rspt.ch>"
 	],
+  "scripts": {
+    "dev": "vite"
+  },
 	"license": "MIT",
-	"private": false
+	"private": false,
+	"devDependencies": {
+		"vite": "^4.5.0"
+	}
 }
