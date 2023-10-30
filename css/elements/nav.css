@@ -1,5 +1,5 @@
 nav {
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   color: var(--color-text);
   height: 3em;
   display: flex;
@@ -21,6 +21,7 @@ nav > .content {
   bottom: 0;
   transition: 0.3s;
   z-index: 100;
+  padding: .5rem 0;
 }
 nav > .content > * {
   display: block;
@@ -51,7 +52,7 @@ nav > .toggle > div {
   display: none;
 }
 #nav-toggle:checked ~ .content {
-  top: 3em;
+  top: 0;
 }
 #nav-toggle:checked ~ .toggle > div:first-child {
   transform-origin: top left;

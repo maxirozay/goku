@@ -82,10 +82,8 @@
   right: 0;
   max-height: 75vh;
   overflow-y: auto;
-  box-shadow: 0 0 3px #0003;
-  background-color: var(--color-background-soft);
-  color: var(--color-text) !important;
-  border: var(--border-width) solid var(--color-background-soft);
+  box-shadow: var(--shadow);
+  background-color: var(--color-fg);
   border-radius: var(--border-radius);
   z-index: 1000;
   transition: all .3s ease;

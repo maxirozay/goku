@@ -10,7 +10,7 @@
 }
 
 .modal > div {
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   z-index: 10001;
   border-radius: var(--border-radius);
   margin: auto;

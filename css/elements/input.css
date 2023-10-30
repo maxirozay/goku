@@ -52,7 +52,7 @@ input[type=checkbox]:checked {
   border-left-width: 18px;
 }
 input[type=checkbox]:disabled {
-  background: var(--color-background);
+  background: var(--color-bg);
 }
 input[type=checkbox]:checked:disabled {
   background: var(--primary-color);
@@ -72,7 +72,7 @@ input[type="color"] {
 	width: 1em;
 	height: 1em;
   padding: 0;
-  margin-left: .25em;
+  margin: 0 0 0 .25em;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
