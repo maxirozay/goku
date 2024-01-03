@@ -29,7 +29,6 @@ label {
 label > input,
 label > textarea,
 label > select  {
-  margin-top: .25em;
   width: 100%;
 }
 
@@ -56,6 +55,11 @@ input[type=checkbox]:disabled {
 }
 input[type=checkbox]:checked:disabled {
   background: var(--primary-color);
+}
+
+input[type=radio] {
+  width: auto;
+  margin: 0 .25em .25em 0;
 }
 
 input[type='file'] {

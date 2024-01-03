@@ -1,6 +1,6 @@
 {
 	"name": "goku-css",
-	"version": "7.0.0",
+	"version": "7.0.3",
 	"description": "CSS Framework",
 	"main": "css/goku.css",
 	"repository": "git@github.com:maxirozay/goku.git",
@@ -8,9 +8,9 @@
 		"Maxime Rossier <rossier.maxime@gmail.com>",
 		"Julien Grünhagel <julien@rspt.ch>"
 	],
-  "scripts": {
-    "dev": "vite"
-  },
+	"scripts": {
+		"dev": "vite"
+	},
 	"license": "MIT",
 	"private": false,
 	"devDependencies": {
