@@ -63,7 +63,7 @@
 }
 .dropdown > input:checked ~ div,
 .dropdown > button:hover ~ div,
-.dropdown > div:hover {
+.dropdown > button ~ div:hover {
   transform: translateY(0);
 }
 
