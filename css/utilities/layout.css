@@ -282,3 +282,9 @@
 .mirror {
   transform: rotate(180deg);
 }
+
+.line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
