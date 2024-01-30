@@ -34,6 +34,18 @@
   border: var(--border-width) solid var(--success-color) !important;
 }
 
+.warning {
+  background-color: var(--warning-color) !important;
+  border-color: var(--warning-color) !important;
+  color: #1a1a1a !important;
+  border-radius: var(--border-radius);
+}
+
+.warning-border {
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--warning-color) !important;
+}
+
 .error {
   background-color: var(--error-color) !important;
   border-color: var(--error-color) !important;
