@@ -2,12 +2,13 @@ table {
   border-collapse: collapse;
   border-radius: var(--border-radius);
   table-layout: fixed;
-}
-table:first-child {
-  margin-left: 0;
-}
-table:last-child {
-  margin-right: 0;
+
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 th {
@@ -20,9 +21,11 @@ td {
   padding: var(--padding);
 }
 
-tr:nth-child(even) {
-  background-color: rgba(128, 128, 128, 0.2);
-}
-tr:hover {
-  background-color: rgba(128, 128, 128, 0.4);
+tr {
+  &:nth-child(even) {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.4);
+  }
 }

@@ -2,24 +2,23 @@ progress {
   background-color: var(--secondary-color);
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--secondary-color);
-  margin: var(--margin);
-}
 
-progress::-webkit-progress-bar {
-  background-color: var(--secondary-color);
-}
-
-progress::-moz-progress-bar {
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  animation-name: loading;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
-progress::-webkit-progress-value {
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
+  &::-webkit-progress-bar {
+    background-color: var(--secondary-color);
+  }
+  
+  &::-moz-progress-bar {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--primary-color);
+    animation-name: loading;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  &::-webkit-progress-value {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--primary-color);
+  }
 }

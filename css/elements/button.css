@@ -3,9 +3,9 @@ button {
   color: var(--color-button-text);
   border-color: var(--color-button-border);
   font-weight: bold;
-}
 
-button:active {
-  background-color: var(--primary-color-active);
-  border-color: var(--primary-color-active);
+  &:active {
+    background-color: var(--primary-color-active);
+    border-color: var(--primary-color-active);
+  }
 }

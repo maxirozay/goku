@@ -1,83 +1,80 @@
-.primary {
-  background-color: var(--primary-color) !important;
-  border-color: var(--primary-color) !important;
-  color: var(--primary-color-text) !important;
+.primary,
+.primary-border,
+.secondary,
+.secondary-border,
+.success,
+.success-border,
+.warning,
+.warning-border,
+.error,
+.error-border,
+.bg,
+.bg-border,
+.fg,
+.fg-border {
   border-radius: var(--border-radius);
+  border: var(--border-width) solid !important;
 }
 
+.primary {
+  background: var(--primary-color) !important;
+  color: var(--primary-color-text) !important;
+}
+.primary,
 .primary-border {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
 }
 
 .secondary {
-  background-color: var(--secondary-color) !important;
-  border-color: var(--secondary-color) !important;
+  background: var(--secondary-color) !important;
   color: var(--secondary-color-text) !important;
-  border-radius: var(--border-radius);
 }
-
+.secondary,
 .secondary-border {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
 }
 
 .success {
-  background-color: var(--success-color) !important;
-  border-color: var(--success-color) !important;
+  background: var(--success-color) !important;
   color: #1a1a1a !important;
-  border-radius: var(--border-radius);
 }
-
+.success,
 .success-border {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--success-color) !important;
+  border-color: var(--success-color) !important;
 }
 
 .warning {
-  background-color: var(--warning-color) !important;
-  border-color: var(--warning-color) !important;
+  background: var(--warning-color) !important;
   color: #1a1a1a !important;
-  border-radius: var(--border-radius);
 }
-
+.warning,
 .warning-border {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--warning-color) !important;
+  border-color: var(--warning-color) !important;
 }
 
 .error {
-  background-color: var(--error-color) !important;
-  border-color: var(--error-color) !important;
+  background: var(--error-color) !important;
   color: #1a1a1a !important;
-  border-radius: var(--border-radius);
 }
-
+.error,
 .error-border {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--error-color) !important;
+  border-color: var(--error-color) !important;
 }
 
 .bg {
-  background-color: var(--color-bg) !important;
-  border-color: var(--color-bg) !important;
+  background: var(--color-bg) !important;
   color: var(--color-text) !important;
-  border-radius: var(--border-radius);
 }
-
+.bg,
 .bg-border {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-bg) !important;
+  border-color: var(--color-bg) !important;
 }
 
 .fg {
-  background-color: var(--color-fg) !important;
-  border-color: var(--color-fg) !important;
+  background: var(--color-fg) !important;
   color: var(--color-text) !important;
-  border-radius: var(--border-radius);
 }
-
+.fg,
 .fg-border {
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--color-fg) !important;
+  border-color: var(--color-fg) !important;
 }

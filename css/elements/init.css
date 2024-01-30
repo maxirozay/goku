@@ -11,6 +11,11 @@ select {
   border-radius: var(--border-radius);
   padding: var(--padding-input);
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    border-color: var(--primary-color-active);
+  }
 }
 input,
 textarea,
@@ -18,16 +23,6 @@ select {
   background-color: var(--color-input);
   color: var(--color-text);
   border-color: var(--color-input-border);
-}
-button:hover,
-button:focus,
-input:hover,
-input:focus
-textarea:hover,
-textarea:focus,
-select:hover,
-select:focus {
-  border-color: var(--primary-color-active);
 }
 
 *:disabled {

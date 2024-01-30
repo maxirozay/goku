@@ -1,12 +1,8 @@
-/**
- * Variables
- */
+/* Variables */
 
 @import "variables.css";
 
-/**
- * HTML Elements
- */
+/* HTML Elements */
 
 @import "elements/init.css";
 @import "elements/body.css";
@@ -19,9 +15,7 @@
 @import "elements/section.css";
 @import "elements/table.css";
 
-/**
- * Components
- */
+/* Components */
 
 @import "components/drawer.css";
 @import "components/dropdown.css";
@@ -29,12 +23,9 @@
 @import "components/modal.css";
 @import "components/tabs.css";
 
-/**
- * Utilities
- */
+/* Utilities */
 
 @import "utilities/borders.css";
 @import "utilities/colors.css";
 @import "utilities/layout.css";
 @import "utilities/shadow.css";
-@import "utilities/typo.css";

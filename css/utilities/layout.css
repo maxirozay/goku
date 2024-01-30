@@ -1,6 +1,4 @@
-/*
- * Size
- */
+/* Size */
 
 @media (min-width: 1200px) {
   .portrait {
@@ -19,9 +17,7 @@
   box-sizing: border-box;
 }
 
-/*
- * Overflow
- */
+/* Overflow */
 
 .overflow-x {
   overflow-x: auto;
@@ -31,244 +27,143 @@
   overflow-y: auto;
 }
 
-/*
- * Spacing
- */
+/* Spacing */
 
-.m {
-  margin: auto !important;
-}
-.m0 {
-  margin: 0 !important;
-}
-.mx {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-.mx0 {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-.my {
-  margin-top: auto !important;
-  margin-bottom: auto !important;
-}
-.my0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-.mt {
+.m, .my, .mt {
   margin-top: auto !important;
 }
-.mt0 {
-  margin-top: 0 !important;
-}
-.mr {
-  margin-right: auto !important;
-}
-.mr0 {
-  margin-right: 0 !important;
-}
-.mb {
+.m, .my, .mb {
   margin-bottom: auto !important;
 }
-.mb0 {
-  margin-bottom: 0 !important;
-}
-.ml {
+.m, .mx, .ml {
   margin-left: auto !important;
 }
-.ml0 {
+.m, .mx, .mr {
+  margin-right: auto !important;
+}
+
+.m0, .my0, .mt0 {
+  margin-top: 0 !important;
+}
+.m0, .my0, .mb0 {
+  margin-bottom: 0 !important;
+}
+.m0, .mx0, .ml0 {
   margin-left: 0 !important;
 }
+.m0, .mx0, .mr0 {
+  margin-right: 0 !important;
+}
 
-.m1 {
-  margin: var(--margin) !important;
-}
-.mx1 {
-  margin-left: var(--margin-l) !important;
-  margin-right: var(--margin-r) !important;
-}
-.my1 {
-  margin-top: var(--margin-t) !important;
-  margin-bottom: var(--margin-b) !important;
-}
-.mt1 {
+.m1, .my1, .mt1 {
   margin-top: var(--margin-t) !important;
 }
-.mr1 {
-  margin-right: var(--margin-r) !important;
-}
-.mb1 {
+.m1, .my1, .mb1 {
   margin-bottom: var(--margin-b) !important;
 }
-.ml1 {
+.m1, .mx1, .ml1 {
   margin-left: var(--margin-l) !important;
 }
-
-.m2 {
-  margin-top: calc(var(--margin-t) * var(--margin-ratio2)) !important;
-  margin-right: calc(var(--margin-r) * var(--margin-ratio2)) !important;
-  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2)) !important;
-  margin-left: calc(var(--margin-l) * var(--margin-ratio2)) !important;
-}
-.mx2 {
-  margin-left: calc(var(--margin-l) * var(--margin-ratio2)) !important;
-  margin-right: calc(var(--margin-r) * var(--margin-ratio2)) !important;
-}
-.my2 {
-  margin-top: calc(var(--margin-t) * var(--margin-ratio2)) !important;
-  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2)) !important;
-}
-.mt2 {
-  margin-top: calc(var(--margin-t) * var(--margin-ratio2)) !important;
-}
-.mr2 {
-  margin-right: calc(var(--margin-r) * var(--margin-ratio2)) !important;
-}
-.mb2 {
-  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2)) !important;
-}
-.ml2 {
-  margin-left: calc(var(--margin-l) * var(--margin-ratio2)) !important;
+.m1, .mx1, .mr1 {
+  margin-right: var(--margin-r) !important;
 }
 
-.m3 {
+.m2, .my2, .mt2 {
+  margin-top: calc(var(--margin-t) * var(--margin-ratio2)) !important;
+}
+.m2, .my2, .mb2 {
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2)) !important;
+}
+.m2, .mx2, .ml2 {
+  margin-left: calc(var(--margin-l) * var(--margin-ratio2)) !important;
+}
+.m2, .mx2, .mr2 {
+  margin-right: calc(var(--margin-r) * var(--margin-ratio2)) !important;
+}
+
+.m3, .my3, .mt3 {
   margin-top: calc(var(--margin-t) * var(--margin-ratio3)) !important;
-  margin-right: calc(var(--margin-r) * var(--margin-ratio3)) !important;
-  margin-bottom: calc(var(--margin-b) * var(--margin-ratio3)) !important;
-  margin-left: calc(var(--margin-l) * var(--margin-ratio3)) !important;
 }
-.mx3 {
-  margin-left: calc(var(--margin-l) * var(--margin-ratio3)) !important;
-  margin-right: calc(var(--margin-r) * var(--margin-ratio3)) !important;
-}
-.my3 {
-  margin-top: calc(var(--margin-t) * var(--margin-ratio3)) !important;
-  margin-bottom: calc(var(--margin-b) * var(--margin-ratio3)) !important;
-}
-.mt3 {
-  margin-top: calc(var(--margin-t) * var(--margin-ratio3)) !important;
-}
-.mr3 {
-  margin-right: calc(var(--margin-r) * var(--margin-ratio3)) !important;
-}
-.mb3 {
+.m3, .my3, .mb3 {
   margin-bottom: calc(var(--margin-b) * var(--margin-ratio3)) !important;
 }
-.ml3 {
+.m3, .mx3, .ml3 {
   margin-left: calc(var(--margin-l) * var(--margin-ratio3)) !important;
+}
+.m3, .mx3, .mr3 {
+  margin-right: calc(var(--margin-r) * var(--margin-ratio3)) !important;
 }
 
 .p-input {
   padding: var(--padding-input) !important;
 }
 
-.p0 {
-  padding: 0 !important;
+.p, .py, .pt {
+  padding-top: auto !important;
 }
-.px0 {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+.p, .py, .pb {
+  padding-bottom: auto !important;
 }
-.py0 {
+.p, .px, .pl {
+  padding-left: auto !important;
+}
+.p, .px, .pr {
+  padding-right: auto !important;
+}
+
+.p0, .py0, .pt0 {
   padding-top: 0 !important;
+}
+.p0, .py0, .pb0 {
   padding-bottom: 0 !important;
 }
-.pt0 {
-  padding-top: 0 !important;
-}
-.pr0 {
-  padding-right: 0 !important;
-}
-.pb0 {
-  padding-bottom: 0 !important;
-}
-.pl0 {
+.p0, .px0, .pl0 {
   padding-left: 0 !important;
 }
+.p0, .px0, .pr0 {
+  padding-right: 0 !important;
+}
 
-.p1 {
-  padding: var(--padding) !important;
-}
-.px1 {
-  padding-left: var(--padding-l) !important;
-  padding-right: var(--padding-r) !important;
-}
-.py1 {
-  padding-top: var(--padding-t) !important;
-  padding-bottom: var(--padding-b) !important;
-}
-.pt1 {
+.p1, .py1, .pt1 {
   padding-top: var(--padding-t) !important;
 }
-.pr1 {
-  padding-right: var(--padding-r) !important;
-}
-.pb1 {
+.p1, .py1, .pb1 {
   padding-bottom: var(--padding-b) !important;
 }
-.pl1 {
+.p1, .px1, .pl1 {
   padding-left: var(--padding-l) !important;
 }
-
-.p2 {
-  padding-top: calc(var(--padding-t) * var(--padding-ratio2)) !important;
-  padding-right: calc(var(--padding-r) * var(--padding-ratio2)) !important;
-  padding-bottom: calc(var(--padding-b) * var(--padding-ratio2)) !important;
-  padding-left: calc(var(--padding-l) * var(--padding-ratio2)) !important;
-}
-.px2 {
-  padding-left: calc(var(--padding-l) * var(--padding-ratio2)) !important;
-  padding-right: calc(var(--padding-r) * var(--padding-ratio2)) !important;
-}
-.py2 {
-  padding-top: calc(var(--padding-t) * var(--padding-ratio2)) !important;
-  padding-bottom: calc(var(--padding-b) * var(--padding-ratio2)) !important;
-}
-.pt2 {
-  padding-top: calc(var(--padding-t) * var(--padding-ratio2)) !important;
-}
-.pr2 {
-  padding-right: calc(var(--padding-r) * var(--padding-ratio2)) !important;
-}
-.pb2 {
-  padding-bottom: calc(var(--padding-b) * var(--padding-ratio2)) !important;
-}
-.pl2 {
-  padding-left: calc(var(--padding-l) * var(--padding-ratio2)) !important;
+.p1, .px1, .pr1 {
+  padding-right: var(--padding-r) !important;
 }
 
-.p3 {
-  padding-top: calc(var(--padding-t) * var(--padding-ratio3)) !important;
-  padding-right: calc(var(--padding-r) * var(--padding-ratio3)) !important;
-  padding-bottom: calc(var(--padding-b) * var(--padding-ratio3)) !important;
-  padding-left: calc(var(--padding-l) * var(--padding-ratio3)) !important;
+.p2, .py2, .pt2 {
+  padding-top: calc(var(--padding-t) * var(--padding-ratio2)) !important;
 }
-.px3 {
-  padding-left: calc(var(--padding-l) * var(--padding-ratio3)) !important;
-  padding-right: calc(var(--padding-r) * var(--padding-ratio3)) !important;
+.p2, .py2, .pb2 {
+  padding-bottom: calc(var(--padding-b) * var(--padding-ratio2)) !important;
 }
-.py3 {
-  padding-top: calc(var(--padding-t) * var(--padding-ratio3)) !important;
-  padding-bottom: calc(var(--padding-b) * var(--padding-ratio3)) !important;
+.p2, .px2, .pl2 {
+  padding-left: calc(var(--padding-l) * var(--padding-ratio2)) !important;
 }
-.pt3 {
-  padding-top: calc(var(--padding-t) * var(--padding-ratio3)) !important;
-}
-.pr3 {
-  padding-right: calc(var(--padding-r) * var(--padding-ratio3)) !important;
-}
-.pb3 {
-  padding-bottom: calc(var(--padding-b) * var(--padding-ratio3)) !important;
-}
-.pl3 {
-  padding-left: calc(var(--padding-l) * var(--padding-ratio3)) !important;
+.p2, .px2, .pr2 {
+  padding-right: calc(var(--padding-r) * var(--padding-ratio2)) !important;
 }
 
-/*
- * Position
- */
+.p3, .py3, .pt3 {
+  padding-top: calc(var(--padding-t) * var(--padding-ratio3)) !important;
+}
+.p3, .py3, .pb3 {
+  padding-bottom: calc(var(--padding-b) * var(--padding-ratio3)) !important;
+}
+.p3, .px3, .pl3 {
+  padding-left: calc(var(--padding-l) * var(--padding-ratio3)) !important;
+}
+.p3, .px3, .pr3 {
+  padding-right: calc(var(--padding-r) * var(--padding-ratio3)) !important;
+}
+
+/* Position */
 
 .text-center {
   text-align: center;
@@ -321,9 +216,7 @@
   display: table;
 }
 
-/*
- * Flex
- */
+/* Flex */
 
 .flex {
   display: flex;

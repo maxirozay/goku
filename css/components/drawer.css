@@ -46,19 +46,20 @@
   cursor: pointer;
   display: inline-block;
   padding: var(--padding);
-}
-.drawer-layout__toggle .bar {
-  transition: .3s;
-  background-color: var(--primary-color);
-  margin: 1px auto;
-  width: 12px;
-  height: 4px;
-}
-.drawer-layout__toggle .bar:first-child {
-  transform: rotate(-45deg);
-}
-.drawer-layout__toggle .bar:last-child {
-  transform:  rotate(45deg);
+
+  & .bar {
+    transition: .3s;
+    background-color: var(--primary-color);
+    margin: 1px auto;
+    width: 12px;
+    height: 4px;
+  }
+  & .bar:first-child {
+    transform: rotate(-45deg);
+  }
+  & .bar:last-child {
+    transform:  rotate(45deg);
+  }
 }
 .drawer-layout__input:checked + div > .drawer-layout__toggle .bar:first-child {
   transform: rotate(45deg);
