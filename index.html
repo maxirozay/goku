@@ -236,6 +236,8 @@
               padding-left
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
             </label>
+          </div>
+          <div class="flex">
             <label class="flex-1 mr1">
               padding-ratio2
               <input type="number" value="2" onkeyup="document.documentElement.style.setProperty('--padding-ratio2', event.target.value)">
@@ -263,6 +265,8 @@
               margin-left
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
             </label>
+          </div>
+          <div class="flex">
             <label class="flex-1 mr1">
               margin-ratio2
               <input type="number" value="8" onkeyup="document.documentElement.style.setProperty('--margin-ratio2', event.target.value)">
@@ -551,7 +555,11 @@
           You can remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code>.
 
           <h3 id="colors">Colors</h3>
-          <div class="flex">
+          <div class="flex-wrap">
+            <div class="bg  flex-1 p1 m1">bg</div>
+            <div class="bg-border  flex-1 p1 m1">bg-border</div>
+            <div class="fg  flex-1 p1 m1">fg</div>
+            <div class="fg-border  flex-1 p1 m1">fg-border</div>
             <div class="primary  flex-1 p1 m1">primary</div>
             <div class="primary-border  flex-1 p1 m1">primary-border</div>
             <div class="secondary  flex-1 p1 m1">secondary</div>
@@ -562,12 +570,6 @@
             <div class="warning-border  flex-1 p1 m1">warning-border</div>
             <div class="error  flex-1 p1 m1">error</div>
             <div class="error-border  flex-1 p1 m1">error-border</div>
-          </div>
-          <div class="flex mt1">
-            <div class="bg  flex-1 p1 m1">bg</div>
-            <div class="bg-border  flex-1 p1 m1">bg-border</div>
-            <div class="fg  flex-1 p1 m1">fg</div>
-            <div class="fg-border  flex-1 p1 m1">fg-border</div>
           </div>
 
           <h3 id="flex">Flex</h3>
