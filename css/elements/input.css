@@ -42,13 +42,13 @@ input[type=checkbox] {
   display: inline-block;
   background: radial-gradient(#eee 65%, #888 75%);
   border: 2px solid #888;
-  border-right-width: 18px;
-  width: 36px;
-  height: 18px;
+  border-right-width: 1em;
+  width: 2em;
+  height: 1em;
   transition: .2s all;
-  border-radius: 9px;
-  margin: 0 0 0 auto;
+  border-radius: .5em;
   padding: 0;
+  vertical-align: bottom;
 
   &:checked {
     background: radial-gradient(#fff 65%, var(--primary-color) 75%);
