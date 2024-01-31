@@ -4,7 +4,7 @@ textarea,
 select {
   font-weight: inherit;
   font-size: inherit;
-  line-height: inherit;
+  line-height: 1.25;
   font-family: inherit;
   border-width: var(--border-width);
   border-style: solid;
@@ -23,6 +23,10 @@ select {
   background-color: var(--color-input);
   color: var(--color-text);
   border-color: var(--color-input-border);
+}
+
+input[type=date] {
+  line-height: 1.125;
 }
 
 *:disabled {

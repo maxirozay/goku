@@ -25,12 +25,6 @@ input,
 textarea,
 select  {
   width: 100%;
-  margin-top: .25em;
-  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2));
-}
-
-input[type=date] {
-  line-height: 1;
 }
 
 input[type=checkbox] {
