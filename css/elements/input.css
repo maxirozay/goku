@@ -36,8 +36,8 @@ input[type=date] {
 input[type=checkbox] {
   appearance: none;
   display: inline-block;
-  background: radial-gradient(#eee 65%, #888 75%);
-  border: 2px solid #888;
+  background: radial-gradient(#eee 65%, var(--color-input) 75%);
+  border: 2px solid var(--color-input);
   border-right-width: 1em;
   width: 2em;
   height: 1em;
@@ -61,8 +61,16 @@ input[type=checkbox] {
 }
 
 input[type=radio] {
-  width: auto;
-  margin: 0 .25em .25em 0;
+  display: none;
+}
+input[type=radio] + label {
+  padding: var(--padding-input);
+  border-radius: var(--border-radius);
+  background: var(--color-input);
+}
+input[type=radio]:checked + label {
+  background: var(--primary-color);
+  color: var(--primary-color-text);
 }
 
 input[type='file'] {

@@ -310,14 +310,36 @@
             Checkbox
             <input class="ml2" type="checkbox">
           </label>
-          <label>
-            <input type="radio" name="radio">
-            Radio 1
-          </label>
-          <label>
-            <input type="radio" name="radio">
-            Radio 2
-          </label>
+
+          <div class="secondary flex g1 my2">
+            <input type="radio" name="radio" id="radio1">
+            <label for="radio1" class="flex-1 text-center">
+              Radio 1
+            </label>
+            <input type="radio" name="radio" id="radio2">
+            <label for="radio2" class="flex-1 text-center">
+              Radio 2
+            </label>
+            <input type="radio" name="radio" id="radio3">
+            <label for="radio3" class="flex-1 text-center">
+              Radio 2
+            </label>
+          </div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="secondary flex g1 my2"&gt;
+  &lt;input type="radio" name="radio" id="radio1"&gt;
+  &lt;label for="radio1" class="flex-1 text-center"&gt;
+    Radio 1
+  &lt;/label&gt;
+  &lt;input type="radio" name="radio" id="radio2"&gt;
+  &lt;label for="radio2" class="flex-1 text-center"&gt;
+    Radio 2
+  &lt;/label&gt;
+  &lt;input type="radio" name="radio" id="radio3"&gt;
+  &lt;label for="radio3" class="flex-1 text-center"&gt;
+    Radio 2
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
           <p>File</p>
           <label>
             Regular file input
