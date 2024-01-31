@@ -21,6 +21,12 @@
   bottom: 0;
 }
 
+label + :is(input, textarea, select),
+label > :is(input, textarea, select) {
+  margin-top: .25em;
+  margin-bottom: calc(var(--padding-b) * var(--padding-ratio2));
+}
+
 input,
 textarea,
 select  {

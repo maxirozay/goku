@@ -7,8 +7,6 @@
 .dropdown > label,
 .dropdown > button {
   width: 100%;
-  margin: 0;
-  box-sizing: border-box;
   background: none;
   text-align: left;
   color: inherit;
