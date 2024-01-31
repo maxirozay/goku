@@ -542,12 +542,8 @@
 &lt;/div&gt;</code></pre>
 
           <h3 id="modal">Modal</h3>
-          <button onclick="document.getElementById('myModal').style.display = 'flex'">Open Modal</button>
-          <div id="myModal" class="modal" style="display: none;" onclick="document.getElementById('myModal').style.display = 'none'">
-            <div class="p2" onclick="event.stopPropagation()">
-              last child
-            </div>
-          </div>
+          <p>Place the element with the modal class before the &lt;/body&gt;.</p>
+          <button onclick="document.getElementById('myModal').style.display = 'flex';document.getElementById('myModal').classList.toggle('modal')">Open Modal</button>
           <pre><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
   &lt;div&gt;last child&lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -873,6 +869,15 @@
             <li>Water</li>
           </ul>
         </section>
+      </div>
+    </div>
+    <div
+      id="myModal"
+      style="display: none;"
+      onclick="document.getElementById('myModal').style.display = 'none';document.getElementById('myModal').classList.toggle('modal')"
+    >
+      <div class="p2" onclick="event.stopPropagation()">
+        Modal
       </div>
     </div>
 
