@@ -159,8 +159,8 @@
 }</code></pre>
 
           <h3>Try to change those variables</h3>
-          <div class="flex">
-            <label class="flex-1 mr1">
+          <div class="flex g1">
+            <label class="flex-1">
               font-family
               <input type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
             </label>
@@ -170,22 +170,22 @@
             </label>
           </div>
 
-          <div class="flex  text-center">
-            <label class="flex-auto mr1">
+          <div class="flex g1  text-center">
+            <label class="flex-auto">
               Primary color
               <input
                 type="color"
                 value="#ff8f4f"
                 onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
             </label>
-            <label class="flex-auto mr1">
+            <label class="flex-auto">
               Primary color text
               <input
                 type="color"
                 value="#000000"
                 onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
             </label>
-            <label class="flex-auto mr1">
+            <label class="flex-auto">
               Button color
               <input
                 type="color"
@@ -194,8 +194,8 @@
             </label>
           </div>
 
-          <div class="flex  text-center">
-            <label class="flex-auto mr1">
+          <div class="flex g1  text-center">
+            <label class="flex-auto">
               Border radius
               <input
                 class="mx"
@@ -220,26 +220,26 @@
             <input type="text" value="0 0 3px 2px #8883" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
           </label>
 
-          <div class="flex">
-            <label class="flex-1 mr1">
+          <div class="flex g1">
+            <label class="flex-1">
               padding-top
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               padding-right
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-r', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               padding-bottom
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-b', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               padding-left
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
             </label>
           </div>
-          <div class="flex">
-            <label class="flex-1 mr1">
+          <div class="flex g1">
+            <label class="flex-1">
               padding-ratio2
               <input type="number" value="2" onkeyup="document.documentElement.style.setProperty('--padding-ratio2', event.target.value)">
             </label>
@@ -249,26 +249,26 @@
             </label>
           </div>
 
-          <div class="flex">
-            <label class="flex-1 mr1">
+          <div class="flex g1">
+            <label class="flex-1">
               margin-top
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               margin-right
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               margin-bottom
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               margin-left
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
             </label>
           </div>
-          <div class="flex">
-            <label class="flex-1 mr1">
+          <div class="flex g1">
+            <label class="flex-1">
               margin-ratio2
               <input type="number" value="8" onkeyup="document.documentElement.style.setProperty('--margin-ratio2', event.target.value)">
             </label>
@@ -292,16 +292,16 @@
 
           <h3 id="input">Input</h3>
           <h4>Type</h4>
-          <div class="flex">
-            <label class="flex-auto m1">
+          <div class="flex g1">
+            <label class="flex-auto">
               Text
               <input type="text">
             </label>
-            <label class="flex-auto m1">
+            <label class="flex-auto">
               Number
               <input type="number">
             </label>
-            <label class="flex-auto m1">
+            <label class="flex-auto">
               Date
               <input type="date">
             </label>
@@ -496,34 +496,34 @@
           <div class="dropdown">
             <input id="dropdown1" type="checkbox">
             <label for="dropdown1">Click Dropdown</label>
-            <div>
-              <a class="m2">Item 1</a>
-              <a class="m2">Item 2</a>
-              <label for="dropdown1" class="m0 p1">Collapse</label>
+            <div class="g2 p1">
+              <a>Item 1</a>
+              <a>Item 2</a>
+              <label for="dropdown1">Collapse</label>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;input id="dropdown1" type="checkbox"&gt;
   &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
-  &lt;div&gt;
-    &lt;a class="m2"&gt;Item 1&lt;/a&gt;
-    &lt;a class="m2"&gt;Item 2&lt;/a&gt;
+  &lt;div class="g2 p1"&gt;
+    &lt;a&gt;Item 1&lt;/a&gt;
+    &lt;a&gt;Item 2&lt;/a&gt;
     &lt;label for="dropdown1" class="m0 p1"&gt;Collapse&lt;/label&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
           <div class="dropdown">
             <button>Hover Dropdown</button>
-            <div>
-              <a class="m2">Item 1</a>
-              <a class="m2">Item 2</a>
+            <div class="g2 p1">
+              <a>Item 1</a>
+              <a>Item 2</a>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;button&gt;Hover Dropdown&lt;/button&gt;
-  &lt;div&gt;
-    &lt;a class="m2"&gt;Item 1&lt;/a&gt;
-    &lt;a class="m2"&gt;Item 2&lt;/a&gt;
+  &lt;div class="g2 p1"&gt;
+    &lt;a&gt;Item 1&lt;/a&gt;
+    &lt;a&gt;Item 2&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
@@ -574,21 +574,21 @@
           You can remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code>.
 
           <h3 id="colors">Colors</h3>
-          <div class="flex-wrap">
-            <div class="bg  flex-1 p1 m1">bg</div>
-            <div class="bg-border  flex-1 p1 m1">bg-border</div>
-            <div class="fg  flex-1 p1 m1">fg</div>
-            <div class="fg-border  flex-1 p1 m1">fg-border</div>
-            <div class="primary  flex-1 p1 m1">primary</div>
-            <div class="primary-border  flex-1 p1 m1">primary-border</div>
-            <div class="secondary  flex-1 p1 m1">secondary</div>
-            <div class="secondary-border  flex-1 p1 m1">secondary-border</div>
-            <div class="success  flex-1 p1 m1">success</div>
-            <div class="success-border  flex-1 p1 m1">success-border</div>
-            <div class="warning  flex-1 p1 m1">warning</div>
-            <div class="warning-border  flex-1 p1 m1">warning-border</div>
-            <div class="error  flex-1 p1 m1">error</div>
-            <div class="error-border  flex-1 p1 m1">error-border</div>
+          <div class="flex-wrap g2">
+            <div class="bg  flex-1 p1">bg</div>
+            <div class="bg-border  flex-1 p1">bg-border</div>
+            <div class="fg  flex-1 p1">fg</div>
+            <div class="fg-border  flex-1 p1">fg-border</div>
+            <div class="primary  flex-1 p1">primary</div>
+            <div class="primary-border  flex-1 p1">primary-border</div>
+            <div class="secondary  flex-1 p1">secondary</div>
+            <div class="secondary-border  flex-1 p1">secondary-border</div>
+            <div class="success  flex-1 p1">success</div>
+            <div class="success-border  flex-1 p1">success-border</div>
+            <div class="warning  flex-1 p1">warning</div>
+            <div class="warning-border  flex-1 p1">warning-border</div>
+            <div class="error  flex-1 p1">error</div>
+            <div class="error-border  flex-1 p1">error-border</div>
           </div>
 
           <h3 id="flex">Flex</h3>
@@ -796,8 +796,8 @@
           <h2>Example</h2>
           <form class="clearfix mb3 p2 fg-border">
             <b>Form</b>
-            <div class="flex">
-              <label class="flex-auto mr1">
+            <div class="flex g1">
+              <label class="flex-auto">
                 Enter your name
                 <input type="text">
               </label>
