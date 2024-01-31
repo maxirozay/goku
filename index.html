@@ -573,85 +573,98 @@
           <h3 id="flex">Flex</h3>
           <p>
             Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space and adapt the orientation to the window size.
+            Use the classes <code class="language-css" data-lang="css">g1, g2, g3</code> to add a gap based on the margins values.
           </p>
-          <div class="flex">
-            <div class="fg  flex-auto p1 m1">
+          <div class="flex g1">
+            <div class="fg  flex-auto p1">
               flex-auto
             </div>
-            <div class="fg  flex-auto p1 m1">
+            <div class="fg  flex-auto p1">
               flex-auto
             </div>
-            <div class="fg  flex-auto p1 m1">
+            <div class="fg  flex-auto p1">
               flex-auto
             </div>
           </div>
           <p>
             You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
           </p>
-          <div class="flex">
-            <div class="fg  flex-2 p1 m1">
+          <div class="flex g1">
+            <div class="fg  flex-2 p1">
               flex-2
             </div>
-            <div class="fg  flex-4 p1 m1">
+            <div class="fg  flex-4 p1">
               flex-4
             </div>
-            <div class="fg  flex-8 p1 m1">
+            <div class="fg  flex-8 p1">
               flex-8
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-column</code> on the parent if you want to take all the width and stack your elements.
           </p>
-          <div class="flex-column">
-            <div class="fg  p1 m1">
+          <div class="flex-column g1">
+            <div class="fg  p1">
               row 1
             </div>
-            <div class="fg  p1 m1">
+            <div class="fg  p1">
               row 2
             </div>
-            <div class="fg  p1 m1">
+            <div class="fg  p1">
               row 3
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-row</code> to keep row direction on small screen.
           </p>
-          <div class="flex-row">
-            <div class="fg  p1 flex-1 m1">
+          <div class="flex-row g1">
+            <div class="fg  p1 flex-1">
               col 1
             </div>
-            <div class="fg  p1 flex-1 m1">
+            <div class="fg  p1 flex-1">
               col 2
             </div>
-            <div class="fg  p1 flex-1 m1">
+            <div class="fg  p1 flex-1">
               col 3
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-wrap</code> to show overflowing elements on a new line.
           </p>
-          <div class="flex-wrap">
-            <div class="fg  p1 m1" style="width: 100px">
+          <div class="flex-wrap g1">
+            <div class="fg  p1" style="width: 100px">
               100px
             </div>
-            <div class="fg  p1 m1" style="width: 200px">
+            <div class="fg  p1" style="width: 200px">
               200px
             </div>
-            <div class="fg  p1 m1" style="width: 1000px">
+            <div class="fg  p1" style="width: 1000px">
               100px
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-center</code> to align everything in the center.
           </p>
-          <div class="fg  flex-center">
-            <div class="p1">
-              text
+          <div class="fg  flex-center flex-wrap g1">
+            <div class="bg p1 flex-1" style="min-width: 200px">
+              div
             </div>
-            <button>
-              button
-            </button>
-            <div class="fg p1" style="height: 80px">
+            <div class="bg flex-1" style="min-width: 200px">
+              div
+            </div>
+            <div class="bg p1 flex-1" style="min-width: 200px;height: 80px">
+              div
+            </div>
+            <div class="bg flex-1" style="min-width: 200px;height: 40px">
+              div
+            </div>
+            <div class="bg flex-1" style="min-width: 200px">
+              div
+            </div>
+            <div class="bg flex-1" style="min-width: 200px">
+              div
+            </div>
+            <div class="bg flex-1" style="min-width: 200px">
               div
             </div>
           </div>

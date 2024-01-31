@@ -279,6 +279,16 @@
   flex: 8;
 }
 
+.g1 {
+  gap: var(--margin-t);
+}
+.g2 {
+  gap: calc(var(--margin-t) * var(--margin-ratio2));
+}
+.g3 {
+  gap: calc(var(--margin-t) * var(--margin-ratio3));
+}
+
 .mirror {
   transform: rotate(180deg);
 }
