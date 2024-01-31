@@ -2,6 +2,10 @@
 
 @import "variables.css";
 
+/* HTML Animations */
+
+@import "animations/loading.css";
+
 /* HTML Elements */
 
 @import "elements/init.css";
@@ -19,7 +23,6 @@
 
 @import "components/drawer.css";
 @import "components/dropdown.css";
-@import "components/loading.css";
 @import "components/modal.css";
 @import "components/tabs.css";
 
