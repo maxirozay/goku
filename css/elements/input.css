@@ -1,7 +1,7 @@
 .label__file {
   display: inline-block;
   padding: var(--padding-input);
-  background-color: var(--color-input);
+  background: var(--color-input);
   color: var(--color-text);
   border-color: var(--color-input-border);
   border-radius: var(--border-radius);
@@ -74,7 +74,7 @@ input[type=radio]:checked + label {
 }
 
 input[type='file'] {
-  background-color: var(--color-input);
+  background: var(--color-input);
   color: var(--color-text);
   border-color: var(--color-input-border);
   cursor: pointer;

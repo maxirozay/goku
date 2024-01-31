@@ -1,5 +1,5 @@
 nav {
-  background-color: var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-text);
   height: 3em;
   display: flex;
@@ -7,7 +7,7 @@ nav {
   position: relative;
 
   & > .content {
-    background-color: inherit;
+    background: inherit;
     position: fixed;
     top: 100%;
     left: 0;
@@ -45,7 +45,7 @@ nav {
     width: 20px;
     height: 2px;
     margin: 2px;
-    background-color: var(--color-text);
+    background: var(--color-text);
     transition: all .2s;
   }
 }

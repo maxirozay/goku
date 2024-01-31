@@ -49,7 +49,7 @@
 
   & .bar {
     transition: .3s;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     margin: 1px auto;
     width: 12px;
     height: 4px;
