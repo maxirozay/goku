@@ -33,6 +33,10 @@ label > select  {
   width: 100%;
 }
 
+input[type=date] {
+  line-height: 1;
+}
+
 input[type=checkbox] {
   appearance: none;
   display: inline-block;
