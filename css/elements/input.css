@@ -21,16 +21,12 @@
   bottom: 0;
 }
 
-label {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(var(--margin-l) * var(--margin-ratio2)) 0;
-}
-
-label > input,
-label > textarea,
-label > select  {
+input,
+textarea,
+select  {
   width: 100%;
+  margin-top: .25em;
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2));
 }
 
 input[type=date] {
@@ -47,8 +43,9 @@ input[type=checkbox] {
   height: 1em;
   transition: .2s all;
   border-radius: .5em;
+  margin: 0;
   padding: 0;
-  vertical-align: bottom;
+  vertical-align: text-bottom;
 
   &:checked {
     background: radial-gradient(#fff 65%, var(--primary-color) 75%);
@@ -82,7 +79,7 @@ input[type="color"] {
 	width: 1em;
 	height: 1em;
   padding: 0;
-  margin: 0 0 0 .25em;
+  vertical-align: text-top;
 
   &::-webkit-color-swatch-wrapper {
     padding: 0;
