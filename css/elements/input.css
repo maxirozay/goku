@@ -38,19 +38,19 @@ input[type=checkbox] {
   display: inline-block;
   background: radial-gradient(#eee 65%, var(--color-input) 75%);
   border: 2px solid var(--color-input);
-  border-right-width: 1em;
-  width: 2em;
-  height: 1em;
+  border-right-width: 1.5em;
+  width: 3em;
+  height: 1.5em;
   transition: .2s all;
-  border-radius: .5em;
+  border-radius: 1em;
   margin: 0;
   padding: 0;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 
   &:checked {
     background: radial-gradient(#fff 65%, var(--primary-color) 75%);
     border: 2px solid var(--primary-color);
-    border-left-width: 18px;
+    border-left-width: 1.5em;
   }
   &:disabled {
     background: var(--color-bg);
