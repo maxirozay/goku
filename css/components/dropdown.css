@@ -1,7 +1,6 @@
 .dropdown {
   display: inline-block;
   position: relative;
-  margin: 1px;
 }
 
 .dropdown > label,
@@ -13,7 +12,6 @@
   border: none;
   font-weight: normal;
   padding: 0;
-  display: inline-block;
 }
 
 .dropdown > div::after {
