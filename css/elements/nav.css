@@ -16,13 +16,12 @@ nav {
     transition: 0.3s;
     z-index: 100;
     padding: .5rem 0;
-
   }
 
   & > .content a {
     color: inherit;
   }
-  
+
   & > .content > * {
     display: block;
     padding: .5rem 1rem;
@@ -58,16 +57,14 @@ nav {
       top: 0;
     }
     & ~ .toggle > div:first-child {
-      transform-origin: top left;
-      transform: translate(4px, -2px) rotate(45deg);
+      transform: translateY(3px) rotate(45deg);
     }
     & ~ .toggle > div:nth-child(2):not(:last-child) {
       opacity: 0;
       position: absolute;
     }
     & ~ .toggle > div:last-child {
-      transform-origin: bottom left;
-      transform: translate(4px, 5px) rotate(-45deg);
+      transform: translateY(-3px) rotate(-45deg);
     }
   }
 }
