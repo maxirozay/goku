@@ -9,7 +9,7 @@
 		"Julien Grünhagel <julien@rspt.ch>"
 	],
 	"scripts": {
-		"dev": "vite"
+		"dev": "vite --host"
 	},
 	"license": "MIT",
 	"private": false,
