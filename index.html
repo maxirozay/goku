@@ -38,6 +38,7 @@
         <div class="dropdown">
           <button>Components</button>
           <div class="bg g3 p2">
+            <a href="#accordion">Accordion</a>
             <a href="#drawer">Drawer</a>
             <a href="#dropdown">Dropdown</a>
             <a href="#modal">Modal</a>
@@ -458,6 +459,40 @@
         <hr>
         <section>
           <h2>Components</h2>
+          <h3 id="accordion">Accordion</h3>
+          <div class="accordion fg-border">
+            <input id="accordion1" type="checkbox">
+            <label for="accordion1">
+              <div class="fg p1">Click accordion</div>
+            </label>
+            <div class="p1">
+              Accordion content
+            </div>
+          </div>
+          <div class="accordion fg-border mt1">
+            <input id="accordion2" type="checkbox">
+            <label for="accordion2">
+              <div class="fg p1">Click accordion</div>
+            </label>
+            <div class="p1">
+              <div class="accordion">
+                Content
+                <input id="accordion21" type="checkbox">
+                <label for="accordion21" class="float-right">Click for more content</label>
+                <div>
+                  Sub accordion content
+                </div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="accordion"&gt;
+  &lt;input id="accordion1" type="checkbox"&gt;
+  &lt;label for="accordion1"&gt;Click accordion&lt;/label&gt;
+  &lt;div&gt;
+    Accordion content
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
           <h3 id="drawer">Drawer</h3>
           <div class="drawer-layout">
             <input id="left-toggle" class="drawer-layout__input" type="checkbox">

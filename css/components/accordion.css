@@ -1,0 +1,16 @@
+.accordion > input {
+  display: none;
+}
+
+.accordion > div {
+  max-height: 80vh;
+  transition: all .3s;
+}
+
+.accordion > input:not(:checked) ~ div {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
