@@ -65,9 +65,7 @@ input[type=radio] {
 }
 input[type=radio] + label {
   padding: var(--padding-input);
-  border-radius: var(--border-radius);
   background: var(--color-input);
-  border: none !important;
 }
 input[type=radio]:checked + label {
   background: var(--primary-color) !important;
