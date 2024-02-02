@@ -1,21 +1,45 @@
-.loading {
-  animation-name: loading;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+.pulse {
+  animation: pulse 3s infinite;
   color: #0000;
 }
 
-@keyframes loading {
+@keyframes pulse {
   0% {
     background: var(--primary-color);
-    border-color: var(--primary-color);
   }
   50% {
     background: var(--primary-color-active);
-    border-color: var(--primary-color-active);
   }
   100% {
     background: var(--primary-color);
-    border-color: var(--primary-color);
+  }
+}
+
+.spin {
+  color: #0000;
+  position: relative;
+
+  &:after {
+    content: '';
+    border: 2px solid var(--primary-color-active);
+    border-top-color: #0000;
+    border-bottom-color: #0000;
+    border-radius: 100%;
+    display: inline-block;
+    width: .75em;
+    height: .75em;
+    animation: spin 2s infinite linear;
+    position: absolute;
+    left: calc(50% - .5em);
+    top: calc(50% - .5em);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
