@@ -32,7 +32,6 @@
             <a href="#progress">Progress</a>
             <a href="#select">Select</a>
             <a href="#table">Table</a>
-            <a href="#textarea">Textarea</a>
           </div>
         </div>
         <div class="dropdown">
@@ -74,7 +73,7 @@
           </p>
           <pre><code class="language-bash">yarn add goku-css</code> or <code class="language-bash">npm install goku-css</code></pre>
           <br>
-          Then import 'goku-css'
+          Then import 'goku-css' and code your HTML the elements are styled directly and you can use the classes available for more options.
         </section>
         <hr>
         <section id="customization">
@@ -291,7 +290,6 @@
           </div>
 
           <h3 id="input">Input</h3>
-          <h4>Type</h4>
           <div class="flex g1">
             <label class="flex-auto">
               Text
@@ -306,6 +304,11 @@
               <input type="date">
             </label>
           </div>
+
+          <label>
+            Textarea
+            <textarea rows="4"></textarea>
+          </label>
 
           <label>
             Checkbox
@@ -447,13 +450,6 @@
               </tr>
             </tbody>
           </table>
-
-          <h3 id="textarea">Textarea</h3>
-          <label>
-            Text
-            <textarea rows="4"></textarea>
-          </label>
-
         </section>
         <hr>
         <section>
@@ -577,8 +573,16 @@
 &lt;/div&gt;</code></pre>
 
           <h3 id="modal">Modal</h3>
-          <p>Place the element with the modal class before the &lt;/body&gt;.</p>
           <button onclick="document.getElementById('myModal').style.display = 'flex';document.getElementById('myModal').classList.toggle('modal')">Open Modal</button>
+          <div
+            id="myModal"
+            style="display: none;"
+            onclick="document.getElementById('myModal').style.display = 'none';document.getElementById('myModal').classList.toggle('modal')"
+          >
+            <div class="p2" onclick="event.stopPropagation()">
+              Modal
+            </div>
+          </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
   &lt;div&gt;last child&lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -640,7 +644,7 @@
           <h3 id="flex">Flex</h3>
           <p>
             Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space and adapt the orientation to the window size.
-            Use the classes <code class="language-css" data-lang="css">g1, g2, g3</code> to add a gap based on the margins values.
+            <br>Use the classes <code class="language-css" data-lang="css">g1, g2, g3</code> to add a gap based on the margins values.
           </p>
           <div class="flex g1">
             <div class="fg  flex-auto p1">
@@ -839,15 +843,6 @@
         </section>
       </div>
     </div>
-    <div
-      id="myModal"
-      style="display: none;"
-      onclick="document.getElementById('myModal').style.display = 'none';document.getElementById('myModal').classList.toggle('modal')"
-    >
-      <div class="p2" onclick="event.stopPropagation()">
-        Modal
-      </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
     <script>
@@ -862,8 +857,21 @@
     <style>
       pre {
         border: 1px solid #8888 !important;
+        background: #333 !important;
         line-height: 1;
         font-size: .75em !important;
+        box-shadow: none !important;
+      }
+
+      code {
+        background: #333d !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      h2 {
+        margin-top: 60px;
+        margin-bottom: 0;
       }
       h3 {
         padding-top: 60px;
