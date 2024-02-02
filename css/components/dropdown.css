@@ -23,8 +23,8 @@
   border-bottom: 2px solid var(--color-text);
   transform: rotate(45deg);
   display: block;
-  margin: .5em auto;
-  position: sticky;
+  margin: auto;
+  position: fixed;
   bottom: 1em;
   right: 0;
   left: 0;
@@ -83,7 +83,7 @@
 
 @media (max-width: 900px) {
   .dropdown > div {
-    padding-bottom: 0 !important;
+    padding-bottom: 2em !important;
   }
 }
 
