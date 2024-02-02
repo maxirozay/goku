@@ -15,7 +15,6 @@ nav {
     bottom: 0;
     transition: 0.3s;
     z-index: 100;
-    padding: .5rem 0;
   }
 
   & > .content a {
@@ -24,7 +23,7 @@ nav {
 
   & > .content > * {
     display: block;
-    padding: .5rem 1rem;
+    margin: 1rem;
   }
 
   &  > .toggle {
