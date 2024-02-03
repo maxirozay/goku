@@ -3,16 +3,14 @@ a {
   color: var(--link-color);
   cursor: pointer;
   line-height: 1.15;
+
+  &:hover,
+  &:active {
+    color: var(--primary-color-active);
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
-a:hover {
-  color: var(--primary-color-active);
-}
-
-a:active {
-  color: var(--primary-color-active);
-}
-
-a:focus {
-  text-decoration: underline;
-}

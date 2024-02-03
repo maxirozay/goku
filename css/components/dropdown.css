@@ -1,21 +1,17 @@
 .dropdown {
   display: inline-block;
   position: relative;
-  margin: 1px;
 }
 
 .dropdown > label,
 .dropdown > button {
   width: 100%;
-  margin: 0;
-  box-sizing: border-box;
   background: none;
   text-align: left;
   color: inherit;
   border: none;
   font-weight: normal;
   padding: 0;
-  display: inline-block;
 }
 
 .dropdown > div::after {
@@ -27,17 +23,17 @@
   border-bottom: 2px solid var(--color-text);
   transform: rotate(45deg);
   display: block;
-  margin: .5em auto;
-  position: sticky;
-  bottom: 0;
+  margin: auto;
+  position: fixed;
+  bottom: 1em;
   right: 0;
   left: 0;
 }
 .dropdown:hover::before,
 .dropdown > input:checked ~ label::before {
   content: '';
-  width: 2em;
-  height: 1.75em;
+  width: 4em;
+  height: 2.5em;
   margin: auto;
   display: block;
   position: fixed;
@@ -77,13 +73,20 @@
   max-height: 75vh;
   overflow-y: auto;
   box-shadow: var(--shadow);
-  background-color: var(--color-fg);
+  background: var(--color-fg);
   border-radius: var(--border-radius);
   z-index: 1000;
   transition: all .3s ease;
   transform: translateY(150%);
   white-space: nowrap;
 }
+
+@media (max-width: 900px) {
+  .dropdown > div {
+    padding-bottom: 2em !important;
+  }
+}
+
 @media (min-width: 900px) {
   .dropdown > div {
     display: none;

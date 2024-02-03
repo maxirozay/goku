@@ -6,7 +6,7 @@
   --line-height: 1.25;
   --primary-color: #f84;
   --primary-color-text: #000;
-  --primary-color-active: #888;
+  --primary-color-active: #fff;
   --secondary-color: #888;
   --secondary-color-text: #fff;
   --dark-bg: #1a1a1a;
@@ -26,6 +26,7 @@
   --light-button-border: #f84;
   --light-button-text: #1a1a1a;
   --success-color: #4b4;
+  --warning-color: #e84;
   --error-color: #e54;
   --border-radius: 4px;
   --border-width: 1px;

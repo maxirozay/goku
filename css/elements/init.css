@@ -4,30 +4,29 @@ textarea,
 select {
   font-weight: inherit;
   font-size: inherit;
-  line-height: inherit;
+  line-height: 1.25;
   font-family: inherit;
   border-width: var(--border-width);
   border-style: solid;
   border-radius: var(--border-radius);
   padding: var(--padding-input);
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    border-color: var(--primary-color-active);
+  }
 }
 input,
 textarea,
 select {
-  background-color: var(--color-input);
+  background: var(--color-input);
   color: var(--color-text);
   border-color: var(--color-input-border);
 }
-button:hover,
-button:focus,
-input:hover,
-input:focus
-textarea:hover,
-textarea:focus,
-select:hover,
-select:focus {
-  border-color: var(--primary-color-active);
+
+input[type=date] {
+  line-height: 1.125;
 }
 
 *:disabled {

@@ -1,25 +1,16 @@
 progress {
-  background-color: var(--secondary-color);
-  border-radius: var(--border-radius);
+  height: 8px;
+  background: var(--secondary-color);
+  border-radius: 16px;
   border: var(--border-width) solid var(--secondary-color);
-  margin: var(--margin);
+  overflow: hidden;
 }
 
+progress::-moz-progress-bar,
 progress::-webkit-progress-bar {
-  background-color: var(--secondary-color);
+  -webkit-animation: loading 3s linear infinite;
+        animation: loading 3s linear infinite;
 }
-
-progress::-moz-progress-bar {
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
-  animation-name: loading;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
 progress::-webkit-progress-value {
-  background-color: var(--primary-color);
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--primary-color);
+  background: var(--primary-color);
 }

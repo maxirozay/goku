@@ -1,12 +1,12 @@
-/**
- * Variables
- */
+/* Variables */
 
 @import "variables.css";
 
-/**
- * HTML Elements
- */
+/* HTML Animations */
+
+@import "animations/loading.css";
+
+/* HTML Elements */
 
 @import "elements/init.css";
 @import "elements/body.css";
@@ -16,25 +16,21 @@
 @import "elements/list.css";
 @import "elements/nav.css";
 @import "elements/progress.css";
+@import "elements/scroll.css";
 @import "elements/section.css";
 @import "elements/table.css";
 
-/**
- * Components
- */
+/* Components */
 
+@import "components/accordion.css";
 @import "components/drawer.css";
 @import "components/dropdown.css";
-@import "components/loading.css";
 @import "components/modal.css";
 @import "components/tabs.css";
 
-/**
- * Utilities
- */
+/* Utilities */
 
 @import "utilities/borders.css";
 @import "utilities/colors.css";
 @import "utilities/layout.css";
 @import "utilities/shadow.css";
-@import "utilities/typo.css";

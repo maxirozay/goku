@@ -11,59 +11,60 @@
   </head>
   <body class="m0 p0">
 
-    <nav>
+    <nav class="fixed top left right shadow">
       <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle">
         <div></div>
         <div></div>
+        <div></div>
       </label>
-      <a href="/" class="my px2">Goku CSS</a>
+      <a href="/" class="my px2"><b>Goku CSS</b></a>
       <div class="content">
-        <a href="#customization" class="ml">Customization</a>
-        <div class="dropdown">
+        <div class="mr"></div>
+        <a href="#customization">Customization</a>
+        <div class="dropdown right">
           <button>Elements</button>
-          <div class="bg">
-            <a class="m2"  href="#button">Button</a>
-            <a class="m2"  href="#input">Input</a>
-            <a class="m2"  href="#link">Link</a>
-            <a class="m2"  href="#list">List</a>
-            <a class="m2"  href="#nav">Nav</a>
-            <a class="m2"  href="#progress">Progress</a>
-            <a class="m2"  href="#select">Select</a>
-            <a class="m2"  href="#table">Table</a>
-            <a class="m2"  href="#textarea">Textarea</a>
+          <div class="bg g3 p2">
+            <a href="#button">Button</a>
+            <a href="#input">Input</a>
+            <a href="#link">Link</a>
+            <a href="#list">List</a>
+            <a href="#nav">Nav</a>
+            <a href="#progress">Progress</a>
+            <a href="#select">Select</a>
+            <a href="#table">Table</a>
           </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown right">
           <button>Components</button>
-          <div class="bg">
-            <a class="m2"  href="#drawer">Drawer</a>
-            <a class="m2"  href="#dropdown">Dropdown</a>
-            <a class="m2"  href="#loading">Loading</a>
-            <a class="m2"  href="#modal">Modal</a>
-            <a class="m2"  href="#tabs">Tabs</a>
+          <div class="bg g3 p2">
+            <a href="#accordion">Accordion</a>
+            <a href="#drawer">Drawer</a>
+            <a href="#dropdown">Dropdown</a>
+            <a href="#modal">Modal</a>
+            <a href="#tabs">Tabs</a>
           </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown right">
           <button>Utilities</button>
-          <div class="bg">
-            <a class="m2"  href="#borders">Borders</a>
-            <a class="m2"  href="#colors">Colors</a>
-            <a class="m2"  href="#flex">Flex</a>
-            <a class="m2"  href="#overflow">Overflow</a>
-            <a class="m2"  href="#portrait">Portrait</a>
-            <a class="m2"  href="#position">Position</a>
-            <a class="m2"  href="#size">Size</a>
-            <a class="m2"  href="#spacing">Spacing</a>
-            <a class="m2"  href="#shadow">Shadow</a>
-            <a class="m2"  href="#typo">Typo</a>
+          <div class="bg g3 p2">
+            <a href="#borders">Borders</a>
+            <a href="#colors">Colors</a>
+            <a href="#flex">Flex</a>
+            <a href="#overflow">Overflow</a>
+            <a href="#portrait">Portrait</a>
+            <a href="#position">Position</a>
+            <a href="#size">Size</a>
+            <a href="#spacing">Spacing</a>
+            <a href="#shadow">Shadow</a>
+            <h5 class="mb0">Animations</h5>
+            <a href="#loading">Loading</a>
           </div>
         </div>
-        <a href="#example">Example</a>
       </div>
     </nav>
 
-    <div class="overflow-y relative">
+    <div>
       <div class="portrait  p2">
 
         <section>
@@ -73,7 +74,7 @@
           </p>
           <pre><code class="language-bash">yarn add goku-css</code> or <code class="language-bash">npm install goku-css</code></pre>
           <br>
-          Then import 'goku-css'
+          Then import 'goku-css' and code your HTML the elements are styled directly and you can use the classes available for more options.
         </section>
         <hr>
         <section id="customization">
@@ -90,7 +91,7 @@
   --line-height: 1.25;
   --primary-color: #f84;
   --primary-color-text: #000;
-  --primary-color-active: #888;
+  --primary-color-active: #fff;
   --secondary-color: #888;
   --secondary-color-text: #fff;
   --dark-bg: #1a1a1a;
@@ -158,8 +159,8 @@
 }</code></pre>
 
           <h3>Try to change those variables</h3>
-          <div class="flex">
-            <label class="flex-1 mr1">
+          <div class="flex g1">
+            <label class="flex-1">
               font-family
               <input type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
             </label>
@@ -169,22 +170,22 @@
             </label>
           </div>
 
-          <div class="flex  text-center">
-            <label class="flex-auto mr1">
+          <div class="flex g1 mb2 text-center">
+            <label class="flex-auto p1">
               Primary color
               <input
                 type="color"
                 value="#ff8f4f"
                 onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
             </label>
-            <label class="flex-auto mr1">
+            <label class="flex-auto p1">
               Primary color text
               <input
                 type="color"
                 value="#000000"
                 onchange="document.documentElement.style.setProperty('--primary-color-text', event.target.value)">
             </label>
-            <label class="flex-auto mr1">
+            <label class="flex-auto p1">
               Button color
               <input
                 type="color"
@@ -193,8 +194,8 @@
             </label>
           </div>
 
-          <div class="flex  text-center">
-            <label class="flex-auto mr1">
+          <div class="flex g1 ">
+            <label class="flex-1">
               Border radius
               <input
                 class="mx"
@@ -203,7 +204,7 @@
                 min="0"
                 onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
             </label>
-            <label class="flex-auto">
+            <label class="flex-1">
               Border width
               <input
                 class="mx"
@@ -219,24 +220,26 @@
             <input type="text" value="0 0 3px 2px #8883" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
           </label>
 
-          <div class="flex">
-            <label class="flex-1 mr1">
+          <div class="flex g1">
+            <label class="flex-1">
               padding-top
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               padding-right
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-r', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               padding-bottom
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-b', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               padding-left
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+          </div>
+          <div class="flex g1">
+            <label class="flex-1">
               padding-ratio2
               <input type="number" value="2" onkeyup="document.documentElement.style.setProperty('--padding-ratio2', event.target.value)">
             </label>
@@ -246,24 +249,26 @@
             </label>
           </div>
 
-          <div class="flex">
-            <label class="flex-1 mr1">
+          <div class="flex g1">
+            <label class="flex-1">
               margin-top
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               margin-right
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               margin-bottom
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+            <label class="flex-1">
               margin-left
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
             </label>
-            <label class="flex-1 mr1">
+          </div>
+          <div class="flex g1">
+            <label class="flex-1">
               margin-ratio2
               <input type="number" value="8" onkeyup="document.documentElement.style.setProperty('--margin-ratio2', event.target.value)">
             </label>
@@ -286,34 +291,74 @@
           </div>
 
           <h3 id="input">Input</h3>
-          <h4>Type</h4>
-          <div class="flex">
-            <label class="flex-auto m1">
+          <div class="flex g1">
+            <label class="flex-auto">
               Text
               <input type="text">
             </label>
-            <label class="flex-auto m1">
+            <label class="flex-auto">
               Number
               <input type="number">
             </label>
-            <label class="flex-auto m1">
+            <label class="flex-auto">
               Date
               <input type="date">
             </label>
           </div>
 
           <label>
+            Textarea
+            <textarea rows="4"></textarea>
+          </label>
+
+          <label>
             Checkbox
             <input class="ml2" type="checkbox">
           </label>
-          <label>
-            <input type="radio" name="radio">
-            Radio 1
-          </label>
-          <label>
-            <input type="radio" name="radio">
-            Radio 2
-          </label>
+
+          <div class="secondary-border flex g1 my2">
+            <input type="radio" name="radio2" id="radio21">
+            <label for="radio21" class="flex-1 bg text-center">
+              Radio 1
+            </label>
+            <input type="radio" name="radio2" id="radio22">
+            <label for="radio22" class="flex-1 bg text-center">
+              Radio 2
+            </label>
+            <input type="radio" name="radio2" id="radio23">
+            <label for="radio23" class="flex-1 bg text-center">
+              Radio 3
+            </label>
+          </div>
+          <div class="group flex g1 my2">
+            <input type="radio" name="radio" id="radio1">
+            <label for="radio1" class="flex-1 text-center">
+              Radio 1
+            </label>
+            <input type="radio" name="radio" id="radio2">
+            <label for="radio2" class="flex-1 text-center">
+              Radio 2
+            </label>
+            <input type="radio" name="radio" id="radio3">
+            <label for="radio3" class="flex-1 text-center">
+              Radio 3
+            </label>
+          </div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="group flex g1 my2"&gt;
+  &lt;input type="radio" name="radio" id="radio1"&gt;
+  &lt;label for="radio1" class="flex-1 text-center"&gt;
+    Radio 1
+  &lt;/label&gt;
+  &lt;input type="radio" name="radio" id="radio2"&gt;
+  &lt;label for="radio2" class="flex-1 text-center"&gt;
+    Radio 2
+  &lt;/label&gt;
+  &lt;input type="radio" name="radio" id="radio3"&gt;
+  &lt;label for="radio3" class="flex-1 text-center"&gt;
+    Radio 2
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
           <p>File</p>
           <label>
             Regular file input
@@ -406,17 +451,46 @@
               </tr>
             </tbody>
           </table>
-
-          <h3 id="textarea">Textarea</h3>
-          <label>
-            Text
-            <textarea rows="4"></textarea>
-          </label>
-
         </section>
         <hr>
         <section>
           <h2>Components</h2>
+          <h3 id="accordion">Accordion</h3>
+          <p>Use radio inputs for a group of accordion or checkbox to toggle the accordions one by one.</p>
+          <div class="accordion fg-border">
+            <label for="accordion1">
+              <div class="fg p1">Click accordion</div>
+            </label>
+            <input id="accordion1" name="accordion" type="radio">
+            <div class="p1">
+              Accordion content
+            </div>
+          </div>
+          <div class="accordion fg-border mt1">
+            <label for="accordion2">
+              <div class="fg p1">Click accordion</div>
+            </label>
+            <input id="accordion2" name="accordion" type="radio">
+            <div class="p1">
+              <div class="accordion">
+                Content
+                <label for="accordion21" class="float-right">Click for more content</label>
+                <input id="accordion21" type="checkbox">
+                <div>
+                  Sub accordion content
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <pre><code class="language-html" data-lang="html">&lt;div class="accordion"&gt;
+  &lt;label for="accordion1"&gt;Click accordion&lt;/label&gt;
+  &lt;input id="accordion1" type="checkbox"&gt;
+  &lt;div&gt;
+    Accordion content
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
           <h3 id="drawer">Drawer</h3>
           <div class="drawer-layout">
             <input id="left-toggle" class="drawer-layout__input" type="checkbox">
@@ -469,53 +543,62 @@
           <div class="dropdown">
             <input id="dropdown1" type="checkbox">
             <label for="dropdown1">Click Dropdown</label>
-            <div>
-              <a class="m2">Item 1</a>
-              <a class="m2">Item 2</a>
-              <label for="dropdown1" class="m0 p1">Collapse</label>
+            <div class="g2 p1">
+              <a>Item 1</a>
+              <a>Item 2</a>
+              <label for="dropdown1">Collapse</label>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;input id="dropdown1" type="checkbox"&gt;
   &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
-  &lt;div&gt;
-    &lt;a class="m2"&gt;Item 1&lt;/a&gt;
-    &lt;a class="m2"&gt;Item 2&lt;/a&gt;
+  &lt;div class="g2 p1"&gt;
+    &lt;a&gt;Item 1&lt;/a&gt;
+    &lt;a&gt;Item 2&lt;/a&gt;
     &lt;label for="dropdown1" class="m0 p1"&gt;Collapse&lt;/label&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="dropdown">
-            <button>Hover Dropdown</button>
-            <div>
-              <a class="m2">Item 1</a>
-              <a class="m2">Item 2</a>
+          <div class="flex-row g2 mt3">
+            <div class="dropdown flex-1">
+              <button>Hover Dropdown</button>
+              <div class="g2 p1">
+                <a>Item 1</a>
+                <a>Item 2</a>
+              </div>
+            </div>
+            <div class="dropdown right flex-1">
+              <button>Add "right" next to the dropdown class to open from the right.</button>
+              <div class="g2 p1">
+                <a>Item 1</a>
+                <a>Item 2</a>
+              </div>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;button&gt;Hover Dropdown&lt;/button&gt;
-  &lt;div&gt;
-    &lt;a class="m2"&gt;Item 1&lt;/a&gt;
-    &lt;a class="m2"&gt;Item 2&lt;/a&gt;
+  &lt;div class="g2 p1"&gt;
+    &lt;a&gt;Item 1&lt;/a&gt;
+    &lt;a&gt;Item 2&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <h3 id="loading">Loading</h3>
-          <button class="loading">loading</button>
-          <pre><code class="language-html" data-lang="html">&lt;button class="loading"&gt;loading&lt;/button&gt;</code></pre>
-
           <h3 id="modal">Modal</h3>
-          <button onclick="document.getElementById('myModal').style.display = 'flex'">Open Modal</button>
-          <div id="myModal" class="modal" style="display: none;" onclick="document.getElementById('myModal').style.display = 'none'">
+          <button onclick="document.getElementById('myModal').style.display = 'flex';document.getElementById('myModal').classList.toggle('modal')">Open Modal</button>
+          <div
+            id="myModal"
+            style="display: none;"
+            onclick="document.getElementById('myModal').style.display = 'none';document.getElementById('myModal').classList.toggle('modal')"
+          >
             <div class="p2" onclick="event.stopPropagation()">
-              last child
+              Modal
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="modal"&gt;
   &lt;div&gt;last child&lt;/div&gt;
 &lt;/div&gt;</code></pre>
           <h3 id="tabs">Tabs</h3>
-          <div class="tabs">
+          <div class="tabs g1">
             <button class="flex-1">
               flex-1
             </button>
@@ -533,7 +616,7 @@
             fg tabs__content
           </div>
 
-          <pre><code class="language-html" data-lang="html">&lt;div class="tabs"&gt;
+          <pre><code class="language-html" data-lang="html">&lt;div class="tabs g1"&gt;
   &lt;button class="flex-1"&gt;flex-1&lt;/button&gt;
   &lt;button class="flex-1  active  fg"&gt;flex-1 active fg&lt;/button&gt;
   &lt;button class="flex-1"&gt;flex-1&lt;/button&gt;
@@ -548,108 +631,122 @@
           <p>The utilities classes used in those elements are the one displayed on each element.</p>
 
           <h3 id="borders">Borders</h3>
-          You can remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code>.
+          <p>You can add/remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code> or <code class="language-css" data-lang="css">border-radius</code>.</p>
+          <p>The class <code class="language-css" data-lang="css">group</code> will add the radius and remove the radius of the children.</p>
 
           <h3 id="colors">Colors</h3>
-          <div class="flex">
-            <div class="primary  flex-1 p1 m1">primary</div>
-            <div class="primary-border  flex-1 p1 m1">primary-border</div>
-            <div class="secondary  flex-1 p1 m1">secondary</div>
-            <div class="secondary-border  flex-1 p1 m1">secondary-border</div>
-            <div class="success  flex-1 p1 m1">success</div>
-            <div class="success-border  flex-1 p1 m1">success-border</div>
-            <div class="error  flex-1 p1 m1">error</div>
-            <div class="error-border  flex-1 p1 m1">error-border</div>
-          </div>
-          <div class="flex mt1">
-            <div class="bg  flex-1 p1 m1">bg</div>
-            <div class="bg-border  flex-1 p1 m1">bg-border</div>
-            <div class="fg  flex-1 p1 m1">fg</div>
-            <div class="fg-border  flex-1 p1 m1">fg-border</div>
+          <div class="flex-wrap g2">
+            <div class="bg  flex-1 p1">bg</div>
+            <div class="bg-border  flex-1 p1">bg-border</div>
+            <div class="fg  flex-1 p1">fg</div>
+            <div class="fg-border  flex-1 p1">fg-border</div>
+            <div class="primary  flex-1 p1">primary</div>
+            <div class="primary-border  flex-1 p1">primary-border</div>
+            <div class="secondary  flex-1 p1">secondary</div>
+            <div class="secondary-border  flex-1 p1">secondary-border</div>
+            <div class="success  flex-1 p1">success</div>
+            <div class="success-border  flex-1 p1">success-border</div>
+            <div class="warning  flex-1 p1">warning</div>
+            <div class="warning-border  flex-1 p1">warning-border</div>
+            <div class="error  flex-1 p1">error</div>
+            <div class="error-border  flex-1 p1">error-border</div>
           </div>
 
           <h3 id="flex">Flex</h3>
           <p>
             Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space and adapt the orientation to the window size.
+            <br>Use the classes <code class="language-css" data-lang="css">g1, g2, g3</code> to add a gap based on the margins values.
           </p>
-          <div class="flex">
-            <div class="fg  flex-auto p1 m1">
+          <div class="flex g1">
+            <div class="fg  flex-auto p1">
               flex-auto
             </div>
-            <div class="fg  flex-auto p1 m1">
+            <div class="fg  flex-auto p1">
               flex-auto
             </div>
-            <div class="fg  flex-auto p1 m1">
+            <div class="fg  flex-auto p1">
               flex-auto
             </div>
           </div>
           <p>
             You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
           </p>
-          <div class="flex">
-            <div class="fg  flex-2 p1 m1">
+          <div class="flex g1">
+            <div class="fg  flex-2 p1">
               flex-2
             </div>
-            <div class="fg  flex-4 p1 m1">
+            <div class="fg  flex-4 p1">
               flex-4
             </div>
-            <div class="fg  flex-8 p1 m1">
+            <div class="fg  flex-8 p1">
               flex-8
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-column</code> on the parent if you want to take all the width and stack your elements.
           </p>
-          <div class="flex-column">
-            <div class="fg  p1 m1">
+          <div class="flex-column g1">
+            <div class="fg  p1">
               row 1
             </div>
-            <div class="fg  p1 m1">
+            <div class="fg  p1">
               row 2
             </div>
-            <div class="fg  p1 m1">
+            <div class="fg  p1">
               row 3
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-row</code> to keep row direction on small screen.
           </p>
-          <div class="flex-row">
-            <div class="fg  p1 flex-1 m1">
+          <div class="flex-row g1">
+            <div class="fg  p1 flex-1">
               col 1
             </div>
-            <div class="fg  p1 flex-1 m1">
+            <div class="fg  p1 flex-1">
               col 2
             </div>
-            <div class="fg  p1 flex-1 m1">
+            <div class="fg  p1 flex-1">
               col 3
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-wrap</code> to show overflowing elements on a new line.
           </p>
-          <div class="flex-wrap">
-            <div class="fg  p1 m1" style="width: 100px">
+          <div class="flex-wrap g1">
+            <div class="fg  p1" style="width: 100px">
               100px
             </div>
-            <div class="fg  p1 m1" style="width: 200px">
+            <div class="fg  p1" style="width: 200px">
               200px
             </div>
-            <div class="fg  p1 m1" style="width: 1000px">
-              100px
+            <div class="fg  p1" style="width: 1000px">
+              1000px
             </div>
           </div>
           <p>
             Use <code class="language-css" data-lang="css">flex-center</code> to align everything in the center.
           </p>
-          <div class="fg  flex-center">
-            <div class="p1">
-              text
+          <div class="fg  flex-center flex-wrap g1 text-center" style="min-height: 200px">
+            <div class="bg p1 flex-1" style="min-width: 200px">
+              div
             </div>
-            <button>
-              button
-            </button>
-            <div class="fg p1" style="height: 80px">
+            <div class="bg flex-1" style="min-width: 200px">
+              div
+            </div>
+            <div class="bg p1 flex-1" style="min-width: 200px;height: 80px">
+              div
+            </div>
+            <div class="bg flex-1" style="min-width: 200px;height: 40px">
+              div
+            </div>
+            <div class="bg flex-1" style="min-width: 200px">
+              div
+            </div>
+            <div class="bg flex-1" style="min-width: 200px">
+              div
+            </div>
+            <div class="bg flex-1" style="min-width: 200px">
               div
             </div>
           </div>
@@ -658,9 +755,12 @@
           <div class="fg  overflow-x" style="width: 50px;">
             overflow-x
           </div>
-          <br>
-          <div class="fg  overflow-y" style="height: 50px; writing-mode: vertical-lr;">
+          <div class="fg  overflow-y mt2" style="height: 50px; writing-mode: vertical-lr;">
             overflow-y
+          </div>
+          <p>Keep text on one line with the <code class="language-css" data-lang="css">line</code> class.</p>
+          <div class="fg line mt2" style="width: 2.5em;">
+            line too long
           </div>
 
           <h3 id="portrait">Portrait</h3>
@@ -747,79 +847,16 @@
           <h3 id="shadow">Shadow</h3>
           You can use the class <code class="language-css" data-lang="css">shadow</code> and <code class="language-css" data-lang="css">no-shadow</code> to add or remove shadow.
 
-          <h3 id="typo">Typo</h3>
-          <span class="small">small</span>
-          <a class="small" href="#">small</a>
-          <button class="small">small</button>
-
-        </section>
-        <hr>
-        <section id="example">
-          <h2>Example</h2>
-          <form class="clearfix mb3 p2 fg-border">
-            <b>Form</b>
-            <div class="flex">
-              <label class="flex-auto mr1">
-                Enter your name
-                <input type="text">
-              </label>
-              <label class="flex-auto">
-                Enter your email
-                <input type="email">
-              </label>
-            </div>
-            <label>
-              Comment
-              <textarea name="name" rows="2" placeholder="..."></textarea>
-            </label>
-            <label>
-              Do you want to subscribe to our newsletter?
-              <input type="checkbox">
-              <span></span>
-            </label>
-            <button class="float-right">Confirm</button>
-          </form>
-          <div class="fg p1">
-            This content need some buttons on the side.
-            <br>
-            This is a new line.
-              <a href="#">Say Hi!</a>
-            <div class="text-right">
-              <button>Edit</button>
-              <button class="success">Save</button>
-              <button class="error">Delete</button>
-            </div>
-          </div>
-          <h4>Users</h4>
-          <table class="text-center">
-            <thead>
-              <tr>
-                <th>User</th>
-                <th>Age</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Bob</td>
-                <td>26</td>
-              </tr>
-              <tr>
-                <td>Alice</td>
-                <td>22</td>
-              </tr>
-            </tbody>
-          </table>
-          <h4>Shopping list</h4>
-          <ul>
-            <li>
-              Chicken
-              <ul>
-                <li>Nuggets</li>
-                <li>Drums</li>
-              </ul>
-            </li>
-            <li>Water</li>
-          </ul>
+          <h2>Animations</h2>
+          <h3 id="loading">Loading</h3>
+          <button class="pulse-bg">button</button>
+          <button class="spin">button</button>
+          <button class="pulse-bg spin">button</button>
+          <pre><code class="language-html" data-lang="html">
+&lt;button class="pulse-bg"&gt;button&lt;/button&gt;
+&lt;button class="spin"&gt;button&lt;/button&gt;
+&lt;button class="pulse-bg spin"&gt;button&lt;/button&gt;
+          </code></pre>
         </section>
       </div>
     </div>
@@ -837,8 +874,25 @@
     <style>
       pre {
         border: 1px solid #8888 !important;
+        background: #333 !important;
         line-height: 1;
         font-size: .75em !important;
+        box-shadow: none !important;
+      }
+
+      code {
+        background: #333d !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      h2 {
+        margin-top: 60px;
+        margin-bottom: 0;
+      }
+      h3 {
+        padding-top: 60px;
+        margin-top: 0;
       }
     </style>
   </body>

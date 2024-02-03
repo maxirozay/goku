@@ -7,4 +7,8 @@ body {
   padding: 0;
   background: var(--color-bg);
   color: var(--color-text);
+
+  &:has(#nav-toggle:checked, .modal) {
+    overflow: hidden;
+  }
 }
