@@ -1,9 +1,9 @@
-.pulse {
-  animation: pulse 3s infinite;
+.pulse-bg {
+  animation: pulse-bg 3s infinite;
   color: #0000;
 }
 
-@keyframes pulse {
+@keyframes pulse-bg {
   0% {
     background: var(--primary-color);
   }
