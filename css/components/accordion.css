@@ -4,7 +4,7 @@
 
 .accordion > div {
   max-height: 80vh;
-  transition: all .2s;
+  transition: all .3s;
 }
 
 .accordion > input:not(:checked) ~ div {
