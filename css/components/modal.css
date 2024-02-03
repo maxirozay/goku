@@ -6,7 +6,7 @@
   left: 0;
   display: flex;
   z-index: 10000;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
 }
 
 .modal > div {
