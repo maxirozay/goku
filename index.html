@@ -456,25 +456,26 @@
         <section>
           <h2>Components</h2>
           <h3 id="accordion">Accordion</h3>
+          <p>Use radio inputs for a group of accordion or checkbox to toggle the accordions one by one.</p>
           <div class="accordion fg-border">
-            <input id="accordion1" type="checkbox">
             <label for="accordion1">
               <div class="fg p1">Click accordion</div>
             </label>
+            <input id="accordion1" name="accordion" type="radio">
             <div class="p1">
               Accordion content
             </div>
           </div>
           <div class="accordion fg-border mt1">
-            <input id="accordion2" type="checkbox">
             <label for="accordion2">
               <div class="fg p1">Click accordion</div>
             </label>
+            <input id="accordion2" name="accordion" type="radio">
             <div class="p1">
               <div class="accordion">
                 Content
-                <input id="accordion21" type="checkbox">
                 <label for="accordion21" class="float-right">Click for more content</label>
+                <input id="accordion21" type="checkbox">
                 <div>
                   Sub accordion content
                 </div>
@@ -483,8 +484,8 @@
           </div>
           <br>
           <pre><code class="language-html" data-lang="html">&lt;div class="accordion"&gt;
-  &lt;input id="accordion1" type="checkbox"&gt;
   &lt;label for="accordion1"&gt;Click accordion&lt;/label&gt;
+  &lt;input id="accordion1" type="checkbox"&gt;
   &lt;div&gt;
     Accordion content
   &lt;/div&gt;
