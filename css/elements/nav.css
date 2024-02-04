@@ -1,19 +1,14 @@
 nav {
   background: var(--color-bg);
   color: var(--color-text);
-  height: 3em;
+  height: 1.5em;
+  padding: calc(var(--padding-t) * var(--padding-ratio2));
   display: flex;
   z-index: 100;
   position: relative;
 
   & > .content {
     background: inherit;
-    position: fixed;
-    top: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: 0.3s;
     z-index: 100;
   }
 
@@ -23,47 +18,83 @@ nav {
 
   & > .content > * {
     display: block;
-    margin: 1rem;
-  }
-
-  &  > .toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
-    z-index: 101;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 calc(var(--padding-t) * var(--padding-ratio2));
-  }
-  & > .toggle > div {
-    width: 20px;
-    height: 2px;
-    margin: 2px;
-    background: var(--color-text);
-    transition: all .2s;
+    margin: 1rem 0 1rem 1rem;
   }
 }
-
 #nav-toggle {
   display: none;
+}
 
-  &:checked {
-    & ~ .content {
-      top: 0;
+@media (max-width:900px) {
+  nav {
+    & > .content {
+      position: fixed;
+      top: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: auto;
+      transition: 0.3s;
     }
-    & ~ .toggle > div:first-child {
-      transform: translateY(3px) rotate(45deg);
-    }
-    & ~ .toggle > div:nth-child(2):not(:last-child) {
-      opacity: 0;
+
+    & > .toggle {
       position: absolute;
+      top: 0;
+      right: 0;
+      height: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 101;
+      padding: calc(var(--padding-t) * var(--padding-ratio2));
     }
-    & ~ .toggle > div:last-child {
-      transform: translateY(-3px) rotate(-45deg);
+    & > .toggle > div {
+      width: 20px;
+      height: 2px;
+      background: var(--color-text);
+      transition: all .2s;
+    }
+    & > .toggle > div:nth-child(2) {
+      margin: 4px 0;
+    }
+  }
+
+  #nav-toggle {
+    &:checked {
+      & ~ .content {
+        top: 0;
+      }
+      & ~ .toggle > div:first-child {
+        transform: translateY(1px) rotate(45deg);
+      }
+      & ~ .toggle > div:nth-child(2):not(:last-child) {
+        opacity: 0;
+        position: absolute;
+      }
+      & ~ .toggle > div:last-child {
+        transform: translateY(-1px) rotate(-45deg);
+      }
+    }
+  }
+
+  .content > .dropdown > button {
+    font-weight: 500;
+    font-size: 1.25em;
+
+    &::after {
+      display: none;
+    }
+  }
+  .content > .dropdown > div {
+    display: flex;
+    position: static;
+    transform: none;
+    box-shadow: none;
+    padding: 1em 0 !important;
+    max-height: none;
+
+    &::after {
+      display: none;
     }
   }
 }
@@ -72,10 +103,7 @@ nav {
   nav > .content {
     display: flex;
     align-items: center;
-    position: static;
     flex: auto;
-    margin: 0 .5rem;
-    transition: 0s;
 
     & > .content {
       & > *,
