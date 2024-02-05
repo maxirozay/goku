@@ -6,7 +6,6 @@
 .dropdown > label,
 .dropdown > button {
   background: none;
-  text-align: left;
   color: inherit;
   border: none;
   font-weight: normal;
@@ -86,9 +85,13 @@
     z-index: 1001;
   }
 
-  .dropdown.desktop > label::after,
-  .dropdown.desktop > button::after {
-    display: none;
+  .dropdown.desktop > label,
+  .dropdown.desktop > button {
+    font-weight: bold;
+
+    &::after {
+      display: none;
+    }
   }
   .dropdown.desktop > div {
     position: static;
@@ -96,10 +99,7 @@
     box-shadow: none;
     max-height: none;
     background: inherit !important;
-    border-left: 1px solid var(--color-text) !important;
-    border-radius: 0;
-    font-size: .8em;
-    padding: 0 1em !important;
+    padding: 0 !important;
     margin: 1em 0;
 
     &::after {
@@ -124,15 +124,13 @@
     display: flex;
   }
 
-  .dropdown > div::after,
-  .dropdown::before,
-  .dropdown > label::before {
-    display: none;
-  }
+  .dropdown.mobile > label,
+  .dropdown.mobile > button {
+    font-weight: bold;
 
-  .dropdown.mobile > label::after,
-  .dropdown.mobile > button::after {
-    display: none;
+    &::after {
+      display: none;
+    }
   }
   .dropdown.mobile > div {
     display: flex;
@@ -140,10 +138,7 @@
     box-shadow: none;
     max-height: none;
     background: inherit !important;
-    border-left: 1px solid var(--color-text) !important;
-    border-radius: 0;
-    font-size: .8em;
-    padding: 0 1em !important;
+    padding: 0 !important;
     margin: 1em 0;
   }
 }
