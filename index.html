@@ -11,18 +11,17 @@
   </head>
   <body class="m0 p0">
 
-    <nav class="fixed top left right shadow">
+    <nav class="fixed top left right shadow p2">
       <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle">
         <div></div>
         <div></div>
         <div></div>
       </label>
-      <a href="/" class="my"><b>Goku CSS</b></a>
-      <div class="content">
-        <span class="mr"></span>
+      <a href="/"><b>Goku CSS</b></a>
+      <div class="content ml">
         <a href="#customization">Customization</a>
-        <div class="dropdown right">
+        <div class="dropdown desktop right">
           <button>Elements</button>
           <div class="bg g3 p2">
             <a href="#button">Button</a>
@@ -35,7 +34,7 @@
             <a href="#table">Table</a>
           </div>
         </div>
-        <div class="dropdown right">
+        <div class="dropdown desktop right">
           <button>Components</button>
           <div class="bg g3 p2">
             <a href="#accordion">Accordion</a>
@@ -45,7 +44,7 @@
             <a href="#tabs">Tabs</a>
           </div>
         </div>
-        <div class="dropdown right">
+        <div class="dropdown desktop right">
           <button>Utilities</button>
           <div class="bg g3 p2">
             <a href="#borders">Borders</a>
@@ -398,9 +397,15 @@
 
           <h3 id="nav">Nav</h3>
           <p>If you have a small screen try the main menu to see how it looks on mobile.</p>
-          <nav style="z-index:0">
-            <div class="my ml3">Nav</div>
-            <div class="content mx3">
+          <nav class="p2" style="z-index:0">
+            <input id="nav-toggle" type="checkbox">
+            <label class="toggle" for="nav-toggle">
+              <div></div>
+              <div></div>
+              <div></div>
+            </label>
+            <div>Nav</div>
+            <div class="content">
               <a href="#">link 1</a>
               <a href="#" class="mr">link 2</a>
               <a href="#">link 3</a>
@@ -408,14 +413,14 @@
             </div>
           </nav>
 
-          <pre><code class="language-html" data-lang="html">&lt;nav&gt;
+          <pre><code class="language-html" data-lang="html">&lt;nav class="p2"&gt;
   &lt;input id="nav-toggle" type="checkbox"&gt;
   &lt;label class="toggle" for="nav-toggle"&gt;
     &lt;div&gt;&lt;/div&gt;
     &lt;div&gt;&lt;/div&gt;
   &lt;/label&gt;
-  &lt;div class="my ml3"&gt;Nav&lt;/div&gt;
-  &lt;div class="content mx3"&gt;
+  &lt;div&gt;Nav&lt;/div&gt;
+  &lt;div class="content"&gt;
     &lt;a href="#"&gt;link 1&lt;/a&gt;
     &lt;a href="#" class="mr"&gt;link 2&lt;/a&gt;
     &lt;a href="#"&gt;link 3&lt;/a&gt;
@@ -583,6 +588,25 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
+          <p>Add the class <code class="language-css" data-lang="css">mobile</code> or <code class="language-css" data-lang="css">desktop</code> next to dropdown to have a mobile/desktop only dropdown</p>
+          <div>
+            <div class="dropdown mobile">
+              <button>Mobile Dropdown</button>
+              <div class="g2 p1">
+                <a>Item 1</a>
+                <a>Item 2</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="dropdown desktop">
+              <button>Desktop Dropdown</button>
+              <div class="g2 p1">
+                <a>Item 1</a>
+                <a>Item 2</a>
+              </div>
+            </div>
+          </div>
           <h3 id="modal">Modal</h3>
           <button onclick="document.getElementById('myModal').style.display = 'flex';document.getElementById('myModal').classList.toggle('modal')">Open Modal</button>
           <div

@@ -1,8 +1,6 @@
 nav {
   background: var(--color-bg);
   color: var(--color-text);
-  height: 1.5em;
-  padding: calc(var(--padding-t) * var(--padding-ratio2));
   display: flex;
   z-index: 100;
   position: relative;
@@ -14,11 +12,6 @@ nav {
 
   & > .content a {
     color: inherit;
-  }
-
-  & > .content > * {
-    display: block;
-    margin: 1rem 0 1rem 1rem;
   }
 }
 #nav-toggle {
@@ -35,18 +28,23 @@ nav {
       bottom: 0;
       overflow-y: auto;
       transition: 0.3s;
+      padding: inherit;
+    }
+    & > .content > * {
+      display: block;
+      margin-bottom: 1em;
     }
 
     & > .toggle {
       position: absolute;
       top: 0;
       right: 0;
-      height: 1.5em;
+      bottom: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       z-index: 101;
-      padding: calc(var(--padding-t) * var(--padding-ratio2));
+      padding: inherit;
     }
     & > .toggle > div {
       width: 20px;
@@ -76,44 +74,15 @@ nav {
       }
     }
   }
-
-  .content > .dropdown > button {
-    font-weight: 500;
-    font-size: 1.25em;
-
-    &::after {
-      display: none;
-    }
-  }
-  .content > .dropdown > div {
-    display: flex;
-    position: static;
-    transform: none;
-    box-shadow: none;
-    padding: 1em 0 !important;
-    max-height: none;
-
-    &::after {
-      display: none;
-    }
-  }
 }
 
 @media (min-width: 900px) {
-  nav > .content {
-    display: flex;
-    align-items: center;
-    flex: auto;
-
-    & > .content {
-      & > *,
-      & > .dropdown > button {
-        display: inline-block;
-        padding: var(--padding);
-      }
+  nav {
+    & > .content > * {
+      margin-left: 1rem;
     }
-  }
-  nav > .toggle {
-    display: none;
+    & > .toggle {
+      display: none;
+    }
   }
 }
