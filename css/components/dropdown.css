@@ -5,7 +5,6 @@
 
 .dropdown > label,
 .dropdown > button {
-  width: 100%;
   background: none;
   text-align: left;
   color: inherit;
@@ -57,19 +56,10 @@
 .dropdown > input {
   display: none;
 }
-.dropdown > input:checked ~ div,
-.dropdown > button:hover ~ div,
-.dropdown > button ~ div:hover {
-  transform: translateY(0);
-}
 
 .dropdown > div {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   max-height: 75vh;
   overflow-y: auto;
   box-shadow: var(--shadow);
@@ -77,13 +67,44 @@
   border-radius: var(--border-radius);
   z-index: 1000;
   transition: all .3s ease;
-  transform: translateY(150%);
   white-space: nowrap;
 }
 
 @media (max-width: 900px) {
+  .dropdown > input:checked ~ div,
+  .dropdown > button:hover ~ div,
+  .dropdown > button ~ div:hover {
+    transform: translateY(0);
+  }
+
   .dropdown > div {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding-bottom: 2em !important;
+    transform: translateY(150%);
+  }
+
+  .dropdown.desktop > label::after,
+  .dropdown.desktop > button::after {
+    display: none;
+  }
+  .dropdown.desktop > div {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    max-height: none;
+    background: inherit !important;
+    border-left: 1px solid var(--color-text) !important;
+    border-radius: 0;
+    font-size: .8em;
+    padding: 0 1em !important;
+    margin: 1em 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -107,5 +128,22 @@
   .dropdown::before,
   .dropdown > label::before {
     display: none;
+  }
+
+  .dropdown.mobile > label::after,
+  .dropdown.mobile > button::after {
+    display: none;
+  }
+  .dropdown.mobile > div {
+    display: flex;
+    position: static;
+    box-shadow: none;
+    max-height: none;
+    background: inherit !important;
+    border-left: 1px solid var(--color-text) !important;
+    border-radius: 0;
+    font-size: .8em;
+    padding: 0 1em !important;
+    margin: 1em 0;
   }
 }
