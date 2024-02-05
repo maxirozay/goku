@@ -10,19 +10,19 @@
   border: none;
   font-weight: normal;
   padding: 0;
+
+  &::after {
+    content: '';
+    width: .4em;
+    height: .4em;
+    border-right: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+    transform: rotate(45deg);
+    margin: .25em .25em 0 .5em;
+    float: right;
+  }
 }
 
-.dropdown > label::after,
-.dropdown > button::after {
-  content: '';
-  width: .4em;
-  height: .4em;
-  border-right: 2px solid var(--color-text);
-  border-bottom: 2px solid var(--color-text);
-  transform: rotate(45deg);
-  margin: .25em .25em 0 .5em;
-  float: right;
-}
 .dropdown > input {
   display: none;
 }
@@ -31,13 +31,13 @@
   display: flex;
   flex-direction: column;
   max-height: 75vh;
+  min-width: 10em;
   overflow-y: auto;
   box-shadow: var(--shadow);
   background: var(--color-fg);
   border-radius: var(--border-radius);
   z-index: 1000;
   transition: all .3s ease;
-  white-space: nowrap;
 }
 
 @media (max-width: 900px) {
@@ -47,7 +47,7 @@
     transform: translateY(0);
   }
 
-  .dropdown > div {
+  .dropdown:not(.-desktop) > div {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -85,37 +85,30 @@
     z-index: 1001;
   }
 
-  .dropdown.desktop > label,
-  .dropdown.desktop > button {
+  .dropdown.-desktop > label,
+  .dropdown.-desktop > button {
     font-weight: bold;
 
     &::after {
       display: none;
     }
   }
-  .dropdown.desktop > div {
-    position: static;
-    transform: none;
+  .dropdown.-desktop > div {
     box-shadow: none;
+    border: none !important;
     max-height: none;
-    background: inherit !important;
-    padding: 0 !important;
-    margin: 1em 0;
-
-    &::after {
-      display: none;
-    }
+    background: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
 @media (min-width: 900px) {
-  .dropdown > div {
+  .dropdown:not(.-mobile) > div {
     display: none;
     position: absolute;
-    bottom: inherit;
     right: inherit;
     left: inherit;
-    transform: translateY(0);
   }
 
   .dropdown > input:checked ~ div,
@@ -124,21 +117,20 @@
     display: flex;
   }
 
-  .dropdown.mobile > label,
-  .dropdown.mobile > button {
+  .dropdown.-mobile > label,
+  .dropdown.-mobile > button {
     font-weight: bold;
 
     &::after {
       display: none;
     }
   }
-  .dropdown.mobile > div {
-    display: flex;
-    position: static;
-    box-shadow: none;
+  .dropdown.-mobile > div {
+    box-shadow: none !important;
+    border: none !important;
     max-height: none;
-    background: inherit !important;
-    padding: 0 !important;
-    margin: 1em 0;
+    background: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
