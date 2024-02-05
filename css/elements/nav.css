@@ -32,7 +32,9 @@ nav {
     }
     & > .content > * {
       display: block;
+      padding-bottom: 1em;
       margin-bottom: 1em;
+      border-bottom: 1px solid #aaa3;
     }
 
     & > .toggle {
