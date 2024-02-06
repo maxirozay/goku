@@ -3,7 +3,10 @@
 	"version": "8.1.3",
 	"description": "CSS Framework",
 	"main": "css/goku.css",
-	"repository": "git@github.com:maxirozay/goku.git",
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/maxirozay/goku.git"
+	},
 	"contributors": [
 		"Maxime Rossier <rossier.maxime@gmail.com>",
 		"Julien Grünhagel <julien@rspt.ch>"
