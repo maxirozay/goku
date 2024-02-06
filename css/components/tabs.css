@@ -2,7 +2,7 @@
   display: flex;
 
   & > .active {
-    color: inherit;
+    background: var(--primary-color-active);
     border-bottom: none;
 
     &:hover {
@@ -12,14 +12,14 @@
 }
 .tabs > * {
   margin: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
   border-bottom: none;
   box-shadow: none;
 }
 .tabs__content {
   margin-top: 0;
   border-top: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
