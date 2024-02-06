@@ -21,17 +21,17 @@ nav {
   nav {
     & > .content {
       position: fixed;
-      top: 100%;
-      left: 0;
+      top: 0;
+      left: 100%;
       right: 0;
       bottom: 0;
       overflow-y: auto;
-      transition: 0.3s;
+      transition: opacity .3s, top, left 0s .3s;
       padding: inherit;
       flex-direction: column;
       gap: 1em;
       background: inherit;
-      z-index: 100;
+      opacity: 0;
     }
     & > .content > *:not(button) {
       padding-bottom: 1em;
@@ -39,15 +39,10 @@ nav {
     }
 
     & > .toggle {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       z-index: 101;
-      padding: inherit;
     }
     & > .toggle > div {
       width: 20px;
@@ -63,7 +58,9 @@ nav {
   #nav-toggle {
     &:checked {
       & ~ .content {
-        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: opacity .3s;
       }
       & ~ .toggle > div:first-child {
         transform: translateY(1px) rotate(45deg);
