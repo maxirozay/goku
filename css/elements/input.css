@@ -35,7 +35,6 @@ select  {
 
 input[type=checkbox] {
   appearance: none;
-  display: inline-block;
   background: radial-gradient(#888 65%, var(--color-input) 75%);
   border: 2px solid var(--color-input);
   outline: 1px solid var(--color-input-border);

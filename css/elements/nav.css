@@ -2,8 +2,8 @@ nav {
   background: var(--color-bg);
   color: var(--color-text);
   display: flex;
+  align-items: center;
   z-index: 100;
-  position: relative;
 
   & > .content {
     display: flex;
@@ -13,7 +13,7 @@ nav {
     color: inherit;
   }
 }
-#nav-toggle {
+nav > input {
   display: none;
 }
 
@@ -32,17 +32,16 @@ nav {
       gap: 1em;
       background: inherit;
       opacity: 0;
+      z-index: 101;
     }
     & > .content > *:not(button) {
       padding-bottom: 1em;
-      border-bottom: 1px solid #4444;
+      border-bottom: 1px solid #8884;
+      margin: 0 !important;
     }
 
     & > .toggle {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      z-index: 101;
+      z-index: 102;
     }
     & > .toggle > div {
       width: 20px;
@@ -55,7 +54,7 @@ nav {
     }
   }
 
-  #nav-toggle {
+  nav > input {
     &:checked {
       & ~ .content {
         left: 0;
