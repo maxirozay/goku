@@ -6,8 +6,7 @@ nav {
   position: relative;
 
   & > .content {
-    background: inherit;
-    z-index: 100;
+    display: flex;
   }
 
   & > .content a {
@@ -29,11 +28,13 @@ nav {
       overflow-y: auto;
       transition: 0.3s;
       padding: inherit;
+      flex-direction: column;
+      gap: 1em;
+      background: inherit;
+      z-index: 100;
     }
-    & > .content > * {
-      display: block;
+    & > .content > *:not(button) {
       padding-bottom: 1em;
-      margin-bottom: 1em;
       border-bottom: 1px solid #4444;
     }
 
@@ -88,8 +89,6 @@ nav {
     }
   }
   nav  > .content {
-    display: flex;
-    flex-direction: row;
     align-items: center;
   }
 }
