@@ -12,16 +12,16 @@
   <body class="m0 p0">
 
     <nav class="fixed top left right shadow p2">
+      <a href="/" class="mr"><b>Goku CSS</b></a>
       <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle">
         <div></div>
         <div></div>
         <div></div>
       </label>
-      <a href="/"><b>Goku CSS</b></a>
-      <div class="content ml">
+      <div class="content">
         <a href="#customization">Customization</a>
-        <div class="dropdown desktop right">
+        <div class="dropdown -desktop right">
           <button>Elements</button>
           <div class="bg g3 p2">
             <a href="#button">Button</a>
@@ -34,7 +34,7 @@
             <a href="#table">Table</a>
           </div>
         </div>
-        <div class="dropdown desktop right">
+        <div class="dropdown -desktop right">
           <button>Components</button>
           <div class="bg g3 p2">
             <a href="#accordion">Accordion</a>
@@ -44,7 +44,7 @@
             <a href="#tabs">Tabs</a>
           </div>
         </div>
-        <div class="dropdown desktop right">
+        <div class="dropdown -desktop right">
           <button>Utilities</button>
           <div class="bg g3 p2">
             <a href="#borders">Borders</a>
@@ -90,7 +90,7 @@
   --line-height: 1.25;
   --primary-color: #f84;
   --primary-color-text: #000;
-  --primary-color-active: #fff;
+  --primary-color-active: #aaa;
   --secondary-color: #888;
   --secondary-color-text: #fff;
   --dark-bg: #1a1a1a;
@@ -396,33 +396,32 @@
           </ul>
 
           <h3 id="nav">Nav</h3>
-          <p>If you have a small screen try the main menu to see how it looks on mobile.</p>
-          <nav class="p2" style="z-index:0">
-            <input id="nav-toggle" type="checkbox">
-            <label class="toggle" for="nav-toggle">
+          <nav class="p2 fg">
+            <div>Nav</div>
+            <input id="nav-toggle2" type="checkbox">
+            <label class="toggle ml" for="nav-toggle2">
               <div></div>
               <div></div>
               <div></div>
             </label>
-            <div>Nav</div>
-            <div class="content">
+            <div class="content w">
               <a href="#">link 1</a>
-              <a href="#" class="mr">link 2</a>
+              <a href="#" class="mx">link 2</a>
               <a href="#">link 3</a>
               <button name="button">button</button>
             </div>
           </nav>
 
-          <pre><code class="language-html" data-lang="html">&lt;nav class="p2"&gt;
+          <pre><code class="language-html" data-lang="html">&lt;nav class="p2 fg"&gt;
+  &lt;div&gt;Nav&lt;/div&gt;
   &lt;input id="nav-toggle" type="checkbox"&gt;
-  &lt;label class="toggle" for="nav-toggle"&gt;
+  &lt;label class="toggle ml" for="nav-toggle"&gt;
     &lt;div&gt;&lt;/div&gt;
     &lt;div&gt;&lt;/div&gt;
   &lt;/label&gt;
-  &lt;div&gt;Nav&lt;/div&gt;
-  &lt;div class="content"&gt;
+  &lt;div class="content w"&gt;
     &lt;a href="#"&gt;link 1&lt;/a&gt;
-    &lt;a href="#" class="mr"&gt;link 2&lt;/a&gt;
+    &lt;a href="#" class="mx"&gt;link 2&lt;/a&gt;
     &lt;a href="#"&gt;link 3&lt;/a&gt;
     &lt;button name="button"&gt;button&lt;/button&gt;
   &lt;/div&gt;
@@ -588,9 +587,9 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <p>Add the class <code class="language-css" data-lang="css">mobile</code> or <code class="language-css" data-lang="css">desktop</code> next to dropdown to have a mobile/desktop only dropdown</p>
+          <p>Add the class <code class="language-css" data-lang="css">-mobile</code> or <code class="language-css" data-lang="css">-desktop</code> next to dropdown to have a mobile/desktop only dropdown</p>
           <div>
-            <div class="dropdown mobile">
+            <div class="dropdown -mobile">
               <button>Mobile Dropdown</button>
               <div class="g2 p1">
                 <a>Item 1</a>
@@ -598,8 +597,9 @@
               </div>
             </div>
           </div>
+          <br>
           <div>
-            <div class="dropdown desktop">
+            <div class="dropdown -desktop">
               <button>Desktop Dropdown</button>
               <div class="g2 p1">
                 <a>Item 1</a>

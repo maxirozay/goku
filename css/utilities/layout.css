@@ -281,13 +281,13 @@
 }
 
 .g1 {
-  gap: var(--margin-t);
+  gap: var(--gap);
 }
 .g2 {
-  gap: calc(var(--margin-t) * var(--margin-ratio2));
+  gap: calc(var(--gap) * var(--gap-ratio2));
 }
 .g3 {
-  gap: calc(var(--margin-t) * var(--margin-ratio3));
+  gap: calc(var(--gap) * var(--gap-ratio3));
 }
 
 .mirror {
