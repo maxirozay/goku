@@ -573,33 +573,31 @@
               </div>
               <button class="m3">Close</button>
             </div>
-            <div class="dropdown right flex-1">
+            <div class="dropdown right flex-1" tabindex="0">
               <button>Add "right" next to the dropdown class to open from the right.</button>
               <div class="g2 p2">
                 <a>Item 1</a>
                 <a>Item 2</a>
               </div>
-              <button class="m3">Close</button>
             </div>
           </div>
-          <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
+          <pre><code class="language-html" data-lang="html">&lt;div class="dropdown" tabindex="0"&gt;
   &lt;button&gt;Hover Dropdown&lt;/button&gt;
   &lt;div class="g2 p2"&gt;
     &lt;a&gt;Item 1&lt;/a&gt;
     &lt;a&gt;Item 2&lt;/a&gt;
   &lt;/div&gt;
-  &lt;button&gt;Close&lt;/button&gt;
+  &lt;button&gt;Optionnal close button&lt;/button&gt;
 &lt;/div&gt;</code></pre>
 
           <p>Add the class <code class="language-css" data-lang="css">-mobile</code> or <code class="language-css" data-lang="css">-desktop</code> next to dropdown to have a mobile/desktop only dropdown</p>
           <div>
-            <div class="dropdown -mobile">
+            <div class="dropdown -mobile" tabindex="0">
               <button>Mobile Dropdown</button>
               <div class="g2 p2">
                 <a>Item 1</a>
                 <a>Item 2</a>
               </div>
-              <button>Close</button>
             </div>
           </div>
           <br>
