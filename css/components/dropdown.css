@@ -12,8 +12,8 @@
   padding: 0;
 }
 
-.dropdown > label::after,
-.dropdown > button:first-child::after {
+.dropdown > label:after,
+.dropdown > button:first-child:after {
   content: '';
   width: .4em;
   height: .4em;
@@ -61,7 +61,7 @@
     padding-bottom: 3.5em !important;
     transform: translateY(150%);
 
-    &::after {
+    &:after {
       content: '.';
       color: #0000;
       width: .5em;
@@ -77,8 +77,8 @@
       left: 0;
     }
   }
-  .dropdown:hover::before,
-  .dropdown > input:checked ~ label::before,
+  .dropdown:hover:before,
+  .dropdown > input:checked ~ label:before,
   .dropdown > div ~ button {
     content: '';
     width: 100%;
@@ -98,8 +98,8 @@
   .dropdown.-desktop > button {
     font-weight: bold;
   }
-  .dropdown.-desktop > label::after,
-  .dropdown.-desktop > button::after {
+  .dropdown.-desktop > label:after,
+  .dropdown.-desktop > button:after {
     display: none;
   }
   .dropdown.-desktop > div {
@@ -130,8 +130,8 @@
   .dropdown.-mobile > button {
     font-weight: bold;
   }
-  .dropdown.-mobile > label::after,
-  .dropdown.-mobile > button::after {
+  .dropdown.-mobile > label:after,
+  .dropdown.-mobile > button:after {
     display: none;
   }
   .dropdown.-mobile > div {
