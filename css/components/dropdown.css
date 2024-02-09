@@ -4,26 +4,28 @@
 }
 
 .dropdown > label,
-.dropdown > button {
+.dropdown > button:first-child {
   background: none;
   color: inherit;
   border: none;
   font-weight: normal;
   padding: 0;
-
-  &::after {
-    content: '';
-    width: .4em;
-    height: .4em;
-    border-right: 2px solid var(--color-text);
-    border-bottom: 2px solid var(--color-text);
-    transform: rotate(45deg);
-    margin: .25em .25em 0 .5em;
-    float: right;
-  }
 }
 
-.dropdown > input {
+.dropdown > label::after,
+.dropdown > button:first-child::after {
+  content: '';
+  width: .4em;
+  height: .4em;
+  border-right: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-text);
+  transform: rotate(45deg);
+  margin: .25em .25em 0 .5em;
+  float: right;
+}
+
+.dropdown > input,
+.dropdown > div ~ button {
   display: none;
 }
 
@@ -46,13 +48,17 @@
   .dropdown > button ~ div:hover {
     transform: translateY(0);
   }
+  .dropdown > button:hover ~ div ~ button,
+  .dropdown > button ~ div:hover ~ button {
+    transform: translateY(0);
+  }
 
   .dropdown:not(.-desktop) > div {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    padding-bottom: 2.5em !important;
+    padding-bottom: 3.5em !important;
     transform: translateY(150%);
 
     &::after {
@@ -66,16 +72,17 @@
       display: block;
       margin: auto;
       position: fixed;
-      bottom: 1em;
+      bottom: 1.5em;
       right: 0;
       left: 0;
     }
   }
   .dropdown:hover::before,
-  .dropdown > input:checked ~ label::before {
+  .dropdown > input:checked ~ label::before,
+  .dropdown > div ~ button {
     content: '';
     width: 100%;
-    height: 2em;
+    height: 3em;
     margin: auto;
     display: block;
     position: fixed;
@@ -83,15 +90,17 @@
     right: 0;
     left: 0;
     z-index: 1001;
+    transform: translateY(150%);
+    transition: all .3s ease;
   }
 
   .dropdown.-desktop > label,
   .dropdown.-desktop > button {
     font-weight: bold;
-
-    &::after {
-      display: none;
-    }
+  }
+  .dropdown.-desktop > label::after,
+  .dropdown.-desktop > button::after {
+    display: none;
   }
   .dropdown.-desktop > div {
     box-shadow: none;
@@ -120,10 +129,10 @@
   .dropdown.-mobile > label,
   .dropdown.-mobile > button {
     font-weight: bold;
-
-    &::after {
-      display: none;
-    }
+  }
+  .dropdown.-mobile > label::after,
+  .dropdown.-mobile > button::after {
+    display: none;
   }
   .dropdown.-mobile > div {
     box-shadow: none !important;
