@@ -12,11 +12,13 @@
 		"Julien Grünhagel <julien@rspt.ch>"
 	],
 	"scripts": {
-		"dev": "vite --host"
+		"dev": "vite --host",
+		"build": "vite build",
+		"preview": "vite preview --host"
 	},
 	"license": "MIT",
 	"private": false,
 	"devDependencies": {
-		"vite": "^4.5.0"
+		"vite": "^5.1.1"
 	}
 }
