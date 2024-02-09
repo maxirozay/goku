@@ -19,6 +19,8 @@ nav > input {
 
 @media (max-width:900px) {
   nav {
+    gap: 25px;
+
     & > .content {
       position: fixed;
       top: 0;
@@ -42,6 +44,9 @@ nav > input {
 
     & > .toggle {
       z-index: 102;
+      padding: 25px;
+      margin: -25px;
+      -webkit-tap-highlight-color: #0000;
     }
     & > .toggle > div {
       width: 20px;
