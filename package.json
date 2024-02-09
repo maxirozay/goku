@@ -14,7 +14,7 @@
 	"scripts": {
 		"dev": "vite --host",
 		"build": "vite build",
-		"preview": "vite preview --host"
+		"preview": "vite build && vite preview --host"
 	},
 	"license": "MIT",
 	"private": false,
