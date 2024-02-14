@@ -131,7 +131,6 @@
       box-shadow: none;
       border: none !important;
       max-height: none;
-      background: none !important;
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
@@ -164,7 +163,6 @@
     box-shadow: none !important;
     border: none !important;
     max-height: none;
-    background: none !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
