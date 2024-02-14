@@ -21,61 +21,61 @@
 .error-border,
 .bg-border,
 .fg-border {
-  border: var(--border-width) solid !important;
+  border: var(--border-width) solid;
 }
 
 .primary {
-  background: var(--primary-color) !important;
-  color: var(--primary-color-text) !important;
+  background: var(--primary-color);
+  color: var(--primary-color-text);
 }
 .primary-border {
-  border-color: var(--primary-color) !important;
+  border-color: var(--primary-color);
 }
 
 .secondary {
-  background: var(--secondary-color) !important;
-  color: var(--secondary-color-text) !important;
+  background: var(--secondary-color);
+  color: var(--secondary-color-text);
 }
 .secondary-border {
-  border-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color);
 }
 
 .success {
-  background: var(--success-color) !important;
-  color: #1a1a1a !important;
+  background: var(--success-color);
+  color: #1a1a1a;
 }
 .success-border {
-  border-color: var(--success-color) !important;
+  border-color: var(--success-color);
 }
 
 .warning {
-  background: var(--warning-color) !important;
-  color: #1a1a1a !important;
+  background: var(--warning-color);
+  color: #1a1a1a;
 }
 .warning-border {
-  border-color: var(--warning-color) !important;
+  border-color: var(--warning-color);
 }
 
 .error {
-  background: var(--error-color) !important;
-  color: #1a1a1a !important;
+  background: var(--error-color);
+  color: #1a1a1a;
 }
 .error-border {
-  border-color: var(--error-color) !important;
+  border-color: var(--error-color);
 }
 
 .bg {
-  background: var(--color-bg) !important;
-  color: var(--color-text) !important;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 .bg-border {
-  border-color: var(--color-bg) !important;
+  border-color: var(--color-bg);
 }
 
 .fg {
-  background: var(--color-fg) !important;
-  color: var(--color-text) !important;
+  background: var(--color-fg);
+  color: var(--color-text);
 }
 .fg-border {
-  border-color: var(--color-fg) !important;
+  border-color: var(--color-fg);
 }
