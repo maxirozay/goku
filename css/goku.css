@@ -2,10 +2,6 @@
 
 @import "variables.css";
 
-/* HTML Animations */
-
-@import "animations/loading.css";
-
 /* HTML Elements */
 
 @import "elements/init.css";
@@ -34,3 +30,7 @@
 @import "utilities/colors.css";
 @import "utilities/layout.css";
 @import "utilities/shadow.css";
+
+/* HTML Animations */
+
+@import "animations/loading.css";
