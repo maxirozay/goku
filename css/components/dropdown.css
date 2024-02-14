@@ -36,7 +36,7 @@
   min-width: 10em;
   overflow-y: auto;
   box-shadow: var(--shadow);
-  background: var(--color-fg);
+  backdrop-filter: blur(99px);
   border-radius: var(--border-radius);
   z-index: 1000;
   transition: all .3s ease;
