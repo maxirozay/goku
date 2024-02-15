@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Goku CSS - Documentation</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-twilight.min.css">
@@ -23,7 +23,7 @@
         <a href="#customization">Customization</a>
         <div class="dropdown -desktop right">
           <button>Elements</button>
-          <div class="bg g3 p2">
+          <div class="g3 p2">
             <a href="#button">Button</a>
             <a href="#input">Input</a>
             <a href="#link">Link</a>
@@ -36,7 +36,7 @@
         </div>
         <div class="dropdown -desktop right">
           <button>Components</button>
-          <div class="bg g3 p2">
+          <div class="g3 p2">
             <a href="#accordion">Accordion</a>
             <a href="#drawer">Drawer</a>
             <a href="#dropdown">Dropdown</a>
@@ -46,7 +46,7 @@
         </div>
         <div class="dropdown -desktop right">
           <button>Utilities</button>
-          <div class="bg g3 p2">
+          <div class="g3 p2">
             <a href="#borders">Borders</a>
             <a href="#colors">Colors</a>
             <a href="#flex">Flex</a>
@@ -550,18 +550,18 @@
           <div class="dropdown">
             <input id="dropdown1" type="checkbox">
             <label for="dropdown1">Click Dropdown</label>
-            <div class="g2 p2">
-              <a>Item 1</a>
-              <a>Item 2</a>
+            <div class="p2">
+              <div>Item 1</div>
+              <div>Item 2</div>
               <label for="dropdown1">Collapse</label>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown"&gt;
   &lt;input id="dropdown1" type="checkbox"&gt;
   &lt;label for="dropdown1"&gt;Click Dropdown&lt;/label&gt;
-  &lt;div class="g2 p2"&gt;
-    &lt;a&gt;Item 1&lt;/a&gt;
-    &lt;a&gt;Item 2&lt;/a&gt;
+  &lt;div class="p2"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
     &lt;label for="dropdown1" class="m0 p1"&gt;Collapse&lt;/label&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -569,25 +569,25 @@
           <div class="flex-row g2 mt3">
             <div class="dropdown flex-1">
               <button>Hover Dropdown</button>
-              <div class="g2 p2">
-                <a>Item 1</a>
-                <a>Item 2</a>
+              <div class="p2">
+                <div>Item 1</div>
+                <div>Item 2</div>
               </div>
               <button class="m3">Close</button>
             </div>
             <div class="dropdown right flex-1" tabindex="0">
               <button>Add "right" next to the dropdown class to open from the right.</button>
-              <div class="g2 p2">
-                <a>Item 1</a>
-                <a>Item 2</a>
+              <div class="p2">
+                <div>Item 1</div>
+                <div>Item 2</div>
               </div>
             </div>
           </div>
           <pre><code class="language-html" data-lang="html">&lt;div class="dropdown" tabindex="0"&gt;
   &lt;button&gt;Hover Dropdown&lt;/button&gt;
-  &lt;div class="g2 p2"&gt;
-    &lt;a&gt;Item 1&lt;/a&gt;
-    &lt;a&gt;Item 2&lt;/a&gt;
+  &lt;div class="p2"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
   &lt;/div&gt;
   &lt;button&gt;Optionnal close button&lt;/button&gt;
 &lt;/div&gt;</code></pre>
@@ -596,9 +596,9 @@
           <div>
             <div class="dropdown -mobile" tabindex="0">
               <button>Mobile Dropdown</button>
-              <div class="g2 p2">
-                <a>Item 1</a>
-                <a>Item 2</a>
+              <div class="p2">
+                <div>Item 1</div>
+                <div>Item 2</div>
               </div>
             </div>
           </div>
@@ -606,9 +606,9 @@
           <div>
             <div class="dropdown -desktop">
               <button>Desktop Dropdown</button>
-              <div class="g2 p2">
-                <a>Item 1</a>
-                <a>Item 2</a>
+              <div class="p2">
+                <div>Item 1</div>
+                <div>Item 2</div>
               </div>
             </div>
           </div>
