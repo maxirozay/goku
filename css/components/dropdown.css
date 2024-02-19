@@ -50,7 +50,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding-bottom: 3.5em !important;
+      padding-bottom: 0 !important;
       transform: translateY(150%);
 
       &:after {
@@ -62,11 +62,9 @@
         border-bottom: 2px solid var(--color-text);
         transform: rotate(45deg);
         display: block;
-        margin: auto;
-        position: fixed;
+        margin: 1.5em auto;
+        position: sticky;
         bottom: 1.5em;
-        right: 0;
-        left: 0;
       }
     }
 
