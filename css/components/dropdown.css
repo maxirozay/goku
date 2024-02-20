@@ -10,13 +10,13 @@
 
     &:after {
       content: '';
-      display: inline-block;
+      float: right;
       width: .4em;
       height: .4em;
       border-right: 2px solid var(--color-text);
       border-bottom: 2px solid var(--color-text);
       transform: rotate(45deg);
-      margin: .2em 0 .2em .5em;
+      margin: .25em .25em .25em .5em;
       transition: all .3s;
     }
   }
