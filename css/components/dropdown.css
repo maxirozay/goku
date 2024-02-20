@@ -1,119 +1,100 @@
 .dropdown {
-  display: inline-block;
   position: relative;
-}
 
-.dropdown > label,
-.dropdown > button:first-child {
-  background: none;
-  color: inherit;
-  border: none;
-  font-weight: normal;
-  padding: 0;
-}
+  > :is(label, button:first-child) {
+    background: none;
+    color: inherit;
+    border: none;
+    font-weight: normal;
+    padding: 0;
 
-.dropdown > label:after,
-.dropdown > button:first-child:after {
-  content: '';
-  width: .4em;
-  height: .4em;
-  border-right: 2px solid var(--color-text);
-  border-bottom: 2px solid var(--color-text);
-  transform: rotate(45deg);
-  margin: .25em .25em 0 .5em;
-  float: right;
-}
+    &:after {
+      content: '';
+      display: inline-block;
+      width: .4em;
+      height: .4em;
+      border-right: 2px solid var(--color-text);
+      border-bottom: 2px solid var(--color-text);
+      transform: rotate(45deg);
+      margin: .2em 0 .2em .5em;
+      transition: all .3s;
+    }
+  }
+  > input:checked ~ label:after {
+    transform: translateY(.2em) rotate(-135deg);
+  }
 
-.dropdown > input,
-.dropdown > div ~ button {
-  display: none;
-}
+  > input,
+  > div ~ button {
+    display: none;
+  }
 
-.dropdown > div {
-  display: flex;
-  flex-direction: column;
-  max-height: 75vh;
-  min-width: 10em;
-  overflow-y: auto;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(99px);
-  border-radius: var(--border-radius);
-  z-index: 1000;
-  transition: all .3s ease;
+  > div {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    box-sizing: border-box;
+    min-width: 10em;
+    overflow-y: auto;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(99px);
+    border-radius: var(--border-radius);
+    z-index: 1000;
+    transition: all .3s ease;
+  }
 }
 
 @media (max-width: 900px) {
   .dropdown:not(.-desktop) {
     > div {
       position: fixed;
-      bottom: 0;
+      bottom: -100vh;
       left: 0;
       right: 0;
-      padding-bottom: 3.5em !important;
-      transform: translateY(150%);
-
-      &:after {
-        content: '.';
-        color: #0000;
-        width: .5em;
-        height: .5em;
-        border-right: 2px solid var(--color-text);
-        border-bottom: 2px solid var(--color-text);
-        transform: rotate(45deg);
-        display: block;
-        margin: auto;
-        position: fixed;
-        bottom: 1.5em;
-        right: 0;
-        left: 0;
-      }
-    }
-
-    &:focus-within {
-      &:after {
-        content: '';
-        width: 100%;
-        height: 3em;
-        margin: auto;
-        display: block;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        z-index: 1001;
-        transition: all .3s ease;
-      }
+      padding-bottom: 3em !important;
+      pointer-events: none;
     }
 
     > input:checked ~ div,
-    > button:hover ~ div,
-    > button ~ div:hover {
-      transform: translateY(0);
-    }
-    > button:hover ~ div ~ button,
-    > button ~ div:hover ~ button {
-      transform: translateY(0);
-    }
-    > input:checked ~ label:before {
-      content: '';
-      width: 100%;
-      height: 3em;
-      margin: auto;
-      display: block;
-      position: fixed;
+    > button:hover ~ *,
+    > button ~ div:hover,
+    > div:hover ~ button {
       bottom: 0;
+      pointer-events: auto;
+    }
+    &:before,
+    &:after,
+    label:before {
+      content: '';
+      position: fixed;
+      transition: bottom .3s;
+      bottom: -100vh;
       right: 0;
       left: 0;
-      z-index: 1002;
+      z-index: 1001;
+    }
+    &:has(:is(button:first-child, button ~ div):hover):before,
+    > input:checked ~ label:before {
+      height: 3em;
+      bottom: 0;
+      backdrop-filter: blur(3px);
+    }
+    &:has(:is(button:first-child, button ~ div):hover, input:checked):after {
+      width: .5em;
+      height: .5em;
+      border-right: 2px solid var(--color-text);
+      border-bottom: 2px solid var(--color-text);
+      transform: rotate(45deg);
+      margin: 1.25em auto;
+      bottom: 0;
     }
     > div ~ button {
       display: block;
       position: fixed;
-      bottom: 0;
+      bottom: -100vh;
       right: 0;
       left: 0;
       z-index: 1002;
-      transform: translateY(25vh);
       transition: all .3s ease;
     }
   }
@@ -123,8 +104,7 @@
     > button {
       font-weight: bold;
     }
-    > label:after,
-    > button:after {
+    > :is(label, button):after {
       display: none;
     }
     > div {
@@ -146,26 +126,30 @@
     left: inherit;
   }
 
-  .dropdown > input:checked ~ div,
-  .dropdown:hover > button ~ div,
-  .dropdown > button:focus ~ div {
-    display: flex;
+  .dropdown {
+    > input:checked ~ div,
+    &:hover > button ~ div,
+    &:focus-within > button ~ div {
+      display: flex;
+    }
   }
 
-  .dropdown.-mobile > label,
-  .dropdown.-mobile > button {
-    font-weight: bold;
-  }
-  .dropdown.-mobile > label:after,
-  .dropdown.-mobile > button:after {
-    display: none;
-  }
-  .dropdown.-mobile > div {
-    box-shadow: none !important;
-    border: none !important;
-    max-height: none;
-    backdrop-filter: none;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  .dropdown.-mobile {
+    > :is(label, button) {
+      font-weight: bold;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    > div {
+      box-shadow: none !important;
+      border: none !important;
+      max-height: none;
+      backdrop-filter: none;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
   }
 }
