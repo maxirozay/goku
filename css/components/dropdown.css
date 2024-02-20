@@ -32,7 +32,6 @@
   > div {
     display: flex;
     flex-direction: column;
-    max-height: 100%;
     box-sizing: border-box;
     min-width: 10em;
     overflow-y: auto;
@@ -47,6 +46,7 @@
 @media (max-width: 900px) {
   .dropdown:not(.-desktop) {
     > div {
+      max-height: 100%;
       position: fixed;
       bottom: -100vh;
       left: 0;
@@ -124,6 +124,7 @@
     position: absolute;
     right: inherit;
     left: inherit;
+    max-height: 60vh;
   }
 
   .dropdown {
