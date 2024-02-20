@@ -32,7 +32,8 @@
   > div {
     display: flex;
     flex-direction: column;
-    max-height: 75vh;
+    max-height: 100%;
+    box-sizing: border-box;
     min-width: 10em;
     overflow-y: auto;
     box-shadow: var(--shadow);
@@ -47,54 +48,53 @@
   .dropdown:not(.-desktop) {
     > div {
       position: fixed;
-      bottom: 0;
+      bottom: -100vh;
       left: 0;
       right: 0;
-      padding-bottom: 0 !important;
-      transform: translateY(150%);
-
-      &:after {
-        content: '.';
-        color: #0000;
-        width: .5em;
-        height: .5em;
-        border-right: 2px solid var(--color-text);
-        border-bottom: 2px solid var(--color-text);
-        transform: rotate(45deg);
-        display: block;
-        margin: 1.5em auto;
-        position: sticky;
-        bottom: 1.5em;
-      }
+      padding-bottom: 3em !important;
+      pointer-events: none;
     }
 
     > input:checked ~ div,
     > button:hover ~ *,
     > button ~ div:hover,
     > div:hover ~ button {
-      transform: translateY(0);
-    }
-    &:focus-within:after,
-    > input:checked ~ label:before {
-      content: '';
-      width: 100%;
-      height: 3em;
-      margin: auto;
-      display: block;
-      position: fixed;
       bottom: 0;
+      pointer-events: auto;
+    }
+    &:before,
+    &:after,
+    label:before {
+      content: '';
+      position: fixed;
+      transition: bottom .3s;
+      bottom: -100vh;
       right: 0;
       left: 0;
-      z-index: 1002;
+      z-index: 1001;
+    }
+    &:has(:is(button:first-child, button ~ div):hover):before,
+    > input:checked ~ label:before {
+      height: 3em;
+      bottom: 0;
+      backdrop-filter: blur(3px);
+    }
+    &:has(:is(button:first-child, button ~ div):hover, input:checked):after {
+      width: .5em;
+      height: .5em;
+      border-right: 2px solid var(--color-text);
+      border-bottom: 2px solid var(--color-text);
+      transform: rotate(45deg);
+      margin: 1.25em auto;
+      bottom: 0;
     }
     > div ~ button {
       display: block;
       position: fixed;
-      bottom: 0;
+      bottom: -100vh;
       right: 0;
       left: 0;
       z-index: 1002;
-      transform: translateY(25vh);
       transition: all .3s ease;
     }
   }
