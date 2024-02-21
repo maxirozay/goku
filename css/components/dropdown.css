@@ -20,6 +20,9 @@
       transition: all .3s;
     }
   }
+  > label {
+    display: inline-block;
+  }
   > input:checked ~ label:after {
     transform: translateY(.2em) rotate(-135deg);
   }
