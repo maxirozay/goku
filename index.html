@@ -84,8 +84,7 @@
             You can modifiy any following CSS variable. You can do it with Javascript with something like: <pre><code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code></pre>
           </p>
           <pre><code class="language-css" data-lang="css">:root {
-  --font-family: Inter, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu,
-  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-family: sans-serif;
   --font-weight: normal;
   --font-size: 1em;
   --line-height: 1.25;
@@ -162,7 +161,7 @@
           <div class="flex g1">
             <label class="flex-1">
               font-family
-              <input type="text" value="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
+              <input type="text" value="sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
             </label>
             <label class="flex-1">
               font-weight
