@@ -1,6 +1,5 @@
 :root {
-  --font-family: Inter, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu,
-  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-family: sans-serif;
   --font-weight: normal;
   --font-size: 1em;
   --line-height: 1.25;
