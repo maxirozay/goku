@@ -20,9 +20,6 @@
       transition: all .3s;
     }
   }
-  > label {
-    display: inline-block;
-  }
   > input:checked ~ label:after {
     transform: translateY(.2em) rotate(-135deg);
   }
@@ -90,6 +87,7 @@
       transform: rotate(45deg);
       margin: 1.25em auto;
       bottom: 0;
+      pointer-events: none;
     }
     > div ~ button {
       display: block;
