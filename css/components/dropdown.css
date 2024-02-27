@@ -72,10 +72,10 @@
       right: 0;
       left: 0;
       z-index: 1001;
+      height: 3em;
     }
     &:has(:is(button:first-child, button ~ div):hover):before,
     > input:checked ~ label:before {
-      height: 3em;
       bottom: 0;
       backdrop-filter: blur(3px);
     }
