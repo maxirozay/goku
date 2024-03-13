@@ -67,7 +67,7 @@
     label:before {
       content: '';
       position: fixed;
-      transition: bottom .3s;
+      transition: bottom .2s .1s;
       bottom: -100vh;
       right: 0;
       left: 0;
