@@ -219,7 +219,7 @@
 /* Flex */
 
 .flex {
-  display: flex;
+  display: flex !important;
 }
 
 @media (max-width: 600px) {
@@ -229,24 +229,24 @@
 }
 
 .flex-wrap {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
 }
 
 .flex-center {
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
 
 .flex-column {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
 }
 
 .flex-row {
-  display: flex;
+  display: flex !important;
 }
 
 .flex-auto {
