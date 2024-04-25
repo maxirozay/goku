@@ -75,12 +75,12 @@
       z-index: 1001;
       height: 3em;
     }
-    &:has(:is(button:first-child, button ~ div):hover):before,
+    &:has(> :is(button:first-child, button ~ div):hover):before,
     > input:checked ~ label:before {
       bottom: 0;
       backdrop-filter: blur(3px);
     }
-    &:has(:is(button:first-child, button ~ div):hover, input:checked):after {
+    &:has(> :is(button:first-child, button ~ div):hover, > input:checked):after {
       width: .5em;
       height: .5em;
       border-right: 2px solid var(--color-text);
