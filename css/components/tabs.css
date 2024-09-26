@@ -14,8 +14,7 @@
   margin: 0;
   border-bottom-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
-  border-bottom: none;
-  box-shadow: none;
+  border: 0;
 }
 .tabs__content {
   margin-top: 0;
