@@ -32,4 +32,7 @@ input[type=date] {
 *:disabled {
   opacity: 0.5;
   cursor: default;
+  background: #8888;
+  border-color: #8888;
+  color: var(--color-text);
 }

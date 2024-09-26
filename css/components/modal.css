@@ -10,9 +10,10 @@
 }
 
 .modal > div {
-  background: var(--color-bg);
+  background: var(--color-fg);
   z-index: 10001;
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   margin: auto;
   max-height: 80%;
   overflow-y: auto;
