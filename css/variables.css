@@ -12,7 +12,7 @@
   --dark-fg: #282828;
   --dark-text: #e7e7e7;
   --dark-input: #444;
-  --dark-input-border: #444;
+  --dark-input-border: #666;
   --dark-button: #f84;
   --dark-button-border: #f84;
   --dark-button-text: #1a1a1a;
@@ -25,7 +25,7 @@
   --light-fg: #f6f6f6;
   --light-text: #000;
   --light-input: #eee;
-  --light-input-border: #e8e8e8;
+  --light-input-border: #ddd;
   --light-button: #f84;
   --light-button-border: #f84;
   --light-button-text: #1a1a1a;
@@ -49,7 +49,7 @@
   --margin-ratio2: 10;
   --margin-ratio3: 20;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --gap: 2px;
+  --gap: 1px;
   --gap-ratio2: 4;
   --gap-ratio3: 8;
   --shadow: 0 0 3px 2px #8883;

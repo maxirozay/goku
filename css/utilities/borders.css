@@ -8,6 +8,18 @@
   overflow: hidden;
 }
 
-.group > * {
-  border-radius: 0 !important;
+.group {
+  border: var(--border-width) solid var(--color-input-border);
+  background: var(--color-input-border);
+
+  &:focus-within,
+  &:hover {
+    border-color: var(--primary-color-active);
+  }
+
+  > * {
+    border-radius: 0 !important;
+    outline: 0;
+    border: 0;
+  }
 }

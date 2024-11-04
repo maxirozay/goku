@@ -97,7 +97,7 @@
   --dark-fg: #282828;
   --dark-text: #e7e7e7;
   --dark-input: #444;
-  --dark-input-border: #444;
+  --dark-input-border: #666;
   --dark-button: #f84;
   --dark-button-border: #f84;
   --dark-button-text: #1a1a1a;
@@ -110,7 +110,7 @@
   --light-fg: #f6f6f6;
   --light-text: #000;
   --light-input: #eee;
-  --light-input-border: #e8e8e8;
+  --light-input-border: #ddd;
   --light-button: #f84;
   --light-button-border: #f84;
   --light-button-text: #1a1a1a;
@@ -134,7 +134,7 @@
   --margin-ratio2: 10;
   --margin-ratio3: 20;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --gap: 2px;
+  --gap: 1px;
   --gap-ratio2: 4;
   --gap-ratio3: 8;
   --shadow: 0 0 3px 2px #8883;
@@ -177,7 +177,7 @@
 }</code></pre>
 
           <h3>Try to change those variables</h3>
-          <div class="flex g1">
+          <div class="flex g2">
             <label class="flex-1">
               font-family
               <input type="text" value="sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
@@ -188,7 +188,7 @@
             </label>
           </div>
 
-          <div class="flex g1 mb2 text-center">
+          <div class="flex g2 mb2 text-center">
             <label class="flex-auto p1">
               Primary color
               <input
@@ -212,7 +212,7 @@
             </label>
           </div>
 
-          <div class="flex g1 ">
+          <div class="flex g2 ">
             <label class="flex-1">
               Border radius
               <input
@@ -238,7 +238,7 @@
             <input type="text" value="0 0 3px 2px #8883" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
           </label>
 
-          <div class="flex g1">
+          <div class="flex g2">
             <label class="flex-1">
               padding-top
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
@@ -256,7 +256,7 @@
               <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
             </label>
           </div>
-          <div class="flex g1">
+          <div class="flex g2">
             <label class="flex-1">
               padding-ratio2
               <input type="number" value="2" onkeyup="document.documentElement.style.setProperty('--padding-ratio2', event.target.value)">
@@ -267,7 +267,7 @@
             </label>
           </div>
 
-          <div class="flex g1">
+          <div class="flex g2">
             <label class="flex-1">
               margin-top
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
@@ -285,7 +285,7 @@
               <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
             </label>
           </div>
-          <div class="flex g1">
+          <div class="flex g2">
             <label class="flex-1">
               margin-ratio2
               <input type="number" value="8" onkeyup="document.documentElement.style.setProperty('--margin-ratio2', event.target.value)">
@@ -309,7 +309,7 @@
           </div>
 
           <h3 id="input">Input</h3>
-          <div class="flex g1">
+          <div class="flex g2">
             <label class="flex-auto">
               Text
               <input type="text">
@@ -886,11 +886,9 @@
           <button class="pulse-bg">button</button>
           <button class="spin">button</button>
           <button class="pulse-bg spin">button</button>
-          <pre><code class="language-html" data-lang="html">
-&lt;button class="pulse-bg"&gt;button&lt;/button&gt;
+          <pre><code class="language-html" data-lang="html">&lt;button class="pulse-bg"&gt;button&lt;/button&gt;
 &lt;button class="spin"&gt;button&lt;/button&gt;
-&lt;button class="pulse-bg spin"&gt;button&lt;/button&gt;
-          </code></pre>
+&lt;button class="pulse-bg spin"&gt;button&lt;/button&gt;</code></pre>
         </section>
       </div>
     </div>
