@@ -47,17 +47,17 @@
   display: inline-block;
   padding: var(--padding);
 
-  & .bar {
+  .bar {
     transition: .3s;
     background: var(--primary-color);
     margin: 1px auto;
     width: 12px;
     height: 4px;
   }
-  & .bar:first-child {
+  .bar:first-child {
     transform: rotate(-45deg);
   }
-  & .bar:last-child {
+  .bar:last-child {
     transform:  rotate(45deg);
   }
 }

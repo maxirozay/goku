@@ -22,7 +22,7 @@ nav > input {
   nav {
     gap: 24px;
 
-    & > .content {
+    > .content {
       position: fixed;
       top: 0;
       left: 100%;
@@ -37,44 +37,44 @@ nav > input {
       opacity: 0;
       z-index: 101;
     }
-    & > .content > *:not(button) {
+    > .content > *:not(button) {
       padding-bottom: 1em;
       border-bottom: 1px solid #8884;
       margin: 0 !important;
     }
 
-    & > .toggle {
+    > .toggle {
       z-index: 102;
       padding: 12px;
       margin: -12px;
       -webkit-tap-highlight-color: #0000;
     }
-    & > .toggle > div {
+    > .toggle > div {
       width: 20px;
       height: 2px;
       background: var(--color-text);
       transition: all .2s;
     }
-    & > .toggle > div:nth-child(2) {
+    > .toggle > div:nth-child(2) {
       margin: 4px 0;
     }
   }
 
   nav > input {
     &:checked {
-      & ~ .content {
+      ~ .content {
         left: 0;
         opacity: 1;
         transition: opacity .3s;
       }
-      & ~ .toggle > div:first-child {
+      ~ .toggle > div:first-child {
         transform: translateY(1px) rotate(45deg);
       }
-      & ~ .toggle > div:nth-child(2):not(:last-child) {
+      ~ .toggle > div:nth-child(2):not(:last-child) {
         opacity: 0;
         position: absolute;
       }
-      & ~ .toggle > div:last-child {
+      ~ .toggle > div:last-child {
         transform: translateY(-1px) rotate(-45deg);
       }
     }
@@ -83,10 +83,10 @@ nav > input {
 
 @media (min-width: 900px) {
   nav {
-    & > .content > * {
+    > .content > * {
       margin-left: 1rem;
     }
-    & > .toggle {
+    > .toggle {
       display: none;
     }
   }
