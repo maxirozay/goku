@@ -11,7 +11,9 @@
 .bg,
 .bg-border,
 .fg,
-.fg-border {
+.fg-border,
+.input,
+.input-border {
   border-radius: var(--border-radius);
 }
 .primary-border,
@@ -20,8 +22,9 @@
 .warning-border,
 .error-border,
 .bg-border,
-.fg-border {
-  border: var(--border-width) solid;
+.fg-border,
+.input-border {
+  border: var(--border-width) solid !important;
 }
 
 .primary {
@@ -78,4 +81,12 @@
 }
 .fg-border {
   border-color: var(--color-fg) !important;
+}
+
+.input {
+  background: var(--color-input) !important;
+  color: var(--color-input-text) !important;
+}
+.input-border {
+  border-color: var(--color-input-border) !important;
 }
