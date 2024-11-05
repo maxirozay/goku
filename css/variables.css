@@ -5,7 +5,7 @@
   --line-height: 1.25;
   --dark-primary-color: #f84;
   --dark-primary-color-text: #000;
-  --dark-primary-color-active: #842;
+  --dark-primary-color-active: #f84;
   --dark-secondary-color: #555;
   --dark-secondary-color-text: #fff;
   --dark-bg: #1a1a1a;
@@ -18,7 +18,7 @@
   --dark-button-text: #1a1a1a;
   --light-primary-color: #f84;
   --light-primary-color-text: #000;
-  --light-primary-color-active: #fb8;
+  --light-primary-color-active: #f84;
   --light-secondary-color: #ddd;
   --light-secondary-color-text: #000;
   --light-bg: #fff;
