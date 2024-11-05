@@ -4,13 +4,9 @@ progress {
   border-radius: 16px;
   border: var(--border-width) solid var(--secondary-color);
   overflow: hidden;
+  animation: pulse-bg 3s infinite;
 }
 
-progress::-moz-progress-bar,
-progress::-webkit-progress-bar {
-  -webkit-animation: loading 3s linear infinite;
-        animation: loading 3s linear infinite;
-}
 progress::-webkit-progress-value {
   background: var(--primary-color);
 }
