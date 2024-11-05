@@ -2,7 +2,7 @@
   display: inline-block;
   padding: var(--padding-input);
   background: var(--color-input);
-  color: var(--color-text);
+  color: var(--color-input-text);
   border-color: var(--color-input-border);
   border-radius: var(--border-radius);
   text-align: center;
@@ -71,6 +71,7 @@ input[type=radio] {
 input[type=radio] + label {
   padding: var(--padding-input);
   background: var(--color-input);
+  color: var(--color-input-text);
 }
 input[type=radio]:checked + label {
   background: var(--primary-color) !important;

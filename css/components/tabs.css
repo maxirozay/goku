@@ -23,7 +23,7 @@
 
   > a {
     border-bottom: 2px solid var(--color-input-border);
-    color: var(--color-text);
+    color: var(--color-input-text);
 
     &:first-child {
       padding-left: 0;

@@ -3,7 +3,7 @@
 
   > :is(label, button:first-child) {
     background: none;
-    color: inherit;
+    color: var(--color-input-text);
     border: none;
     font-weight: normal;
     padding: 0;

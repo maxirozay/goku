@@ -5,12 +5,13 @@ nav {
   align-items: center;
   z-index: 100;
 
-  & > .content {
+  > .content {
     display: flex;
-  }
 
-  & > .content a {
-    color: inherit;
+    & a,
+    > .dropdown > * {
+      color: inherit !important;
+    }
   }
 }
 nav > input {

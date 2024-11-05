@@ -21,7 +21,7 @@ input,
 textarea,
 select {
   background: var(--color-input);
-  color: var(--color-text);
+  color: var(--color-input-text);
   border-color: var(--color-input-border);
 }
 
