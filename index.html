@@ -9,9 +9,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-twilight.min.css">
   </head>
-  <body class="m0 p0">
+  <body class="flex-column" style="max-height: 100vh;">
 
-    <nav class="fixed top left right shadow p2">
+    <nav class="shadow p2">
       <a href="/" class="mr"><b>Goku CSS</b></a>
       <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle">
@@ -63,18 +63,17 @@
       </div>
     </nav>
 
-    <div>
+    <div class="flex-auto overflow-y">
       <div class="portrait p2">
 
         <section>
           <h2>Getting started</h2>
-          <p>
-            To use Goku CSS you only need to install and import it.
-          </p>
+          To use Goku CSS you only need to install it.
           <pre><code class="language-bash">yarn add goku-css</code> or <code class="language-bash">npm install goku-css</code></pre>
-          <br>
-          Then import 'goku-css' and code your HTML the elements are styled directly and you can use the classes available for more options.
-          For a ready to use version you can import `goku-css/docs/index.css`.
+          Then import it.
+          <pre><code class="language-javascript" data-lang="javascript"></code>import 'goku-css'</pre>
+          For a ready to use version you can import the follwing file.
+          <pre><code class="language-javascript" data-lang="javascript"></code>import 'goku-css/docs/index.css'</pre>
         </section>
         <hr>
         <section id="customization">
