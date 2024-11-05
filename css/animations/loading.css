@@ -4,14 +4,9 @@
 }
 
 @keyframes pulse-bg {
-  0% {
-    background: var(--primary-color);
-  }
   50% {
     background: var(--primary-color-active);
-  }
-  100% {
-    background: var(--primary-color);
+    opacity: .5;
   }
 }
 
@@ -21,7 +16,7 @@
 
   &:after {
     content: '';
-    border: 2px solid var(--primary-color-active);
+    border: 2px solid var(--color-button-text);
     border-top-color: #0000;
     border-bottom-color: #0000;
     border-radius: 100%;
