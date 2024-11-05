@@ -25,57 +25,57 @@
 }
 
 .primary {
-  background: var(--primary-color);
-  color: var(--primary-color-text);
+  background: var(--primary-color) !important;
+  color: var(--primary-color-text) !important;
 }
 .primary-border {
-  border-color: var(--primary-color);
+  border-color: var(--primary-color) !important;
 }
 
 .secondary {
-  background: var(--secondary-color);
-  color: var(--secondary-color-text);
+  background: var(--secondary-color) !important;
+  color: var(--secondary-color-text) !important;
 }
 .secondary-border {
-  border-color: var(--secondary-color);
+  border-color: var(--secondary-color) !important;
 }
 
 .success {
-  background: var(--success-color);
-  color: #1a1a1a;
+  background: var(--success-color) !important;
+  color: #1a1a1a !important;
 }
 .success-border {
-  border-color: var(--success-color);
+  border-color: var(--success-color) !important;
 }
 
 .warning {
-  background: var(--warning-color);
-  color: #1a1a1a;
+  background: var(--warning-color) !important;
+  color: #1a1a1a !important;
 }
 .warning-border {
-  border-color: var(--warning-color);
+  border-color: var(--warning-color) !important;
 }
 
 .error {
-  background: var(--error-color);
-  color: #1a1a1a;
+  background: var(--error-color) !important;
+  color: #1a1a1a !important;
 }
 .error-border {
-  border-color: var(--error-color);
+  border-color: var(--error-color) !important;
 }
 
 .bg {
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-bg) !important;
+  color: var(--color-text) !important;
 }
 .bg-border {
-  border-color: var(--color-bg);
+  border-color: var(--color-bg) !important;
 }
 
 .fg {
-  background: var(--color-fg);
-  color: var(--color-text);
+  background: var(--color-fg) !important;
+  color: var(--color-text) !important;
 }
 .fg-border {
-  border-color: var(--color-fg);
+  border-color: var(--color-fg) !important;
 }

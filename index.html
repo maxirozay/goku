@@ -632,31 +632,72 @@
   &lt;div&gt;last child&lt;/div&gt;
 &lt;/div&gt;</code></pre>
           <h3 id="tabs">Tabs</h3>
-          <div class="tabs g1">
-            <button class="flex-1">
-              flex-1
-            </button>
-            <button class="flex-1 fg">
-              flex-1 fg
-            </button>
-            <button class="flex-1">
-              flex-1
-            </button>
-            <button class="flex-1">
-              flex-1
-            </button>
+          <div class="tabs">
+            <a>link 1</a>
+            <a class="active">link 2</a>
+            <a>link 3</a>
+            <a>link 4</a>
           </div>
-          <div class="fg p1 tabs__content">
-            fg tabs__content
-          </div>
-
-          <pre><code class="language-html" data-lang="html">&lt;div class="tabs g1"&gt;
-  &lt;button class="flex-1"&gt;flex-1&lt;/button&gt;
-  &lt;button class="flex-1 fg"&gt;flex-1 active fg&lt;/button&gt;
-  &lt;button class="flex-1"&gt;flex-1&lt;/button&gt;
-  &lt;button class="flex-1"&gt;flex-1&lt;/button&gt;
+          <div class="py1">content</div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="tabs"&gt;
+  &lt;a&gt;link 1&lt;/a&gt;
+  &lt;a class="active"&gt;link 2&lt;/a&gt;
+  &lt;a&gt;link 3&lt;/a&gt;
+  &lt;a&gt;link 4&lt;/a&gt;
 &lt;/div&gt;
-&lt;div class="fg tabs__content"&gt;fg tabs__content&lt;/div&gt;</code></pre>
+&lt;div class="py1"&gt;content&lt;/div&gt;</code></pre>
+          <div class="tabs g1 mt2">
+            <label for="tab1">
+              Radio 1
+              <input type="radio" name="tabs" id="tab1">
+            </label>
+            <label for="tab2" class="secondary">
+              Radio 2
+              <input type="radio" name="tabs" id="tab2">
+            </label>
+            <label for="tab3">
+              Radio 3
+              <input type="radio" name="tabs" id="tab3">
+            </label>
+            <label for="tab3">
+              Radio 4
+              <input type="radio" name="tabs" id="tab4">
+            </label>
+          </div>
+          <div class="secondary p1">content</div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="tabs g1 mt2"&gt;
+  &lt;label for="tab1"&gt;
+    Radio 1
+    &lt;input type="radio" name="tabs" id="tab1"&gt;
+  &lt;/label&gt;
+  &lt;label for="tab2" class="secondary"&gt;
+    Radio 2
+    &lt;input type="radio" name="tabs" id="tab2"&gt;
+  &lt;/label&gt;
+  &lt;label for="tab3"&gt;
+    Radio 3
+    &lt;input type="radio" name="tabs" id="tab3"&gt;
+  &lt;/label&gt;
+  &lt;label for="tab3"&gt;
+    Radio 4
+    &lt;input type="radio" name="tabs" id="tab4"&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="secondary p1"&gt;content&lt;/div&gt;</code></pre>
+          <div class="tabs g1 mt2">
+            <button>button 1</button>
+            <button class="secondary">button 2</button>
+            <button>button 3</button>
+            <button>button 4</button>
+          </div>
+          <div class="secondary p1">content</div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="tabs g1 mt2"&gt;
+  &lt;button&gt;button 1&lt;/button&gt;
+  &lt;button class="secondary"&gt;button 2&lt;/button&gt;
+  &lt;button&gt;button 3&lt;/button&gt;
+  &lt;button&gt;button 4&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="secondary p1"&gt;content&lt;/div&gt;</code></pre>
 
         </section>
         <hr>
