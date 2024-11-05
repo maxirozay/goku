@@ -6,7 +6,6 @@
   }
 
   > * {
-    padding: var(--padding-input);
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
     border-bottom-right-radius: 0 !important;
@@ -19,15 +18,13 @@
     background: var(--color-input);
     color: var(--color-input-text);
     flex: 1;
+    padding: var(--padding-input);
   }
 
   > a {
     border-bottom: 2px solid var(--color-input-border);
     color: var(--color-input-text);
-
-    &:first-child {
-      padding-left: 0;
-    }
+    padding-bottom: var(--padding-b);
 
     &.active {
       background: inherit;
