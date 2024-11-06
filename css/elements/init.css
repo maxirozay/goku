@@ -39,6 +39,6 @@ input[type=date] {
 
 hr {
   border: 0;
-  border-top: var(--border-width) solid #8882;
+  border-top: var(--border-width) solid #8884;
   margin: calc(var(--margin-t) * var(--margin-ratio2)) 0;
 }

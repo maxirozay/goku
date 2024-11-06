@@ -39,7 +39,7 @@ nav > input {
     }
     > .content > *:not(button) {
       padding-bottom: 1em;
-      border-bottom: 1px solid #8884;
+      border-bottom: 1px solid #8888;
       margin: 0 !important;
     }
 
