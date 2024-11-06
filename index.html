@@ -220,6 +220,13 @@
                 value="#ff8f4f"
                 onchange="document.documentElement.style.setProperty('--color-button', event.target.value)">
             </label>
+            <label class="flex-auto p1">
+              Button text color 
+              <input
+                type="color"
+                value="#000"
+                onchange="document.documentElement.style.setProperty('--color-button-text', event.target.value)">
+            </label>
           </div>
 
           <div class="flex g2 ">
@@ -250,58 +257,46 @@
 
           <div class="flex g2">
             <label class="flex-1">
-              padding-top
-              <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-t', event.target.value)">
+              padding
+              <input
+                type="text"
+                value="0.5rem"
+                onkeyup="
+                  document.documentElement.style.setProperty('--padding-t', event.target.value);
+                  document.documentElement.style.setProperty('--padding-r', event.target.value);
+                  document.documentElement.style.setProperty('--padding-b', event.target.value);
+                  document.documentElement.style.setProperty('--padding-l', event.target.value)
+              ">
             </label>
             <label class="flex-1">
-              padding-right
-              <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-r', event.target.value)">
-            </label>
-            <label class="flex-1">
-              padding-bottom
-              <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-b', event.target.value)">
-            </label>
-            <label class="flex-1">
-              padding-left
-              <input type="text" value="0.5rem" onkeyup="document.documentElement.style.setProperty('--padding-l', event.target.value)">
-            </label>
-          </div>
-          <div class="flex g2">
-            <label class="flex-1">
-              padding-ratio2
+              padding ratio 2
               <input type="number" value="2" onkeyup="document.documentElement.style.setProperty('--padding-ratio2', event.target.value)">
             </label>
             <label class="flex-1">
-              padding-ratio3
+              padding ratio 3
               <input type="number" value="3" onkeyup="document.documentElement.style.setProperty('--padding-ratio3', event.target.value)">
             </label>
           </div>
 
           <div class="flex g2">
             <label class="flex-1">
-              margin-top
-              <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-t', event.target.value)">
+              margin
+              <input
+                type="text"
+                value="1px"
+                onkeyup="
+                  document.documentElement.style.setProperty('--margin-t', event.target.value);
+                  document.documentElement.style.setProperty('--margin-b', event.target.value);
+                  document.documentElement.style.setProperty('--margin-l', event.target.value);
+                  document.documentElement.style.setProperty('--margin-r', event.target.value);
+              ">
             </label>
             <label class="flex-1">
-              margin-right
-              <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-r', event.target.value)">
-            </label>
-            <label class="flex-1">
-              margin-bottom
-              <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-b', event.target.value)">
-            </label>
-            <label class="flex-1">
-              margin-left
-              <input type="text" value="1px" onkeyup="document.documentElement.style.setProperty('--margin-l', event.target.value)">
-            </label>
-          </div>
-          <div class="flex g2">
-            <label class="flex-1">
-              margin-ratio2
+              margin ratio 2
               <input type="number" value="8" onkeyup="document.documentElement.style.setProperty('--margin-ratio2', event.target.value)">
             </label>
             <label class="flex-1">
-              margin-ratio3
+              margin ratio 3
               <input type="number" value="16" onkeyup="document.documentElement.style.setProperty('--margin-ratio3', event.target.value)">
             </label>
           </div>
