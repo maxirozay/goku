@@ -8,17 +8,18 @@
     font-weight: normal;
     padding: 0;
     display: inline-block;
+    white-space: nowrap;
 
     &:after {
       content: '';
-      float: right;
-      width: .4em;
-      height: .4em;
+      width: .3em;
+      height: .3em;
       border-right: 2px solid;
       border-bottom: 2px solid;
       transform: rotate(45deg);
       margin: .25em .25em .25em .5em;
       transition: all .3s;
+      display: inline-block;
     }
   }
   > input:checked ~ label:after {
