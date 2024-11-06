@@ -31,6 +31,8 @@ input,
 textarea,
 select  {
   width: 100%;
+  accent-color: var(--primary-color);
+  caret-color: var(--primary-color);
 }
 
 select  {
@@ -115,15 +117,4 @@ input[type="color"] {
 input[type='range'] {
   appearance: none;
   height: .5em;
-}
-input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
-  background: var(--primary-color);
-  border-radius: 100%;
-}
-input[type="range"]::-moz-range-thumb {
-  background: var(--primary-color);
-  border-radius: 100%;
 }
