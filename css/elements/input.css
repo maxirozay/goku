@@ -37,11 +37,11 @@ input[type=checkbox] {
   appearance: none;
   background: var(--color-input);
   border: var(--border-width) solid var(--color-input-border);
-  width: 2.5em;
-  height: 1.25em;
+  width: 2em;
+  height: 1em;
   transition: .2s all;
   border-radius: 1em;
-  padding: 3px;
+  padding: 2px;
   margin: 0;
   box-sizing: content-box;
   vertical-align: sub;
@@ -49,8 +49,8 @@ input[type=checkbox] {
   &:after {
     content: '';
     display: inline-block;
-    width: 1.25em;
-    height: 1.25em;
+    width: 1em;
+    height: 1em;
     background: #888;
     border-radius: 100%;
     transition: inherit;
@@ -60,7 +60,7 @@ input[type=checkbox] {
 
     &:after {
       background: var(--primary-color-text);
-      margin-left: 1.25em;
+      margin-left: 1em;
     }
   }
 }
