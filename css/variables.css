@@ -40,10 +40,10 @@
   --error-color: #e54;
   --border-radius: 4px;
   --border-width: 1px;
-  --padding-t: 0.5em;
-  --padding-r: 0.5em;
-  --padding-b: 0.5em;
-  --padding-l: 0.5em;
+  --padding-t: 8px;
+  --padding-r: 8px;
+  --padding-b: 8px;
+  --padding-l: 8px;
   --padding-ratio2: 2;
   --padding-ratio3: 3;
   --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
