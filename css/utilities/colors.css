@@ -14,9 +14,11 @@
 .fg-border,
 .input,
 .input-border {
-  border-radius: var(--border-radius);
+  &:not(.bt, .br, .bb, .bl) {
+    border-radius: var(--border-radius);
+  }
 }
-.primary-border,
+.primary-border:not(.bt),
 .secondary-border,
 .success-border,
 .warning-border,
@@ -24,7 +26,9 @@
 .bg-border,
 .fg-border,
 .input-border {
-  border: var(--border-width) solid !important;
+  &:not(.bt, .br, .bb, .bl) {
+    border: var(--border-width) solid;
+  }
 }
 
 .primary {
