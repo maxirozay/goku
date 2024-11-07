@@ -8,8 +8,7 @@ nav {
   > .content {
     display: flex;
 
-    & a,
-    > .dropdown > * {
+    & a {
       color: inherit !important;
     }
   }

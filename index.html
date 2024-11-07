@@ -22,7 +22,7 @@
       <div class="content">
         <a href="#customization">Customization</a>
         <div class="dropdown -desktop right">
-          <button>Elements</button>
+          <a href="#elements">Elements</a>
           <div class="g3 p2">
             <a href="#button">Button</a>
             <a href="#input">Input</a>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="dropdown -desktop right">
-          <button>Components</button>
+          <a href="#components">Components</a>
           <div class="g3 p2">
             <a href="#accordion">Accordion</a>
             <a href="#drawer">Drawer</a>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="dropdown -desktop right">
-          <button>Utilities</button>
+          <a href="#utilities">Utilities</a>
           <div class="g3 p2">
             <a href="#borders">Borders</a>
             <a href="#colors">Colors</a>
@@ -308,7 +308,7 @@
           </div>
         </section>
         <hr>
-        <section>
+        <section id="elements">
           <h2>Elements</h2>
           <p>You don't need to do do anything for the basic HTML elements. They are already styled based on the values of CSS variables.</p>
 
@@ -465,7 +465,7 @@
           </table>
         </section>
         <hr>
-        <section>
+        <section id="Components">
           <h2>Components</h2>
           <h3 id="accordion">Accordion</h3>
           <p>Use radio inputs for a group of accordion or checkbox to toggle the accordions one by one.</p>
@@ -580,10 +580,9 @@
                 <div>Item 1</div>
                 <div>Item 2</div>
               </div>
-              <button class="m3">Close</button>
             </div>
-            <div class="dropdown right flex-1" tabindex="0">
-              <button class="w text-right">Add "right" next to the dropdown class to open from the right.</button>
+            <div class="dropdown right ml flex-1 flex" tabindex="0">
+              <span class="ml">Add "right" next to the dropdown class to open from the right.</span>
               <div class="p2">
                 <div>Item 1</div>
                 <div>Item 2</div>
@@ -598,19 +597,11 @@
   &lt;/div&gt;
   &lt;button&gt;Optionnal close button&lt;/button&gt;
 &lt;/div&gt;</code></pre>
-          <div class="dropdown flex-1">
-            <button class="input input-border p-input">input input-border p-input</button>
-            <div class="p2">
-              <div>Item 1</div>
-              <div>Item 2</div>
-            </div>
-            <button class="m3">Close</button>
-          </div>
 
           <p>Add the class <code class="language-css" data-lang="css">-mobile</code> or <code class="language-css" data-lang="css">-desktop</code> next to dropdown to have a mobile/desktop only dropdown</p>
           <div>
             <div class="dropdown -mobile" tabindex="0">
-              <button>Mobile Dropdown</button>
+              <button>Mobile Dropdown</button> <!-- You can also use <span> or <a> -->
               <div class="p2">
                 <div>Item 1</div>
                 <div>Item 2</div>
@@ -711,7 +702,7 @@
 
         </section>
         <hr>
-        <section>
+        <section id="utilities">
           <h2>Utilities</h2>
           <p>The utilities classes used in those elements are the one displayed on each element.</p>
 

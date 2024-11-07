@@ -1,26 +1,16 @@
 .dropdown {
   position: relative;
 
-  > :is(label, button:first-child) {
-    background: none;
-    color: var(--color-input-text);
-    border: none;
-    font-weight: normal;
-    padding: 0;
+  > :has(+ div):after {
+    content: '';
+    width: .3em;
+    height: .3em;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(45deg);
+    margin: .25em .25em .25em .5em;
+    transition: all .3s;
     display: inline-block;
-    white-space: nowrap;
-
-    &:after {
-      content: '';
-      width: .3em;
-      height: .3em;
-      border-right: 2px solid #888;
-      border-bottom: 2px solid #888;
-      transform: rotate(45deg);
-      margin: .25em .25em .25em .5em;
-      transition: all .3s;
-      display: inline-block;
-    }
   }
   > input:checked ~ label:after {
     transform: translateY(.2em) rotate(-135deg);
@@ -58,9 +48,8 @@
     }
 
     > input:checked ~ div,
-    > button:hover ~ *,
-    > button ~ div:hover,
-    > div:hover ~ button {
+    > :is(button, span, a):hover ~ *,
+    > :is(button, span, a) ~ div:hover {
       bottom: 0;
       pointer-events: auto;
     }
@@ -76,12 +65,12 @@
       z-index: 1001;
       height: 3em;
     }
-    &:has(> :is(button:first-child, button ~ div):hover):before,
+    &:has(> :is(button, span, a):hover, > :is(button, span, a) + div:hover):before,
     > input:checked ~ label:before {
       bottom: 0;
       backdrop-filter: blur(3px);
     }
-    &:has(> :is(button:first-child, button ~ div):hover, > input:checked):after {
+    &:has(> input:checked, > :is(button, span, a):hover, > :is(button, span, a) + div:hover):after {
       width: .5em;
       height: .5em;
       border-right: 2px solid;
@@ -91,25 +80,21 @@
       bottom: 0;
       pointer-events: none;
     }
-    > div ~ button {
-      display: block;
-      position: fixed;
-      bottom: -100vh;
-      right: 0;
-      left: 0;
-      z-index: 1002;
-      transition: all .3s ease;
-    }
   }
 
   .dropdown.-desktop {
-    > label,
-    > button {
+    > :has(+ div) {
       font-weight: bold;
+      background: none;
+      color: var(--color-header-text) !important;
+      border: 0;
+      padding: 0;
+
+      &:after {
+        display: none;
+      }
     }
-    > :is(label, button):after {
-      display: none;
-    }
+
     > div {
       box-shadow: none;
       border: none !important;
@@ -132,15 +117,20 @@
 
   .dropdown {
     > input:checked ~ div,
-    &:hover > button ~ div,
-    &:focus-within > button ~ div {
+    &:hover > :not(input, label) ~ div,
+    &:focus-within > :is(button, span, a) ~ div {
       display: flex;
+      top: 100%;
     }
   }
 
   .dropdown.-mobile {
-    > :is(label, button) {
+    > :has(+ div) {
       font-weight: bold;
+      background: none;
+      color: var(--color-header-text) !important;
+      border: 0;
+      padding: 0;
 
       &:after {
         display: none;
