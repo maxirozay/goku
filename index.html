@@ -79,10 +79,14 @@
         <section id="customization">
           <h2>Customization</h2>
 
-          <p>
-            You can modifiy any following CSS variable. You can do it with Javascript with something like: <pre><code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code></pre>
-          </p>
-          <pre><code class="language-css" data-lang="css">:root {
+          <p>You can modifiy any CSS variable directly with CSS or with Javascript with something like: <pre><code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code></pre></p>
+          <div class="accordion fg">
+            <label for="variables" class="p1">
+              See all variables
+            </label>
+            <input id="variables" type="checkbox">
+            <div class="p1">
+              <pre><code class="language-css" data-lang="css">:root {
   --font-family: sans-serif;
   --font-weight: normal;
   --font-size: 1em;
@@ -185,6 +189,8 @@
     --link-color: var(--dark-link);
   }
 }</code></pre>
+            </div>
+          </div>
 
           <h3>Try to change those variables</h3>
           <div class="flex g2">
@@ -762,7 +768,7 @@
             </div>
           </div>
           <p>
-            You can also use <code class="language-css" data-lang="css">flex-x</code> where x is a digit from 1 to 8.
+            You can also use <code class="language-css" data-lang="css">flex-*</code> where * is a digit from 1 to 8.
           </p>
           <div class="flex g1">
             <div class="fg  flex-2 p1">
@@ -820,26 +826,8 @@
           <p>
             Use <code class="language-css" data-lang="css">flex-center</code> to align everything in the center.
           </p>
-          <div class="fg  flex-center flex-wrap g1 text-center" style="min-height: 200px">
-            <div class="bg p1 flex-1" style="min-width: 200px">
-              div
-            </div>
-            <div class="bg flex-1" style="min-width: 200px">
-              div
-            </div>
-            <div class="bg p1 flex-1" style="min-width: 200px;height: 80px">
-              div
-            </div>
-            <div class="bg flex-1" style="min-width: 200px;height: 40px">
-              div
-            </div>
-            <div class="bg flex-1" style="min-width: 200px">
-              div
-            </div>
-            <div class="bg flex-1" style="min-width: 200px">
-              div
-            </div>
-            <div class="bg flex-1" style="min-width: 200px">
+          <div class="fg  flex-center p2">
+            <div class="secondary p1" style="width: 200px;">
               div
             </div>
           </div>
@@ -885,36 +873,11 @@
             <span class="fg">clearfix</span>
             <span class="fg  float-left">float-left</span>
           </div>
-          <p>You can also use the following classes:</p>
-          <pre><code class="language-css" data-lang="css">.absolute {
-  position: absolute;
-}
-.fixed {
-  position: fixed;
-}
-.relative {
-  position: relative;
-}
-.static {
-  position: static;
-}
-.sticky {
-  position: sticky;
-}
-
-.top {
-  top: 0;
-}
-.right {
-  right: 0;
-}
-.bottom {
-  bottom: 0;
-}
-.left {
-  left: 0;
-}</code></pre>
-
+          <p>Change the position property with the classes
+            <code class="language-css" data-lang="css">absolute, fixed, relative, static, sticky</code>
+            and set the side position to 0 with
+            <code class="language-css" data-lang="css">top, right, bottom, left</code>.
+          </p>
           <h3 id="size">Size</h3>
           <p>The <code class="language-css" data-lang="css">w</code> class takes 100% of the width and the <code class="language-css" data-lang="css">h</code> class takes 100% of the height.</p>
           <button class="w  m0">w</button>
