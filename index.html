@@ -140,8 +140,8 @@
   --margin-r: 1px;
   --margin-b: 1px;
   --margin-l: 1px;
-  --margin-ratio2: 10;
-  --margin-ratio3: 20;
+  --margin-ratio2: 32;
+  --margin-ratio3: 64;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --gap: 1px;
   --gap-ratio2: 4;
@@ -465,7 +465,7 @@
           </table>
         </section>
         <hr>
-        <section id="Components">
+        <section id="components">
           <h2>Components</h2>
           <h3 id="accordion">Accordion</h3>
           <p>Use radio inputs for a group of accordion or checkbox to toggle the accordions one by one.</p>
@@ -496,8 +496,7 @@
               Content
             </div>
         </div>
-          <br>
-          <pre><code class="language-html" data-lang="html">&lt;div class="accordion"&gt;
+        <pre><code class="language-html" data-lang="html">&lt;div class="accordion"&gt;
   &lt;label for="accordion1" class="accordion fg fg-border group"&gt;Click accordion&lt;/label&gt;
   &lt;input id="accordion1" type="checkbox" class="p1"&gt;
   &lt;div class="p1 bg" style="height: 1.5em;"&gt;
@@ -599,23 +598,18 @@
 &lt;/div&gt;</code></pre>
 
           <p>Add the class <code class="language-css" data-lang="css">-mobile</code> or <code class="language-css" data-lang="css">-desktop</code> next to dropdown to have a mobile/desktop only dropdown</p>
-          <div>
-            <div class="dropdown -mobile" tabindex="0">
-              <button>Mobile Dropdown</button> <!-- You can also use <span> or <a> -->
-              <div class="p2">
-                <div>Item 1</div>
-                <div>Item 2</div>
-              </div>
+          <div class="dropdown -mobile" tabindex="0">
+            <button>Mobile Dropdown</button> <!-- You can also use <span> or <a> -->
+            <div class="p2">
+              <div>Item 1</div>
+              <div>Item 2</div>
             </div>
           </div>
-          <br>
-          <div>
-            <div class="dropdown -desktop">
-              <button>Desktop Dropdown</button>
-              <div class="p2">
-                <div>Item 1</div>
-                <div>Item 2</div>
-              </div>
+          <div class="dropdown -desktop mt2">
+            <button>Desktop Dropdown</button>
+            <div class="p2">
+              <div>Item 1</div>
+              <div>Item 2</div>
             </div>
           </div>
           <h3 id="modal">Modal</h3>
@@ -647,7 +641,7 @@
   &lt;a&gt;link 4&lt;/a&gt;
 &lt;/div&gt;
 &lt;div class="py1"&gt;content&lt;/div&gt;</code></pre>
-          <div class="tabs g1 mt2">
+          <div class="tabs g1 mt3">
             <label for="tab1">
               Radio 1
               <input type="radio" name="tabs" id="tab1">
@@ -685,7 +679,7 @@
   &lt;/label&gt;
 &lt;/div&gt;
 &lt;div class="secondary p1"&gt;content&lt;/div&gt;</code></pre>
-          <div class="tabs g1 mt2">
+          <div class="tabs g1 mt3">
             <button>button 1</button>
             <button class="secondary">button 2</button>
             <button>button 3</button>

@@ -52,8 +52,8 @@
   --margin-r: 1px;
   --margin-b: 1px;
   --margin-l: 1px;
-  --margin-ratio2: 10;
-  --margin-ratio3: 20;
+  --margin-ratio2: 32;
+  --margin-ratio3: 64;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
   --gap: 1px;
   --gap-ratio2: 8;
