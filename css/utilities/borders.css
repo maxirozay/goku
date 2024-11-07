@@ -23,3 +23,16 @@
     border: 0;
   }
 }
+
+.bt {
+  border-top: var(--border-width) solid;
+}
+.bl {
+  border-left: var(--border-width) solid;
+}
+.bb {
+  border-bottom: var(--border-width) solid;
+}
+.br {
+  border-right: var(--border-width) solid;
+}

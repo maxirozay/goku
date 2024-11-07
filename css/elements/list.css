@@ -1,13 +1,3 @@
-ul {
-  list-style-type: none;
-  padding: 0;
-
-  & li {
-    padding-left: 1rem;
-    border-left: var(--border-width) solid;
-
-    &.active {
-      color: var(--primary-color-active);
-    }
-  }
+ul, ol {
+  padding-left: 1em;
 }
