@@ -572,7 +572,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="flex-row g2 mt3">
+          <div class="flex-row g2 mt2">
             <div class="dropdown flex-1">
               <button>Hover Dropdown</button>
               <div class="p2">
@@ -594,7 +594,28 @@
     &lt;div&gt;Item 1&lt;/div&gt;
     &lt;div&gt;Item 2&lt;/div&gt;
   &lt;/div&gt;
-  &lt;button&gt;Optionnal close button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+          <p>Add the class <code class="language-css" data-lang="css">icon</code> to remove the arrow.</p>
+          <div class="dropdown icon" tabindex="0">
+            <span>
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" height="32">
+                <circle cx="8" cy="8" r="7" stroke="#888" fill="none"/>
+                <circle cx="8" cy="5.5" r="3" fill="#888"/>
+                <ellipse cx="8" cy="12" rx="6" ry="3" fill="#888"/>
+              </svg>
+            </span>
+            <div class="p2">content</div>
+          </div>
+          <pre><code class="language-html" data-lang="html">&lt;div class="dropdown icon" tabindex="0"&gt;
+  &lt;span&gt;
+    &lt;svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" height="32"&gt;
+      &lt;circle cx="8" cy="8" r="7" stroke="#888" fill="none"/&gt;
+      &lt;circle cx="8" cy="5.5" r="3" fill="#888"/&gt;
+      &lt;ellipse cx="8" cy="12" rx="6" ry="3" fill="#888"/&gt;
+    &lt;/svg&gt;
+  &lt;/span&gt;
+  &lt;div class="p2"&gt;content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
           <p>Add the class <code class="language-css" data-lang="css">-mobile</code> or <code class="language-css" data-lang="css">-desktop</code> next to dropdown to have a mobile/desktop only dropdown</p>

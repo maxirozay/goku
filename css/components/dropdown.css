@@ -1,7 +1,7 @@
 .dropdown {
   position: relative;
 
-  > :has(+ div):after {
+  &:not(.icon) > :has(+ div):after {
     content: '';
     width: .3em;
     height: .3em;
