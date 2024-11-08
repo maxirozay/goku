@@ -28,7 +28,7 @@
     min-width: 10em;
     overflow-y: auto;
     box-shadow: var(--shadow);
-    backdrop-filter: blur(99px);
+    background: var(--color-fg);
     border-radius: var(--border-radius);
     z-index: 1000;
     transition: all .3s ease;
@@ -68,7 +68,6 @@
     &:has(> :is(button, span, a):hover, > :is(button, span, a) + div:hover):before,
     > input:checked ~ label:before {
       bottom: 0;
-      backdrop-filter: blur(3px);
     }
     &:has(> input:checked, > :is(button, span, a):hover, > :is(button, span, a) + div:hover):after {
       width: .5em;
@@ -99,7 +98,7 @@
       box-shadow: none;
       border: none !important;
       max-height: none;
-      backdrop-filter: none;
+      background: none;
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
@@ -141,7 +140,7 @@
       box-shadow: none !important;
       border: none !important;
       max-height: none;
-      backdrop-filter: none;
+      background: none;
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
