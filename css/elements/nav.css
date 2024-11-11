@@ -93,11 +93,9 @@ nav {
       align-items: center;
     }
   }
-}
 
-@media (min-width: 1500px) {
   nav.vertical {
-    width: 300px;
+    width: var(--drawer-width);
     height: 100vh;
     flex-direction: column;
     overflow-y: auto;
