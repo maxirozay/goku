@@ -46,7 +46,6 @@ select  {
 input[type=checkbox] {
   appearance: none;
   background: var(--color-input);
-  border: var(--border-width) solid var(--color-input-border);
   width: 2em;
   height: 1em;
   transition: .2s all;
@@ -54,7 +53,8 @@ input[type=checkbox] {
   padding: 2px;
   margin: 0;
   box-sizing: content-box;
-  vertical-align: sub;
+  vertical-align: middle;
+  margin-top: -2px;
 
   &:after {
     content: '';
