@@ -111,6 +111,8 @@ nav {
       align-items: initial;
 
       .dropdown {
+        border-bottom: 1px solid #8888;
+
         > :has(+ div) {
           font-weight: bold;
           background: none;
