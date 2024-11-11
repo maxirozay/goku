@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-twilight.min.css">
   </head>
   <body>
-    <nav class="shadow p2 sticky top">
+    <nav class="shadow p2 sticky top vertical">
       <a href="/" class="mr"><b>Goku CSS</b></a>
       <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle">
@@ -401,39 +401,37 @@ Dropbox file input
 &lt;/ul&gt;</code></pre>
 
         <h3 id="nav">Nav</h3>
-        <nav class="p2 fg" style="max-height: 18em;">
-          <div class="flex-row g3 w">
-            <div class="mr">Nav</div>
-            <button class="ml">Button</button>
+        <p>Use the <code class="language-css" data-lang="css">vertical</code> class to have a vertical nav if the screen width is greater than 1500px.</p>
+        <nav class="p2 fg vertical" style="max-height: 18em;">
+          <div>Nav</div>
+          <input type="text" placeholder="search">
+          <div class="content">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <button name="button">button</button>
           </div>
           <input id="nav-toggle2" type="checkbox">
-          <label class="toggle ml" for="nav-toggle2">
+          <label class="toggle" for="nav-toggle2">
             <div></div>
             <div></div>
             <div></div>
           </label>
-          <div class="content w">
-            <a href="#">link 1</a>
-            <a href="#" class="mx">link 2</a>
-            <a href="#">link 3</a>
-            <button name="button">button</button>
-          </div>
         </nav>
 
-        <pre><code class="language-html" data-lang="html">&lt;nav class="p2 fg"&gt;
+        <pre><code class="language-html" data-lang="html">&lt;nav class="p2 fg vertical"&gt;
   &lt;div&gt;Nav&lt;/div&gt;
-  &lt;input id="nav-toggle" type="checkbox"&gt;
-  &lt;label class="toggle ml" for="nav-toggle"&gt;
+  &lt;input type="text" placeholder="search"&gt;
+  &lt;div class="content"&gt;
+    &lt;a href="#"&gt;home&lt;/a&gt;
+    &lt;a href="#"&gt;about&lt;/a&gt;
+    &lt;button name="button"&gt;button&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;input id="nav-toggle2" type="checkbox"&gt;
+  &lt;label class="toggle" for="nav-toggle2"&gt;
     &lt;div&gt;&lt;/div&gt;
     &lt;div&gt;&lt;/div&gt;
     &lt;div&gt;&lt;/div&gt;
   &lt;/label&gt;
-  &lt;div class="content w"&gt;
-    &lt;a href="#"&gt;link 1&lt;/a&gt;
-    &lt;a href="#" class="mx"&gt;link 2&lt;/a&gt;
-    &lt;a href="#"&gt;link 3&lt;/a&gt;
-    &lt;button name="button"&gt;button&lt;/button&gt;
-  &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
 
         <h3 id="progress">Progress</h3>
