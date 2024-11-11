@@ -222,7 +222,7 @@
   display: flex !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .flex {
     flex-direction: column;
   }
