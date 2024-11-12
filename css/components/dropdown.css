@@ -1,25 +1,20 @@
 .dropdown {
   position: relative;
 
-  > :is(label, button:first-child) {
-    background: none;
-    color: inherit;
-    border: none;
-    font-weight: normal;
-    padding: 0;
-    display: inline-block;
+  &:not(.icon) > :has(+ div) {
+    white-space: nowrap;
 
     &:after {
       content: '';
-      float: right;
-      width: .4em;
-      height: .4em;
-      border-right: 2px solid var(--color-text);
-      border-bottom: 2px solid var(--color-text);
+      width: .3em;
+      height: .3em;
+      border-right: 2px solid;
+      border-bottom: 2px solid;
       transform: rotate(45deg);
       margin: .25em .25em .25em .5em;
       transition: all .3s;
-    }
+      display: inline-block;
+    } 
   }
   > input:checked ~ label:after {
     transform: translateY(.2em) rotate(-135deg);
@@ -37,7 +32,7 @@
     min-width: 10em;
     overflow-y: auto;
     box-shadow: var(--shadow);
-    backdrop-filter: blur(99px);
+    background: var(--color-fg);
     border-radius: var(--border-radius);
     z-index: 1000;
     transition: all .3s ease;
@@ -57,9 +52,8 @@
     }
 
     > input:checked ~ div,
-    > button:hover ~ *,
-    > button ~ div:hover,
-    > div:hover ~ button {
+    > :is(button, span, a):hover ~ *,
+    > :is(button, span, a) ~ div:hover {
       bottom: 0;
       pointer-events: auto;
     }
@@ -75,45 +69,40 @@
       z-index: 1001;
       height: 3em;
     }
-    &:has(> :is(button:first-child, button ~ div):hover):before,
+    &:has(> :is(button, span, a):hover, > :is(button, span, a) + div:hover):before,
     > input:checked ~ label:before {
       bottom: 0;
-      backdrop-filter: blur(3px);
     }
-    &:has(> :is(button:first-child, button ~ div):hover, > input:checked):after {
+    &:has(> input:checked, > :is(button, span, a):hover, > :is(button, span, a) + div:hover):after {
       width: .5em;
       height: .5em;
-      border-right: 2px solid var(--color-text);
-      border-bottom: 2px solid var(--color-text);
+      border-right: 2px solid;
+      border-bottom: 2px solid;
       transform: rotate(45deg);
       margin: 1.25em auto;
       bottom: 0;
       pointer-events: none;
     }
-    > div ~ button {
-      display: block;
-      position: fixed;
-      bottom: -100vh;
-      right: 0;
-      left: 0;
-      z-index: 1002;
-      transition: all .3s ease;
-    }
   }
 
   .dropdown.-desktop {
-    > label,
-    > button {
+    > :has(+ div) {
       font-weight: bold;
+      background: none;
+      color: var(--color-header-text) !important;
+      border: 0;
+      padding: 0;
+
+      &:after {
+        display: none;
+      }
     }
-    > :is(label, button):after {
-      display: none;
-    }
+
     > div {
       box-shadow: none;
       border: none !important;
       max-height: none;
-      backdrop-filter: none;
+      background: none;
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
@@ -131,15 +120,19 @@
 
   .dropdown {
     > input:checked ~ div,
-    &:hover > button ~ div,
-    &:focus-within > button ~ div {
+    &:hover > :not(input, label) ~ div,
+    &:focus-within > :is(button, span, a) ~ div {
       display: flex;
     }
   }
 
   .dropdown.-mobile {
-    > :is(label, button) {
+    > :has(+ div) {
       font-weight: bold;
+      background: none;
+      color: var(--color-header-text) !important;
+      border: 0;
+      padding: 0;
 
       &:after {
         display: none;
@@ -150,7 +143,7 @@
       box-shadow: none !important;
       border: none !important;
       max-height: none;
-      backdrop-filter: none;
+      background: none;
       padding-left: 0 !important;
       padding-right: 0 !important;
     }

@@ -1,17 +1,26 @@
-.accordion > input {
-  display: none;
-}
+.accordion {
+  padding: 1px;
 
-.accordion > div {
-  max-height: 80vh;
-  transition: all .3s;
-  overflow: auto;
-}
-
-.accordion > input:not(:checked) ~ div {
-  height: 0 !important;
-  max-height: 0;
-  opacity: 0;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  > input {
+    display: none;
+  }
+  
+  > label {
+    color: var(--color-input-text);
+    display: block;
+  }
+  
+  > div {
+    max-height: 80vh;
+    transition: all .3s;
+    overflow: auto;
+  }
+  
+  > input:not(:checked) ~ div {
+    height: 0 !important;
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }

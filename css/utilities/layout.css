@@ -203,6 +203,18 @@
 .left {
   left: 0;
 }
+.top-100 {
+  top: 100%;
+}
+.right-100 {
+  right: 100%;
+}
+.bottom-100 {
+  bottom: 100%;
+}
+.left-100 {
+  left: 100%;
+}
 
 .float-right {
   float: right;
@@ -222,7 +234,7 @@
   display: flex !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .flex {
     flex-direction: column;
   }

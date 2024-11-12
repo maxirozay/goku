@@ -2,26 +2,33 @@ nav {
   background: var(--color-bg);
   color: var(--color-text);
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
   align-items: center;
   z-index: 100;
+  gap: 24px;
 
-  & > .content {
+  > :first-child {
+    align-items: center;
+  }
+
+  > .content {
     display: flex;
+    gap: 1em;
+
+    & a {
+      color: inherit !important;
+    }
   }
 
-  & > .content a {
-    color: inherit;
+  > input[type=checkbox] {
+    display: none;
   }
-}
-nav > input {
-  display: none;
 }
 
 @media (max-width:900px) {
   nav {
-    gap: 24px;
-
-    & > .content {
+    > .content {
       position: fixed;
       top: 0;
       left: 100%;
@@ -31,50 +38,47 @@ nav > input {
       transition: opacity .3s, top, left 0s .3s;
       padding: inherit;
       flex-direction: column;
-      gap: 1em;
       background: inherit;
       opacity: 0;
       z-index: 101;
     }
-    & > .content > *:not(button) {
+    > .content > *:not(button) {
       padding-bottom: 1em;
-      border-bottom: 1px solid #8884;
+      border-bottom: 1px solid #8888;
       margin: 0 !important;
     }
 
-    & > .toggle {
+    > .toggle {
       z-index: 102;
       padding: 12px;
       margin: -12px;
       -webkit-tap-highlight-color: #0000;
     }
-    & > .toggle > div {
+    > .toggle > div {
       width: 20px;
       height: 2px;
       background: var(--color-text);
       transition: all .2s;
     }
-    & > .toggle > div:nth-child(2) {
+    > .toggle > div:nth-child(2) {
       margin: 4px 0;
     }
-  }
 
-  nav > input {
-    &:checked {
-      & ~ .content {
+    > input:checked {
+      ~ .content {
         left: 0;
         opacity: 1;
         transition: opacity .3s;
       }
-      & ~ .toggle > div:first-child {
-        transform: translateY(1px) rotate(45deg);
+      ~ .toggle > div:first-child {
+        transform: translateY(6px) rotate(45deg);
       }
-      & ~ .toggle > div:nth-child(2):not(:last-child) {
+      ~ .toggle > div:nth-child(2):not(:last-child) {
         opacity: 0;
         position: absolute;
       }
-      & ~ .toggle > div:last-child {
-        transform: translateY(-1px) rotate(-45deg);
+      ~ .toggle > div:last-child {
+        transform: translateY(4px) rotate(-45deg);
       }
     }
   }
@@ -82,14 +86,58 @@ nav > input {
 
 @media (min-width: 900px) {
   nav {
-    & > .content > * {
-      margin-left: 1rem;
-    }
-    & > .toggle {
+    > .toggle {
       display: none;
     }
+    > .content {
+      align-items: center;
+    }
   }
-  nav  > .content {
-    align-items: center;
+
+  nav.vertical {
+    width: var(--drawer-width);
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: auto;
+    float: left;
+    position: sticky;
+    top: 0;
+    align-items: stretch;
+
+    > .content {
+      flex-direction: column;
+      align-items: initial;
+
+      .dropdown {
+        border-bottom: 1px solid #8888;
+
+        > :has(+ div) {
+          font-weight: bold;
+          background: none;
+          color: var(--color-header-text) !important;
+          border: 0;
+          padding: 0;
+
+          &:after {
+            display: none;
+          }
+        }
+        > div {
+          display: flex;
+          position: static;
+          box-shadow: none !important;
+          border: none !important;
+          max-height: none;
+          background: none;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+    }
+
+    + * {
+      overflow-y: auto;
+      height: 100%;
+    }
   }
 }

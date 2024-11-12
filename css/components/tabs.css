@@ -1,24 +1,40 @@
 .tabs {
   display: flex;
 
-  & > .active {
-    background: var(--primary-color-active);
-    border-bottom: none;
+  &:has(a) {
+    box-shadow: inset 0 -2px 0 var(--color-input-border);
+  }
 
-    &:hover {
-      border-color: #0000;
+  > * {
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border: 0;
+  }
+
+  > label,
+  > button {
+    background: var(--color-input);
+    color: var(--color-input-text);
+    flex: 1;
+    padding: var(--padding-input);
+  }
+
+  > a {
+    border-bottom: 2px solid var(--color-input-border);
+    color: var(--color-input-text);
+    padding-bottom: var(--padding-b);
+
+    &.active {
+      background: inherit;
+      color: var(--primary-color);
+      border-bottom-color: var(--primary-color);
     }
   }
-}
-.tabs > * {
-  margin: 0;
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-  border: 0;
-}
-.tabs__content {
-  margin-top: 0;
-  border-top: none;
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+
+  + div {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
 }

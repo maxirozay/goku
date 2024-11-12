@@ -21,7 +21,7 @@ input,
 textarea,
 select {
   background: var(--color-input);
-  color: var(--color-text);
+  color: var(--color-input-text);
   border-color: var(--color-input-border);
 }
 
@@ -35,4 +35,10 @@ input[type=date] {
   background: #8888;
   border-color: #8888;
   color: var(--color-text);
+}
+
+hr {
+  border: 0;
+  border-top: var(--border-width) solid #8884;
+  margin: 0;
 }

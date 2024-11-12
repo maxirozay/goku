@@ -2,7 +2,7 @@
   display: inline-block;
   padding: var(--padding-input);
   background: var(--color-input);
-  color: var(--color-text);
+  color: var(--color-input-text);
   border-color: var(--color-input-border);
   border-radius: var(--border-radius);
   text-align: center;
@@ -24,33 +24,43 @@
 label + :is(input, textarea, select),
 label > :is(input, textarea, select) {
   margin-top: .25em;
-  margin-bottom: calc(var(--padding-b) * var(--padding-ratio2));
+  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2));
 }
 
 input,
 textarea,
 select  {
   width: 100%;
+  accent-color: var(--primary-color);
+  caret-color: var(--primary-color);
+}
+
+select  {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%207%207%22%20fill%3D%22none%22%20stroke%3D%22%23888%22%3E%3Cpolyline%20points%3D%222%202%204%204%206%202%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right var(--padding-r) center;
+  background-size: 1em;
 }
 
 input[type=checkbox] {
   appearance: none;
   background: var(--color-input);
-  border: var(--border-width) solid var(--color-input-border);
-  width: 2.5em;
-  height: 1.25em;
+  width: 2em;
+  height: 1em;
   transition: .2s all;
   border-radius: 1em;
-  padding: 3px;
+  padding: 2px;
   margin: 0;
   box-sizing: content-box;
-  vertical-align: sub;
+  vertical-align: middle;
+  margin-top: -2px;
 
   &:after {
     content: '';
     display: inline-block;
-    width: 1.25em;
-    height: 1.25em;
+    width: 1em;
+    height: 1em;
     background: #888;
     border-radius: 100%;
     transition: inherit;
@@ -60,7 +70,7 @@ input[type=checkbox] {
 
     &:after {
       background: var(--primary-color-text);
-      margin-left: 1.25em;
+      margin-left: 1em;
     }
   }
 }
@@ -71,6 +81,7 @@ input[type=radio] {
 input[type=radio] + label {
   padding: var(--padding-input);
   background: var(--color-input);
+  color: var(--color-input-text);
 }
 input[type=radio]:checked + label {
   background: var(--primary-color) !important;
@@ -101,4 +112,9 @@ input[type="color"] {
     border: none;
     border-radius: 100%;
   }
+}
+
+input[type='range'] {
+  appearance: none;
+  height: .5em;
 }
