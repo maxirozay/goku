@@ -1,6 +1,4 @@
 .accordion {
-  padding: 1px;
-
   > input {
     display: none;
   }
