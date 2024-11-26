@@ -6,7 +6,7 @@ nav {
   box-sizing: border-box;
   align-items: center;
   z-index: 100;
-  gap: 24px;
+  gap: 1em;
 
   > :first-child {
     align-items: center;
@@ -14,7 +14,6 @@ nav {
 
   > .content {
     display: flex;
-    gap: 1em;
 
     & a {
       color: inherit !important;
@@ -36,21 +35,31 @@ nav {
       bottom: 0;
       overflow-y: auto;
       transition: opacity .3s, top, left 0s .3s;
-      padding: inherit;
       flex-direction: column;
       background: inherit;
       opacity: 0;
       z-index: 101;
     }
-    > .content > *:not(button) {
-      padding-bottom: 1em;
-      border-bottom: 1px solid #8888;
-      margin: 0 !important;
+    > .content {
+      > :not(:is(button, hr)) {
+        padding: 1em;
+        margin: 0 !important;
+      }
+      > button {
+        margin: 0 1em !important;
+
+        + :is(button, hr) {
+          margin-top: 1em !important;
+        }
+      }
+      hr + button {
+        margin-top: 1em !important;
+      }
     }
 
     > .toggle {
       z-index: 102;
-      padding: 12px;
+      padding: 1em;
       margin: -12px;
       -webkit-tap-highlight-color: #0000;
     }
@@ -70,15 +79,17 @@ nav {
         opacity: 1;
         transition: opacity .3s;
       }
-      ~ .toggle > div:first-child {
-        transform: translateY(6px) rotate(45deg);
-      }
-      ~ .toggle > div:nth-child(2):not(:last-child) {
-        opacity: 0;
-        position: absolute;
-      }
-      ~ .toggle > div:last-child {
-        transform: translateY(4px) rotate(-45deg);
+      ~ .toggle {
+        > div:first-child {
+          transform: translateY(1px) rotate(45deg);
+        }
+        > div:nth-child(2):not(:last-child) {
+          opacity: 0;
+          position: absolute;
+        }
+        > div:last-child {
+          transform: translateY(-1px) rotate(-45deg);
+        }
       }
     }
   }
@@ -91,6 +102,7 @@ nav {
     }
     > .content {
       align-items: center;
+      gap: 1em;
     }
   }
 
@@ -107,32 +119,6 @@ nav {
     > .content {
       flex-direction: column;
       align-items: initial;
-
-      .dropdown {
-        border-bottom: 1px solid #8888;
-
-        > :has(+ div) {
-          font-weight: bold;
-          background: none;
-          color: var(--color-header-text) !important;
-          border: 0;
-          padding: 0;
-
-          &:after {
-            display: none;
-          }
-        }
-        > div {
-          display: flex;
-          position: static;
-          box-shadow: none !important;
-          border: none !important;
-          max-height: none;
-          background: none;
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-        }
-      }
     }
 
     + * {
