@@ -16,7 +16,7 @@ nav {
     display: flex;
 
     & a {
-      color: inherit !important;
+      color: inherit;
     }
   }
 
