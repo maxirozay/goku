@@ -1,6 +1,6 @@
 {
 	"name": "goku-css",
-	"version": "8.3.4",
+	"version": "8.3.5",
 	"description": "CSS Framework",
 	"main": "css/goku.css",
 	"repository": {
@@ -19,6 +19,6 @@
 	"license": "MIT",
 	"private": false,
 	"devDependencies": {
-		"vite": "^5.1.1"
+		"vite": "^6.0.11"
 	}
 }

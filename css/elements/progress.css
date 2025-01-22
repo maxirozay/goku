@@ -9,4 +9,5 @@ progress {
 
 progress::-webkit-progress-value {
   background: var(--primary-color);
+  transition: all 1s linear;
 }
