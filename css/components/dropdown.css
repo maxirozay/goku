@@ -65,16 +65,18 @@
       right: 0;
       left: 0;
       z-index: 1000;
-    }
-    > input:checked ~ label:before {
+      transition: all .3s .3s;
       height: 100vh;
+      pointer-events: visible;
+      visibility: hidden;
+    }
+    &:has(> input:checked) > label:before {
+      visibility: visible;
     }
     &:has(> input:checked, > :is(button, span, a):hover, > :is(button, span, a) + div:hover):before {
       z-index: 999;
-      transition: backdrop-filter .3s;
       backdrop-filter: blur(2px);
-      height: 100vh;
-      pointer-events: none;
+      visibility: visible;
     }
     &:after {
       width: .5em;
@@ -84,10 +86,10 @@
       transform: rotate(45deg);
       margin: 1em auto;
       pointer-events: none;
-      transition: all .3s;
       opacity: 0;
     }
     &:has(> input:checked, > :is(button, span, a):hover, > :is(button, span, a) + div:hover):after {
+      visibility: visible;
       opacity: 1;
     }
   }
