@@ -4,7 +4,7 @@ textarea,
 select {
   font-weight: inherit;
   font-size: inherit;
-  line-height: 1.25;
+  line-height: var(--line-height);
   font-family: inherit;
   border-width: var(--border-width);
   border-style: solid;
@@ -26,7 +26,7 @@ select {
 }
 
 input[type=date] {
-  line-height: 1.125;
+  line-height: calc(var(--line-height) - .125);
 }
 
 *:disabled {

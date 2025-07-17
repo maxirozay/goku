@@ -10,8 +10,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-twilight.min.css">
   </head>
   <body>
-    <nav class="shadow p2 sticky top vertical">
-      <a href="/" class="mr"><b>Goku CSS</b></a>
+    <nav class="shadow p2 sticky top vertical fg">
+      <div class="flex">
+        <a href="/" class="mr"><b>Goku CSS</b></a>
+        <button id="theme-toggle" class="ml" title="Toggle dark/light mode">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </div>
       <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle">
         <div></div>
@@ -65,21 +70,59 @@
     </nav>
 
     <div class="portrait p2">
+      <header class="text-center mb3">
+        <h1 class="m0 mb1">Goku CSS</h1>
+        <p class="secondary-text">A lightweight, utility-first CSS framework for building modern interfaces</p>
+        <div class="flex g2 flex-center mt2">
+          <span class="secondary p1">~22KB minified</span>
+          <span class="secondary p1">~5KB gzipped</span>
+          <span class="secondary p1">CSS Variables</span>
+          <span class="secondary p1">Mobile-first</span>
+          <span class="secondary p1">Dark mode</span>
+        </div>
+      </header>
 
       <section>
         <h2>Getting started</h2>
-        To use Goku CSS you only need to install it.
-        <pre><code class="language-bash">yarn add goku-css</code> or <code class="language-bash">npm install goku-css</code></pre>
-        Then import it.
-        <pre><code class="language-javascript" data-lang="javascript"></code>import 'goku-css'</pre>
-        For a ready to use version you can import the follwing file.
-        <pre><code class="language-javascript" data-lang="javascript"></code>import 'goku-css/docs/index.css'</pre>
+        <p>Get up and running with Goku CSS in minutes. Choose your preferred installation method:</p>
+        
+        <h3>Package Manager</h3>
+        <div class="flex g2 mb2">
+          <div class="flex-1">
+            <h4 class="m0 mb1">npm</h4>
+            <pre><code class="language-bash">npm install goku-css</code></pre>
+          </div>
+          <div class="flex-1">
+            <h4 class="m0 mb1">yarn</h4>
+            <pre><code class="language-bash">yarn add goku-css</code></pre>
+          </div>
+        </div>
+
+        <h3>Usage</h3>
+        <p>Import the framework in your project:</p>
+        <pre><code class="language-javascript">// Basic import
+import 'goku-css'
+
+// Or use the complete build with docs styles
+import 'goku-css/docs/index.css'</code></pre>
+
+        <h3>CDN</h3>
+        <p>For quick prototyping, use our CDN:</p>
+        <pre><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/goku-css@latest/css/goku.css"&gt;</code></pre>
+
+        <div class="success p2 mt2">
+          <strong>Pro tip:</strong> Start with our CDN for prototyping, then switch to the package manager for production builds.
+        </div>
       </section>
       <hr>
       <section id="customization">
         <h2>Customization</h2>
+        <p>Goku CSS is built with CSS custom properties, making it incredibly easy to customize. Change colors, spacing, typography, and more with simple variable overrides.</p>
 
-        <p>You can modifiy any CSS variable directly with CSS or with Javascript with something like: <pre><code class="language-javascript" data-lang="javascript" style="overflow-wrap: break-word;">document.documentElement.style.setProperty('--primary-color', '#FFFFFF')</code></pre></p>
+        <div class="warning p2 mb2">
+          <strong>Quick tip:</strong> You can modify any CSS variable directly in your stylesheet or dynamically with JavaScript:
+          <pre class="mt1"><code class="language-javascript">document.documentElement.style.setProperty('--primary-color', '#your-color')</code></pre>
+        </div>
         <div class="accordion fg">
           <label for="variables" class="p1">
             See all variables
@@ -88,66 +131,66 @@
           <div class="p1">
             <pre><code class="language-css" data-lang="css">:root {
   --font-family: sans-serif;
-  --font-weight: normal;
-  --font-size: 1em;
-  --line-height: 1.25;
-  --dark-primary-color: #f84;
+  --font-weight: 400;
+  --font-size: 1rem;
+  --line-height: 1.5;
+  --dark-primary-color: #ff8544;
   --dark-primary-color-text: #000;
-  --dark-primary-color-active: #fb8;
-  --dark-secondary-color: #555;
-  --dark-secondary-color-text: #fff;
-  --dark-bg: #1a1a1a;
-  --dark-fg: #282828;
-  --dark-text: #bbb;
-  --dark-header-text: #fff;
-  --dark-input: #444;
+  --dark-primary-color-active: #ffab70;
+  --dark-secondary-color: #30e28c;
+  --dark-secondary-color-text: #000;
+  --dark-bg: #171a18;
+  --dark-fg: #30443d;
+  --dark-text: #d8d5d2;
+  --dark-header-text: #f7fafc;
+  --dark-input: #385043;
   --dark-input-text: #fff;
-  --dark-input-border: #666;
-  --dark-button: #f84;
-  --dark-button-border: #f84;
-  --dark-button-text: #1a1a1a;
-  --dark-link: #f84;
-  --light-primary-color: #f84;
-  --light-primary-color-text: #000;
-  --light-primary-color-active: #f84;
-  --light-secondary-color: #ddd;
-  --light-secondary-color-text: #000;
-  --light-bg: #fff;
-  --light-fg: #f6f6f6;
-  --light-text: #444;
-  --light-header-text: #000;
-  --light-input: #eee;
-  --light-input-text: #000;
-  --light-input-border: #ddd;
-  --light-button: #f84;
-  --light-button-border: #f84;
-  --light-button-text: #1a1a1a;
-  --light-link: #f84;
-  --success-color: #4b4;
-  --warning-color: #e84;
-  --error-color: #e54;
-  --border-radius: 4px;
+  --dark-input-border: #80a48d;
+  --dark-button: #ff8544;
+  --dark-button-border: #ff8544;
+  --dark-button-text: #1a202c;
+  --dark-link: #ff8544;
+  --light-primary-color: #ff8544;
+  --light-primary-color-text: #171a18;
+  --light-primary-color-active: #e6743a;
+  --light-secondary-color: #066;
+  --light-secondary-color-text: #fff;
+  --light-bg: #e7ebe8;
+  --light-fg: #fff;
+  --light-text: #171a18;
+  --light-header-text: #1a202c;
+  --light-input: #f0fbf4;
+  --light-input-text: #050505;
+  --light-input-border: #d0dbd4;
+  --light-button: #ff8544;
+  --light-button-border: #ff8544;
+  --light-button-text: #000;
+  --light-link: #ff8544;
+  --success-color: #48bb78;
+  --warning-color: #ed8936;
+  --error-color: #f56565;
+  --border-radius: 6px;
   --border-width: 1px;
-  --padding-t: 8px;
-  --padding-r: 8px;
-  --padding-b: 8px;
-  --padding-l: 8px;
+  --padding-t: 12px;
+  --padding-r: 12px;
+  --padding-b: 12px;
+  --padding-l: 12px;
   --padding-ratio2: 2;
   --padding-ratio3: 3;
   --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
   --padding-input: calc(var(--padding-t) / 2) var(--padding-r) calc(var(--padding-b) / 2) var(--padding-l);
-  --margin-t: 1px;
-  --margin-r: 1px;
-  --margin-b: 1px;
-  --margin-l: 1px;
-  --margin-ratio2: 32;
-  --margin-ratio3: 64;
+  --margin-t: 4px;
+  --margin-r: 4px;
+  --margin-b: 4px;
+  --margin-l: 4px;
+  --margin-ratio2: 4;
+  --margin-ratio3: 8;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
-  --gap: 1px;
-  --gap-ratio2: 4;
-  --gap-ratio3: 8;
-  --shadow: 0 0 3px 2px #8883;
-  --drawer-width: 300px
+  --gap: 4px;
+  --gap-ratio2: 2;
+  --gap-ratio3: 4;
+  --shadow: 0 1px 3px 0 #788d8344, 0 1px 2px 0 #788d8344;
+  --drawer-width: 300px;
 }
 
 :root {
@@ -192,7 +235,8 @@
           </div>
         </div>
 
-        <h3>Try to change those variables</h3>
+        <h3>Interactive Playground</h3>
+        <p>Try customizing Goku CSS live! Changes will apply immediately to this page.</p>
         <div class="flex g2">
           <label class="flex-1">
             font-family
@@ -310,15 +354,21 @@
       <hr>
       <section id="elements">
         <h2>Elements</h2>
-        <p>You don't need to do do anything for the basic HTML elements. They are already styled based on the values of CSS variables.</p>
+        <p>Goku CSS provides beautiful defaults for all HTML elements out of the box. No classes needed - just write semantic HTML and get great-looking results.</p>
+
+        <div class="fg p2 mb2">
+          <strong>Zero-config styling:</strong> All basic HTML elements are automatically styled with consistent design tokens from our CSS variables.
+        </div>
 
         <h3 id="button">Button</h3>
-        <div>
-          <button>Button</button>
+        <p>Buttons are styled with hover states, focus indicators, and disabled states for better accessibility.</p>
+        <div class="flex g2 mb2">
+          <button>Primary Button</button>
           <button disabled="true">Disabled Button</button>
         </div>
 
         <h3 id="input">Input</h3>
+        <p>Form inputs are consistently styled with proper focus states and responsive design.</p>
         <div class="flex g2">
           <label class="flex-auto">
             Text
@@ -468,8 +518,20 @@
       <hr>
       <section id="components">
         <h2>Components</h2>
+        <p>Pre-built components that work seamlessly together. All components are built with accessibility in mind and work without JavaScript.</p>
+
+        <div class="flex g2 mb2">
+          <div class="warning p1 flex-1 text-center">
+            <strong>Responsive</strong><br>
+            <small>Mobile-first design</small>
+          </div>
+          <div class="error p1 flex-1 text-center">
+            <strong>No JS Required</strong><br>
+            <small>Pure CSS magic</small>
+          </div>
+        </div>
         <h3 id="accordion">Accordion</h3>
-        <p>Use radio inputs for a group of accordion or checkbox to toggle the accordions one by one.</p>
+        <p>Collapsible content sections. Use radio inputs for exclusive groups or checkboxes for independent toggles.</p>
         <div class="accordion fg">
           <label for="accordion1">
             <div class="p1">Click group accordion</div>
@@ -533,7 +595,7 @@
         <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
   &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
   &lt;div&gt;
-    &lt;div lass="fg p1 pb3 h"&gt;This is the left drawer.&lt;/div&gt;
+    &lt;div class="fg p1 pb3 h"&gt;This is the left drawer.&lt;/div&gt;
     &lt;label class="drawer-layout__toggle absolute bottom left" for="left-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
@@ -553,6 +615,7 @@
 &lt;/div&gt;</code></pre>
 
         <h3 id="dropdown">Dropdown</h3>
+        <p>Versatile dropdown menus with click and hover triggers. Automatically adapts to mobile with slide-up behavior.</p>
 
         <div class="dropdown">
           <input id="dropdown1" type="checkbox">
@@ -669,7 +732,7 @@
             Radio 1
             <input type="radio" name="tabs" id="tab1">
           </label>
-          <label for="tab2" class="secondary">
+          <label for="tab2" class="fg">
             Radio 2
             <input type="radio" name="tabs" id="tab2">
           </label>
@@ -682,13 +745,13 @@
             <input type="radio" name="tabs" id="tab4">
           </label>
         </div>
-        <div class="secondary p1">content</div>
+        <div class="fg p1">content</div>
         <pre><code class="language-html" data-lang="html">&lt;div class="tabs g1 mt2"&gt;
   &lt;label for="tab1"&gt;
     Radio 1
     &lt;input type="radio" name="tabs" id="tab1"&gt;
   &lt;/label&gt;
-  &lt;label for="tab2" class="secondary"&gt;
+  &lt;label for="tab2" class="fg"&gt;
     Radio 2
     &lt;input type="radio" name="tabs" id="tab2"&gt;
   &lt;/label&gt;
@@ -701,27 +764,31 @@
     &lt;input type="radio" name="tabs" id="tab4"&gt;
   &lt;/label&gt;
 &lt;/div&gt;
-&lt;div class="secondary p1"&gt;content&lt;/div&gt;</code></pre>
+&lt;div class="fg p1"&gt;content&lt;/div&gt;</code></pre>
         <div class="tabs g1 mt3">
           <button>button 1</button>
-          <button class="secondary">button 2</button>
+          <button class="fg">button 2</button>
           <button>button 3</button>
           <button>button 4</button>
         </div>
-        <div class="secondary p1">content</div>
+        <div class="fg p1">content</div>
         <pre><code class="language-html" data-lang="html">&lt;div class="tabs g1 mt2"&gt;
   &lt;button&gt;button 1&lt;/button&gt;
-  &lt;button class="secondary"&gt;button 2&lt;/button&gt;
+  &lt;button class="fg"&gt;button 2&lt;/button&gt;
   &lt;button&gt;button 3&lt;/button&gt;
   &lt;button&gt;button 4&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class="secondary p1"&gt;content&lt;/div&gt;</code></pre>
+&lt;div class="fg p1"&gt;content&lt;/div&gt;</code></pre>
 
       </section>
       <hr>
       <section id="utilities">
         <h2>Utilities</h2>
-        <p>The utilities classes used in those elements are the one displayed on each element.</p>
+        <p>Powerful utility classes for rapid prototyping and fine-tuning. Mix and match to create any design without writing custom CSS.</p>
+
+        <div class="fg p2 mb2">
+          <strong>Design System:</strong> All utilities are based on consistent design tokens from CSS variables, ensuring visual harmony across your project.
+        </div>
 
         <h3 id="borders">Borders</h3>
         <p>You can add/remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code> or <code class="language-css" data-lang="css">border-radius</code>.</p>
@@ -733,6 +800,7 @@
         <span class="bl p1">bl</span>
 
         <h3 id="colors">Colors</h3>
+        <p>Semantic color system with automatic dark mode support. Each color comes with background, border, and text variants.</p>
         <div class="flex-wrap g2">
           <div class="bg  flex-1 p1">bg</div>
           <div class="bg-border  flex-1 p1">bg-border</div>
@@ -744,6 +812,8 @@
           <div class="secondary-border  flex-1 p1">secondary-border</div>
           <div class="input  flex-1 p1">input</div>
           <div class="input-border  flex-1 p1">input-border</div>
+        </div>
+        <div class="flex-wrap g2 py2">
           <div class="success  flex-1 p1">success</div>
           <div class="success-border  flex-1 p1">success-border</div>
           <div class="warning  flex-1 p1">warning</div>
@@ -760,6 +830,7 @@
         </div>
 
         <h3 id="flex">Flex</h3>
+        <p>Powerful flexbox utilities for modern layouts. Responsive by default with mobile-first breakpoints.</p>
         <p>
           Use the <code class="language-css" data-lang="css">flex-auto</code> class inside an element containing the <code class="language-css" data-lang="css">flex</code> class to automatically fill the space and adapt the orientation to the window size.
           <br>Use the classes <code class="language-css" data-lang="css">g1, g2, g3</code> to add a gap based on the margins values.
@@ -914,7 +985,10 @@
         You can use the class <code class="language-css" data-lang="css">shadow</code> and <code class="language-css" data-lang="css">no-shadow</code> to add or remove shadow.
 
         <h2>Animations</h2>
-        <h3 id="loading">Loading</h3>
+        <p>Subtle animations and micro-interactions to enhance user experience without being distracting.</p>
+        
+        <h3 id="loading">Loading States</h3>
+        <p>Built-in loading animations for better user feedback during async operations.</p>
         <button class="pulse-bg">button</button>
         <button class="spin">button</button>
         <button class="pulse-bg spin">button</button>
@@ -922,10 +996,58 @@
 &lt;button class="spin"&gt;button&lt;/button&gt;
 &lt;button class="pulse-bg spin"&gt;button&lt;/button&gt;</code></pre>
       </section>
+
+      <footer class="text-center py3 mt3 bt">
+        <div class="mb2">
+          <h3>Ready to start building?</h3>
+          <p class="secondary-text">Join the Goku CSS community and build amazing interfaces</p>
+        </div>
+        
+        <div class="flex g2 flex-center mb2">
+          <a href="https://github.com/maxirozay/goku" class="secondary p1">
+            GitHub
+          </a>
+          <a href="https://npmjs.com/package/goku-css" class="secondary p1">
+            npm
+          </a>
+          <a href="#" class="secondary p1">
+            Examples
+          </a>
+        </div>
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
     <script>
+      const themeToggle = document.getElementById('theme-toggle')
+      const html = document.documentElement
+
+      const savedTheme = localStorage.getItem('theme')
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+      let currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light')
+      
+      function applyTheme(theme) {
+        const themeIcon = document.getElementById('theme-icon')
+        if (theme === 'dark') {
+          html.setAttribute('data-theme', 'dark')
+          themeIcon.textContent = '☀️'
+        } else {
+          html.removeAttribute('data-theme')
+          themeIcon.textContent = '🌙'
+        }
+        localStorage.setItem('theme', theme)
+        currentTheme = theme
+      }
+
+      applyTheme(currentTheme)
+
+      // Toggle theme
+      themeToggle.addEventListener('click', () => {
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme)
+      })
+
       window.addEventListener('hashchange', () => {
         document.getElementById('nav-toggle').checked = false
       })
@@ -940,6 +1062,59 @@
     </script>
 
     <style>
+      [data-theme="dark"] {
+        --primary-color: var(--dark-primary-color);
+        --primary-color-text: var(--dark-primary-color-text);
+        --primary-color-active: var(--dark-primary-color-active);
+        --secondary-color: var(--dark-secondary-color);
+        --secondary-color-text: var(--dark-secondary-color-text);
+        --color-bg: var(--dark-bg);
+        --color-fg: var(--dark-fg);
+        --color-text: var(--dark-text);
+        --color-header-text: var(--dark-header-text);
+        --color-input: var(--dark-input);
+        --color-input-text: var(--dark-input-text);
+        --color-input-border: var(--dark-input-border);
+        --color-button: var(--dark-button);
+        --color-button-border: var(--dark-button-border);
+        --color-button-text: var(--dark-button-text);
+        --link-color: var(--dark-link);
+      }
+
+      :root:not([data-theme="dark"]) {
+        --primary-color: var(--light-primary-color);
+        --primary-color-text: var(--light-primary-color-text);
+        --primary-color-active: var(--light-primary-color-active);
+        --secondary-color: var(--light-secondary-color);
+        --secondary-color-text: var(--light-secondary-color-text);
+        --color-bg: var(--light-bg);
+        --color-fg: var(--light-fg);
+        --color-text: var(--light-text);
+        --color-header-text: var(--light-header-text);
+        --color-input: var(--light-input);
+        --color-input-text: var(--light-input-text);
+        --color-input-border: var(--light-input-border);
+        --color-button: var(--light-button);
+        --color-button-border: var(--light-button-border);
+        --color-button-text: var(--light-button-text);
+        --link-color: var(--light-link);
+      }
+
+      /* Theme toggle button styling */
+      #theme-toggle {
+        background: none;
+        border: 1px solid var(--color-input-border);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+      }
+
+      /* Code block styling */
       pre {
         border: 1px solid #8888 !important;
         background: #333 !important;
