@@ -1,6 +1,4 @@
 nav {
-  background: var(--color-bg);
-  color: var(--color-text);
   display: flex;
   width: 100%;
   box-sizing: border-box;
@@ -36,11 +34,11 @@ nav {
       overflow-y: auto;
       transition: opacity .3s, top, left 0s .3s;
       flex-direction: column;
-      background: inherit;
+      background: var(--color-fg);
+      color: var(--color-text);
       opacity: 0;
       z-index: 101;
-    }
-    > .content {
+
       > :not(:is(button, hr)) {
         padding: 1em;
         margin: 0 !important;
