@@ -12,7 +12,7 @@
   <body>
     <nav class="shadow p2 sticky top vertical fg">
       <a href="/" class="mr"><b>Goku CSS</b></a>
-      <button id="theme-toggle" class="ml" title="Toggle dark/light mode">
+      <button id="theme-toggle" title="Toggle dark/light mode">
         <span id="theme-icon">🌙</span>
       </button>
       <input id="nav-toggle" type="checkbox">
@@ -167,7 +167,7 @@ import 'goku-css/docs/index.css'</code></pre>
   --success-color: #48bb78;
   --warning-color: #ed8936;
   --error-color: #f56565;
-  --border-radius: 6px;
+  --border-radius: 12px;
   --border-width: 1px;
   --padding-t: 12px;
   --padding-r: 12px;
@@ -283,7 +283,7 @@ import 'goku-css/docs/index.css'</code></pre>
             <input
               class="mx"
               type="number"
-              value="4"
+              value="12"
               min="0"
               onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
           </label>
@@ -300,7 +300,7 @@ import 'goku-css/docs/index.css'</code></pre>
 
         <label>
           Shadow
-          <input type="text" value="0 0 3px 2px #8883" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
+          <input type="text" value="0 1px 3px 0 #788d8344, 0 1px 2px 0 #788d8344" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
         </label>
 
         <div class="flex g2">
@@ -308,7 +308,7 @@ import 'goku-css/docs/index.css'</code></pre>
             padding
             <input
               type="text"
-              value="8px"
+              value="12px"
               onkeyup="
                 document.documentElement.style.setProperty('--padding-t', event.target.value);
                 document.documentElement.style.setProperty('--padding-r', event.target.value);
@@ -331,7 +331,7 @@ import 'goku-css/docs/index.css'</code></pre>
             margin
             <input
               type="text"
-              value="1px"
+              value="4px"
               onkeyup="
                 document.documentElement.style.setProperty('--margin-t', event.target.value);
                 document.documentElement.style.setProperty('--margin-b', event.target.value);
@@ -341,11 +341,11 @@ import 'goku-css/docs/index.css'</code></pre>
           </label>
           <label class="flex-1">
             margin ratio 2
-            <input type="number" value="8" onkeyup="document.documentElement.style.setProperty('--margin-ratio2', event.target.value)">
+            <input type="number" value="4" onkeyup="document.documentElement.style.setProperty('--margin-ratio2', event.target.value)">
           </label>
           <label class="flex-1">
             margin ratio 3
-            <input type="number" value="16" onkeyup="document.documentElement.style.setProperty('--margin-ratio3', event.target.value)">
+            <input type="number" value="8" onkeyup="document.documentElement.style.setProperty('--margin-ratio3', event.target.value)">
           </label>
         </div>
       </section>
@@ -392,7 +392,7 @@ import 'goku-css/docs/index.css'</code></pre>
           <input class="ml2" type="checkbox">
         </label>
 
-        <div class="group flex g1 my2">
+        <div class="group flex my2">
           <input type="radio" name="radio" id="radio1">
           <label for="radio1" class="flex-1 text-center">
             Radio 1
@@ -566,23 +566,23 @@ import 'goku-css/docs/index.css'</code></pre>
 &lt;/div&gt;</code></pre>
 
         <h3 id="drawer">Drawer</h3>
-        <div class="drawer-layout">
+        <div class="drawer-layout fg-border">
           <input id="left-toggle" class="drawer-layout__input" type="checkbox">
           <div>
-            <div class="fg p1 pb3 h">This is the left drawer.</div>
+            <div class="fg p1 pb3 h no-border-radius">This is the left drawer.</div>
             <label class="drawer-layout__toggle  absolute bottom left" for="left-toggle">
               <div class="bar"></div>
               <div class="bar"></div>
             </label>
           </div>
 
-          <div class="flex-4 p1 fg-border pb3">
+          <div class="flex-4 p1 pb3">
             This is the main content.
           </div>
 
           <input id="right-toggle" class="drawer-layout__input" type="checkbox">
           <div>
-            <div class="fg p1 pb3 h">This is the right drawer.</div>
+            <div class="fg p1 pb3 h no-border-radius">This is the right drawer.</div>
             <label class="drawer-layout__toggle  mirror absolute bottom right" for="right-toggle">
               <div class="bar"></div>
               <div class="bar"></div>
@@ -590,21 +590,21 @@ import 'goku-css/docs/index.css'</code></pre>
           </div>
         </div>
 
-        <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout"&gt;
+        <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout fg-border"&gt;
   &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
   &lt;div&gt;
-    &lt;div class="fg p1 pb3 h"&gt;This is the left drawer.&lt;/div&gt;
+    &lt;div class="fg p1 pb3 h no-border-radius"&gt;This is the left drawer.&lt;/div&gt;
     &lt;label class="drawer-layout__toggle absolute bottom left" for="left-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 
-  &lt;div class="flex-4  fg pb3"&gt;This is the main content.&lt;/div&gt;
+  &lt;div class="flex-4  pb3"&gt;This is the main content.&lt;/div&gt;
 
   &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
   &lt;div&gt;
-    &lt;div class="fg p1 pb3 h"&gt;This is the right drawer.&lt;/div&gt;
+    &lt;div class="fg p1 pb3 h no-border-radius"&gt;This is the right drawer.&lt;/div&gt;
     &lt;label class="drawer-layout__toggle mirror absolute bottom right" for="right-toggle"&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
       &lt;div class="bar"&gt;&lt;/div&gt;
@@ -910,14 +910,14 @@ import 'goku-css/docs/index.css'</code></pre>
         </div>
 
         <h3 id="overflow">Overflow</h3>
-        <div class="fg  overflow-x" style="width: 50px;">
+        <div class="fg  overflow-x p1" style="width: 50px; white-space: nowrap;">
           overflow-x
         </div>
-        <div class="fg  overflow-y mt2" style="height: 50px; writing-mode: vertical-lr;">
+        <div class="fg  overflow-y p1 mt2" style="height: 50px; white-space: nowrap; writing-mode: vertical-lr;">
           overflow-y
         </div>
         <p>Keep text on one line with the <code class="language-css" data-lang="css">line</code> class.</p>
-        <div class="fg line mt2" style="width: 2.5em;">
+        <div class="fg line p1 mt2" style="width: 2.5em;">
           line too long
         </div>
 
@@ -927,28 +927,28 @@ import 'goku-css/docs/index.css'</code></pre>
         </div>
 
         <h3 id="position">Position</h3>
-        <div class="fg my1 text-center">
+        <div class="fg my1 p1 text-center">
           text-center
         </div>
-        <div class="fg my1 text-right">
+        <div class="fg my1 p1 text-right">
           text-right
         </div>
-        <div class="fg  mx my1" style="width: 100px">
+        <div class="fg  mx my1 p1" style="width: 100px">
           mx
         </div>
-        <div class="fg  ml my1" style="width: 100px">
+        <div class="fg  ml my1 p1" style="width: 100px">
           ml
         </div>
-        <div class="fg  mr my1" style="width: 100px">
+        <div class="fg  mr my1 p1" style="width: 100px">
           mr
         </div>
-        <div class="fg  clearfix my1">
+        <div class="fg  clearfix my1 p1">
           <span class="fg">clearfix</span>
           <span class="fg  float-right">float-right</span>
         </div>
-        <div class="fg  clearfix my1">
+        <div class="fg  clearfix my1 p1">
           <span class="fg">clearfix</span>
-          <span class="fg  float-left">float-left</span>
+          <span class="fg pr1  float-left">float-left</span>
         </div>
         <p>Change the position property with the classes
           <code class="language-css" data-lang="css">absolute, fixed, relative, static, sticky</code>
@@ -1057,6 +1057,45 @@ import 'goku-css/docs/index.css'</code></pre>
         const progress = document.getElementById('progressbar')
           progress.value = (progress.value + 1) % 100
         }, 500)
+
+      function addCopyButtons() {
+        document.querySelectorAll('pre').forEach((preEl) => {
+          // Skip if already has copy button
+          if (preEl.querySelector('.copy-btn')) return
+          
+          const codeEl = preEl.querySelector('code')
+          if (!codeEl) return
+          
+          const copyBtn = document.createElement('button')
+          copyBtn.className = 'copy-btn'
+          copyBtn.innerHTML = '📋'
+          copyBtn.title = 'Copy to clipboard'
+          
+          copyBtn.addEventListener('click', async () => {
+            try {
+              const text = codeEl.textContent
+              await navigator.clipboard.writeText(text)
+              
+              copyBtn.innerHTML = '✅'
+              copyBtn.title = 'Copied!'
+              
+              setTimeout(() => {
+                copyBtn.innerHTML = '📋'
+                copyBtn.title = 'Copy to clipboard'
+              }, 2000)
+            } catch (err) {
+              copyBtn.innerHTML = '❌'
+              setTimeout(() => {
+                copyBtn.innerHTML = '📋'
+              }, 2000)
+            }
+          })
+          
+          preEl.appendChild(copyBtn)
+        })
+      }
+
+      document.addEventListener('DOMContentLoaded', addCopyButtons)
     </script>
 
     <style>
@@ -1077,6 +1116,10 @@ import 'goku-css/docs/index.css'</code></pre>
         --color-button-border: var(--dark-button-border);
         --color-button-text: var(--dark-button-text);
         --link-color: var(--dark-link);
+
+        input::placeholder {
+          color: #fff8;
+        }
       }
 
       :root:not([data-theme="dark"]) {
@@ -1096,6 +1139,10 @@ import 'goku-css/docs/index.css'</code></pre>
         --color-button-border: var(--light-button-border);
         --color-button-text: var(--light-button-text);
         --link-color: var(--light-link);
+
+        input::placeholder {
+          color: #0008;
+        }
       }
 
       /* Theme toggle button styling */
@@ -1119,12 +1166,28 @@ import 'goku-css/docs/index.css'</code></pre>
         line-height: 1;
         font-size: .75em !important;
         box-shadow: none !important;
+        position: relative;
       }
 
       code {
         background: #333d !important;
         border: none !important;
         box-shadow: none !important;
+      }
+
+      .copy-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: var(--color-fg);
+        border: 1px solid var(--color-input-border);
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
       }
     </style>
   </body>

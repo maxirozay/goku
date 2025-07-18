@@ -1,13 +1,21 @@
 progress {
-  height: 8px;
-  background: var(--secondary-color);
-  border-radius: 16px;
-  border: var(--border-width) solid var(--secondary-color);
+  height: 1em;
+  background: #8888;
+  border-radius: 1em;
+  border: none;
   overflow: hidden;
-  animation: pulse-bg 3s infinite;
 }
 
 progress::-webkit-progress-value {
-  background: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-active));
+  border-radius: inherit;
   transition: all 1s linear;
+}
+
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-active));
 }
