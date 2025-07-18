@@ -100,4 +100,8 @@
     --color-button-text: var(--dark-button-text);
     --link-color: var(--dark-link);
   }
+
+  input::placeholder {
+    color: #fff8;
+  }
 }
