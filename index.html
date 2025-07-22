@@ -53,6 +53,7 @@
           <h4 class="m0">
             <a href="#utilities">Utilities</a>
           </h4>
+          <a href="#animations">Animations</a>
           <a href="#borders">Borders</a>
           <a href="#colors">Colors</a>
           <a href="#flex">Flex</a>
@@ -141,7 +142,7 @@ import 'goku-css/docs/index.css'</code></pre>
   --dark-fg: #30443d;
   --dark-text: #d8d5d2;
   --dark-header-text: #f7fafc;
-  --dark-input: #385043;
+  --dark-input: #40584d;
   --dark-input-text: #fff;
   --dark-input-border: #80a48d;
   --dark-button: #ff8544;
@@ -788,6 +789,16 @@ import 'goku-css/docs/index.css'</code></pre>
           <strong>Design System:</strong> All utilities are based on consistent design tokens from CSS variables, ensuring visual harmony across your project.
         </div>
 
+        <h3>Animations</h3>
+        
+        <p>Built-in loading animations for better user feedback during async operations.</p>
+        <button class="pulse-bg">button</button>
+        <button class="spin">button</button>
+        <button class="pulse-bg spin">button</button>
+        <pre><code class="language-html" data-lang="html">&lt;button class="pulse-bg"&gt;button&lt;/button&gt;
+&lt;button class="spin"&gt;button&lt;/button&gt;
+&lt;button class="pulse-bg spin"&gt;button&lt;/button&gt;</code></pre>
+
         <h3 id="borders">Borders</h3>
         <p>You can add/remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code> or <code class="language-css" data-lang="css">border-radius</code>.</p>
         <p>The class <code class="language-css" data-lang="css">group</code> will add the radius and remove the radius of the children.</p>
@@ -981,18 +992,6 @@ import 'goku-css/docs/index.css'</code></pre>
 
         <h3 id="shadow">Shadow</h3>
         You can use the class <code class="language-css" data-lang="css">shadow</code> and <code class="language-css" data-lang="css">no-shadow</code> to add or remove shadow.
-
-        <h2>Animations</h2>
-        <p>Subtle animations and micro-interactions to enhance user experience without being distracting.</p>
-        
-        <h3 id="loading">Loading States</h3>
-        <p>Built-in loading animations for better user feedback during async operations.</p>
-        <button class="pulse-bg">button</button>
-        <button class="spin">button</button>
-        <button class="pulse-bg spin">button</button>
-        <pre><code class="language-html" data-lang="html">&lt;button class="pulse-bg"&gt;button&lt;/button&gt;
-&lt;button class="spin"&gt;button&lt;/button&gt;
-&lt;button class="pulse-bg spin"&gt;button&lt;/button&gt;</code></pre>
       </section>
 
       <footer class="text-center py3 mt3 bt">
@@ -1161,11 +1160,16 @@ import 'goku-css/docs/index.css'</code></pre>
 
       /* Code block styling */
       pre {
+        margin: 2em 0 !important;
         border: 1px solid #8888 !important;
         line-height: 1;
         font-size: .75em !important;
         box-shadow: none !important;
         position: relative;
+
+        &:hover > .copy-btn {
+          display: flex;
+        }
       }
 
       code {
@@ -1182,10 +1186,11 @@ import 'goku-css/docs/index.css'</code></pre>
         width: 32px;
         height: 32px;
         cursor: pointer;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         font-size: 14px;
+        z-index: 1;
       }
     </style>
   </body>
