@@ -57,7 +57,6 @@
           <a href="#borders">Borders</a>
           <a href="#colors">Colors</a>
           <a href="#flex">Flex</a>
-          <a href="#loading">Loading</a>
           <a href="#overflow">Overflow</a>
           <a href="#portrait">Portrait</a>
           <a href="#position">Position</a>
@@ -789,7 +788,7 @@ import 'goku-css/docs/index.css'</code></pre>
           <strong>Design System:</strong> All utilities are based on consistent design tokens from CSS variables, ensuring visual harmony across your project.
         </div>
 
-        <h3>Animations</h3>
+        <h3 id="animations">Animations</h3>
         
         <p>Built-in loading animations for better user feedback during async operations.</p>
         <button class="pulse-bg">button</button>
@@ -936,7 +935,7 @@ import 'goku-css/docs/index.css'</code></pre>
 
         <h3 id="portrait">Portrait</h3>
         <div class="portrait">
-          This div is centered and will never be more than 1200 pixels width. 1200 pixels is our desktop breakpoints but you can change the portrait class' max-width if you would like another size.
+          This element use the <code class="language-css" data-lang="css">portrait</code> class to be centered and never be more than 1200 pixels width.
         </div>
 
         <h3 id="position">Position</h3>
@@ -972,7 +971,7 @@ import 'goku-css/docs/index.css'</code></pre>
         </p>
         <h3 id="size">Size</h3>
         <p>The <code class="language-css" data-lang="css">w</code> class takes 100% of the width and the <code class="language-css" data-lang="css">h</code> class takes 100% of the height.</p>
-        <button class="w  m0">w</button>
+        <div class="w fg p1">w</div>
 
         <h3 id="spacing">Spacing</h3>
         <p>
@@ -980,16 +979,16 @@ import 'goku-css/docs/index.css'</code></pre>
           For the margin, if you don't specify a size, like m or mx, the margin will be set to auto.
         </p>
         <div>
-          <button class="m0">m0</button>
-          <button class="m1">m1</button>
-          <button class="m2">m2</button>
-          <button class="m3">m3</button>
+          <span class="fg p1 m0">m0</span>
+          <span class="fg p1 m1">m1</span>
+          <span class="fg p1 m2">m2</span>
+          <span class="fg p1 m3">m3</span>
         </div>
-        <div>
-          <button class="p0">p0</button>
-          <button class="p1">p1</button>
-          <button class="p2">p2</button>
-          <button class="p3">p3</button>
+        <div class="mt3 py3">
+          <span class="fg p0">p0</span>
+          <span class="fg p1">p1</span>
+          <span class="fg p2">p2</span>
+          <span class="fg p3">p3</span>
         </div>
 
         <h3 id="shadow">Shadow</h3>
