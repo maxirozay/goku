@@ -55,6 +55,7 @@
   --margin-ratio2: 4;
   --margin-ratio3: 8;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
+  --grid-min-width: 250px;
   --gap: 4px;
   --gap-ratio2: 2;
   --gap-ratio3: 4;

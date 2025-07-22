@@ -57,6 +57,7 @@
           <a href="#borders">Borders</a>
           <a href="#colors">Colors</a>
           <a href="#flex">Flex</a>
+          <a href="#grid">Grid</a>
           <a href="#overflow">Overflow</a>
           <a href="#portrait">Portrait</a>
           <a href="#position">Position</a>
@@ -184,6 +185,7 @@ import 'goku-css/docs/index.css'</code></pre>
   --margin-ratio2: 4;
   --margin-ratio3: 8;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
+  --grid-min-width: 250px;
   --gap: 4px;
   --gap-ratio2: 2;
   --gap-ratio3: 4;
@@ -920,6 +922,79 @@ import 'goku-css/docs/index.css'</code></pre>
             div
           </div>
         </div>
+
+        <h3 id="grid">Grid</h3>
+        <p>Modern CSS Grid utilities for 2D layouts. Perfect complement to flexbox for complex grid systems.</p>
+        
+        <p>Basic grid container with auto-fit columns (uses <code class="language-css" data-lang="css">--grid-min-width</code> variable):</p>
+        <div class="grid-fit g2">
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="grid-fit g2"&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Auto-fill vs auto-fit (auto-fill creates empty columns if space available):</p>
+        <div class="grid-fill g2">
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="grid-fill g2"&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Column and row spanning for complex layouts:</p>
+        <div class="grid-fit g2" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="fg p1 col-2">col-2</div>
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+          <div class="fg p1 col-3">col-3</div>
+          <div class="fg p1"></div>
+          <div class="fg p1 w">w</div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="grid-fit g2" style="grid-template-columns: repeat(4, 1fr);"&gt;
+  &lt;div class="fg p1 col-2"&gt;col-2&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1 col-3"&gt;col-3&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1 w"&gt;w&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Row spanning example:</p>
+        <div class="grid-fit g2" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="fg p1 row-2">row-2</div>
+          <div class="fg p1"></div>
+          <div class="fg p1 row-3">row-3</div>
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="grid-fit g2" style="grid-template-columns: repeat(2, 1fr);"&gt;
+  &lt;div class="fg p1 row-2"&gt;row-2&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1 row-3"&gt;row-3&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Available classes:</p>
+        <ul>
+          <li><code class="language-css" data-lang="css">grid</code> - Basic grid container</li>
+          <li><code class="language-css" data-lang="css">grid-fit</code> - Auto-fit columns (uses <code class="language-css" data-lang="css">--grid-min-width</code>)</li>
+          <li><code class="language-css" data-lang="css">grid-fill</code> - Auto-fill columns (uses <code class="language-css" data-lang="css">--grid-min-width</code>)</li>
+          <li><code class="language-css" data-lang="css">col-2</code>, <code class="language-css" data-lang="css">col-3</code> - Column spanning (2 or 3 columns)</li>
+          <li><code class="language-css" data-lang="css">w</code> - Span entire width</li>
+          <li><code class="language-css" data-lang="css">row-2</code>, <code class="language-css" data-lang="css">row-3</code> - Row spanning (2 or 3 rows)</li>
+          <li><code class="language-css" data-lang="css">g1</code>, <code class="language-css" data-lang="css">g2</code>, <code class="language-css" data-lang="css">g3</code> - Gap sizing (works with both flex and grid)</li>
+        </ul>
+
+        <p><strong>Note:</strong> The grid system uses CSS variables for flexibility. Set <code class="language-css" data-lang="css">--grid-min-width</code> to customize the minimum column width for auto-fit and auto-fill grids.</p>
 
         <h3 id="overflow">Overflow</h3>
         <div class="fg  overflow-x p1" style="width: 50px; white-space: nowrap;">
