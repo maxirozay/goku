@@ -7,14 +7,14 @@
   display: flex;
   z-index: 10000;
   backdrop-filter: blur(3px);
-}
 
-.modal > div {
-  background: var(--color-fg);
-  z-index: 10001;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  margin: auto;
-  max-height: 80%;
-  overflow-y: auto;
+  > div {
+    background: var(--color-fg);
+    z-index: 10001;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: auto;
+    max-height: 80%;
+    overflow-y: auto;
+  }
 }
