@@ -5,42 +5,6 @@
   overflow: hidden;
 }
 
-.drawer-layout__input {
-  display: none !important;
-}
-
-.drawer-layout__input + div > div {
-  transition: all .3s;
-  box-sizing: border-box;
-  overflow-y: auto;
-  max-height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-.drawer-layout__input:first-child:checked + div > div {
-  right: 100%;
-  left: -100%;
-  z-index: 1;
-}
-.drawer-layout__input:not(:first-child):checked + div > div {
-  left: 100%;
-  right: -100%;
-  z-index: 2;
-}
-@media (min-width: 600px) {
-  .drawer-layout__input + div > div {
-    position: static;
-    width: var(--drawer-width);
-  }
-  .drawer-layout__input:first-child:checked + div > div {
-    margin-left: calc(var(--drawer-width) * -1);
-  }
-  .drawer-layout__input:not(:first-child):checked + div > div {
-    margin-right: calc(var(--drawer-width) * -1);
-  }
-}
-
 .drawer-layout__toggle {
   margin: auto;
   cursor: pointer;
@@ -53,17 +17,57 @@
     margin: 1px auto;
     width: 12px;
     height: 4px;
-  }
-  .bar:first-child {
-    transform: rotate(-45deg);
-  }
-  .bar:last-child {
-    transform:  rotate(45deg);
+
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+    &:last-child {
+      transform:  rotate(45deg);
+    }
   }
 }
-.drawer-layout__input:checked + div > .drawer-layout__toggle .bar:first-child {
-  transform: rotate(45deg);
+
+.drawer-layout__input {
+  display: none !important;
+
+   + div > div {
+    transition: all .3s;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &:first-child:checked + div > div {
+    right: 100%;
+    left: -100%;
+  }
+  &:not(:first-child):checked + div > div {
+    left: 100%;
+    right: -100%;
+  }
+  &:checked + div > .drawer-layout__toggle > .bar {
+    &:first-child {
+      transform: rotate(45deg);
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
 }
-.drawer-layout__input:checked + div > .drawer-layout__toggle .bar:last-child {
-  transform: rotate(-45deg);
+
+@media (min-width: 600px) {
+  .drawer-layout__input {
+    + div > div {
+      position: static;
+      width: var(--drawer-width);
+    }
+    &:first-child:checked + div > div {
+      margin-left: calc(var(--drawer-width) * -1);
+    }
+    &:not(:first-child):checked + div > div {
+      margin-right: calc(var(--drawer-width) * -1);
+    }
+  }
 }

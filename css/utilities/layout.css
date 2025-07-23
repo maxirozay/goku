@@ -292,6 +292,38 @@
   flex: 8;
 }
 
+/* Grid */
+
+.grid-fit,
+.grid-fill {
+  display: grid;
+
+  > .col-2 {
+    grid-column: span 2;
+  }
+  > .col-3 {
+    grid-column: span 3;
+  }
+  > .w {
+    grid-column: 1 / -1;
+  }
+
+  > .row-2 {
+    grid-row: span 2;
+  }
+  > .row-3 {
+    grid-row: span 3;
+  }
+}
+
+.grid-fit {
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), 1fr));
+}
+
+.grid-fill {
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-width), 1fr));
+}
+
 .g1 {
   gap: var(--gap);
 }

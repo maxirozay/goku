@@ -53,10 +53,11 @@
           <h4 class="m0">
             <a href="#utilities">Utilities</a>
           </h4>
+          <a href="#animations">Animations</a>
           <a href="#borders">Borders</a>
           <a href="#colors">Colors</a>
           <a href="#flex">Flex</a>
-          <a href="#loading">Loading</a>
+          <a href="#grid">Grid</a>
           <a href="#overflow">Overflow</a>
           <a href="#portrait">Portrait</a>
           <a href="#position">Position</a>
@@ -72,7 +73,7 @@
         <h1 class="m0 mb1">Goku CSS</h1>
         <p class="secondary-text">A lightweight, utility-first CSS framework for building modern interfaces</p>
         <div class="flex g2 flex-center mt2">
-          <span class="secondary p1">~22KB minified</span>
+          <span class="secondary p1">~23KB minified</span>
           <span class="secondary p1">~5KB gzipped</span>
           <span class="secondary p1">CSS Variables</span>
           <span class="secondary p1">Mobile-first</span>
@@ -141,7 +142,7 @@ import 'goku-css/docs/index.css'</code></pre>
   --dark-fg: #30443d;
   --dark-text: #d8d5d2;
   --dark-header-text: #f7fafc;
-  --dark-input: #385043;
+  --dark-input: #40584d;
   --dark-input-text: #fff;
   --dark-input-border: #80a48d;
   --dark-button: #ff8544;
@@ -184,6 +185,7 @@ import 'goku-css/docs/index.css'</code></pre>
   --margin-ratio2: 4;
   --margin-ratio3: 8;
   --margin: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
+  --grid-min-width: 250px;
   --gap: 4px;
   --gap-ratio2: 2;
   --gap-ratio3: 4;
@@ -650,7 +652,7 @@ import 'goku-css/docs/index.css'</code></pre>
             </div>
           </div>
         </div>
-        <p>Add "right" next to the dropdown class to open from the right.</p>
+        <p>If you use a button and click on it the dropdown will stay open while the button is focused else use a span or anchor to only open on hover. Add "right" next to the dropdown class to open from the right.</p>
         <pre><code class="language-html" data-lang="html">&lt;div class="dropdown" tabindex="0"&gt;
   &lt;button&gt;Hover Dropdown, you can use button, span or a.&lt;/button&gt; 
   &lt;div class="p2"&gt;
@@ -788,6 +790,18 @@ import 'goku-css/docs/index.css'</code></pre>
           <strong>Design System:</strong> All utilities are based on consistent design tokens from CSS variables, ensuring visual harmony across your project.
         </div>
 
+        <h3 id="animations">Animations</h3>
+        
+        <p>Built-in loading animations for better user feedback during async operations.</p>
+        <button class="pulse-bg">button</button>
+        <button class="spin">button</button>
+        <button class="pulse-bg spin">button</button>
+        <button class="ripple">button</button>
+        <pre><code class="language-html" data-lang="html">&lt;button class="pulse-bg"&gt;button&lt;/button&gt;
+&lt;button class="spin"&gt;button&lt;/button&gt;
+&lt;button class="pulse-bg spin"&gt;button&lt;/button&gt;
+&lt;button class="ripple"&gt;button&lt;/button&gt;</code></pre>
+
         <h3 id="borders">Borders</h3>
         <p>You can add/remove the border-radius on an element with the utility class <code class="language-css" data-lang="css">no-border-radius</code> or <code class="language-css" data-lang="css">border-radius</code>.</p>
         <p>The class <code class="language-css" data-lang="css">group</code> will add the radius and remove the radius of the children.</p>
@@ -909,6 +923,79 @@ import 'goku-css/docs/index.css'</code></pre>
           </div>
         </div>
 
+        <h3 id="grid">Grid</h3>
+        <p>Modern CSS Grid utilities for 2D layouts. Perfect complement to flexbox for complex grid systems.</p>
+        
+        <p>Basic grid container with auto-fit columns (uses <code class="language-css" data-lang="css">--grid-min-width</code> variable):</p>
+        <div class="grid-fit g2">
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="grid-fit g2"&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Auto-fill vs auto-fit (auto-fill creates empty columns if space available):</p>
+        <div class="grid-fill g2">
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="grid-fill g2"&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Column and row spanning for complex layouts:</p>
+        <div class="grid-fit g2" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="fg p1 col-2">col-2</div>
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+          <div class="fg p1 col-3">col-3</div>
+          <div class="fg p1"></div>
+          <div class="fg p1 w">w</div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="grid-fit g2" style="grid-template-columns: repeat(4, 1fr);"&gt;
+  &lt;div class="fg p1 col-2"&gt;col-2&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1 col-3"&gt;col-3&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1 w"&gt;w&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Row spanning example:</p>
+        <div class="grid-fit g2" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="fg p1 row-2">row-2</div>
+          <div class="fg p1"></div>
+          <div class="fg p1 row-3">row-3</div>
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+          <div class="fg p1"></div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="grid-fit g2" style="grid-template-columns: repeat(2, 1fr);"&gt;
+  &lt;div class="fg p1 row-2"&gt;row-2&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1 row-3"&gt;row-3&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+  &lt;div class="fg p1"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Available classes:</p>
+        <ul>
+          <li><code class="language-css" data-lang="css">grid</code> - Basic grid container</li>
+          <li><code class="language-css" data-lang="css">grid-fit</code> - Auto-fit columns (uses <code class="language-css" data-lang="css">--grid-min-width</code>)</li>
+          <li><code class="language-css" data-lang="css">grid-fill</code> - Auto-fill columns (uses <code class="language-css" data-lang="css">--grid-min-width</code>)</li>
+          <li><code class="language-css" data-lang="css">col-2</code>, <code class="language-css" data-lang="css">col-3</code> - Column spanning (2 or 3 columns)</li>
+          <li><code class="language-css" data-lang="css">w</code> - Span entire width</li>
+          <li><code class="language-css" data-lang="css">row-2</code>, <code class="language-css" data-lang="css">row-3</code> - Row spanning (2 or 3 rows)</li>
+          <li><code class="language-css" data-lang="css">g1</code>, <code class="language-css" data-lang="css">g2</code>, <code class="language-css" data-lang="css">g3</code> - Gap sizing (works with both flex and grid)</li>
+        </ul>
+
+        <p><strong>Note:</strong> The grid system uses CSS variables for flexibility. Set <code class="language-css" data-lang="css">--grid-min-width</code> to customize the minimum column width for auto-fit and auto-fill grids.</p>
+
         <h3 id="overflow">Overflow</h3>
         <div class="fg  overflow-x p1" style="width: 50px; white-space: nowrap;">
           overflow-x
@@ -923,7 +1010,7 @@ import 'goku-css/docs/index.css'</code></pre>
 
         <h3 id="portrait">Portrait</h3>
         <div class="portrait">
-          This div is centered and will never be more than 1200 pixels width. 1200 pixels is our desktop breakpoints but you can change the portrait class' max-width if you would like another size.
+          This element use the <code class="language-css" data-lang="css">portrait</code> class to be centered and never be more than 1200 pixels width.
         </div>
 
         <h3 id="position">Position</h3>
@@ -959,7 +1046,7 @@ import 'goku-css/docs/index.css'</code></pre>
         </p>
         <h3 id="size">Size</h3>
         <p>The <code class="language-css" data-lang="css">w</code> class takes 100% of the width and the <code class="language-css" data-lang="css">h</code> class takes 100% of the height.</p>
-        <button class="w  m0">w</button>
+        <div class="w fg p1">w</div>
 
         <h3 id="spacing">Spacing</h3>
         <p>
@@ -967,32 +1054,20 @@ import 'goku-css/docs/index.css'</code></pre>
           For the margin, if you don't specify a size, like m or mx, the margin will be set to auto.
         </p>
         <div>
-          <button class="m0">m0</button>
-          <button class="m1">m1</button>
-          <button class="m2">m2</button>
-          <button class="m3">m3</button>
+          <span class="fg p1 m0">m0</span>
+          <span class="fg p1 m1">m1</span>
+          <span class="fg p1 m2">m2</span>
+          <span class="fg p1 m3">m3</span>
         </div>
-        <div>
-          <button class="p0">p0</button>
-          <button class="p1">p1</button>
-          <button class="p2">p2</button>
-          <button class="p3">p3</button>
+        <div class="mt3 py3">
+          <span class="fg p0">p0</span>
+          <span class="fg p1">p1</span>
+          <span class="fg p2">p2</span>
+          <span class="fg p3">p3</span>
         </div>
 
         <h3 id="shadow">Shadow</h3>
         You can use the class <code class="language-css" data-lang="css">shadow</code> and <code class="language-css" data-lang="css">no-shadow</code> to add or remove shadow.
-
-        <h2>Animations</h2>
-        <p>Subtle animations and micro-interactions to enhance user experience without being distracting.</p>
-        
-        <h3 id="loading">Loading States</h3>
-        <p>Built-in loading animations for better user feedback during async operations.</p>
-        <button class="pulse-bg">button</button>
-        <button class="spin">button</button>
-        <button class="pulse-bg spin">button</button>
-        <pre><code class="language-html" data-lang="html">&lt;button class="pulse-bg"&gt;button&lt;/button&gt;
-&lt;button class="spin"&gt;button&lt;/button&gt;
-&lt;button class="pulse-bg spin"&gt;button&lt;/button&gt;</code></pre>
       </section>
 
       <footer class="text-center py3 mt3 bt">
@@ -1161,11 +1236,16 @@ import 'goku-css/docs/index.css'</code></pre>
 
       /* Code block styling */
       pre {
+        margin: 2em 0 !important;
         border: 1px solid #8888 !important;
         line-height: 1;
         font-size: .75em !important;
         box-shadow: none !important;
         position: relative;
+
+        &:hover > .copy-btn {
+          display: flex;
+        }
       }
 
       code {
@@ -1182,10 +1262,11 @@ import 'goku-css/docs/index.css'</code></pre>
         width: 32px;
         height: 32px;
         cursor: pointer;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         font-size: 14px;
+        z-index: 1;
       }
     </style>
   </body>
