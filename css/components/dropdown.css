@@ -112,7 +112,7 @@
       border: none !important;
       max-height: none;
       background: none;
-      padding: 1em 0 0 0 !important;
+      padding: 1em 0 !important;
       gap: 0;
       border-radius: 0;
     }
@@ -154,7 +154,7 @@
       border: none !important;
       max-height: none;
       background: none;
-      padding: 1em 0 0 0 !important;
+      padding: 1em 0 !important;
       gap: 0;
       border-radius: 0;
     }
