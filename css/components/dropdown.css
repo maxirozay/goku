@@ -109,7 +109,7 @@
 
     > div {
       box-shadow: none;
-      border-bottom: var(--border-width) solid var(--text-color);
+      border-bottom: var(--border-width) solid var(--color-text);
       max-height: none;
       background: none;
       padding: 1em 0 !important;
