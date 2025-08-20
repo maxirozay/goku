@@ -38,11 +38,9 @@ nav {
       color: var(--color-text);
       opacity: 0;
       z-index: 101;
+      gap: inherit;
+      padding: inherit;
 
-      > :not(:is(button, hr)) {
-        padding: 1em;
-        margin: 0 !important;
-      }
       > button {
         margin: 0 1em !important;
 

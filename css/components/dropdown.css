@@ -109,18 +109,11 @@
 
     > div {
       box-shadow: none;
-      border: none !important;
+      border-bottom: var(--border-width) solid var(--color-text);
       max-height: none;
       background: none;
-      padding: 1em 0 0 0 !important;
-      gap: 0;
+      padding: 1em 0 !important;
       border-radius: 0;
-
-      > * {
-        padding: .25em 1em;
-        color: var(--color-text);
-        border-left: var(--border-width) solid var(--color-text);
-      }
     }
   }
 }
@@ -157,18 +150,11 @@
 
     > div {
       box-shadow: none !important;
-      border: none !important;
+      border-bottom: var(--border-width) solid var(--color-text);
       max-height: none;
       background: none;
-      padding: 1em 0 0 0 !important;
-      gap: 0;
+      padding: 1em 0 !important;
       border-radius: 0;
-
-      > * {
-        padding: .25em 1em;
-        color: var(--color-text);
-        border-left: var(--border-width) solid var(--color-text);
-      }
     }
   }
 }
