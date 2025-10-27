@@ -11,7 +11,6 @@
   > div {
     max-height: 80vh;
     transition: all .3s;
-    overflow: auto;
   }
   
   > input:not(:checked) ~ div {
