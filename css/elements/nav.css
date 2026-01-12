@@ -42,8 +42,6 @@ nav {
       padding: inherit;
 
       > button {
-        margin: 0 1em !important;
-
         + :is(button, hr) {
           margin-top: 1em !important;
         }
