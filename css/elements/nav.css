@@ -65,16 +65,16 @@ nav {
       align-items: center;
       transition: all 0.3s;
     }
-    > .toggle > div {
+    > .toggle > * {
       width: 18px;
       height: 2px;
       background: var(--color-text);
       transition: all 0.3s;
     }
-    > .toggle > div:nth-child(1) {
+    > .toggle > *:nth-child(1) {
       margin-bottom: 3px;
     }
-    > .toggle > div:nth-child(2) {
+    > .toggle > *:nth-child(2) {
       margin-bottom: 3px;
     }
 
@@ -85,10 +85,8 @@ nav {
         transition: opacity .3s;
       }
       ~ .toggle {
-        background: var(--color-button);
 
-        > div {
-          background: var(--color-button-text);
+        > * {
           &:nth-child(1) {
             transform: translateY(5px) rotate(45deg);
           }
