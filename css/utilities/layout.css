@@ -98,19 +98,6 @@
   padding: var(--padding-input) !important;
 }
 
-.p, .py, .pt {
-  padding-top: auto !important;
-}
-.p, .py, .pb {
-  padding-bottom: auto !important;
-}
-.p, .px, .pl {
-  padding-left: auto !important;
-}
-.p, .px, .pr {
-  padding-right: auto !important;
-}
-
 .p0, .py0, .pt0 {
   padding-top: 0 !important;
 }
