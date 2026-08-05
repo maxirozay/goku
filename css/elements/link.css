@@ -7,9 +7,5 @@ a {
   &:active {
     color: var(--primary-color-active);
   }
-
-  &:focus {
-    text-decoration: underline;
-  }
 }
 

@@ -28,7 +28,16 @@
 }
 
 .drawer-layout__input {
-  display: none !important;
+  /* Hidden visually, still focusable and announced. */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  overflow: hidden;
+  appearance: none;
 
    + div > div {
     transition: all .3s;
@@ -38,6 +47,9 @@
     position: absolute;
     left: 0;
     right: 0;
+  }
+  &:focus-visible + div > .drawer-layout__toggle {
+    outline: 2px solid var(--primary-color-active);
   }
   &:first-child:checked + div > div {
     right: 100%;
@@ -57,7 +69,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .drawer-layout__input {
     + div > div {
       position: static;

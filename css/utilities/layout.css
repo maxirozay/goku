@@ -1,6 +1,6 @@
 /* Size */
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   .portrait {
     max-width: 1200px;
     margin: auto !important;
@@ -221,7 +221,7 @@
   display: flex !important;
 }
 
-@media (max-width: 900px) {
+@media (width < 900px) {
   .flex {
     flex-direction: column;
   }
@@ -235,8 +235,7 @@
 .flex-center {
   display: flex !important;
   align-items: center;
-  justify-content: center;
-  align-content: center;
+  place-content: center;
 }
 
 .flex-column {

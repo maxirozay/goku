@@ -1,19 +1,32 @@
 .accordion {
+  /* Hidden visually, still focusable and announced. */
   > input {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    overflow: hidden;
+    appearance: none;
   }
-  
+
+  &:has(> input:focus-visible) {
+    outline: 2px solid var(--primary-color-active);
+  }
+
   > label {
     color: var(--color-input-text);
     display: block;
   }
-  
+
   > div {
     max-height: 80vh;
     transition: all .3s;
     overflow: auto;
   }
-  
+
   > input:not(:checked) ~ div {
     height: 0 !important;
     max-height: 0;

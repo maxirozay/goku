@@ -1,33 +1,27 @@
-.primary,
 .primary-border,
-.secondary,
 .secondary-border,
-.success,
 .success-border,
-.warning,
 .warning-border,
-.error,
 .error-border,
-.bg,
 .bg-border,
-.fg,
 .fg-border,
-.input,
 .input-border {
   &:not(.bt, .br, .bb, .bl) {
+    border-width: var(--border-width);
+    border-style: solid;
     border-radius: var(--border-radius);
   }
 }
-.primary-border,
-.secondary-border,
-.success-border,
-.warning-border,
-.error-border,
-.bg-border,
-.fg-border,
-.input-border {
+.primary,
+.secondary,
+.success,
+.warning,
+.error,
+.bg,
+.fg,
+.input {
   &:not(.bt, .br, .bb, .bl) {
-    border: var(--border-width) solid;
+    border-radius: var(--border-radius);
   }
 }
 

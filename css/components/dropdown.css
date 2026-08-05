@@ -6,21 +6,37 @@
 
     &:after {
       content: '';
-      width: .3em;
-      height: .3em;
-      border-right: 2px solid;
-      border-bottom: 2px solid;
-      transform: rotate(45deg);
-      margin: .25em .25em .25em .5em;
-      transition: all .3s;
+      width: var(--arrow-width);
+      height: var(--arrow-height);
+      background: currentcolor;
+      mask: var(--arrow-mask) no-repeat center / 100% 100%;
+      margin: 0 .25em 0 .5em;
+      vertical-align: middle;
+      transition: transform .3s;
       display: inline-block;
-    } 
+    }
   }
   > input:checked ~ label:after {
-    transform: translateY(.2em) rotate(-135deg);
+    transform: rotate(180deg);
   }
 
-  > input,
+  /* Hidden visually, still focusable and announced. */
+  > input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    overflow: hidden;
+    appearance: none;
+  }
+
+  > input:focus-visible ~ label {
+    outline: 2px solid var(--primary-color-active);
+  }
+
   > div ~ button {
     display: none;
   }
@@ -39,7 +55,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (width < 900px) {
   .dropdown:not(.-desktop) {
     > div {
       max-height: 80vh;
@@ -56,6 +72,7 @@
       bottom: 0;
       pointer-events: auto;
     }
+
     &:before,
     &:after,
     label:before {
@@ -67,7 +84,7 @@
       z-index: 1000;
       transition: all .3s .3s;
       height: 100vh;
-      pointer-events: visible;
+      pointer-events: auto;
       visibility: hidden;
     }
     &:has(> input:checked) > label:before {
@@ -118,7 +135,7 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .dropdown:not(.-mobile) > div {
     display: none;
     position: absolute;

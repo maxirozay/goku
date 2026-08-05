@@ -18,21 +18,31 @@ nav {
     }
   }
 
-  > input[type=checkbox] {
-    display: none;
+  /* Hidden visually, still focusable and announced. */
+  > input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    overflow: hidden;
+    appearance: none;
+  }
+
+  > input:focus-visible ~ .toggle {
+    outline: 2px solid var(--primary-color-active);
   }
 }
 
-@media (max-width:900px) {
+@media (width < 900px) {
   nav {
     > .content {
       position: fixed;
-      top: 0;
-      left: 100%;
-      right: 0;
-      bottom: 0;
+      inset: 0 0 0 100%;
       overflow-y: auto;
-      transition: opacity .3s, top, left 0s .3s;
+      transition: opacity .3s, left 0s .3s;
       flex-direction: column;
       background: var(--color-fg);
       color: var(--color-text);
@@ -102,7 +112,7 @@ nav {
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   nav {
     > .toggle {
       display: none;

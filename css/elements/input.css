@@ -11,14 +11,15 @@
   &:hover {
     border-color: var(--primary-color-active);
   }
+
+  &:has(> input:focus-visible) {
+    outline: 2px solid var(--primary-color-active);
+  }
 }
 .label__file > input[type='file'] {
   opacity: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
 }
 
 label + :is(input, textarea, select),
@@ -29,22 +30,22 @@ label > :is(input, textarea, select) {
 
 input,
 textarea,
-select  {
+select {
   width: 100%;
   accent-color: var(--primary-color);
   caret-color: var(--primary-color);
 }
 
-select  {
+select {
   appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%207%207%22%20fill%3D%22none%22%20stroke%3D%22%23888%22%3E%3Cpolyline%20points%3D%222%202%204%204%206%202%22%2F%3E%3C%2Fsvg%3E');
+  background-image: var(--arrow-image);
   background-repeat: no-repeat;
   background-position: right var(--padding-r) center;
-  background-size: 1em;
+  background-size: var(--arrow-width) var(--arrow-height);
   padding-right: 1.5em;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   appearance: none;
   background: var(--color-input);
   width: 2em;
@@ -63,7 +64,7 @@ input[type=checkbox] {
     display: inline-block;
     width: 1em;
     height: 1em;
-    background: #888;
+    background: var(--color-input-border);
     border-radius: 100%;
     transition: inherit;
   }
@@ -77,19 +78,29 @@ input[type=checkbox] {
   }
 }
 
-input[type=radio] {
-  display: none;
+/* Hidden visually, still focusable and announced. */
+input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  overflow: hidden;
 }
-input[type=radio] + label {
+input[type="radio"] + label {
   padding: var(--padding-input);
   background: var(--color-input);
   color: var(--color-input-text);
 }
-input[type=radio]:checked + label {
+input[type="radio"]:checked + label {
   background: var(--primary-color) !important;
   color: var(--primary-color-text) !important;
 }
-
+input[type="radio"]:focus-visible + label {
+  outline: 2px solid var(--primary-color-active);
+}
 input[type='file'] {
   background: var(--color-input);
   color: var(--color-text);
@@ -98,11 +109,11 @@ input[type='file'] {
 }
 
 input[type="color"] {
-	appearance: none;
-	border: none;
+  appearance: none;
+  border: none;
   border-radius: 100%;
-	width: 1em;
-	height: 1em;
+  width: 1em;
+  height: 1em;
   padding: 0;
   margin: 0;
   vertical-align: text-top;

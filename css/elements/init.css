@@ -12,8 +12,7 @@ select {
   padding: var(--padding-input);
   box-sizing: border-box;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: var(--primary-color-active);
   }
 }
@@ -25,7 +24,7 @@ select {
   border-color: var(--color-input-border);
 }
 
-input[type=date] {
+input[type="date"] {
   line-height: calc(var(--line-height) - .125);
 }
 
@@ -41,4 +40,8 @@ hr {
   border: 0;
   border-top: var(--border-width) solid #8884;
   margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary-color-active);
 }

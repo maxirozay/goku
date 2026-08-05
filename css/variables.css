@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+
   --font-family: sans-serif;
   --font-weight: 400;
   --font-size: 1rem;
@@ -40,6 +42,11 @@
   --error-color: #f56565;
   --border-radius: 12px;
   --border-width: 1px;
+  --arrow-width: .6em;
+  --arrow-height: .36em;
+  --arrow-mask: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%201%205%205%209%201%22%2F%3E%3C%2Fsvg%3E');
+  --light-arrow-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20stroke%3D%22%23050505%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%201%205%205%209%201%22%2F%3E%3C%2Fsvg%3E');
+  --dark-arrow-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%201%205%205%209%201%22%2F%3E%3C%2Fsvg%3E');
   --padding-t: 8px;
   --padding-r: 8px;
   --padding-b: 8px;
@@ -61,9 +68,8 @@
   --gap-ratio3: 12;
   --shadow: 0 1px 3px 0 #788d8344, 0 1px 2px 0 #788d8344;
   --drawer-width: 300px;
-}
 
-:root {
+  /* light theme */
   --primary-color: var(--light-primary-color);
   --primary-color-text: var(--light-primary-color-text);
   --primary-color-active: var(--light-primary-color-active);
@@ -80,10 +86,13 @@
   --color-button-border: var(--light-button-border);
   --color-button-text: var(--light-button-text);
   --link-color: var(--light-link);
+  --arrow-image: var(--light-arrow-image);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
+  
     --primary-color: var(--dark-primary-color);
     --primary-color-text: var(--dark-primary-color-text);
     --primary-color-active: var(--dark-primary-color-active);
@@ -100,6 +109,7 @@
     --color-button-border: var(--dark-button-border);
     --color-button-text: var(--dark-button-text);
     --link-color: var(--dark-link);
+    --arrow-image: var(--dark-arrow-image);
   }
 
   input::placeholder {
