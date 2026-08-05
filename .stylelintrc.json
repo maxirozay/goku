@@ -1,6 +1,10 @@
 {
 	"extends": "stylelint-config-standard",
 	"rules": {
-		"import-notation": "string"
+		"import-notation": "string",
+		"selector-pseudo-element-colon-notation": "single",
+		"selector-class-pattern": null,
+		"rule-empty-line-before": null,
+		"no-descending-specificity": null
 	}
 }

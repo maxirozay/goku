@@ -1,10 +1,18 @@
 # Goku CSS framework
 
+A small, class-light CSS framework. Styles plain HTML elements, adds a handful of
+components and utilities, and stays out of your way. ~5 KB gzipped for everything.
+
 ## Getting started
 
-To use Goku CSS you only need to install and import it.
+Install with `pnpm add goku-css` (or `npm` / `yarn`), then pick one of:
 
-- Install with: `yarn add goku-css` or `npm install goku-css`
-- Import `goku-css`
+```js
+import 'goku-css'
+```
 
-For a ready to use version you can import `goku-css/docs/index.css`.
+## Development
+
+- `pnpm dev` — docs site with hot reload
+- `pnpm build` — rebuild `docs/`
+- `pnpm lint` — stylelint
