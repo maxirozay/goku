@@ -7,7 +7,7 @@ progress {
 }
 
 progress::-webkit-progress-value {
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-active));
+  background: linear-gradient(90deg, var(--primary-color), var(--active-color));
   border-radius: inherit;
   transition: all 1s linear;
 }
@@ -17,5 +17,5 @@ progress::-webkit-progress-bar {
 }
 
 progress::-moz-progress-bar {
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-active));
+  background: linear-gradient(90deg, var(--primary-color), var(--active-color));
 }

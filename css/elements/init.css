@@ -13,15 +13,15 @@ select {
   box-sizing: border-box;
 
   &:hover {
-    border-color: var(--primary-color-active);
+    border-color: var(--active-color);
   }
 }
 input,
 textarea,
 select {
-  background: var(--color-input);
-  color: var(--color-input-text);
-  border-color: var(--color-input-border);
+  background: var(--input-bg-color);
+  color: var(--input-text-color);
+  border-color: var(--input-border-color);
 }
 
 input[type="date"] {
@@ -31,17 +31,17 @@ input[type="date"] {
 *:disabled {
   opacity: 0.5;
   cursor: default;
-  background: #8888;
-  border-color: #8888;
-  color: var(--color-text);
+  background: var(--muted-color);
+  border-color: var(--muted-color);
+  color: var(--muted-text-color);
 }
 
 hr {
   border: 0;
-  border-top: var(--border-width) solid #8884;
+  border-top: var(--border-width) solid var(--border-color);
   margin: 0;
 }
 
 :focus-visible {
-  outline: 2px solid var(--primary-color-active);
+  outline: var(--outline);
 }

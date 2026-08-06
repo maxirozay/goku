@@ -5,6 +5,7 @@
 .error-border,
 .bg-border,
 .fg-border,
+.muted-border,
 .input-border {
   &:not(.bt, .br, .bb, .bl) {
     border-width: var(--border-width);
@@ -19,6 +20,7 @@
 .error,
 .bg,
 .fg,
+.muted,
 .input {
   &:not(.bt, .br, .bb, .bl) {
     border-radius: var(--border-radius);
@@ -27,7 +29,7 @@
 
 .primary {
   background: var(--primary-color) !important;
-  color: var(--primary-color-text) !important;
+  color: var(--primary-text-color) !important;
 }
 .primary-border {
   border-color: var(--primary-color) !important;
@@ -35,7 +37,7 @@
 
 .secondary {
   background: var(--secondary-color) !important;
-  color: var(--secondary-color-text) !important;
+  color: var(--secondary-text-color) !important;
 }
 .secondary-border {
   border-color: var(--secondary-color) !important;
@@ -43,7 +45,7 @@
 
 .success {
   background: var(--success-color) !important;
-  color: #1a1a1a !important;
+  color: var(--success-text-color) !important;
 }
 .success-border {
   border-color: var(--success-color) !important;
@@ -51,7 +53,7 @@
 
 .warning {
   background: var(--warning-color) !important;
-  color: #1a1a1a !important;
+  color: var(--warning-text-color) !important;
 }
 .warning-border {
   border-color: var(--warning-color) !important;
@@ -59,34 +61,42 @@
 
 .error {
   background: var(--error-color) !important;
-  color: #1a1a1a !important;
+  color: var(--error-text-color) !important;
 }
 .error-border {
   border-color: var(--error-color) !important;
 }
 
 .bg {
-  background: var(--color-bg) !important;
-  color: var(--color-text) !important;
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
 }
 .bg-border {
-  border-color: var(--color-bg) !important;
+  border-color: var(--bg-color) !important;
+}
+
+.muted {
+  background: var(--muted-color) !important;
+  color: var(--muted-text-color) !important;
+}
+.muted-border {
+  border-color: var(--muted-color) !important;
 }
 
 .fg {
-  background: var(--color-fg) !important;
-  color: var(--color-text) !important;
+  background: var(--fg-color) !important;
+  color: var(--text-color) !important;
 }
 .fg-border {
-  border-color: var(--color-fg) !important;
+  border-color: var(--fg-color) !important;
 }
 
 .input {
-  background: var(--color-input) !important;
-  color: var(--color-input-text) !important;
+  background: var(--input-bg-color) !important;
+  color: var(--input-text-color) !important;
 }
 .input-border {
-  border-color: var(--color-input-border) !important;
+  border-color: var(--input-border-color) !important;
 }
 
 .primary-text {
@@ -107,4 +117,8 @@
 
 .error-text {
   color: var(--error-color) !important;
+}
+
+.muted-text {
+  color: var(--muted-color) !important;
 }

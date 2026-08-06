@@ -9,12 +9,12 @@
 }
 
 .group {
-  border: var(--border-width) solid var(--color-input-border);
-  background: var(--color-input-border);
+  border: var(--border-width) solid var(--input-border-color);
+  background: var(--input-border-color);
 
   &:focus-within,
   &:hover {
-    border-color: var(--primary-color-active);
+    border-color: var(--active-color);
   }
 
   > * {
@@ -28,14 +28,14 @@
 }
 
 .bt {
-  border-top: var(--border-width) solid;
+  border-top: var(--border-width) solid var(--border-color);
 }
 .bl {
-  border-left: var(--border-width) solid;
+  border-left: var(--border-width) solid var(--border-color);
 }
 .bb {
-  border-bottom: var(--border-width) solid;
+  border-bottom: var(--border-width) solid var(--border-color);
 }
 .br {
-  border-right: var(--border-width) solid;
+  border-right: var(--border-width) solid var(--border-color);
 }

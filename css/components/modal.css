@@ -2,12 +2,12 @@
   position: fixed;
   inset: 0;
   display: flex;
-  z-index: 10000;
+  z-index: var(--modal-z);
   backdrop-filter: blur(3px);
 
   > div {
-    background: var(--color-fg);
-    z-index: 10001;
+    background: var(--fg-color);
+    z-index: calc(var(--modal-z) + 1);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     margin: auto;

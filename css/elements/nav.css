@@ -3,7 +3,7 @@ nav {
   width: 100%;
   box-sizing: border-box;
   align-items: center;
-  z-index: 100;
+  z-index: var(--nav-z);
   gap: 1em;
 
   > :first-child {
@@ -32,7 +32,7 @@ nav {
   }
 
   > input:focus-visible ~ .toggle {
-    outline: 2px solid var(--primary-color-active);
+    outline: var(--outline);
   }
 }
 
@@ -42,12 +42,12 @@ nav {
       position: fixed;
       inset: 0 0 0 100%;
       overflow-y: auto;
-      transition: opacity .3s, left 0s .3s;
+      transition: opacity var(--transition-duration), left 0s var(--transition-duration);
       flex-direction: column;
-      background: var(--color-fg);
-      color: var(--color-text);
+      background: var(--fg-color);
+      color: var(--text-color);
       opacity: 0;
-      z-index: 101;
+      z-index: calc(var(--nav-z) + 1);
       gap: inherit;
       padding: inherit;
 
@@ -62,7 +62,7 @@ nav {
     }
 
     > .toggle {
-      z-index: 102;
+      z-index: calc(var(--nav-z) + 2);
       padding: 12px;
       margin: -12px;
       -webkit-tap-highlight-color: transparent;
@@ -73,13 +73,13 @@ nav {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: all 0.3s;
+      transition: all var(--transition-duration);
     }
     > .toggle > * {
       width: 18px;
       height: 2px;
-      background: var(--color-text);
-      transition: all 0.3s;
+      background: var(--text-color);
+      transition: all var(--transition-duration);
     }
     > .toggle > *:nth-child(1) {
       margin-bottom: 3px;
@@ -92,7 +92,7 @@ nav {
       ~ .content {
         left: 0;
         opacity: 1;
-        transition: opacity .3s;
+        transition: opacity var(--transition-duration);
       }
       ~ .toggle {
 

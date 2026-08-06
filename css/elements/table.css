@@ -12,7 +12,7 @@ table {
 }
 
 th {
-  border-bottom: var(--border-width) solid #8884;
+  border-bottom: var(--border-width) solid var(--border-color);
 }
 
 tr,
@@ -23,9 +23,9 @@ td {
 
 tr {
   &:nth-child(even) {
-    background: #8881;
+    background: var(--stripe-color);
   }
   &:hover {
-    background: #8882;
+    background: var(--hover-color);
   }
 }

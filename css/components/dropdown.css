@@ -9,10 +9,10 @@
       width: var(--arrow-width);
       height: var(--arrow-height);
       background: currentcolor;
-      mask: var(--arrow-mask) no-repeat center / 100% 100%;
+      mask: var(--arrow-image) no-repeat center / 100% 100%;
       margin: 0 .25em 0 .5em;
       vertical-align: middle;
-      transition: transform .3s;
+      transition: transform var(--transition-duration);
       display: inline-block;
     }
   }
@@ -34,7 +34,7 @@
   }
 
   > input:focus-visible ~ label {
-    outline: 2px solid var(--primary-color-active);
+    outline: var(--outline);
   }
 
   > div ~ button {
@@ -48,10 +48,10 @@
     min-width: 10em;
     overflow-y: auto;
     box-shadow: var(--shadow);
-    background: var(--color-fg);
+    background: var(--fg-color);
     border-radius: var(--border-radius);
-    z-index: 1000;
-    transition: all .3s ease;
+    z-index: var(--dropdown-z);
+    transition: all var(--transition-duration) ease;
   }
 }
 
@@ -81,8 +81,8 @@
       top: 0;
       right: 0;
       left: 0;
-      z-index: 1000;
-      transition: all .3s .3s;
+      z-index: var(--dropdown-z);
+      transition: all var(--transition-duration) var(--transition-duration);
       height: 100vh;
       pointer-events: auto;
       visibility: hidden;
@@ -91,7 +91,7 @@
       visibility: visible;
     }
     &:has(> input:checked, > :is(button, span, a):hover, > :is(button, span, a) + div:hover):before {
-      z-index: 999;
+      z-index: calc(var(--dropdown-z) - 1);
       backdrop-filter: blur(2px);
       visibility: visible;
     }
@@ -115,7 +115,7 @@
     > :has(+ div) {
       font-weight: bold;
       background: none;
-      color: var(--color-header-text) !important;
+      color: var(--header-text-color) !important;
       border: 0;
       padding: 0;
 
@@ -126,7 +126,7 @@
 
     > div {
       box-shadow: none;
-      border-bottom: var(--border-width) solid var(--color-text);
+      border-bottom: var(--border-width) solid var(--text-color);
       max-height: none;
       background: none;
       padding: 1em 0 !important;
@@ -156,7 +156,7 @@
     > :has(+ div) {
       font-weight: bold;
       background: none;
-      color: var(--color-header-text) !important;
+      color: var(--header-text-color) !important;
       border: 0;
       padding: 0;
 
@@ -167,7 +167,7 @@
 
     > div {
       box-shadow: none !important;
-      border-bottom: var(--border-width) solid var(--color-text);
+      border-bottom: var(--border-width) solid var(--text-color);
       max-height: none;
       background: none;
       padding: 1em 0 !important;
