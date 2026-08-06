@@ -54,6 +54,7 @@
           <h4 class="m0">
             <a href="#utilities">Utilities</a>
           </h4>
+          <a href="#accessibility">Accessibility</a>
           <a href="#animations">Animations</a>
           <a href="#borders">Borders</a>
           <a href="#colors">Colors</a>
@@ -383,6 +384,24 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
           Checkbox
           <input class="ml2" type="checkbox">
         </label>
+
+        <h4>Radio</h4>
+        <p>
+          Radio buttons keep their native appearance by default. Wrap them in a
+          <code class="language-css" data-lang="css">group</code> with a label after each input to turn them into a
+          segmented control: the input is hidden visually (still focusable and announced) and the label becomes the
+          control. For your own patterns, the <code class="language-css" data-lang="css">visually-hidden</code> class
+          does the same to any element.
+        </p>
+        <label>
+          <input type="radio" name="plain-radio" checked> Native radio
+        </label>
+        <label>
+          <input type="radio" name="plain-radio"> Another one
+        </label>
+        <pre><code class="language-html" data-lang="html">&lt;label&gt;
+  &lt;input type="radio" name="plain-radio" checked&gt; Native radio
+&lt;/label&gt;</code></pre>
 
         <div class="group flex my2">
           <input type="radio" name="radio" id="radio1">
@@ -722,15 +741,15 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
             Radio 1
             <input type="radio" name="tabs" id="tab1">
           </label>
-          <label for="tab2" class="fg">
+          <label for="tab2">
             Radio 2
-            <input type="radio" name="tabs" id="tab2">
+            <input type="radio" name="tabs" id="tab2" checked>
           </label>
           <label for="tab3">
             Radio 3
             <input type="radio" name="tabs" id="tab3">
           </label>
-          <label for="tab3">
+          <label for="tab4">
             Radio 4
             <input type="radio" name="tabs" id="tab4">
           </label>
@@ -741,15 +760,15 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
     Radio 1
     &lt;input type="radio" name="tabs" id="tab1"&gt;
   &lt;/label&gt;
-  &lt;label for="tab2" class="fg"&gt;
+  &lt;label for="tab2"&gt;
     Radio 2
-    &lt;input type="radio" name="tabs" id="tab2"&gt;
+    &lt;input type="radio" name="tabs" id="tab2" checked&gt;
   &lt;/label&gt;
   &lt;label for="tab3"&gt;
     Radio 3
     &lt;input type="radio" name="tabs" id="tab3"&gt;
   &lt;/label&gt;
-  &lt;label for="tab3"&gt;
+  &lt;label for="tab4"&gt;
     Radio 4
     &lt;input type="radio" name="tabs" id="tab4"&gt;
   &lt;/label&gt;

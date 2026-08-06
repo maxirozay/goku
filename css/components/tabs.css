@@ -21,6 +21,32 @@
     padding: var(--padding-input);
   }
 
+  > label {
+    text-align: center;
+    cursor: pointer;
+
+    /* Hidden visually, still focusable and announced. */
+    > input[type="radio"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      opacity: 0;
+      overflow: hidden;
+      appearance: none;
+    }
+
+    &:has(> input:checked) {
+      background: var(--fg-color);
+      color: var(--text-color);
+    }
+    &:has(> input:focus-visible) {
+      outline: var(--outline);
+    }
+  }
+
   > a {
     border-bottom: 2px solid var(--input-border-color);
     color: var(--input-text-color);

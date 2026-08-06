@@ -28,10 +28,15 @@ label > :is(input, textarea, select) {
   margin-bottom: 1em;
 }
 
-input,
+input:not([type="radio"]),
 textarea,
 select {
   width: 100%;
+}
+
+input,
+textarea,
+select {
   accent-color: var(--primary-color);
   caret-color: var(--primary-color);
 }
@@ -82,8 +87,8 @@ input[type="checkbox"] {
   }
 }
 
-/* Hidden visually, still focusable and announced. */
-input[type="radio"] {
+.group > input[type="radio"] {
+  /* Hidden visually, still focusable and announced. */
   position: absolute;
   width: 1px;
   height: 1px;
@@ -92,18 +97,20 @@ input[type="radio"] {
   border: 0;
   opacity: 0;
   overflow: hidden;
-}
-input[type="radio"] + label {
-  padding: var(--padding-input);
-  background: var(--input-bg-color);
-  color: var(--input-text-color);
-}
-input[type="radio"]:checked + label {
-  background: var(--primary-color) !important;
-  color: var(--primary-text-color) !important;
-}
-input[type="radio"]:focus-visible + label {
-  outline: var(--outline);
+  appearance: none;
+
+  + label {
+    padding: var(--padding-input);
+    background: var(--input-bg-color);
+    color: var(--input-text-color);
+  }
+  &:checked + label {
+    background: var(--primary-color) !important;
+    color: var(--primary-text-color) !important;
+  }
+  &:focus-visible + label {
+    outline: var(--outline);
+  }
 }
 input[type='file'] {
   background: var(--input-bg-color);
