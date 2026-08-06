@@ -64,6 +64,7 @@
   --transition-duration: .3s;
   --outline: 2px solid var(--active-color);
   --nav-z: 100;
+  --dropdown-gap: .5em;
   --dropdown-z: 1000;
   --modal-z: 10000;
 }

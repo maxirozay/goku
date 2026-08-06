@@ -142,6 +142,13 @@
     right: inherit;
     left: inherit;
     max-height: 60vh;
+    margin-top: var(--dropdown-gap);
+  }
+
+  .dropdown:not(.-mobile):hover:before {
+    content: '';
+    position: absolute;
+    height: var(--dropdown-gap);
   }
 
   .dropdown {
