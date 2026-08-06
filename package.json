@@ -3,6 +3,14 @@
 	"version": "8.4.12",
 	"description": "CSS Framework",
 	"main": "css/goku.css",
+	"style": "css/goku.css",
+	"exports": {
+		".": "./css/goku.css",
+		"./bundle": "./docs/index.css",
+		"./*": "./*"
+	},
+	"jsdelivr": "docs/index.css",
+	"unpkg": "docs/index.css",
 	"files": [
 		"css",
 		"docs/index.css"
