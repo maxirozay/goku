@@ -101,15 +101,22 @@
 
         <h3>Usage</h3>
         <p>Import the framework in your project:</p>
-        <pre><code class="language-javascript">// Basic import
+        <pre><code class="language-javascript">// Everything, as source files — your bundler inlines the imports
 import 'goku-css'
 
-// Or use the complete build with docs styles
-import 'goku-css/docs/index.css'</code></pre>
+// Pre-bundled and minified, if you'd rather skip that step
+import 'goku-css/bundle'
+
+// Or cherry-pick only what you need
+import 'goku-css/css/variables.css'
+import 'goku-css/css/elements/button.css'</code></pre>
 
         <h3>CDN</h3>
-        <p>For quick prototyping, use our CDN:</p>
-        <pre><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/goku-css@latest/css/goku.css"&gt;</code></pre>
+        <p>For quick prototyping, drop in the pre-bundled build — one request, no import waterfall:</p>
+        <pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/goku-css"&gt;
+
+&lt;!-- or pin a version --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/goku-css@8/docs/index.css"&gt;</code></pre>
 
         <div class="success p2 mt2">
           <strong>Pro tip:</strong> Start with our CDN for prototyping, then switch to the package manager for production builds.
