@@ -3,74 +3,67 @@
   flex-direction: row;
   position: relative;
   overflow: hidden;
-}
 
-.drawer-layout__toggle {
-  margin: auto;
-  cursor: pointer;
-  display: inline-block;
-  padding: var(--padding);
-
-  .bar {
-    transition: var(--transition-duration);
-    background: var(--primary-color);
-    margin: 1px auto;
-    width: 12px;
-    height: 4px;
-
-    &:first-child {
-      transform: rotate(-45deg);
-    }
-    &:last-child {
-      transform:  rotate(45deg);
-    }
-  }
-}
-
-.drawer-layout__input {
-  /* Hidden visually, still focusable and announced. */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  opacity: 0;
-  overflow: hidden;
-  appearance: none;
-
-   + div > div {
-    transition: all var(--transition-duration);
-    box-sizing: border-box;
-    overflow-y: auto;
-    max-height: 100%;
+  > input {
+    /* Hidden visually, still focusable and announced. */
     position: absolute;
-    left: 0;
-    right: 0;
-  }
-  &:focus-visible + div > .drawer-layout__toggle {
-    outline: var(--outline);
-  }
-  &:first-child:checked + div > div {
-    right: 100%;
-    left: -100%;
-  }
-  &:not(:first-child):checked + div > div {
-    left: 100%;
-    right: -100%;
-  }
-  &:checked + div > .drawer-layout__toggle > .bar {
-    &:first-child {
-      transform: rotate(45deg);
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    overflow: hidden;
+    appearance: none;
+
+    + div {
+      > div {
+        transition: all var(--transition-duration);
+        box-sizing: border-box;
+        overflow-y: auto;
+        max-height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+      > label {
+        margin: auto;
+        cursor: pointer;
+        display: inline-block;
+        padding: var(--padding);
+
+        &:after {
+          content: '';
+          display: block;
+          width: var(--arrow-width);
+          height: var(--arrow-width);
+          background: var(--primary-color);
+          mask: var(--arrow-image) no-repeat center / var(--arrow-width) var(--arrow-height);
+          transform: rotate(90deg);
+          transition: transform var(--transition-duration);
+        }
+      }
     }
-    &:last-child {
-      transform: rotate(-45deg);
+    &:focus-visible + div > label {
+      outline: var(--outline);
+    }
+    &:first-child:checked + div > div {
+      right: 100%;
+      left: -100%;
+    }
+    &:not(:first-child):checked + div > div {
+      left: 100%;
+      right: -100%;
+    }
+    &:checked + div > label:after {
+      transform: rotate(-90deg);
     }
   }
 }
+
 
 @media (width >= 600px) {
-  .drawer-layout__input {
+  .drawer-layout > input {
     + div > div {
       position: static;
       width: var(--drawer-width);

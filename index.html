@@ -585,12 +585,10 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
 
         <h3 id="drawer">Drawer</h3>
         <div class="drawer-layout fg-border">
-          <input id="left-toggle" class="drawer-layout__input" type="checkbox">
+          <input id="left-toggle" type="checkbox">
           <div>
             <div class="fg p1 pb3 h no-border-radius">This is the left drawer.</div>
-            <label class="drawer-layout__toggle  absolute bottom left" for="left-toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
+            <label class="absolute bottom left" for="left-toggle">
             </label>
           </div>
 
@@ -598,35 +596,27 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
             This is the main content.
           </div>
 
-          <input id="right-toggle" class="drawer-layout__input" type="checkbox">
+          <input id="right-toggle" type="checkbox">
           <div>
             <div class="fg p1 pb3 h no-border-radius">This is the right drawer.</div>
-            <label class="drawer-layout__toggle  mirror absolute bottom right" for="right-toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
+            <label class="mirror absolute bottom right" for="right-toggle">
             </label>
           </div>
         </div>
 
         <pre><code class="language-html" data-lang="html">&lt;div class="drawer-layout fg-border"&gt;
-  &lt;input id="left-toggle" class="drawer-layout__input" type="checkbox"&gt;
+  &lt;input id="left-toggle" type="checkbox"&gt;
   &lt;div&gt;
     &lt;div class="fg p1 pb3 h no-border-radius"&gt;This is the left drawer.&lt;/div&gt;
-    &lt;label class="drawer-layout__toggle absolute bottom left" for="left-toggle"&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-    &lt;/label&gt;
+    &lt;label class="absolute bottom left" for="left-toggle"&gt;&lt;/label&gt;
   &lt;/div&gt;
 
   &lt;div class="flex-4  pb3"&gt;This is the main content.&lt;/div&gt;
 
-  &lt;input id="right-toggle" class="drawer-layout__input" type="checkbox"&gt;
+  &lt;input id="right-toggle" type="checkbox"&gt;
   &lt;div&gt;
     &lt;div class="fg p1 pb3 h no-border-radius"&gt;This is the right drawer.&lt;/div&gt;
-    &lt;label class="drawer-layout__toggle mirror absolute bottom right" for="right-toggle"&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-      &lt;div class="bar"&gt;&lt;/div&gt;
-    &lt;/label&gt;
+    &lt;label class="mirror absolute bottom right" for="right-toggle"&gt;&lt;/label&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
