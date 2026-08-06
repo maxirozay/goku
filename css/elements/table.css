@@ -27,5 +27,6 @@ tr {
   }
   &:hover {
     background: var(--hover-color);
+    color: var(--hover-text-color);
   }
 }

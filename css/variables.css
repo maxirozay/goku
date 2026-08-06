@@ -29,8 +29,9 @@
   --warning-text-color: #1a1a1a;
   --error-color: light-dark(#b32525, #ff9a9a);
   --error-text-color: light-dark(#fff, #1a1a1a);
+  --hover-color: #088;
+  --hover-text-color: #fff;
   --border-color: light-dark(#088, #0bb);
-  --hover-color: light-dark(#0882, #0883);
   --stripe-color: light-dark(#0441, #0ee1);
   --border-radius: 12px;
   --border-width: 1px;

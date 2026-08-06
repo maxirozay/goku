@@ -122,3 +122,11 @@
 .muted-text {
   color: var(--muted-color) !important;
 }
+
+.hover:hover {
+  background: var(--hover-color);
+}
+
+.hover-text:hover {
+  color: var(--hover-color);
+}
