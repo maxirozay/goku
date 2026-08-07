@@ -4,41 +4,44 @@ textarea,
 select {
   font-weight: inherit;
   font-size: inherit;
-  line-height: var(--line-height);
+  line-height: var(--g-line-height);
   font-family: inherit;
-  border-width: var(--border-width);
+  border-width: var(--g-border-width);
   border-style: solid;
-  border-radius: var(--border-radius);
-  padding: var(--padding-input);
+  border-radius: var(--g-border-radius);
+  padding: var(--g-padding-input);
   box-sizing: border-box;
 
-  &:hover,
-  &:focus {
-    border-color: var(--primary-color-active);
+  &:hover {
+    border-color: var(--g-active);
   }
 }
 input,
 textarea,
 select {
-  background: var(--color-input);
-  color: var(--color-input-text);
-  border-color: var(--color-input-border);
+  background: var(--g-input-bg);
+  color: var(--g-input-color);
+  border-color: var(--g-input-border-color);
 }
 
-input[type=date] {
-  line-height: calc(var(--line-height) - .125);
+input[type="date"] {
+  line-height: calc(var(--g-line-height) - .125);
 }
 
 *:disabled {
   opacity: 0.5;
   cursor: default;
-  background: #8888;
-  border-color: #8888;
-  color: var(--color-text);
+  background: var(--g-muted);
+  border-color: var(--g-muted);
+  color: var(--g-muted-contrast);
 }
 
 hr {
   border: 0;
-  border-top: var(--border-width) solid #8884;
+  border-top: var(--g-border-width) solid var(--g-border-color);
   margin: 0;
+}
+
+:focus-visible {
+  outline: var(--g-outline);
 }

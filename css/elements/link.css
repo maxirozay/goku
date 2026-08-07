@@ -1,15 +1,11 @@
 a {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--g-a-color);
   cursor: pointer;
 
   &:hover,
   &:active {
-    color: var(--primary-color-active);
-  }
-
-  &:focus {
-    text-decoration: underline;
+    color: var(--g-active);
   }
 }
 

@@ -1,20 +1,21 @@
 .modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   display: flex;
-  z-index: 10000;
+  z-index: var(--g-modal-z);
   backdrop-filter: blur(3px);
+  overflow: hidden;
+  overscroll-behavior: contain;
 
   > div {
-    background: var(--color-fg);
-    z-index: 10001;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    background: var(--g-fg);
+    color: var(--g-fg-contrast);
+    z-index: calc(var(--g-modal-z) + 1);
+    border-radius: var(--g-border-radius);
+    box-shadow: var(--g-shadow);
     margin: auto;
     max-height: 80%;
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }

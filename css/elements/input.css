@@ -1,55 +1,65 @@
 .label__file {
   display: inline-block;
-  padding: var(--padding-input);
-  background: var(--color-input);
-  color: var(--color-input-text);
-  border-color: var(--color-input-border);
-  border-radius: var(--border-radius);
+  padding: var(--g-padding-input);
+  background: var(--g-input-bg);
+  color: var(--g-input-color);
+  border-color: var(--g-input-border-color);
+  border-radius: var(--g-border-radius);
   text-align: center;
   position: relative;
 
   &:hover {
-    border-color: var(--primary-color-active);
+    border-color: var(--g-active);
+  }
+
+  &:has(> input:focus-visible) {
+    outline: var(--g-outline);
   }
 }
 .label__file > input[type='file'] {
   opacity: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
 }
 
-label + :is(input, textarea, select),
-label > :is(input, textarea, select) {
-  margin-top: .25em;
-  margin-bottom: 1em;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-gap2);
+}
+
+input:not([type="radio"]),
+textarea,
+select {
+  width: 100%;
 }
 
 input,
 textarea,
-select  {
-  width: 100%;
-  accent-color: var(--primary-color);
-  caret-color: var(--primary-color);
+select {
+  accent-color: var(--g-primary);
+  caret-color: var(--g-primary);
 }
 
-select  {
+input::placeholder {
+  color: var(--g-muted);
+}
+
+select {
   appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%207%207%22%20fill%3D%22none%22%20stroke%3D%22%23888%22%3E%3Cpolyline%20points%3D%222%202%204%204%206%202%22%2F%3E%3C%2Fsvg%3E');
+  background-image: var(--g-arrow-image);
   background-repeat: no-repeat;
-  background-position: right var(--padding-r) center;
-  background-size: 1em;
+  background-position: right var(--g-padding-r) center;
+  background-size: var(--g-arrow-width) var(--g-arrow-height);
   padding-right: 1.5em;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   appearance: none;
-  background: var(--color-input);
+  background: var(--g-input-bg);
   width: 2em;
   height: 1em;
-  transition: .2s all;
+  transition: var(--g-transition-duration) all;
   border-radius: 1em;
   padding: 2px;
   margin: 0;
@@ -63,46 +73,58 @@ input[type=checkbox] {
     display: inline-block;
     width: 1em;
     height: 1em;
-    background: #888;
+    background: var(--g-muted);
     border-radius: 100%;
     transition: inherit;
   }
   &:checked {
-    background: var(--primary-color);
+    background: var(--g-primary);
 
     &:after {
-      background: var(--primary-color-text);
+      background: var(--g-primary-contrast);
       margin-left: 1em;
     }
   }
 }
 
-input[type=radio] {
-  display: none;
-}
-input[type=radio] + label {
-  padding: var(--padding-input);
-  background: var(--color-input);
-  color: var(--color-input-text);
-}
-input[type=radio]:checked + label {
-  background: var(--primary-color) !important;
-  color: var(--primary-color-text) !important;
-}
+.group > input[type="radio"] {
+  /* Hidden visually, still focusable and announced. */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  overflow: hidden;
+  appearance: none;
 
+  + label {
+    padding: var(--g-padding-input);
+    background: var(--g-input-bg);
+    color: var(--g-input-color);
+  }
+  &:checked + label {
+    background: var(--g-primary) !important;
+    color: var(--g-primary-contrast) !important;
+  }
+  &:focus-visible + label {
+    outline: var(--g-outline);
+  }
+}
 input[type='file'] {
-  background: var(--color-input);
-  color: var(--color-text);
-  border-color: var(--color-input-border);
+  background: var(--g-input-bg);
+  color: var(--g-input-color);
+  border-color: var(--g-input-border-color);
   cursor: pointer;
 }
 
 input[type="color"] {
-	appearance: none;
-	border: none;
+  appearance: none;
+  border: none;
   border-radius: 100%;
-	width: 1em;
-	height: 1em;
+  width: 1em;
+  height: 1em;
   padding: 0;
   margin: 0;
   vertical-align: text-top;

@@ -1,22 +1,10 @@
-.pulse-bg {
-  animation: pulse-bg 3s infinite;
-  color: #0000;
-}
-
-@keyframes pulse-bg {
-  50% {
-    background: var(--primary-color-active);
-    opacity: .5;
-  }
-}
-
 .spin {
   color: #0000;
   position: relative;
 
   &:after {
     content: '';
-    border: 2px solid var(--color-button-text);
+    border: 2px solid var(--g-button-color);
     border-top-color: #0000;
     border-bottom-color: #0000;
     border-radius: 100%;
@@ -46,11 +34,8 @@
   &:before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--color-bg);
+    inset: 0;
+    background: var(--g-bg);
   }
 
   &:after {
@@ -58,7 +43,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background: radial-gradient(circle at 50%, #0000 30%, var(--primary-color) 50%, #0000 70%);
+    background: radial-gradient(circle at 50%, #0000 30%, var(--g-primary) 50%, #0000 70%);
     transform: translate(-50%, -50%);
     animation: ripple 2s infinite cubic-bezier(1, 0, .5, 0);
   }
@@ -74,4 +59,3 @@
     height: 200vw;
   }
 }
- 

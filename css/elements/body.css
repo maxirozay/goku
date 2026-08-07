@@ -1,14 +1,10 @@
 body {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
+  font-family: var(--g-font-family);
+  font-weight: var(--g-font-weight);
+  font-size: var(--g-font-size);
+  line-height: var(--g-line-height);
   margin: 0;
   padding: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
-
-  &:has(#nav-toggle:checked, .modal) {
-    overflow: hidden;
-  }
+  background: var(--g-bg);
+  color: var(--g-bg-contrast);
 }

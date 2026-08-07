@@ -4,35 +4,43 @@
 
 .group,
 .border-radius {
-  border-radius: var(--border-radius);
+  border-radius: var(--g-border-radius);
   overflow: hidden;
 }
 
 .group {
-  border: var(--border-width) solid var(--color-input-border);
-  background: var(--color-input-border);
+  border: var(--g-border-width) solid var(--g-input-border-color);
+  background: var(--g-input-border-color);
 
   &:focus-within,
   &:hover {
-    border-color: var(--primary-color-active);
+    border-color: var(--g-active);
   }
 
   > * {
     border-radius: 0 !important;
-    outline: 0;
     border: 0;
+  }
+
+  > *:not(:focus-visible) {
+    outline: 0;
   }
 }
 
+.b {
+  border: var(--g-border-width) solid var(--g-border-color);
+  border-radius: var(--g-border-radius);
+}
+
 .bt {
-  border-top: var(--border-width) solid;
+  border-top: var(--g-border-width) solid var(--g-border-color);
 }
 .bl {
-  border-left: var(--border-width) solid;
+  border-left: var(--g-border-width) solid var(--g-border-color);
 }
 .bb {
-  border-bottom: var(--border-width) solid;
+  border-bottom: var(--g-border-width) solid var(--g-border-color);
 }
 .br {
-  border-right: var(--border-width) solid;
+  border-right: var(--g-border-width) solid var(--g-border-color);
 }

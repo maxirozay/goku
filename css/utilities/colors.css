@@ -1,116 +1,133 @@
-.primary,
 .primary-border,
-.secondary,
 .secondary-border,
-.success,
 .success-border,
-.warning,
 .warning-border,
-.error,
-.error-border,
-.bg,
+.danger-border,
 .bg-border,
-.fg,
 .fg-border,
-.input,
+.muted-border,
 .input-border {
   &:not(.bt, .br, .bb, .bl) {
-    border-radius: var(--border-radius);
+    border-width: var(--g-border-width);
+    border-style: solid;
+    border-radius: var(--g-border-radius);
   }
 }
-.primary-border,
-.secondary-border,
-.success-border,
-.warning-border,
-.error-border,
-.bg-border,
-.fg-border,
-.input-border {
+.primary,
+.secondary,
+.success,
+.warning,
+.danger,
+.bg,
+.fg,
+.muted,
+.input {
   &:not(.bt, .br, .bb, .bl) {
-    border: var(--border-width) solid;
+    border-radius: var(--g-border-radius);
   }
 }
 
 .primary {
-  background: var(--primary-color) !important;
-  color: var(--primary-color-text) !important;
+  background: var(--g-primary) !important;
+  color: var(--g-primary-contrast) !important;
 }
 .primary-border {
-  border-color: var(--primary-color) !important;
+  border-color: var(--g-primary) !important;
 }
 
 .secondary {
-  background: var(--secondary-color) !important;
-  color: var(--secondary-color-text) !important;
+  background: var(--g-secondary) !important;
+  color: var(--g-secondary-contrast) !important;
 }
 .secondary-border {
-  border-color: var(--secondary-color) !important;
+  border-color: var(--g-secondary) !important;
 }
 
 .success {
-  background: var(--success-color) !important;
-  color: #1a1a1a !important;
+  background: var(--g-success) !important;
+  color: var(--g-success-contrast) !important;
 }
 .success-border {
-  border-color: var(--success-color) !important;
+  border-color: var(--g-success) !important;
 }
 
 .warning {
-  background: var(--warning-color) !important;
-  color: #1a1a1a !important;
+  background: var(--g-warning) !important;
+  color: var(--g-warning-contrast) !important;
 }
 .warning-border {
-  border-color: var(--warning-color) !important;
+  border-color: var(--g-warning) !important;
 }
 
-.error {
-  background: var(--error-color) !important;
-  color: #1a1a1a !important;
+.danger {
+  background: var(--g-danger) !important;
+  color: var(--g-danger-contrast) !important;
 }
-.error-border {
-  border-color: var(--error-color) !important;
+.danger-border {
+  border-color: var(--g-danger) !important;
 }
 
 .bg {
-  background: var(--color-bg) !important;
-  color: var(--color-text) !important;
+  background: var(--g-bg) !important;
+  color: var(--g-bg-contrast) !important;
 }
 .bg-border {
-  border-color: var(--color-bg) !important;
+  border-color: var(--g-bg) !important;
+}
+
+.muted {
+  background: var(--g-muted) !important;
+  color: var(--g-muted-contrast) !important;
+}
+.muted-border {
+  border-color: var(--g-muted) !important;
 }
 
 .fg {
-  background: var(--color-fg) !important;
-  color: var(--color-text) !important;
+  background: var(--g-fg) !important;
+  color: var(--g-fg-contrast) !important;
 }
 .fg-border {
-  border-color: var(--color-fg) !important;
+  border-color: var(--g-fg) !important;
 }
 
 .input {
-  background: var(--color-input) !important;
-  color: var(--color-input-text) !important;
+  background: var(--g-input-bg) !important;
+  color: var(--g-input-color) !important;
 }
 .input-border {
-  border-color: var(--color-input-border) !important;
+  border-color: var(--g-input-border-color) !important;
 }
 
 .primary-text {
-  color: var(--primary-color) !important;
+  color: var(--g-primary) !important;
 }
 
 .secondary-text {
-  color: var(--secondary-color) !important;
+  color: var(--g-secondary) !important;
 }
 
 .success-text {
-  color: var(--success-color) !important;
+  color: var(--g-success) !important;
 }
 
 .warning-text {
-  color: var(--warning-color) !important;
+  color: var(--g-warning) !important;
 }
 
-.error-text {
-  color: var(--error-color) !important;
+.danger-text {
+  color: var(--g-danger) !important;
+}
+
+.muted-text {
+  color: var(--g-muted) !important;
+}
+
+.hover:hover {
+  background: var(--g-hover);
+  color: var(--g-hover-contrast);
+}
+
+.hover-text:hover {
+  color: var(--g-hover);
 }

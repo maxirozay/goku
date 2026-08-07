@@ -6,21 +6,37 @@
 
     &:after {
       content: '';
-      width: .3em;
-      height: .3em;
-      border-right: 2px solid;
-      border-bottom: 2px solid;
-      transform: rotate(45deg);
-      margin: .25em .25em .25em .5em;
-      transition: all .3s;
+      width: var(--g-arrow-width);
+      height: var(--g-arrow-height);
+      background: currentcolor;
+      mask: var(--g-arrow-image) no-repeat center / 100% 100%;
+      margin: 0 .25em 0 .5em;
+      vertical-align: middle;
+      transition: transform var(--g-transition-duration);
       display: inline-block;
-    } 
+    }
   }
   > input:checked ~ label:after {
-    transform: translateY(.2em) rotate(-135deg);
+    transform: rotate(180deg);
   }
 
-  > input,
+  /* Hidden visually, still focusable and announced. */
+  > input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    overflow: hidden;
+    appearance: none;
+  }
+
+  > input:focus-visible ~ label {
+    outline: var(--g-outline);
+  }
+
   > div ~ button {
     display: none;
   }
@@ -31,15 +47,17 @@
     box-sizing: border-box;
     min-width: 10em;
     overflow-y: auto;
-    box-shadow: var(--shadow);
-    background: var(--color-fg);
-    border-radius: var(--border-radius);
-    z-index: 1000;
-    transition: all .3s ease;
+    overscroll-behavior: contain;
+    box-shadow: var(--g-shadow);
+    background: var(--g-fg);
+    color: var(--g-fg-contrast);
+    border-radius: var(--g-border-radius);
+    z-index: var(--g-dropdown-z);
+    transition: all var(--g-transition-duration) ease;
   }
 }
 
-@media (max-width: 900px) {
+@media (width < 900px) {
   .dropdown:not(.-desktop) {
     > div {
       max-height: 80vh;
@@ -56,6 +74,7 @@
       bottom: 0;
       pointer-events: auto;
     }
+
     &:before,
     &:after,
     label:before {
@@ -64,17 +83,17 @@
       top: 0;
       right: 0;
       left: 0;
-      z-index: 1000;
-      transition: all .3s .3s;
+      z-index: var(--g-dropdown-z);
+      transition: all var(--g-transition-duration) var(--g-transition-duration);
       height: 100vh;
-      pointer-events: visible;
+      pointer-events: auto;
       visibility: hidden;
     }
     &:has(> input:checked) > label:before {
       visibility: visible;
     }
     &:has(> input:checked, > :is(button, span, a):hover, > :is(button, span, a) + div:hover):before {
-      z-index: 999;
+      z-index: calc(var(--g-dropdown-z) - 1);
       backdrop-filter: blur(2px);
       visibility: visible;
     }
@@ -98,7 +117,7 @@
     > :has(+ div) {
       font-weight: bold;
       background: none;
-      color: var(--color-header-text) !important;
+      color: var(--g-h-color) !important;
       border: 0;
       padding: 0;
 
@@ -109,22 +128,30 @@
 
     > div {
       box-shadow: none;
-      border-bottom: var(--border-width) solid var(--color-text);
+      border-bottom: var(--g-border-width) solid currentcolor;
       max-height: none;
       background: none;
+      color: inherit;
       padding: 1em 0 !important;
       border-radius: 0;
     }
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .dropdown:not(.-mobile) > div {
     display: none;
     position: absolute;
     right: inherit;
     left: inherit;
     max-height: 60vh;
+    margin-top: var(--g-dropdown-gap);
+  }
+
+  .dropdown:not(.-mobile):hover:before {
+    content: '';
+    position: absolute;
+    height: var(--g-dropdown-gap);
   }
 
   .dropdown {
@@ -139,7 +166,7 @@
     > :has(+ div) {
       font-weight: bold;
       background: none;
-      color: var(--color-header-text) !important;
+      color: var(--g-h-color) !important;
       border: 0;
       padding: 0;
 
@@ -150,9 +177,10 @@
 
     > div {
       box-shadow: none !important;
-      border-bottom: var(--border-width) solid var(--color-text);
+      border-bottom: var(--g-border-width) solid currentcolor;
       max-height: none;
       background: none;
+      color: inherit;
       padding: 1em 0 !important;
       border-radius: 0;
     }
