@@ -128,12 +128,12 @@
 
     > div {
       box-shadow: none;
-      border-bottom: var(--g-border-width) solid currentcolor;
       max-height: none;
       background: none;
       color: inherit;
-      padding: 1em 0 !important;
       border-radius: 0;
+      padding: .5em 1em !important;
+      border-inline-start: var(--g-border-width) solid var(--g-border-color);
     }
   }
 }
@@ -178,13 +178,13 @@
     }
 
     > div {
-      box-shadow: none !important;
-      border-bottom: var(--g-border-width) solid currentcolor;
+      box-shadow: none;
       max-height: none;
       background: none;
       color: inherit;
-      padding: 1em 0 !important;
       border-radius: 0;
+      padding: .5em 1em !important;
+      border-inline-start: var(--g-border-width) solid var(--g-border-color);
     }
   }
 }
