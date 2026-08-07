@@ -151,6 +151,8 @@
   .dropdown:not(.-mobile):hover:before {
     content: '';
     position: absolute;
+    top: 100%;
+    width: 100%;
     height: var(--g-dropdown-gap);
   }
 
