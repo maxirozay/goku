@@ -1,10 +1,8 @@
 /* Size */
 
-@media (width >= 1200px) {
-  .portrait {
-    max-width: 1200px;
-    margin: auto !important;
-  }
+.portrait {
+  max-width: var(--g-portrait-width);
+  margin: auto !important;
 }
 
 .w {
