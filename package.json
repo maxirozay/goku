@@ -1,6 +1,6 @@
 {
 	"name": "goku-css",
-	"version": "9.0.1",
+	"version": "9.0.2",
 	"description": "CSS Framework",
 	"main": "css/goku.css",
 	"style": "css/goku.css",
