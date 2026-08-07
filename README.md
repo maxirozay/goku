@@ -34,6 +34,21 @@ tree-shake, minify, and apply your own PostCSS/Lightning CSS config. CDNs resolv
 same package name to the pre-built `docs/index.css` instead, since a browser following
 a chain of `@import`s would otherwise pay for a request waterfall.
 
+## Theming
+
+Everything is a custom property on `:root`. Override the ones you care about:
+
+```css
+:root {
+  --g-primary: #6d28d9;
+  --g-primary-contrast: #fff;
+  --g-border-radius: 4px;
+}
+```
+
+Colours use `light-dark()`, so a single declaration covers both schemes. See
+[`css/variables.css`](css/variables.css) for the full list.
+
 ## Development
 
 - `pnpm dev` — docs site with hot reload

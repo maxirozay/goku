@@ -18,7 +18,7 @@
 
     + div {
       > div {
-        transition: all var(--transition-duration);
+        transition: all var(--g-transition-duration);
         box-sizing: border-box;
         overflow-y: auto;
         max-height: 100%;
@@ -30,22 +30,22 @@
         margin: auto;
         cursor: pointer;
         display: inline-block;
-        padding: var(--padding);
+        padding: var(--g-padding);
 
         &:after {
           content: '';
           display: block;
-          width: var(--arrow-width);
-          height: var(--arrow-width);
-          background: var(--primary-color);
-          mask: var(--arrow-image) no-repeat center / var(--arrow-width) var(--arrow-height);
+          width: var(--g-arrow-width);
+          height: var(--g-arrow-width);
+          background: var(--g-primary);
+          mask: var(--g-arrow-image) no-repeat center / var(--g-arrow-width) var(--g-arrow-height);
           transform: rotate(90deg);
-          transition: transform var(--transition-duration);
+          transition: transform var(--g-transition-duration);
         }
       }
     }
     &:focus-visible + div > label {
-      outline: var(--outline);
+      outline: var(--g-outline);
     }
     &:first-child:checked + div > div {
       right: 100%;
@@ -66,13 +66,13 @@
   .drawer-layout > input {
     + div > div {
       position: static;
-      width: var(--drawer-width);
+      width: var(--g-drawer-width);
     }
     &:first-child:checked + div > div {
-      margin-left: calc(var(--drawer-width) * -1);
+      margin-left: calc(var(--g-drawer-width) * -1);
     }
     &:not(:first-child):checked + div > div {
-      margin-right: calc(var(--drawer-width) * -1);
+      margin-right: calc(var(--g-drawer-width) * -1);
     }
   }
 }

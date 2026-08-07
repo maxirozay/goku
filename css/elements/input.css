@@ -1,19 +1,19 @@
 .label__file {
   display: inline-block;
-  padding: var(--padding-input);
-  background: var(--input-bg-color);
-  color: var(--input-text-color);
-  border-color: var(--input-border-color);
-  border-radius: var(--border-radius);
+  padding: var(--g-padding-input);
+  background: var(--g-input-bg);
+  color: var(--g-input-color);
+  border-color: var(--g-input-border-color);
+  border-radius: var(--g-border-radius);
   text-align: center;
   position: relative;
 
   &:hover {
-    border-color: var(--active-color);
+    border-color: var(--g-active);
   }
 
   &:has(> input:focus-visible) {
-    outline: var(--outline);
+    outline: var(--g-outline);
   }
 }
 .label__file > input[type='file'] {
@@ -37,29 +37,29 @@ select {
 input,
 textarea,
 select {
-  accent-color: var(--primary-color);
-  caret-color: var(--primary-color);
+  accent-color: var(--g-primary);
+  caret-color: var(--g-primary);
 }
 
 input::placeholder {
-  color: var(--muted-color);
+  color: var(--g-muted);
 }
 
 select {
   appearance: none;
-  background-image: var(--arrow-image);
+  background-image: var(--g-arrow-image);
   background-repeat: no-repeat;
-  background-position: right var(--padding-r) center;
-  background-size: var(--arrow-width) var(--arrow-height);
+  background-position: right var(--g-padding-r) center;
+  background-size: var(--g-arrow-width) var(--g-arrow-height);
   padding-right: 1.5em;
 }
 
 input[type="checkbox"] {
   appearance: none;
-  background: var(--input-bg-color);
+  background: var(--g-input-bg);
   width: 2em;
   height: 1em;
-  transition: var(--transition-duration) all;
+  transition: var(--g-transition-duration) all;
   border-radius: 1em;
   padding: 2px;
   margin: 0;
@@ -73,15 +73,15 @@ input[type="checkbox"] {
     display: inline-block;
     width: 1em;
     height: 1em;
-    background: var(--input-border-color);
+    background: var(--g-muted);
     border-radius: 100%;
     transition: inherit;
   }
   &:checked {
-    background: var(--primary-color);
+    background: var(--g-primary);
 
     &:after {
-      background: var(--primary-text-color);
+      background: var(--g-primary-contrast);
       margin-left: 1em;
     }
   }
@@ -100,22 +100,22 @@ input[type="checkbox"] {
   appearance: none;
 
   + label {
-    padding: var(--padding-input);
-    background: var(--input-bg-color);
-    color: var(--input-text-color);
+    padding: var(--g-padding-input);
+    background: var(--g-input-bg);
+    color: var(--g-input-color);
   }
   &:checked + label {
-    background: var(--primary-color) !important;
-    color: var(--primary-text-color) !important;
+    background: var(--g-primary) !important;
+    color: var(--g-primary-contrast) !important;
   }
   &:focus-visible + label {
-    outline: var(--outline);
+    outline: var(--g-outline);
   }
 }
 input[type='file'] {
-  background: var(--input-bg-color);
-  color: var(--text-color);
-  border-color: var(--input-border-color);
+  background: var(--g-input-bg);
+  color: var(--g-input-color);
+  border-color: var(--g-input-border-color);
   cursor: pointer;
 }
 

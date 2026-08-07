@@ -13,17 +13,17 @@
   }
 
   &:has(> input:focus-visible) {
-    outline: var(--outline);
+    outline: var(--g-outline);
   }
 
   > label {
-    color: var(--input-text-color);
+    color: var(--g-input-color);
     display: block;
   }
 
   > div {
     max-height: 80vh;
-    transition: all var(--transition-duration);
+    transition: all var(--g-transition-duration);
     overflow: auto;
   }
 

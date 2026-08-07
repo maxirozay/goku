@@ -56,46 +56,46 @@
 }
 
 .m1, .my1, .mt1 {
-  margin-top: var(--margin-t) !important;
+  margin-top: var(--g-margin-t) !important;
 }
 .m1, .my1, .mb1 {
-  margin-bottom: var(--margin-b) !important;
+  margin-bottom: var(--g-margin-b) !important;
 }
 .m1, .mx1, .ml1 {
-  margin-left: var(--margin-l) !important;
+  margin-left: var(--g-margin-l) !important;
 }
 .m1, .mx1, .mr1 {
-  margin-right: var(--margin-r) !important;
+  margin-right: var(--g-margin-r) !important;
 }
 
 .m2, .my2, .mt2 {
-  margin-top: calc(var(--margin-t) * var(--margin-ratio2)) !important;
+  margin-top: calc(var(--g-margin-t) * var(--g-margin-ratio2)) !important;
 }
 .m2, .my2, .mb2 {
-  margin-bottom: calc(var(--margin-b) * var(--margin-ratio2)) !important;
+  margin-bottom: calc(var(--g-margin-b) * var(--g-margin-ratio2)) !important;
 }
 .m2, .mx2, .ml2 {
-  margin-left: calc(var(--margin-l) * var(--margin-ratio2)) !important;
+  margin-left: calc(var(--g-margin-l) * var(--g-margin-ratio2)) !important;
 }
 .m2, .mx2, .mr2 {
-  margin-right: calc(var(--margin-r) * var(--margin-ratio2)) !important;
+  margin-right: calc(var(--g-margin-r) * var(--g-margin-ratio2)) !important;
 }
 
 .m3, .my3, .mt3 {
-  margin-top: calc(var(--margin-t) * var(--margin-ratio3)) !important;
+  margin-top: calc(var(--g-margin-t) * var(--g-margin-ratio3)) !important;
 }
 .m3, .my3, .mb3 {
-  margin-bottom: calc(var(--margin-b) * var(--margin-ratio3)) !important;
+  margin-bottom: calc(var(--g-margin-b) * var(--g-margin-ratio3)) !important;
 }
 .m3, .mx3, .ml3 {
-  margin-left: calc(var(--margin-l) * var(--margin-ratio3)) !important;
+  margin-left: calc(var(--g-margin-l) * var(--g-margin-ratio3)) !important;
 }
 .m3, .mx3, .mr3 {
-  margin-right: calc(var(--margin-r) * var(--margin-ratio3)) !important;
+  margin-right: calc(var(--g-margin-r) * var(--g-margin-ratio3)) !important;
 }
 
 .p-input {
-  padding: var(--padding-input) !important;
+  padding: var(--g-padding-input) !important;
 }
 
 .p0, .py0, .pt0 {
@@ -112,42 +112,42 @@
 }
 
 .p1, .py1, .pt1 {
-  padding-top: var(--padding-t) !important;
+  padding-top: var(--g-padding-t) !important;
 }
 .p1, .py1, .pb1 {
-  padding-bottom: var(--padding-b) !important;
+  padding-bottom: var(--g-padding-b) !important;
 }
 .p1, .px1, .pl1 {
-  padding-left: var(--padding-l) !important;
+  padding-left: var(--g-padding-l) !important;
 }
 .p1, .px1, .pr1 {
-  padding-right: var(--padding-r) !important;
+  padding-right: var(--g-padding-r) !important;
 }
 
 .p2, .py2, .pt2 {
-  padding-top: calc(var(--padding-t) * var(--padding-ratio2)) !important;
+  padding-top: calc(var(--g-padding-t) * var(--g-padding-ratio2)) !important;
 }
 .p2, .py2, .pb2 {
-  padding-bottom: calc(var(--padding-b) * var(--padding-ratio2)) !important;
+  padding-bottom: calc(var(--g-padding-b) * var(--g-padding-ratio2)) !important;
 }
 .p2, .px2, .pl2 {
-  padding-left: calc(var(--padding-l) * var(--padding-ratio2)) !important;
+  padding-left: calc(var(--g-padding-l) * var(--g-padding-ratio2)) !important;
 }
 .p2, .px2, .pr2 {
-  padding-right: calc(var(--padding-r) * var(--padding-ratio2)) !important;
+  padding-right: calc(var(--g-padding-r) * var(--g-padding-ratio2)) !important;
 }
 
 .p3, .py3, .pt3 {
-  padding-top: calc(var(--padding-t) * var(--padding-ratio3)) !important;
+  padding-top: calc(var(--g-padding-t) * var(--g-padding-ratio3)) !important;
 }
 .p3, .py3, .pb3 {
-  padding-bottom: calc(var(--padding-b) * var(--padding-ratio3)) !important;
+  padding-bottom: calc(var(--g-padding-b) * var(--g-padding-ratio3)) !important;
 }
 .p3, .px3, .pl3 {
-  padding-left: calc(var(--padding-l) * var(--padding-ratio3)) !important;
+  padding-left: calc(var(--g-padding-l) * var(--g-padding-ratio3)) !important;
 }
 .p3, .px3, .pr3 {
-  padding-right: calc(var(--padding-r) * var(--padding-ratio3)) !important;
+  padding-right: calc(var(--g-padding-r) * var(--g-padding-ratio3)) !important;
 }
 
 /* Position */
@@ -303,21 +303,21 @@
 }
 
 .grid-fit {
-  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--g-grid-min-width), 1fr));
 }
 
 .grid-fill {
-  grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-width), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--g-grid-min-width), 1fr));
 }
 
 .g1 {
-  gap: var(--gap);
+  gap: var(--g-gap);
 }
 .g2 {
-  gap: calc(var(--gap) * var(--gap-ratio2));
+  gap: calc(var(--g-gap) * var(--g-gap-ratio2));
 }
 .g3 {
-  gap: calc(var(--gap) * var(--gap-ratio3));
+  gap: calc(var(--g-gap) * var(--g-gap-ratio3));
 }
 
 .mirror {

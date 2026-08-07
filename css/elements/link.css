@@ -1,11 +1,11 @@
 a {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--g-a-color);
   cursor: pointer;
 
   &:hover,
   &:active {
-    color: var(--active-color);
+    color: var(--g-active);
   }
 }
 

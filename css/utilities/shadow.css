@@ -1,5 +1,5 @@
 .shadow {
-  box-shadow: var(--shadow);
+  box-shadow: var(--g-shadow);
 }
 
 .no-shadow {

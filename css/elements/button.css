@@ -1,11 +1,12 @@
 button {
-  background: var(--button-bg-color);
-  color: var(--button-text-color);
-  border-color: var(--button-border-color);
+  background: var(--g-button-bg);
+  color: var(--g-button-color);
+  border-color: var(--g-button-border-color);
   font-weight: bold;
 
   &:active {
-    background: var(--active-color);
-    border-color: var(--active-color);
+    background: var(--g-active);
+    color: var(--g-active-contrast);
+    border-color: var(--g-active);
   }
 }

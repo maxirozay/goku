@@ -1,6 +1,6 @@
 table {
   border-collapse: collapse;
-  border-radius: var(--border-radius);
+  border-radius: var(--g-border-radius);
   table-layout: fixed;
 
   &:first-child {
@@ -12,21 +12,21 @@ table {
 }
 
 th {
-  border-bottom: var(--border-width) solid var(--border-color);
+  border-bottom: var(--g-border-width) solid var(--g-border-color);
 }
 
 tr,
 th,
 td {
-  padding: var(--padding);
+  padding: var(--g-padding);
 }
 
 tr {
   &:nth-child(even) {
-    background: var(--stripe-color);
+    background: var(--g-stripe);
   }
   &:hover {
-    background: var(--hover-color);
-    color: var(--hover-text-color);
+    background: var(--g-hover);
+    color: var(--g-hover-contrast);
   }
 }

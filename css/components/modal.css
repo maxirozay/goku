@@ -2,14 +2,14 @@
   position: fixed;
   inset: 0;
   display: flex;
-  z-index: var(--modal-z);
+  z-index: var(--g-modal-z);
   backdrop-filter: blur(3px);
 
   > div {
-    background: var(--fg-color);
-    z-index: calc(var(--modal-z) + 1);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    background: var(--g-fg);
+    z-index: calc(var(--g-modal-z) + 1);
+    border-radius: var(--g-border-radius);
+    box-shadow: var(--g-shadow);
     margin: auto;
     max-height: 80%;
     overflow-y: auto;

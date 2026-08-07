@@ -3,7 +3,7 @@ nav {
   width: 100%;
   box-sizing: border-box;
   align-items: center;
-  z-index: var(--nav-z);
+  z-index: var(--g-nav-z);
   gap: 1em;
 
   > :first-child {
@@ -32,7 +32,7 @@ nav {
   }
 
   > input:focus-visible ~ .toggle {
-    outline: var(--outline);
+    outline: var(--g-outline);
   }
 }
 
@@ -42,12 +42,12 @@ nav {
       position: fixed;
       inset: 0 0 0 100%;
       overflow-y: auto;
-      transition: opacity var(--transition-duration), left 0s var(--transition-duration);
+      transition: opacity var(--g-transition-duration), left 0s var(--g-transition-duration);
       flex-direction: column;
-      background: var(--fg-color);
-      color: var(--text-color);
+      background: var(--g-fg);
+      color: var(--g-fg-contrast);
       opacity: 0;
-      z-index: calc(var(--nav-z) + 1);
+      z-index: calc(var(--g-nav-z) + 1);
       gap: inherit;
       padding: inherit;
 
@@ -62,7 +62,7 @@ nav {
     }
 
     > .toggle {
-      z-index: calc(var(--nav-z) + 2);
+      z-index: calc(var(--g-nav-z) + 2);
       padding: 12px;
       margin: -12px;
       -webkit-tap-highlight-color: transparent;
@@ -73,13 +73,13 @@ nav {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      transition: all var(--transition-duration);
+      transition: all var(--g-transition-duration);
     }
     > .toggle > * {
       width: 18px;
       height: 2px;
-      background: var(--text-color);
-      transition: all var(--transition-duration);
+      background: currentcolor;
+      transition: all var(--g-transition-duration);
     }
     > .toggle > *:nth-child(1) {
       margin-bottom: 3px;
@@ -92,7 +92,7 @@ nav {
       ~ .content {
         left: 0;
         opacity: 1;
-        transition: opacity var(--transition-duration);
+        transition: opacity var(--g-transition-duration);
       }
       ~ .toggle {
 
@@ -124,7 +124,7 @@ nav {
   }
 
   nav.vertical {
-    width: var(--drawer-width);
+    width: var(--g-drawer-width);
     height: 100vh;
     flex-direction: column;
     overflow-y: auto;

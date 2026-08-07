@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="./css/goku.css">
     <link rel="icon" href="https://maximerossier.ch/favicon.ico">
     <title>Goku CSS - Documentation</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-twilight.min.css">
   </head>
   <body>
-    <nav class="shadow p3 sticky top vertical fg">
+    <nav class="p3 sticky top vertical fg no-border-radius">
       <a href="/" class="mr primary-text"><b>Goku CSS</b></a>
       <input id="nav-toggle" type="checkbox">
       <label class="toggle" for="nav-toggle" aria-label="menu">
@@ -74,12 +72,12 @@
       <header class="text-center mb3">
         <h1 class="m0 mb1">Goku CSS</h1>
         <p class="secondary-text">A lightweight, utility-first CSS framework for building modern interfaces</p>
-        <div class="flex g2 flex-center mt2">
-          <span class="secondary p1">~23KB minified</span>
-          <span class="secondary p1">~5KB gzipped</span>
-          <span class="secondary p1">CSS Variables</span>
-          <span class="secondary p1">Mobile-first</span>
-          <span class="secondary p1">Dark mode</span>
+        <div class="flex g3 flex-center mt2">
+          <span class="fg secondary-border shadow p1">~25KB minified</span>
+          <span class="fg secondary-border shadow p1">~5KB gzipped</span>
+          <span class="fg secondary-border shadow p1">CSS Variables</span>
+          <span class="fg secondary-border shadow p1">Mobile-first</span>
+          <span class="fg secondary-border shadow p1">Dark mode</span>
         </div>
       </header>
 
@@ -88,16 +86,8 @@
         <p>Get up and running with Goku CSS in minutes. Choose your preferred installation method:</p>
         
         <h3>Package Manager</h3>
-        <div class="flex g2 mb2">
-          <div class="flex-1">
-            <h4 class="m0 mb1">npm</h4>
-            <pre><code class="language-bash">npm install goku-css</code></pre>
-          </div>
-          <div class="flex-1">
-            <h4 class="m0 mb1">yarn</h4>
-            <pre><code class="language-bash">yarn add goku-css</code></pre>
-          </div>
-        </div>
+        <h4 class="m0 mb1">npm</h4>
+        <pre><code class="language-bash">npm install goku-css</code></pre>
 
         <h3>Usage</h3>
         <p>Import the framework in your project:</p>
@@ -118,18 +108,17 @@ import 'goku-css/css/elements/button.css'</code></pre>
 &lt;!-- or pin a version --&gt;
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/goku-css@8/docs/index.css"&gt;</code></pre>
 
-        <div class="success p2 mt2">
+        <div class="secondary p2 mt2">
           <strong>Pro tip:</strong> Start with our CDN for prototyping, then switch to the package manager for production builds.
         </div>
       </section>
-      <hr>
       <section id="customization">
         <h2>Customization</h2>
         <p>Goku CSS is built with CSS custom properties, making it incredibly easy to customize. Change colors, spacing, typography, and more with simple variable overrides.</p>
 
-        <div class="warning p2 mb2">
+        <div class="secondary p2 mb2">
           <strong>Quick tip:</strong> You can modify any CSS variable directly in your stylesheet or dynamically with JavaScript:
-          <pre class="mt1"><code class="language-javascript">document.documentElement.style.setProperty('--primary-color', '#your-color')</code></pre>
+          <pre class="mt1"><code class="language-javascript">document.documentElement.style.setProperty('--g-primary', '#your-color')</code></pre>
         </div>
         <div class="accordion fg">
           <label for="variables" class="p1">
@@ -137,91 +126,7 @@ import 'goku-css/css/elements/button.css'</code></pre>
           </label>
           <input id="variables" type="checkbox">
           <div class="p1">
-            <pre><code class="language-css m0" data-lang="css">:root {
-  color-scheme: light dark;
-
-  --font-family: system-ui, sans-serif;
-  --font-weight: 400;
-  --font-size: 1rem;
-  --line-height: 1.5;
-  --primary-color: light-dark(#3f59a4, #ff9a5f);
-  --primary-text-color: light-dark(#fff, #000);
-  --active-color: light-dark(#7896f3, #ffc499);
-  --secondary-color: light-dark(#066, #30e28c);
-  --secondary-text-color: light-dark(#fff, #000);
-  --bg-color: light-dark(#f3f6f4, #171a18);
-  --fg-color: light-dark(#fff, #30443d);
-  --text-color: light-dark(#171a18, #d8d5d2);
-  --header-text-color: light-dark(#1a202c, #f7fafc);
-  --input-bg-color: light-dark(#f8fdfb, #40584d);
-  --input-text-color: light-dark(#050505, #fff);
-  --input-border-color: light-dark(#6f8478, #93b79f);
-  --button-bg-color: var(--primary-color);
-  --button-border-color: var(--primary-color);
-  --button-text-color: var(--primary-text-color);
-  --muted-color: light-dark(#5c5c5c, #b0b0b0);
-  --muted-text-color: light-dark(#fff, #1a1a1a);
-  --link-color: light-dark(#3f59a4, #8faaf9);
-  --success-color: light-dark(#176b3d, #47ce7f);
-  --success-text-color: light-dark(#fff, #1a1a1a);
-  --warning-color: light-dark(#d87400, #fea359);
-  --warning-text-color: #1a1a1a;
-  --error-color: light-dark(#b32525, #ff9a9a);
-  --error-text-color: light-dark(#fff, #1a1a1a);
-  --hover-color: #088;
-  --hover-text-color: #fff;
-  --border-color: light-dark(#088, #0bb);
-  --stripe-color: light-dark(#0441, #0ee1);
-  --border-radius: 12px;
-  --border-width: 1px;
-  --arrow-width: .6em;
-  --arrow-height: .36em;
-  --arrow-image-light: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20stroke%3D%22%23050505%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%201%205%205%209%201%22%2F%3E%3C%2Fsvg%3E');
-  --arrow-image-dark: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M1%201%205%205%209%201%22%2F%3E%3C%2Fsvg%3E');
-  --arrow-image: var(--arrow-image-light);
-  --padding-t: 8px;
-  --padding-r: 8px;
-  --padding-b: 8px;
-  --padding-l: 8px;
-  --padding-ratio2: 1.5;
-  --padding-ratio3: 2.5;
-  --padding: var(--padding-t) var(--padding-r) var(--padding-b) var(--padding-l);
-  --padding-input: var(--padding-t) calc(var(--padding-r) * var(--padding-ratio2)) var(--padding-b) calc(var(--padding-l) * var(--padding-ratio2));
-  --margin-t: 12px;
-  --margin-r: 12px;
-  --margin-b: 12px;
-  --margin-l: 12px;
-  --margin-ratio2: 2.5;
-  --margin-ratio3: 4.25;
-  --grid-min-width: 250px;
-  --gap: 1px;
-  --gap-ratio2: 8;
-  --gap-ratio3: 12;
-  --shadow-color: light-dark(#788d8344, #30e28c44);
-  --shadow: 0 0 4px var(--shadow-color);
-  --drawer-width: 300px;
-  --transition-duration: .3s;
-  --outline: 2px solid var(--active-color);
-  --nav-z: 100;
-  --dropdown-z: 1000;
-  --modal-z: 10000;
-}
-
-:root[data-theme="light"] {
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --arrow-image: var(--arrow-image-dark);
-  }
-}
-
-:root[data-theme="dark"] {
-  color-scheme: dark;
-
-  --arrow-image: var(--arrow-image-dark);
-}</code></pre>
+            <pre><code class="language-css m0" data-lang="css"><!-- inject:css/variables.css --></code></pre>
           </div>
         </div>
 
@@ -231,7 +136,7 @@ import 'goku-css/css/elements/button.css'</code></pre>
 delete document.documentElement.dataset.theme // back to the OS preference</code></pre>
         <p>Overriding a color for a single theme only takes one declaration:</p>
         <pre><code class="language-css">:root {
-  --bg-color: light-dark(#fff, #111);
+  --g-bg: light-dark(#fff, #111);
 }</code></pre>
 
         <h3>Interactive Playground</h3>
@@ -239,11 +144,11 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
         <div class="flex g2">
           <label class="flex-1">
             font-family
-            <input type="text" value="system-ui, sans-serif" onkeyup="document.documentElement.style.setProperty('--font-family', event.target.value)">
+            <input type="text" value="system-ui, sans-serif" onkeyup="document.documentElement.style.setProperty('--g-font-family', event.target.value)">
           </label>
           <label class="flex-1">
             font-weight
-            <input type="text" value="400" onkeyup="document.documentElement.style.setProperty('--font-weight', event.target.value)">
+            <input type="text" value="400" onkeyup="document.documentElement.style.setProperty('--g-font-weight', event.target.value)">
           </label>
         </div>
 
@@ -252,29 +157,29 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
             Primary color
             <input
               type="color"
-              value="#3f59a4"
-              onchange="document.documentElement.style.setProperty('--primary-color', event.target.value)">
+              value="#a8480f"
+              onchange="document.documentElement.style.setProperty('--g-primary', event.target.value)">
           </label>
           <label class="flex-auto p1">
-            Primary color text
+            Primary contrast
             <input
               type="color"
               value="#ffffff"
-              onchange="document.documentElement.style.setProperty('--primary-text-color', event.target.value)">
+              onchange="document.documentElement.style.setProperty('--g-primary-contrast', event.target.value)">
           </label>
           <label class="flex-auto p1">
             Button color
             <input
               type="color"
-              value="#3f59a4"
-              onchange="document.documentElement.style.setProperty('--button-bg-color', event.target.value)">
+              value="#a8480f"
+              onchange="document.documentElement.style.setProperty('--g-button-bg', event.target.value)">
           </label>
           <label class="flex-auto p1">
             Button text color 
             <input
               type="color"
               value="#ffffff"
-              onchange="document.documentElement.style.setProperty('--button-text-color', event.target.value)">
+              onchange="document.documentElement.style.setProperty('--g-button-color', event.target.value)">
           </label>
         </div>
 
@@ -286,7 +191,7 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
               type="number"
               value="12"
               min="0"
-              onchange="document.documentElement.style.setProperty('--border-radius', event.target.value + 'px')">
+              onchange="document.documentElement.style.setProperty('--g-border-radius', event.target.value + 'px')">
           </label>
           <label class="flex-1">
             Border width
@@ -295,13 +200,13 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
               type="number"
               value="1"
               min="0"
-              onchange="document.documentElement.style.setProperty('--border-width', event.target.value + 'px')">
+              onchange="document.documentElement.style.setProperty('--g-border-width', event.target.value + 'px')">
           </label>
         </div>
 
         <label>
           Shadow
-          <input type="text" value="0 0 4px #788d8344" onkeyup="document.documentElement.style.setProperty('--shadow', event.target.value)">
+          <input type="text" value="0 1px 4px #171a1826" onkeyup="document.documentElement.style.setProperty('--g-shadow', event.target.value)">
         </label>
 
         <div class="flex g2">
@@ -311,19 +216,19 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
               type="text"
               value="8px"
               onkeyup="
-                document.documentElement.style.setProperty('--padding-t', event.target.value);
-                document.documentElement.style.setProperty('--padding-r', event.target.value);
-                document.documentElement.style.setProperty('--padding-b', event.target.value);
-                document.documentElement.style.setProperty('--padding-l', event.target.value)
+                document.documentElement.style.setProperty('--g-padding-t', event.target.value);
+                document.documentElement.style.setProperty('--g-padding-r', event.target.value);
+                document.documentElement.style.setProperty('--g-padding-b', event.target.value);
+                document.documentElement.style.setProperty('--g-padding-l', event.target.value)
             ">
           </label>
           <label class="flex-1">
             padding ratio 2
-            <input type="number" value="1.5" step=".5" onkeyup="document.documentElement.style.setProperty('--padding-ratio2', event.target.value)">
+            <input type="number" value="1.5" step=".5" onkeyup="document.documentElement.style.setProperty('--g-padding-ratio2', event.target.value)">
           </label>
           <label class="flex-1">
             padding ratio 3
-            <input type="number" value="2.5" step=".5" onkeyup="document.documentElement.style.setProperty('--padding-ratio3', event.target.value)">
+            <input type="number" value="2.5" step=".5" onkeyup="document.documentElement.style.setProperty('--g-padding-ratio3', event.target.value)">
           </label>
         </div>
 
@@ -334,23 +239,22 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
               type="text"
               value="12px"
               onkeyup="
-                document.documentElement.style.setProperty('--margin-t', event.target.value);
-                document.documentElement.style.setProperty('--margin-b', event.target.value);
-                document.documentElement.style.setProperty('--margin-l', event.target.value);
-                document.documentElement.style.setProperty('--margin-r', event.target.value);
+                document.documentElement.style.setProperty('--g-margin-t', event.target.value);
+                document.documentElement.style.setProperty('--g-margin-b', event.target.value);
+                document.documentElement.style.setProperty('--g-margin-l', event.target.value);
+                document.documentElement.style.setProperty('--g-margin-r', event.target.value);
             ">
           </label>
           <label class="flex-1">
             margin ratio 2
-            <input type="number" value="2.5" step=".25" onkeyup="document.documentElement.style.setProperty('--margin-ratio2', event.target.value)">
+            <input type="number" value="2.5" step=".25" onkeyup="document.documentElement.style.setProperty('--g-margin-ratio2', event.target.value)">
           </label>
           <label class="flex-1">
             margin ratio 3
-            <input type="number" value="4.25" step=".25" onkeyup="document.documentElement.style.setProperty('--margin-ratio3', event.target.value)">
+            <input type="number" value="4.25" step=".25" onkeyup="document.documentElement.style.setProperty('--g-margin-ratio3', event.target.value)">
           </label>
         </div>
       </section>
-      <hr>
       <section id="elements">
         <h2>Elements</h2>
         <p>Goku CSS provides beautiful defaults for all HTML elements out of the box. No classes needed - just write semantic HTML and get great-looking results.</p>
@@ -532,7 +436,6 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
           </tbody>
         </table>
       </section>
-      <hr>
       <section id="components">
         <h2>Components</h2>
         <p>Pre-built components that work seamlessly together. All components are built with accessibility in mind and work without JavaScript.</p>
@@ -736,7 +639,6 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
 &lt;div class="py1"&gt;content&lt;/div&gt;</code></pre>
 
       </section>
-      <hr>
       <section id="utilities">
         <h2>Utilities</h2>
         <p>Powerful utility classes for rapid prototyping and fine-tuning. Mix and match to create any design without writing custom CSS.</p>
@@ -787,15 +689,15 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
           <div class="success-border  flex-1 p1">success-border</div>
           <div class="warning  flex-1 p1">warning</div>
           <div class="warning-border  flex-1 p1">warning-border</div>
-          <div class="error  flex-1 p1">error</div>
-          <div class="error-border  flex-1 p1">error-border</div>
+          <div class="danger  flex-1 p1">danger</div>
+          <div class="danger-border  flex-1 p1">danger-border</div>
         </div>
         <div class="flex-wrap g2 py2">
           <div class="primary-text  flex-1">primary-text</div>
           <div class="secondary-text  flex-1">secondary-text</div>
           <div class="success-text  flex-1">success-text</div>
           <div class="warning-text  flex-1">warning-text</div>
-          <div class="error-text  flex-1">error-text</div>
+          <div class="danger-text  flex-1">danger-text</div>
           <div class="muted-text  flex-1">muted-text</div>
         </div>
 
@@ -888,7 +790,7 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
         <h3 id="grid">Grid</h3>
         <p>Modern CSS Grid utilities for 2D layouts. Perfect complement to flexbox for complex grid systems.</p>
         
-        <p>Basic grid container with auto-fit columns (uses <code class="language-css" data-lang="css">--grid-min-width</code> variable):</p>
+        <p>Basic grid container with auto-fit columns (uses <code class="language-css" data-lang="css">--g-grid-min-width</code> variable):</p>
         <div class="grid-fit g2">
           <div class="fg p1"></div>
           <div class="fg p1"></div>
@@ -948,15 +850,15 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
         <p>Available classes:</p>
         <ul>
           <li><code class="language-css" data-lang="css">grid</code> - Basic grid container</li>
-          <li><code class="language-css" data-lang="css">grid-fit</code> - Auto-fit columns (uses <code class="language-css" data-lang="css">--grid-min-width</code>)</li>
-          <li><code class="language-css" data-lang="css">grid-fill</code> - Auto-fill columns (uses <code class="language-css" data-lang="css">--grid-min-width</code>)</li>
+          <li><code class="language-css" data-lang="css">grid-fit</code> - Auto-fit columns (uses <code class="language-css" data-lang="css">--g-grid-min-width</code>)</li>
+          <li><code class="language-css" data-lang="css">grid-fill</code> - Auto-fill columns (uses <code class="language-css" data-lang="css">--g-grid-min-width</code>)</li>
           <li><code class="language-css" data-lang="css">col-2</code>, <code class="language-css" data-lang="css">col-3</code> - Column spanning (2 or 3 columns)</li>
           <li><code class="language-css" data-lang="css">w</code> - Span entire width</li>
           <li><code class="language-css" data-lang="css">row-2</code>, <code class="language-css" data-lang="css">row-3</code> - Row spanning (2 or 3 rows)</li>
           <li><code class="language-css" data-lang="css">g1</code>, <code class="language-css" data-lang="css">g2</code>, <code class="language-css" data-lang="css">g3</code> - Gap sizing (works with both flex and grid)</li>
         </ul>
 
-        <p><strong>Note:</strong> The grid system uses CSS variables for flexibility. Set <code class="language-css" data-lang="css">--grid-min-width</code> to customize the minimum column width for auto-fit and auto-fill grids.</p>
+        <p><strong>Note:</strong> The grid system uses CSS variables for flexibility. Set <code class="language-css" data-lang="css">--g-grid-min-width</code> to customize the minimum column width for auto-fit and auto-fill grids.</p>
 
         <h3 id="overflow">Overflow</h3>
         <div class="fg  overflow-x p1" style="width: 50px; white-space: nowrap;">
@@ -1129,8 +1031,8 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
     <style>
       /* Theme toggle button styling */
       #theme-toggle {
-        background: none;
-        border: 1px solid var(--input-border-color);
+        background: #444;
+        border: 1px solid var(--g-input-border-color);
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -1141,12 +1043,22 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
         font-size: 1.2em;
       }
 
+      /* Sections carry their own separation now that the rules are gone */
+      section {
+        margin-block: calc(var(--g-margin-b) * var(--g-margin-ratio3) * 1.5);
+      }
+
       /* Code block styling */
       pre {
-        border: 1px solid #8888 !important;
-        line-height: 1;
-        font-size: .75em !important;
-        box-shadow: none !important;
+        background: color-mix(in oklab, var(--g-bg-contrast) 4%, var(--g-bg));
+        color: var(--g-bg-contrast);
+        border: var(--g-border-width) solid var(--g-border-color);
+        border-radius: var(--g-border-radius);
+        padding: var(--g-padding-input);
+        margin: var(--g-margin-b) 0;
+        line-height: 1.6;
+        font-size: .8em;
+        overflow-x: auto;
         position: relative;
 
         &:hover > .copy-btn {
@@ -1154,17 +1066,69 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
         }
       }
 
+      pre,
       code {
-        border: none !important;
-        box-shadow: none !important;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        tab-size: 2;
+      }
+
+      /* Inline code reads as a chip, not a slab */
+      :not(pre) > code {
+        background: color-mix(in oklab, var(--g-bg-contrast) 8%, transparent);
+        border-radius: 4px;
+        padding: .1em .35em;
+      }
+
+      /* Syntax highlighting, themed with light-dark() like the rest of the framework */
+      .token.comment,
+      .token.prolog,
+      .token.doctype,
+      .token.cdata,
+      .token.punctuation {
+        color: light-dark(#5a6d64, #8ea79b);
+      }
+
+      .token.string,
+      .token.attr-value,
+      .token.char,
+      .token.inserted {
+        color: light-dark(#0a6b45, #30e28c);
+      }
+
+      .token.keyword,
+      .token.selector,
+      .token.tag,
+      .token.deleted {
+        color: light-dark(#a3266f, #ff9a5f);
+      }
+
+      .token.function,
+      .token.class-name,
+      .token.atrule {
+        color: light-dark(#0e7490, #8faaf9);
+      }
+
+      .token.property,
+      .token.number,
+      .token.boolean,
+      .token.constant,
+      .token.symbol {
+        color: light-dark(#8a5a00, #fea359);
+      }
+
+      .token.attr-name,
+      .token.variable,
+      .token.operator,
+      .token.url {
+        color: light-dark(#6b4ea8, #c9a9ff);
       }
 
       .copy-btn {
         position: absolute;
         top: 5px;
         right: 5px;
-        background: var(--fg-color);
-        border: 1px solid var(--input-border-color);
+        background: var(--g-fg);
+        border: 1px solid var(--g-input-border-color);
         width: 32px;
         height: 32px;
         cursor: pointer;
