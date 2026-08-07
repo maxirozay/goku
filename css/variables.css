@@ -61,7 +61,16 @@
   --g-gap1: 1px;
   --g-gap2: 8px;
   --g-gap3: 12px;
-  --g-shadow: 0 0 8px var(--g-secondary);
+  --g-shadow-tint: color-mix(in oklab, var(--g-secondary) 45%, transparent);
+  --g-shadow-ambient: light-dark(#171a1826, #0009);
+  --g-shadow-highlight: light-dark(#fffffff2, #ffffff45);
+  --g-shadow:
+    0 1px 2px var(--g-shadow-ambient),
+    0 12px 28px -14px var(--g-shadow-ambient),
+    0 0 14px -4px var(--g-shadow-tint),
+    inset 0 0 0 var(--g-border-width) color-mix(in oklab, var(--g-shadow-highlight) 40%, transparent),
+    inset 0 1px 1px var(--g-shadow-highlight),
+    inset 0 -10px 18px -14px var(--g-shadow-tint);
   --g-drawer-width: 300px;
   --g-transition-duration: .3s;
   --g-outline: 2px solid var(--g-active);
