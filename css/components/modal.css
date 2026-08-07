@@ -4,14 +4,18 @@
   display: flex;
   z-index: var(--g-modal-z);
   backdrop-filter: blur(3px);
+  overflow: hidden;
+  overscroll-behavior: contain;
 
   > div {
     background: var(--g-fg);
+    color: var(--g-fg-contrast);
     z-index: calc(var(--g-modal-z) + 1);
     border-radius: var(--g-border-radius);
     box-shadow: var(--g-shadow);
     margin: auto;
     max-height: 80%;
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }

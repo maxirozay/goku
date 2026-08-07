@@ -7,8 +7,4 @@ body {
   padding: 0;
   background: var(--g-bg);
   color: var(--g-bg-contrast);
-
-  &:has(nav > input[type="checkbox"]:checked, .modal) {
-    overflow: hidden;
-  }
 }

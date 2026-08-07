@@ -243,6 +243,7 @@
 
 .flex-row {
   display: flex !important;
+  flex-direction: row;
 }
 
 .flex-auto {
@@ -309,13 +310,13 @@
 }
 
 .g1 {
-  gap: var(--g-gap);
+  gap: var(--g-gap1);
 }
 .g2 {
-  gap: calc(var(--g-gap) * var(--g-gap-ratio2));
+  gap: var(--g-gap2);
 }
 .g3 {
-  gap: calc(var(--g-gap) * var(--g-gap-ratio3));
+  gap: var(--g-gap3);
 }
 
 .mirror {

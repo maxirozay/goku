@@ -37,7 +37,7 @@
           display: block;
           width: var(--g-arrow-width);
           height: var(--g-arrow-width);
-          background: var(--g-primary);
+          background: currentcolor;
           mask: var(--g-arrow-image) no-repeat center / var(--g-arrow-width) var(--g-arrow-height);
           transform: rotate(90deg);
           transition: transform var(--g-transition-duration);

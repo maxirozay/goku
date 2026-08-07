@@ -19,7 +19,7 @@
   --g-muted-contrast: light-dark(#fff, #1a1a1a);
   --g-hover: var(--g-secondary);
   --g-hover-contrast: var(--g-secondary-contrast);
-  --g-active: light-dark(#3a4a42, #ffc499);
+  --g-active: light-dark(#268055, #ffc499);
   --g-active-contrast: light-dark(#fff, #1a1a1a);
   --g-bg: light-dark(#fff, #171a18);
   --g-bg-contrast: light-dark(#1a201c, #eee);
@@ -58,9 +58,9 @@
   --g-margin-ratio3: 4.25;
   --g-grid-min-width: 250px;
   --g-portrait-width: 800px;
-  --g-gap: 1px;
-  --g-gap-ratio2: 8;
-  --g-gap-ratio3: 12;
+  --g-gap1: 1px;
+  --g-gap2: 8px;
+  --g-gap3: 12px;
   --g-shadow: 0 0 8px var(--g-secondary);
   --g-drawer-width: 300px;
   --g-transition-duration: .3s;

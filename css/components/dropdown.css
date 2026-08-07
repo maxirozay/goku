@@ -47,8 +47,10 @@
     box-sizing: border-box;
     min-width: 10em;
     overflow-y: auto;
+    overscroll-behavior: contain;
     box-shadow: var(--g-shadow);
     background: var(--g-fg);
+    color: var(--g-fg-contrast);
     border-radius: var(--g-border-radius);
     z-index: var(--g-dropdown-z);
     transition: all var(--g-transition-duration) ease;
@@ -129,6 +131,7 @@
       border-bottom: var(--g-border-width) solid currentcolor;
       max-height: none;
       background: none;
+      color: inherit;
       padding: 1em 0 !important;
       border-radius: 0;
     }
@@ -177,6 +180,7 @@
       border-bottom: var(--g-border-width) solid currentcolor;
       max-height: none;
       background: none;
+      color: inherit;
       padding: 1em 0 !important;
       border-radius: 0;
     }

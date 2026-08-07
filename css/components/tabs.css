@@ -2,18 +2,18 @@
   display: flex;
 
   &:has(a) {
-    box-shadow: inset 0 -2px 0 var(--g-input-border-color);
+    box-shadow: inset 0 -2px 0 var(--g-border-color);
   }
 
   > a {
-    border-bottom: 2px solid var(--g-input-border-color);
-    color: var(--g-input-color);
+    border-bottom: 2px solid var(--g-border-color);
+    color: inherit;
     padding-bottom: var(--g-padding-b);
 
     &.active {
       background: inherit;
-      color: var(--g-primary);
-      border-bottom-color: var(--g-primary);
+      color: var(--g-active);
+      border-bottom-color: var(--g-active);
     }
   }
 }

@@ -141,118 +141,120 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
 
         <h3>Interactive Playground</h3>
         <p>Try customizing Goku CSS live! Changes will apply immediately to this page.</p>
-        <div class="flex g2">
-          <label class="flex-1">
-            font-family
-            <input type="text" value="system-ui, sans-serif" onkeyup="document.documentElement.style.setProperty('--g-font-family', event.target.value)">
-          </label>
-          <label class="flex-1">
-            font-weight
-            <input type="text" value="400" onkeyup="document.documentElement.style.setProperty('--g-font-weight', event.target.value)">
-          </label>
-        </div>
+        <div class="flex-column g3">
+          <div class="flex g2">
+            <label class="flex-1">
+              font-family
+              <input type="text" value="system-ui, sans-serif" onkeyup="document.documentElement.style.setProperty('--g-font-family', event.target.value)">
+            </label>
+            <label class="flex-1">
+              font-weight
+              <input type="text" value="400" onkeyup="document.documentElement.style.setProperty('--g-font-weight', event.target.value)">
+            </label>
+          </div>
 
-        <div class="flex g2 mb2 text-center">
-          <label class="flex-auto p1">
-            Primary color
-            <input
-              type="color"
-              value="#a8480f"
-              onchange="document.documentElement.style.setProperty('--g-primary', event.target.value)">
-          </label>
-          <label class="flex-auto p1">
-            Primary contrast
-            <input
-              type="color"
-              value="#ffffff"
-              onchange="document.documentElement.style.setProperty('--g-primary-contrast', event.target.value)">
-          </label>
-          <label class="flex-auto p1">
-            Button color
-            <input
-              type="color"
-              value="#a8480f"
-              onchange="document.documentElement.style.setProperty('--g-button-bg', event.target.value)">
-          </label>
-          <label class="flex-auto p1">
-            Button text color 
-            <input
-              type="color"
-              value="#ffffff"
-              onchange="document.documentElement.style.setProperty('--g-button-color', event.target.value)">
-          </label>
-        </div>
+          <div class="flex g2 text-center">
+            <label class="flex-auto p1">
+              Primary color
+              <input
+                type="color"
+                value="#a8480f"
+                onchange="document.documentElement.style.setProperty('--g-primary', event.target.value)">
+            </label>
+            <label class="flex-auto p1">
+              Primary contrast
+              <input
+                type="color"
+                value="#ffffff"
+                onchange="document.documentElement.style.setProperty('--g-primary-contrast', event.target.value)">
+            </label>
+            <label class="flex-auto p1">
+              Button color
+              <input
+                type="color"
+                value="#a8480f"
+                onchange="document.documentElement.style.setProperty('--g-button-bg', event.target.value)">
+            </label>
+            <label class="flex-auto p1">
+              Button text color 
+              <input
+                type="color"
+                value="#ffffff"
+                onchange="document.documentElement.style.setProperty('--g-button-color', event.target.value)">
+            </label>
+          </div>
 
-        <div class="flex g2 ">
-          <label class="flex-1">
-            Border radius
-            <input
-              class="mx"
-              type="number"
-              value="12"
-              min="0"
-              onchange="document.documentElement.style.setProperty('--g-border-radius', event.target.value + 'px')">
-          </label>
-          <label class="flex-1">
-            Border width
-            <input
-              class="mx"
-              type="number"
-              value="1"
-              min="0"
-              onchange="document.documentElement.style.setProperty('--g-border-width', event.target.value + 'px')">
-          </label>
-        </div>
+          <div class="flex g2 ">
+            <label class="flex-1">
+              Border radius
+              <input
+                class="mx"
+                type="number"
+                value="12"
+                min="0"
+                onchange="document.documentElement.style.setProperty('--g-border-radius', event.target.value + 'px')">
+            </label>
+            <label class="flex-1">
+              Border width
+              <input
+                class="mx"
+                type="number"
+                value="1"
+                min="0"
+                onchange="document.documentElement.style.setProperty('--g-border-width', event.target.value + 'px')">
+            </label>
+          </div>
 
-        <label>
-          Shadow
-          <input type="text" value="0 1px 4px #171a1826" onkeyup="document.documentElement.style.setProperty('--g-shadow', event.target.value)">
-        </label>
+          <label>
+            Shadow
+            <input type="text" value="0 1px 4px #171a1826" onkeyup="document.documentElement.style.setProperty('--g-shadow', event.target.value)">
+          </label>
 
-        <div class="flex g2">
-          <label class="flex-1">
-            padding
-            <input
-              type="text"
-              value="8px"
-              onkeyup="
-                document.documentElement.style.setProperty('--g-padding-t', event.target.value);
-                document.documentElement.style.setProperty('--g-padding-r', event.target.value);
-                document.documentElement.style.setProperty('--g-padding-b', event.target.value);
-                document.documentElement.style.setProperty('--g-padding-l', event.target.value)
-            ">
-          </label>
-          <label class="flex-1">
-            padding ratio 2
-            <input type="number" value="1.5" step=".5" onkeyup="document.documentElement.style.setProperty('--g-padding-ratio2', event.target.value)">
-          </label>
-          <label class="flex-1">
-            padding ratio 3
-            <input type="number" value="2.5" step=".5" onkeyup="document.documentElement.style.setProperty('--g-padding-ratio3', event.target.value)">
-          </label>
-        </div>
+          <div class="flex g2">
+            <label class="flex-1">
+              padding
+              <input
+                type="text"
+                value="8px"
+                onkeyup="
+                  document.documentElement.style.setProperty('--g-padding-t', event.target.value);
+                  document.documentElement.style.setProperty('--g-padding-r', event.target.value);
+                  document.documentElement.style.setProperty('--g-padding-b', event.target.value);
+                  document.documentElement.style.setProperty('--g-padding-l', event.target.value)
+              ">
+            </label>
+            <label class="flex-1">
+              padding ratio 2
+              <input type="number" value="1.5" step=".5" onkeyup="document.documentElement.style.setProperty('--g-padding-ratio2', event.target.value)">
+            </label>
+            <label class="flex-1">
+              padding ratio 3
+              <input type="number" value="2.5" step=".5" onkeyup="document.documentElement.style.setProperty('--g-padding-ratio3', event.target.value)">
+            </label>
+          </div>
 
-        <div class="flex g2">
-          <label class="flex-1">
-            margin
-            <input
-              type="text"
-              value="12px"
-              onkeyup="
-                document.documentElement.style.setProperty('--g-margin-t', event.target.value);
-                document.documentElement.style.setProperty('--g-margin-b', event.target.value);
-                document.documentElement.style.setProperty('--g-margin-l', event.target.value);
-                document.documentElement.style.setProperty('--g-margin-r', event.target.value);
-            ">
-          </label>
-          <label class="flex-1">
-            margin ratio 2
-            <input type="number" value="2.5" step=".25" onkeyup="document.documentElement.style.setProperty('--g-margin-ratio2', event.target.value)">
-          </label>
-          <label class="flex-1">
-            margin ratio 3
-            <input type="number" value="4.25" step=".25" onkeyup="document.documentElement.style.setProperty('--g-margin-ratio3', event.target.value)">
-          </label>
+          <div class="flex g2">
+            <label class="flex-1">
+              margin
+              <input
+                type="text"
+                value="12px"
+                onkeyup="
+                  document.documentElement.style.setProperty('--g-margin-t', event.target.value);
+                  document.documentElement.style.setProperty('--g-margin-b', event.target.value);
+                  document.documentElement.style.setProperty('--g-margin-l', event.target.value);
+                  document.documentElement.style.setProperty('--g-margin-r', event.target.value);
+              ">
+            </label>
+            <label class="flex-1">
+              margin ratio 2
+              <input type="number" value="2.5" step=".25" onkeyup="document.documentElement.style.setProperty('--g-margin-ratio2', event.target.value)">
+            </label>
+            <label class="flex-1">
+              margin ratio 3
+              <input type="number" value="4.25" step=".25" onkeyup="document.documentElement.style.setProperty('--g-margin-ratio3', event.target.value)">
+            </label>
+          </div>
         </div>
       </section>
       <section id="elements">
@@ -274,7 +276,14 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
 
         <h3 id="input">Input</h3>
         <p>Form inputs are consistently styled with proper focus states and responsive design.</p>
-        <div class="b p2 my1">
+        <p>
+          A <code class="language-html" data-lang="html">form</code> stacks its fields and spaces them with a gap, so no
+          markup or classes are needed to lay one out. Put fields on the same row by wrapping them in a
+          <a href="#flex">flex</a> container, and reach for
+          <code class="language-css" data-lang="css">flex-column</code> with a
+          <code class="language-css" data-lang="css">g*</code> gap when the fields aren't inside a form.
+        </p>
+        <form class="b p2 my1">
           <div class="flex g2">
             <label class="flex-auto">
               Text
@@ -299,7 +308,24 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
             Checkbox
             <input class="ml2" type="checkbox">
           </label>
-        </div>
+        </form>
+        <pre><code class="language-html" data-lang="html">&lt;form&gt;
+  &lt;div class="flex g2"&gt;
+    &lt;label class="flex-auto"&gt;
+      Text
+      &lt;input type="text"&gt;
+    &lt;/label&gt;
+    &lt;label class="flex-auto"&gt;
+      Number
+      &lt;input type="number"&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;label&gt;
+    Textarea
+    &lt;textarea rows="4"&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;</code></pre>
 
         <h4>Radio</h4>
         <p>
@@ -308,7 +334,7 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
           segmented control: the input is hidden visually (still focusable and announced) and the label becomes the
           control. See <a href="#accessibility">Accessibility</a> for how that pattern works.
         </p>
-        <div class="b p2 my1">
+        <div class="b p2 my1 flex-column g3">
           <label>
             <input type="radio" name="plain-radio" checked> Native radio
           </label>
@@ -352,7 +378,7 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
 &lt;/div&gt;</code></pre>
 
         <h4>File</h4>
-        <div class="b p2 my1">
+        <div class="b p2 my1 flex-column g3">
           <label>
             Regular file input
             <input type="file">
@@ -1039,7 +1065,7 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
           <div class="fg p1 m2">m2</div>
           <div class="fg p1 m3">m3</div>
         </div>
-        <div class="b p2 my1">
+        <div class="b p3 my1">
           <span class="fg p0">p0</span>
           <span class="fg p1">p1</span>
           <span class="fg p2">p2</span>

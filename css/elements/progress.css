@@ -1,6 +1,6 @@
 progress {
   height: 1em;
-  background: #8888;
+  background: var(--g-border-color);
   border-radius: 1em;
   border: none;
   overflow: hidden;

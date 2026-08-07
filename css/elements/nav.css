@@ -3,6 +3,7 @@ nav {
   width: 100%;
   box-sizing: border-box;
   align-items: center;
+  position: relative;
   z-index: var(--g-nav-z);
   gap: 1em;
 
@@ -42,6 +43,7 @@ nav {
       position: fixed;
       inset: 0 0 0 100%;
       overflow-y: auto;
+      overscroll-behavior: contain;
       transition: opacity var(--g-transition-duration), left 0s var(--g-transition-duration);
       flex-direction: column;
       background: var(--g-fg);
@@ -62,6 +64,7 @@ nav {
     }
 
     > .toggle {
+      position: relative;
       z-index: calc(var(--g-nav-z) + 2);
       padding: 12px;
       margin: -12px;

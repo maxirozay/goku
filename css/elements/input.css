@@ -22,10 +22,10 @@
   inset: 0;
 }
 
-label + :is(input, textarea, select),
-label > :is(input, textarea, select) {
-  margin-top: .25em;
-  margin-bottom: 1em;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-gap2);
 }
 
 input:not([type="radio"]),
