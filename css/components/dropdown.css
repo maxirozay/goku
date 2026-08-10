@@ -148,17 +148,17 @@
     margin-top: var(--g-dropdown-gap);
   }
 
-  .dropdown:not(.-mobile) > :has(+ div) {
+  .dropdown:not(.-mobile):hover > :has(+ div) {
     position: relative;
-  }
 
-  .dropdown:not(.-mobile):hover > :has(+ div):before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: var(--g-dropdown-gap);
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: calc(var(--g-dropdown-gap) + (1lh - 1em) / 2);
+    }
   }
 
   @supports (anchor-name: --a) and (anchor-scope: --a) {
