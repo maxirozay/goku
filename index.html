@@ -671,6 +671,54 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
           </div>
         </div>
 
+        <p>
+          A container that clips its content (<code class="language-css" data-lang="css">group</code>,
+          <code class="language-css" data-lang="css">border-radius</code>, <code class="language-css" data-lang="css">overflow-x</code>)
+          cuts the panel off. Add <code class="language-css" data-lang="css">static</code> to let it break out:
+          the panel then positions against the nearest positioned ancestor instead of the dropdown.
+          Keep that ancestor unpositioned and unclipped.
+          <code class="language-css" data-lang="css">right</code> still aligns to the dropdown,
+          in browsers that support anchor positioning.
+        </p>
+        <div class="b p2 my1 flex-row g2">
+          <div class="b border-radius p2 flex-1">
+            <div class="dropdown" tabindex="0">
+              <button>Clipped</button>
+              <div class="p2">
+                <div>Item 1</div>
+                <div>Item 2</div>
+              </div>
+            </div>
+          </div>
+          <div class="b border-radius p2 flex-1">
+            <div class="dropdown static" tabindex="0">
+              <button>Escapes</button>
+              <div class="p2">
+                <div>Item 1</div>
+                <div>Item 2</div>
+              </div>
+            </div>
+          </div>
+          <div class="b border-radius p2 flex-1 text-right">
+            <div class="dropdown static right" tabindex="0">
+              <button>Escapes right</button>
+              <div class="p2">
+                <div>Item 1</div>
+                <div>Item 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre><code class="language-html" data-lang="html">&lt;div class="border-radius"&gt; &lt;!-- overflow: hidden --&gt;
+  &lt;div class="dropdown static right" tabindex="0"&gt;
+    &lt;button&gt;Escapes right&lt;/button&gt;
+    &lt;div class="p2"&gt;
+      &lt;div&gt;Item 1&lt;/div&gt;
+      &lt;div&gt;Item 2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
         <h3 id="modal">Modal</h3>
         <p>A full-screen overlay that closes on a click outside its last child.</p>
         <div class="b p2 my1">
