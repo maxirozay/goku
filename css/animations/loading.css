@@ -1,10 +1,18 @@
 .spin {
-  color: #0000;
   position: relative;
+  content: '';
+
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    border-radius: inherit;
+  }
 
   &:after {
     content: '';
-    border: 2px solid var(--g-button-color);
+    border: 2px solid currentcolor;
     border-top-color: #0000;
     border-bottom-color: #0000;
     border-radius: 100%;
