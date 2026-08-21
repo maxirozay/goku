@@ -12,26 +12,27 @@
 
   &:after {
     content: '';
-    border: 2px solid currentcolor;
+    border: 3px solid currentcolor;
     border-top-color: #0000;
     border-bottom-color: #0000;
     border-radius: 100%;
     display: inline-block;
-    width: .75em;
-    height: .75em;
+    height: 40%;
+    aspect-ratio: 1;
     animation: spin 2s infinite linear;
     position: absolute;
-    left: calc(50% - .5em);
-    top: calc(50% - .5em);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
