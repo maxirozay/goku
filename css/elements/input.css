@@ -22,12 +22,6 @@
   inset: 0;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--g-gap2);
-}
-
 input:not([type="radio"]),
 textarea,
 select {
