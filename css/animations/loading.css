@@ -1,6 +1,5 @@
 .spin {
   position: relative;
-  content: '';
 
   &:before {
     content: '';
@@ -52,19 +51,19 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 200vw;
+    height: 200vw;
     background: radial-gradient(circle at 50%, #0000 30%, var(--g-primary) 50%, #0000 70%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     animation: ripple 2s infinite cubic-bezier(1, 0, .5, 0);
   }
 }
 
 @keyframes ripple {
   0% {
-    width: 0;
-    height: 0;
+    transform: translate(-50%, -50%) scale(0);
   }
   100% {
-    width: 200vw;
-    height: 200vw;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
