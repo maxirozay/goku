@@ -29,7 +29,6 @@ input[type="date"] {
 }
 
 *:disabled {
-  opacity: 0.5;
   cursor: default;
   background: var(--g-muted);
   border-color: var(--g-muted);
