@@ -44,12 +44,13 @@ nav {
       inset: 0 0 0 100%;
       overflow-y: auto;
       overscroll-behavior: contain;
-      transition: opacity var(--g-transition-duration), left 0s var(--g-transition-duration);
+      transition: opacity var(--g-transition-duration), left 0s var(--g-transition-duration), visibility 0s var(--g-transition-duration);
       flex-direction: column;
       background: var(--g-fg);
       color: var(--g-fg-contrast);
       opacity: 0;
       z-index: calc(var(--g-nav-z) + 1);
+      visibility: hidden;
       gap: inherit;
       padding: inherit;
 
@@ -95,6 +96,7 @@ nav {
       ~ .content {
         left: 0;
         opacity: 1;
+        visibility: visible;
         transition: opacity var(--g-transition-duration);
       }
       ~ .toggle {

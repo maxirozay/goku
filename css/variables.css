@@ -11,8 +11,8 @@
   --g-secondary-contrast: light-dark(#fff, #000);
   --g-success: light-dark(#176b3d, #47ce7f);
   --g-success-contrast: light-dark(#fff, #1a1a1a);
-  --g-warning: light-dark(#d87400, #fea359);
-  --g-warning-contrast: #1a1a1a;
+  --g-warning: light-dark(#c95100, #fea359);
+  --g-warning-contrast: light-dark(#fff, #1a1a1a);
   --g-danger: light-dark(#b32525, #ff9a9a);
   --g-danger-contrast: light-dark(#fff, #1a1a1a);
   --g-muted: light-dark(#5a635e, #b0b0b0);
