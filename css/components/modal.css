@@ -10,7 +10,6 @@
   > div {
     background: var(--g-fg);
     color: var(--g-fg-contrast);
-    z-index: calc(var(--g-modal-z) + 1);
     border-radius: var(--g-border-radius);
     box-shadow: var(--g-shadow);
     margin: auto;
