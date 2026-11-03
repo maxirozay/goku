@@ -63,7 +63,7 @@
   --g-gap3: 12px;
   --g-shadow-tint: color-mix(in oklab, var(--g-secondary) 45%, transparent);
   --g-shadow-ambient: light-dark(#171a1826, #0009);
-  --g-shadow-highlight: light-dark(#ffffff66, #ffffff45);
+  --g-shadow-highlight: light-dark(#fff6, #fff4);
   --g-shadow:
     0 1px 2px var(--g-shadow-ambient),
     0 12px 28px -14px var(--g-shadow-ambient),
