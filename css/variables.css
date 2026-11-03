@@ -84,6 +84,12 @@
   color-scheme: light;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --g-transition-duration: 1ms;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --g-arrow-image: var(--g-arrow-image-dark);
