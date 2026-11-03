@@ -11,8 +11,8 @@
   --g-secondary-contrast: light-dark(#fff, #000);
   --g-success: light-dark(#176b3d, #47ce7f);
   --g-success-contrast: light-dark(#fff, #1a1a1a);
-  --g-warning: light-dark(#d87400, #fea359);
-  --g-warning-contrast: #1a1a1a;
+  --g-warning: light-dark(#c95100, #fea359);
+  --g-warning-contrast: light-dark(#fff, #1a1a1a);
   --g-danger: light-dark(#b32525, #ff9a9a);
   --g-danger-contrast: light-dark(#fff, #1a1a1a);
   --g-muted: light-dark(#5a635e, #b0b0b0);
@@ -23,9 +23,8 @@
   --g-active-contrast: light-dark(#fff, #1a1a1a);
   --g-bg: light-dark(#fff, #171a18);
   --g-bg-contrast: light-dark(#1a201c, #eee);
-  --g-border-color: light-dark(#b9d8cb, #3f8363);
   --g-stripe: light-dark(#0441, #0ee1);
-  --g-fg: light-dark(#d0efe0, #30443d);
+  --g-fg: light-dark(#c2ecdc, #30443d);
   --g-fg-contrast: light-dark(#000, #eee);
   --g-h-color: light-dark(#16211b, #f7fafc);
   --g-a-color: light-dark(#0b6478, #8faaf9);
@@ -34,7 +33,8 @@
   --g-button-border-color: var(--g-primary);
   --g-input-bg: light-dark(#fafffc, #40584d);
   --g-input-color: light-dark(#050505, #fff);
-  --g-input-border-color: light-dark(#bdcbc3, #93b79f);
+  --g-input-border-color: light-dark(#7a9a8c, #93b79f);
+  --g-border-color: light-dark(#a5d3c1, #3f8363);
   --g-border-radius: 12px;
   --g-border-width: 1px;
   --g-arrow-width: .6em;
@@ -63,7 +63,7 @@
   --g-gap3: 12px;
   --g-shadow-tint: color-mix(in oklab, var(--g-secondary) 45%, transparent);
   --g-shadow-ambient: light-dark(#171a1826, #0009);
-  --g-shadow-highlight: light-dark(#fffffff2, #ffffff45);
+  --g-shadow-highlight: light-dark(#fff6, #fff4);
   --g-shadow:
     0 1px 2px var(--g-shadow-ambient),
     0 12px 28px -14px var(--g-shadow-ambient),
@@ -82,6 +82,12 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --g-transition-duration: 1ms;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

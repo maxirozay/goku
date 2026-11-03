@@ -55,6 +55,9 @@
       left: 100%;
       right: -100%;
     }
+    &:checked + div > div {
+      visibility: hidden;
+    }
     &:checked + div > label:after {
       transform: rotate(-90deg);
     }

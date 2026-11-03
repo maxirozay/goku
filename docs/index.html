@@ -73,11 +73,11 @@
         <h1 class="m0 mb1">Goku CSS</h1>
         <p class="secondary-text">A lightweight, utility-first CSS framework for building modern interfaces</p>
         <div class="flex-wrap g3 flex-center mt2">
-          <span class="fg secondary-border shadow p1">~25KB minified</span>
-          <span class="fg secondary-border shadow p1">~5KB gzipped</span>
-          <span class="fg secondary-border shadow p1">CSS Variables</span>
-          <span class="fg secondary-border shadow p1">Mobile-first</span>
-          <span class="fg secondary-border shadow p1">Dark mode</span>
+          <span class="fg shadow p1">~25KB minified</span>
+          <span class="fg shadow p1">~5KB gzipped</span>
+          <span class="fg shadow p1">CSS Variables</span>
+          <span class="fg shadow p1">Mobile-first</span>
+          <span class="fg shadow p1">Dark mode</span>
         </div>
       </header>
 
@@ -139,8 +139,8 @@ import 'goku-css/css/elements/button.css'</code></pre>
   --g-secondary-contrast: light-dark(#fff, #000);
   --g-success: light-dark(#176b3d, #47ce7f);
   --g-success-contrast: light-dark(#fff, #1a1a1a);
-  --g-warning: light-dark(#d87400, #fea359);
-  --g-warning-contrast: #1a1a1a;
+  --g-warning: light-dark(#c95100, #fea359);
+  --g-warning-contrast: light-dark(#fff, #1a1a1a);
   --g-danger: light-dark(#b32525, #ff9a9a);
   --g-danger-contrast: light-dark(#fff, #1a1a1a);
   --g-muted: light-dark(#5a635e, #b0b0b0);
@@ -151,9 +151,8 @@ import 'goku-css/css/elements/button.css'</code></pre>
   --g-active-contrast: light-dark(#fff, #1a1a1a);
   --g-bg: light-dark(#fff, #171a18);
   --g-bg-contrast: light-dark(#1a201c, #eee);
-  --g-border-color: light-dark(#b9d8cb, #3f8363);
   --g-stripe: light-dark(#0441, #0ee1);
-  --g-fg: light-dark(#d0efe0, #30443d);
+  --g-fg: light-dark(#c2ecdc, #30443d);
   --g-fg-contrast: light-dark(#000, #eee);
   --g-h-color: light-dark(#16211b, #f7fafc);
   --g-a-color: light-dark(#0b6478, #8faaf9);
@@ -162,7 +161,8 @@ import 'goku-css/css/elements/button.css'</code></pre>
   --g-button-border-color: var(--g-primary);
   --g-input-bg: light-dark(#fafffc, #40584d);
   --g-input-color: light-dark(#050505, #fff);
-  --g-input-border-color: light-dark(#bdcbc3, #93b79f);
+  --g-input-border-color: light-dark(#7a9a8c, #93b79f);
+  --g-border-color: light-dark(#a5d3c1, #3f8363);
   --g-border-radius: 12px;
   --g-border-width: 1px;
   --g-arrow-width: .6em;
@@ -191,7 +191,7 @@ import 'goku-css/css/elements/button.css'</code></pre>
   --g-gap3: 12px;
   --g-shadow-tint: color-mix(in oklab, var(--g-secondary) 45%, transparent);
   --g-shadow-ambient: light-dark(#171a1826, #0009);
-  --g-shadow-highlight: light-dark(#fffffff2, #ffffff45);
+  --g-shadow-highlight: light-dark(#fff6, #fff4);
   --g-shadow:
     0 1px 2px var(--g-shadow-ambient),
     0 12px 28px -14px var(--g-shadow-ambient),
@@ -210,6 +210,12 @@ import 'goku-css/css/elements/button.css'</code></pre>
 
 :root[data-theme="light"] {
   color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --g-transition-duration: 1ms;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1331,116 +1337,6 @@ delete document.documentElement.dataset.theme // back to the OS preference</code
       document.addEventListener('DOMContentLoaded', addCopyButtons)
     </script>
 
-    <style>
-      /* Theme toggle button styling */
-      #theme-toggle {
-        background: #444;
-        border: 1px solid var(--g-input-border-color);
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2em;
-      }
-
-      /* Sections carry their own separation now that the rules are gone */
-      section {
-        margin-block: calc(var(--g-margin-b) * var(--g-margin-ratio3) * 1.5);
-      }
-
-      /* Code block styling */
-      pre {
-        background: color-mix(in oklab, var(--g-bg-contrast) 4%, var(--g-bg));
-        color: var(--g-bg-contrast);
-        border: var(--g-border-width) solid var(--g-border-color);
-        border-radius: var(--g-border-radius);
-        padding: var(--g-padding-input);
-        margin: var(--g-margin-b) 0;
-        line-height: 1.6;
-        font-size: .8em;
-        overflow-x: auto;
-        position: relative;
-
-        &:hover > .copy-btn {
-          display: flex;
-        }
-      }
-
-      pre,
-      code {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-        tab-size: 2;
-      }
-
-      /* Inline code reads as a chip, not a slab */
-      :not(pre) > code {
-        background: color-mix(in oklab, var(--g-bg-contrast) 8%, transparent);
-        border-radius: 4px;
-        padding: .1em .35em;
-      }
-
-      /* Syntax highlighting, themed with light-dark() like the rest of the framework */
-      .token.comment,
-      .token.prolog,
-      .token.doctype,
-      .token.cdata,
-      .token.punctuation {
-        color: light-dark(#5a6d64, #8ea79b);
-      }
-
-      .token.string,
-      .token.attr-value,
-      .token.char,
-      .token.inserted {
-        color: light-dark(#0a6b45, #30e28c);
-      }
-
-      .token.keyword,
-      .token.selector,
-      .token.tag,
-      .token.deleted {
-        color: light-dark(#a3266f, #ff9a5f);
-      }
-
-      .token.function,
-      .token.class-name,
-      .token.atrule {
-        color: light-dark(#0e7490, #8faaf9);
-      }
-
-      .token.property,
-      .token.number,
-      .token.boolean,
-      .token.constant,
-      .token.symbol {
-        color: light-dark(#8a5a00, #fea359);
-      }
-
-      .token.attr-name,
-      .token.variable,
-      .token.operator,
-      .token.url {
-        color: light-dark(#6b4ea8, #c9a9ff);
-      }
-
-      .copy-btn {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        background: var(--g-fg);
-        border: 1px solid var(--g-input-border-color);
-        width: 32px;
-        height: 32px;
-        cursor: pointer;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        z-index: 1;
-      }
-    </style>
+    <style>#theme-toggle{border:1px solid var(--g-input-border-color);cursor:pointer;background:#444;border-radius:50%;justify-content:center;align-items:center;width:40px;height:40px;font-size:1.2em;display:flex}section{margin-block:calc(var(--g-margin-b) * var(--g-margin-ratio3) * 1.5)}pre{background:color-mix(in oklab, var(--g-bg-contrast) 4%, var(--g-bg));color:var(--g-bg-contrast);border:var(--g-border-width) solid var(--g-border-color);border-radius:var(--g-border-radius);padding:var(--g-padding-input);margin:var(--g-margin-b) 0;font-size:.8em;line-height:1.6;position:relative;overflow-x:auto}pre:hover>.copy-btn{display:flex}pre,code{tab-size:2;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}:not(pre)>code{background:color-mix(in oklab, var(--g-bg-contrast) 8%, transparent);border-radius:4px;padding:.1em .35em}.token.comment,.token.prolog,.token.doctype,.token.cdata,.token.punctuation{color:var(--lightningcss-light,#5a6d64)var(--lightningcss-dark,#8ea79b)}.token.string,.token.attr-value,.token.char,.token.inserted{color:var(--lightningcss-light,#0a6b45)var(--lightningcss-dark,#30e28c)}.token.keyword,.token.selector,.token.tag,.token.deleted{color:var(--lightningcss-light,#a3266f)var(--lightningcss-dark,#ff9a5f)}.token.function,.token.class-name,.token.atrule{color:var(--lightningcss-light,#0e7490)var(--lightningcss-dark,#8faaf9)}.token.property,.token.number,.token.boolean,.token.constant,.token.symbol{color:var(--lightningcss-light,#8a5a00)var(--lightningcss-dark,#fea359)}.token.attr-name,.token.variable,.token.operator,.token.url{color:var(--lightningcss-light,#6b4ea8)var(--lightningcss-dark,#c9a9ff)}.copy-btn{background:var(--g-fg);border:1px solid var(--g-input-border-color);cursor:pointer;z-index:1;justify-content:center;align-items:center;width:32px;height:32px;font-size:14px;display:none;position:absolute;top:5px;right:5px}</style>
   </body>
 </html>

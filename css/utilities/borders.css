@@ -9,6 +9,7 @@
 }
 
 .group {
+  position: relative;
   border: var(--g-border-width) solid var(--g-input-border-color);
   background: var(--g-input-border-color);
 

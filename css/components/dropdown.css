@@ -66,6 +66,7 @@
       left: 0;
       right: 0;
       pointer-events: none;
+      visibility: hidden;
     }
 
     > input:checked ~ div,
@@ -73,6 +74,7 @@
     > :is(button, span, a) ~ div:hover {
       bottom: 0;
       pointer-events: auto;
+      visibility: visible;
     }
 
     &:before,

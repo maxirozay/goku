@@ -1,6 +1,5 @@
 table {
   border-collapse: collapse;
-  border-radius: var(--g-border-radius);
   table-layout: fixed;
 
   &:first-child {
@@ -15,7 +14,6 @@ th {
   border-bottom: var(--g-border-width) solid var(--g-border-color);
 }
 
-tr,
 th,
 td {
   padding: var(--g-padding);
@@ -25,8 +23,9 @@ tr {
   &:nth-child(even) {
     background: var(--g-stripe);
   }
-  &:hover {
-    background: var(--g-hover);
-    color: var(--g-hover-contrast);
-  }
+}
+
+tbody tr:hover {
+  background: var(--g-hover);
+  color: var(--g-hover-contrast);
 }
